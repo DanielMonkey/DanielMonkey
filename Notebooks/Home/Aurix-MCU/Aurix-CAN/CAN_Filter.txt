@@ -1,0 +1,139 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2019-02-13T13:26:02+08:00
+
+====== CAN Filter ======
+Created Wednesday 13 February 2019
+
+1. Filter default configuration
+.fltercofing = {
+	.messageIdLength							= IfxCan_MessageIdLength_standard,
+	.standardListSize							= 2,
+	.extendedListSize							= 0,
+	.rejectRemoteFramesWithStandardId		= 0,
+	.rejectRemoteFramesWithExtendedId		= 0,
+	.standardFilterForNonMatchingFrames	= IfxCan_NonMatchingFrame_acceptToRxFifo0,
+	.extendedFilterForNonMatchingFrames	= IfxCan_NonMatchingFrame_acceptToRxFifo0
+}
+====================================================================================
+GFCi (i = 0 - 3)
+Global Filter Configuration i
+RRFE		Reject Remote Frames Extended
+0	Filter remote frames with 29-bit extended IDs
+1	Reject all remote frames with 29-bit extended IDs
+
+RRFS		Reject Remote Frames Standard
+
+ANFE		Accept Non-matching Frames Extended
+Defines how received messages with 29-bit IDs that do not match any element of the filter list are treated.
+00	Accept in Rx FIFO 0
+
+ANFS		Accept Non-Matching Frames Standard
+===========================================================================================
+SIDFCi (i = 0 - 3)
+Standard ID Filter Configuration i
+FLSSA		Filter List Standard Start Address
+Start address of standard Message ID filter list (32-bit word address).
+
+LSS		List Size Standard
+00	No standard Message ID filter
+=======================================================================================
+XIDFCi	(i = 0 - 3)
+Extended ID Filter Configuration i
+FLESA		Filter List Extended Start Address
+LSE		List Size Extended
+=======================================================================================
+2. Standard Message ID Filter Element	-	IfxCan_Can_setStandardFilter
+Up to 128 filter elements can be configured for 11-bit standard IDs. When accessing a Standard Message ID Filter element, its address is the Filter List Standard Start Address SIDFCi.FLSSA plus the index of the filter element (0 ... 127).
+StdMsgk_S0 (k = 0 - 127)
+Standard Message 0
+******************************************************************************************************
+SFID2		Standard Filter ID 2
+This bit field has a different meaning depending on the configuration of SFEC:
+1) SFEC = "001" ... "110" Second ID of standard ID filter element
+2) SFEC = "111" Filter for Rx Buffers or for debug messages
+SFID2[5:0]	defines the offset to the Rx Buffer Start Address RXBC.RBSA for storage of a matching message
+SFID2[8:6] is used to control the filter event pins. A one at the respective bit position enables generation of a pulse at the related filter event pin with the duration of one host clock period in case the filter matches.
+SFID2[10:9] decides whether the received message is stored into an Rx Buffer or treated as message A, B, or C of the debug message sequence.
+000	Store message into an Rx Buffer
+...
+1FF	Store message into an Rx Buffer
+200	Debug Message A
+...
+3FF	Debug Message A
+400	Debug Message B
+...
+5FF	Debug Message B
+600	Debug Message C
+...
+7FF	Debug Message C
+*****************************************************************************************************************
+SFID1		Standard Filter ID 1
+First ID of standard ID filter element.
+When filtering for Rx Buffers or for debug messages this field defines the ID of a standard message to be stored. The received identifiers must match exactly, no masking mechanism is used.
+*****************************************************************************************************************
+SFEC		Standard Filter Element Configuration
+All enabled filter elements are used for acceptance filtering of standard frames. Acceptance filtering stops at the first matching enabled filter element or when the end of the filter list is reached. If SFEC = "100", "101" or "110", a match sets interrupt flag IR.HPM and, if enabled, an interrupt is generated. In this case register HPMS is updated with the status of the priority match.
+000	Disable filter element
+001 	Store in Rx FIFO 0 if filter matches
+010	Store in Rx FIFO 1 if filter matches
+011	Reject ID if filter matches
+100	Set priority if filter matches
+101	Set priority and store in FIFO 0 if filter matches
+110	Set priority and store in FIFO 1 if filter matches
+111	Store into Rx Buffer or as debug message, configuration of SET[1:0] ignored
+******************************************************************************************************************
+SFT		Standard Filter Type
+//Note: With SFT = "11" the filter element is disabled and the acceptance filtering continues (same behaviour as with SFEC = "000")//
+00 		Range filter from SF1ID to SF2ID (SF2ID >= SF1ID)
+01		Dual ID filter for SF1ID or SF2ID
+10		Classic filter: SF1ID = filter, SF2ID = mask
+11		Filter element disabled
+===================================================================================================
+3. Extended Message ID Filter Element - IfxCan_Can_setExtendedFilter
+Up to 64 filter elements can be configured for 29-bit extended IDs. When accessing an Extended Message ID Filter element, its address is the Filter List Extended Start Address XIDFCi.FLESA plus two times the index of the filter element (0 ... 63).
+
+ExtMsgk_F0 (k = 0 - 63)
+Filter Element 0
+
+EFEC
+
+EFID1
+
+ExtMsgk_F1 (k = 0 - 63)
+Filter Element 1
+
+EFT
+
+EFID2
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
