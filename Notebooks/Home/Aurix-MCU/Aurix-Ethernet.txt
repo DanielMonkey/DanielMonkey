@@ -1,0 +1,13 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2019-01-29T16:16:25+08:00
+
+====== Aurix-Ethernet ======
+Created Tuesday 29 January 2019
+
+UDP 
+	Initializatian
+		tegra_aurix_can_init
+			udp_new()
+			udp_bind()
+			udp_recv()

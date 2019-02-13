@@ -1,0 +1,15 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2019-01-31T13:18:55+08:00
+
+====== Error ======
+Created Thursday 31 January 2019
+
+nvidia@tegra-ubuntu:~/Documents/peak-linux-driver-8.7.0$ make clean
+make[1]: Entering directory '/home/nvidia/Documents/peak-linux-driver-8.7.0/driver'
+Makefile:142: *** "Can't find /include/linux/version.h".  Stop.
+make[1]: Leaving directory '/home/nvidia/Documents/peak-linux-driver-8.7.0/driver'
+Makefile:89: recipe for target 'clean' failed
+make: *** [clean] Error 2
+
+

@@ -1,0 +1,45 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2019-01-30T16:19:27+08:00
+
+====== Linux ======
+Created Wednesday 30 January 2019
+
+Drivers Included in Linux Kernel
+Key Features
+Out-of-the-box usage, suitable for most cases
+Part of the Linux mainline kernel, classic CAN since 3.2 (peak_pci), CAN FD since 4.0 (peak_usb)
+CAN channels are handled as network devices (netdev)
+
+Check: Are CAN drivers part of your Linux environment?
+Open a terminal and type:
+grep PEAK_ /boot/config-`uname -r`
+All PEAK drivers are listed (y=included in kernel, m = separate module) but this may not work in every Linux environment.
+
+Check: Is the CAN device initialized?
+Open a terminal and type:
+lsmod | grep ^peak
+If, for example, a USB-based CAn interface from PEAK is connected and initialized, the output will be at least one line starting with peak_usb.
+
+/usr/local/bin/pcanview
+pcanview-ncurs
+
+sudo modprobe peak_usb
+
+# lsusb
+...
+Bus 003 Device 027: ID 0c72:000c PEAK System PCAN-USB
+
+# ip link set can0 up type can bitrate 250000
+$ candump can0 > cantrace.txt
+$ candump -tA can0 > cantrace.txt      # includes date/time
+$ candump ... can0 | tee cantrace.txt  # so as to read what's logged
+
+Peak can driver
+1. Install libpopt lib. 
+$sudo apt-get install libpopt-dev
+
+2. Install peak can driver,download: https://www.peak-system.com/fileadmin/media/linux/files/peak-linux-driver-8.7.0.tar.gz
+
+/usr/include/linux/version.h
+

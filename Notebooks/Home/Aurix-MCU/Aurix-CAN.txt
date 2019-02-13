@@ -1,0 +1,33 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2019-01-29T15:52:37+08:00
+
+====== Aurix-CAN ======
+Created Tuesday 29 January 2019
+
+__/* Structure for CAN Message configuration (transmit/receive) */__
+
+typedef struct
+{
+	uint8							bufferNumber;				__/* Buffer Element number*/__
+	uint32							messageId;					__/* ID, Identifier*/__
+	boolean						remoteTransmitRequest;	__/* RTR, Remote Transmit Request (enable/disable) */__
+	IfxCan_MessageIdLength	messageIdLength;			__/* XTD, Message Id length (Standard/extended) */__
+	boolean						errorStateIndicator;			__/* ESI, Error State Indicator (enable/disable) */__
+	IfxCan_DataLengthCode	dataLengthCode;			__/* DLC, Data Length Code */__
+	IfxCan_FrameMode			frameMode;					__/* CAN frame mode */__
+	boolean						txEventFifoControl;			__/* EFC, Tx Event FIFO Control (enable/disable)*/__
+	boolean						storeInTxFifoQueue;		__/* Write message in Tx FIFO/QUEUE */__
+	boolean						readFromRxFifo0;			__/* Read message from Rx FIFO 0 */__
+	boolean						readFromRxFifo1;			__/* Read message from Rx FIFO 1 */__
+} IfxCan_Message;
+
+const t_node_config NODE_CONFIG[] =
+{
+	{0, IfxCan_NodeId_3, &CAN_A_PIN, "CAN_A"},		/* Index 0, CAN_PHY_A */
+	{2, IfxCan_NodeId_3, &CAN_B_PIN, "CAN_B"},		/* Index 1, CAN_PHY_B */
+	{0, IfxCan_NodeId_1, &CAN_C_PIN, "CAN_C"},		/* Index 2, CAN_PHY_C */
+	{1, IfxCan_NodeId_3, &CAN_D_PIN, "CAN_D"},		/* Index 3, CAN_PHY_D*/
+	{1, IfxCan_NodeId_1, &CAN_E_PIN, "CAN_E"},		/* Index 4, CAN_PHY_E*/
+	{1, IfxCan_NodeId_0, &CAN_F_PIN, "CAN_F"}		/* Index 5, CAN_PHY_F*/
+}

@@ -1,0 +1,36 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2019-01-29T10:28:57+08:00
+
+====== GitHub ======
+Created Tuesday 29 January 2019
+
+$git config --global user.name "DanielMonkey"
+$git config --global.user.email "xiangwei.yang@outlook.com"
+
+创建一个本地文件
+建立本地仓库
+首先进入layout文件夹：
+执行指令进行初始化，会在原始文件夹中生成一个隐藏的文件夹.git:
+$git init
+
+$git add . 								//添加当前文件夹下的所有文件
+$git add .cpp							//添加当前文件夹下的.cpp这个文件
+$git commit -m "layout"				//引号中的内容为对该文件的描述
+
+{{~/Pictures/GitHub_1.png?width=500}}
+$git remote add origin https://github.com/DanielMonkey/DanielMonkey.git
+
+如果出现错误：fatal: remote origin already exists，则执行一下语句：
+$git remote rm origin
+
+再重新执行：
+$git remote add origin https://github.com/DanielMonkey/DanielMonkey.git
+即可成功
+
+最后执行命令：
+$git push origin master
+如果出现错误failed to push some refs to ...，则执行一下语句，先把远程服务器github上面的文件拉下来，再push上去：
+$git pull origin master
+
+刷新github，即可看到上传的文件夹。

@@ -1,0 +1,30 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2019-01-28T18:04:11+08:00
+
+====== Linux Cmd ======
+Created Monday 28 January 2019
+1. Git Commands
+	git clone 
+	a. 3rdparty/eb - Contains Aurix TC297 and TC397 code
+git clone ssh://daniyang@git-master.nvidia.com:12001/3rdparty/eb && scp -p -P 12001 daniyang[[@git-master.nvidia.com]]:hooks/commit-msg eb/.git/hooks/
+
+	b. 3rdparty/altium - Contains Tasking compiler required to compile and build Aurix FW
+git clone ssh://daniyang@git-master.nvidia.com:12001/3rdparty/altium && scp -p -P 12001 daniyang[[@git-master.nvidia.com]]:hooks/commit-msg altium/.git/hooks/
+
+	c. tegra/drive-mcu-autosar - Contains MCU Safety services (L3SS and IST Manager) code
+git clone ssh://daniyang@git-master.nvidia.com:12001/tegra/drive-mcu-autosar && scp -p -P 12001 daniyang[[@git-master.nvidia.com]]:hooks/commit-msg drive-mcu-autosar/.git/hooks/
+
+	d. Internal firmware 
+git clone ssh://daniyang@git-master.nvidia.com:12001/3rdparty/infineon/aurixmcu && scp -p -P 12001 daniyang[[@git-master.nvidia.com]]:hooks/commit-msg aurixmcu/.git/hooks/
+
+2. Connection
+sudo ./tcu_muxer -d /dev/ttyUSB2 -g 16 -b 15 -i
+sudo minicom -D /dev/pts/32
+ssh nvidia@10.19.225.148
+
+3. copy file to Xavier
+scp file_name user_name@ip_addr:/routine/to/put/the/file
+
+
+
