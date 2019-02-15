@@ -1,0 +1,16 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2019-02-13T18:16:25+08:00
+
+====== Direction-determination ======
+Created Wednesday 13 February 2019
+
+The angular determination of the target is determined by the directiveity of the antenna. 
+Directivity, sometimes known as the directive gain, is the ability of the antenna to concentrate the transmitted energy in a particular direction.
+An antenna with high directivity is also called a directive antenna. 
+By measuring the direction in which the antenna is pointing when the echo is received, both the azimuth and elevation angles from the radar to the object or target can be determined. 
+The accuracy of angular measurement is determined by the directivity, which is a function of the size of the antenna.
+
+The True Bearing (referenced to true north) of a radar target is the angle between true north and a line pointed directly at the target. This angle is measured in the horizontal plan and in a clockwise direction from the true north.
+
+{{~/Pictures/bearing.png}}

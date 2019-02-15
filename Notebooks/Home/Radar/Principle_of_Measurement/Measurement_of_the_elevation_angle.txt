@@ -1,0 +1,12 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2019-02-14T15:54:28+08:00
+
+====== Measurement of the elevation angle ======
+Created Thursday 14 February 2019
+
+The elevation angle is the angle between the horizontal plane and the line of sight, measured in the vertical plane. The reference direction (i.e. an elevation angle of zero degrees) is a horizontal line in the direction to the horizon, starting from the antenna. The elevation angle is denoted by the Greek letter ε (epsilon) mostly. It is positive above the horizon, but negative below the horizon.
+
+Altitude- or height-finding radars use a very narrow fan beam in the vertical plane. Height-finding radar systems that also determine bearing must have a narrow beam in the horizontal plane in addition to the one in the vertical plane. The beam is mechanically or electronically scanned in elevation to pinpoint targets. If an echo signal is detected in the receiver, then the current elevation angle is equal to the direction of the antenna pattern.
+
+{{~/Pictures/elevation_angle.png}}

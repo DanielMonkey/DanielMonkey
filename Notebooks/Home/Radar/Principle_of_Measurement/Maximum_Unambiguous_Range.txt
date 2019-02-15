@@ -1,0 +1,65 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2019-02-14T13:58:18+08:00
+
+====== Maximum Unambiguous Range ======
+Created Thursday 14 February 2019
+
+The maximum unambiguous range (Rmax) is the longest range to which a transmitted pulse can travel out to and back again between consecutive transmitted pulses. 
+In other words, Rmax is the maximum distance radar energy can travel round trip between pulses and still produce reliable information.
+
+{{~/Pictures/unambiguous.png}}
+The relationship between the PRF or their reciprocal value interpulse period T (PRT) and Rmax determines the unambiguous range of the radar.
+Suppose the radar emits a pulse that strikes a target and returns to the radar in round trip time t:
+* If t < T then the return signal arrives before the next pulse has been emitted.
+* If t = T then the return signal arrives exactly when the next pulse has been emitted.
+* If t > T then the return signal arrives after the next pulse has been emitted and there is an ambiguity, ie the radar cannot tell whether the return signal has come from the first or second pulse.
+
+The greater the pulse repetition frequency fp (in pulses per second), the shorter the pulse repetition time T (interpulse period) and the shorter the maximum unambiguous range Rmax of the radar. Rmax must be greater than the Maximum Display Range (so called: instrumented range).
+
+staggered PRT
+By employing staggered PRT the target ambiguous return isn't represented any more by small arc on an analogue display. 
+This movement or instability of the ambiguous return is represented typically as a collection of points in certain equipment because of the change in reception times from impulse to impulse. With this distinction, a computer controlled signal processing can calculate the actual distance.
+
+Exemptions
+More mordern 3D- radar sets with a phased array antenna (like the RRP-117) don't have this problem with an ambiguous range. 
+The system computer steers the transmitted beams so that ambiguous returns from the previous pulses are not received while the antenna beam points in another direction.
+
+If the radar uses intrapulse modulation and uses a different waveform in each transmit pulse, the maxium unambiguous measuring distance is of no significance for the radar. Each received echo signal can be assigned to exactly its origin (the individually transmitted pulse) and thus the run time over several pulse periods can be measured.
+
+Radar sets in satellites for the remote sensing of the earth can, however, also represent targets at the correct distance, if they are actually ambiguous. The general height of the orbit is known, so only a distance can be measured that differs by a few kilometers from the height of the orbit. Compared to Fig. 1, this means that at an altitude of 400 km only the measurement result received in the second pulse period can be valid.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,30 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2019-02-13T17:34:23+08:00
+
+====== Basic design of a radar system ======
+Created Wednesday 13 February 2019
+
+* Transmitter
+The radar transmitter produces the short duration high-power rf pulses of energy that are into space by the antenna.
+
+* Duplexer
+The duplexer alternately switches the antenna between the transmitter and receiver so that only one antenna need to be used. This switching is necessary because the high-power pulses of the transmitter would destroy the receiver if energy were allowed to enter the receiver.
+
+* Receiver
+The receivers amplify and demodulate the received RF-signals. The receiver provides video signals on the output.
+
+* Radar Antenna
+The Antenna transfers the transmitter energy to signals in space with the required distribution and efficiency. This process is applied in an identical way on reception.
+
+* Indicator
+The indicator should present to the observer a continuous, easily understandable, graphic picture of the relative position of radar targets. 
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,12 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2019-02-13T18:02:59+08:00
+
+====== Range or distance measurement ======
+Created Wednesday 13 February 2019
+
+The actual range of a target from the radar is known as slant range.
+Slant range is the line of sight distance between the radar and the object illuminated. 
+While ground range is the horizontal distance between the emitter and its target and its calculation requires knowledge of the target's elevation.
+Since the waves travels to a target and back, the round trip time is dividing by two in order to obtain the time the wave took to reach the target.
+
