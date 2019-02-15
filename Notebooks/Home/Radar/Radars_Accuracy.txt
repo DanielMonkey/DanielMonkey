@@ -1,0 +1,27 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2019-02-15T17:53:23+08:00
+
+====== Radars Accuracy ======
+Created Friday 15 February 2019
+
+Accuracy is the degree of conformance between the estimated or measured position and/or the velocity of a platform at a given time and its true position or velocity.
+
+Radio navigation performance accuracy is usually presented as statistical measure of system error and is specified as:
+1. Predictable: The accuracy of a position in relation to the geographic or geodetic co-ordinates of the earth.
+2. Repeatable: The accuracy in which a user can return to a position whose co-ordinates have been measured at a previous time with the same navigation system.
+3. Relative: The accuracy which a user can determine one position relative to another (by neglecgting all possible errors).
+
+Accuarcy in range determination
+The theoretical maximum accuracy with which a distance can be measured depends on the accuracy of the runtime measurement.
+
+	Random Measurement Error
+	A random error occurs with a pulse radar when the rising edge of the echo signal is distorted by noise. Since the pulse is always superimposed with noise during measurement and the pulse plus the noise is measured as amplitude, the pulse is also displayed larger than it is in reality. This shifts the pulse edge and causes a measurement error in the run-time measurement.
+	
+	The time is measured at a point determined by a threshold value, usually at 0.707 of the maximum voltage.
+	However, this pulse is superimposed with the noise level (green). Only a voltage can be measured, which is formed by the sum of the instantaneous voltage of the pulse and the noise (dotted yellow line). This voltage exceeds the threshold value at an earlier time than the clean pulse. The difference is the random measurement error caused by the noise.
+	
+	If the duration of the pulse is know (which cannot be the case with primary radar, but with secondary radar), then this random error can be reduced mathematically by simultaneous evaluation of the front and rear edges of the pulse.
+	
+	
+	
