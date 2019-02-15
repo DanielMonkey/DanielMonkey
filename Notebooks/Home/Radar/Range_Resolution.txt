@@ -1,0 +1,19 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2019-02-15T11:03:14+08:00
+
+====== Range Resolution ======
+Created Friday 15 February 2019
+
+The target resolution of a radar is its ability to distinguish between targets that are very close in either range or bearing.
+Resolution is usually divided into two categories; range resolution and bearing resolution.
+
+Range resolution is the ability of a radar system to distinguish between two or more targets on the same bearing but at different ranges. The degree of range resolution depends on the width of the transmitted pulse, the types and sizes of targets, and the efficiency of the receiver and indicator. Pulse width is the primary factor in range resolution. A well-designed radar system, with all other factors at maximum efficiency, should be able to distiguish targets separated by one-half the pulse width time τ. Therefore, the theoretical range resolution cell of a radar system can be calculated from the following equation:
+Sr >= (c0 * τ) / 2
+
+Radar using Intrapulse-Modulation
+In a pulse compression system, the range-resolution of the radar is given by the length of the pulse at the output-jack of the pulse compressing stage. The ability to compress the pulse depends on the bandwidth of the transmitted pulse (BWtx) not by its pulse width.
+As a matter of course the receiver needs at least the same bandwidth to process the full spectrum of the echo signals.
+Sr >= c0 / (2 * BWtx)
+This allows very high resolution (and a small radar range resolution cell) to be obtained with long pulses, thus with a higher average power.
+{{./pasted_image.png?width=600}}
