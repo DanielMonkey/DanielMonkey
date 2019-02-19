@@ -1,0 +1,14 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2019-02-18T16:28:42+08:00
+
+====== 取余数 ======
+Created Monday 18 February 2019
+
+MOD(number, divisor)
+
+取同一列上一行的值：= INDIRECT(ADDRESS(ROW() - 1, COLUMN()))
+取上同一行向左两列：= INDIRECT(ADDRESS(ROW(), COLUMN() - 2))
+取上同一行向左一列：= INDIRECT(ADDRESS(ROW(), COLUMN() - 1))
+
+= MOD(INDIRECT(ADDRESS(ROW() - 1, COLUMN())) + 1, 4)

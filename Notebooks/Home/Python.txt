@@ -1,0 +1,9 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2019-02-16T12:50:59+08:00
+
+====== Python ======
+Created Saturday 16 February 2019
+
+Wait for a key input
+

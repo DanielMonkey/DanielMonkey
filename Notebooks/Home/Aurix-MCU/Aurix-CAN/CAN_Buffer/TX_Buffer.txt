@@ -1,0 +1,89 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2019-02-18T09:24:59+08:00
+
+====== TX Buffer ======
+Created Monday 18 February 2019
+
+typedef volatile struct _Ifx_CAN_TXMSG
+{
+	Ifx_CAN_TXMSG_T0			T0;				/* Transmit Buffer 0 */
+	Ifx_CAN_TXMSG_T1			T1;				/* Transmit Buffer 1 */
+	Ifx_CAN_TXMSG_DB			DB[64];		/* Data Byte m */
+} Ifx_CAN_TXMSG;
+
+typedef union
+{
+	Ifx_UReg_32Bit				U;				/* Unsigned access */
+	Ifx_SReg_32Bit				I;				/* Signed access */
+	Ifx_CAN_TXMSG_T0_Bits	B;				/* Bitfield access */
+} Ifx_CAN_TXMSG_T0;
+
+typedef struct _Ifx_CAN_TXMSG_T0_Bits
+{
+	Ifx_UReg_32Bit				ID:29;			/* [28:0] Identifier (rw) */
+	Ifx_UReg_32Bit				RTR:1;			/* [29:29] Remote Transmission Request (rw) */
+	Ifx_UReg_32Bit				XTD:1;			/* [30:30] Extended Identifier (rw) */
+	Ifx_UReg_32Bit				ESI:1;			/* [31:31] Error State Indicator (rw) */
+} Ifx_CAN_TXMSG_T0_Bits;
+
+typedef union
+{
+	Ifx_UReg_32Bit				U;				/* Unsigned access */
+	Ifx_SReg_32Bit				I;				/* Signed access */
+	Ifx_CAN_TSMSG_T1_Bits	B;				/* Bitfield access */
+} Ifx_CAN_TXMSG_T1_Bits;
+
+typedef struct _Ifx_CAN_TXMSG_T1_Bits
+{
+	Ifx_UReg_32Bit				R0:16;			/* [15:0] Reserved (rw) */
+	Ifx_UReg_32Bit				DLC:4;			/* [19:16] Data Length Code (rw) */
+	Ifx_UReg_32Bit				BRS:1;			/* [20:20] Bit Rate Switching (rw) */
+	Ifx_UReg_32Bit				FDF:1;			/* [21:21] FD Formate (rw) */
+	Ifx_UReg_32Bit				R22:1;			/* [22:22] Reserved (rw) */
+	Ifx_UReg_32Bit				EFC:1;			/* [23:23] Event FIFO Control (rw) */
+	Ifx_UReg_32Bit				MM:8;			/* [31:24] Message Marker (rw) */
+} Ifx_CAN_TXMSG_T1_Bits;
+
+typedef union
+{
+	Ifx_UReg_8Bit				U;				/* Unsigned access */
+	Ifx_SReg_8Bit				I;				/* Signed access */
+	Ifx_CAN_TXMSG_DB_Bits	B;				/* Bitfield access */
+} Ifx_CAN_TXMSG_DB;
+
+typedef struct _Ifx_CAN_TXMSG_DB_Bits
+{
+	Ifx_UReg_8Bit				DB:8;			/* [7:0] Data Byte m (rw) */
+} Ifx_CAN_TXMSG_DB_Bits;
+
+Ifx_CAN_TXMSG	*txBufferElement = IfxCan_Node_getTxBufferElementAddress(node->node, node->messageRAM.baseAddress, node->messageRAM.txBuffersStartAddress, bufferId);
+
+IFX_EXTERN	Ifx_CANTXMSG *IfxCan_Node_getTxBufferElementAddress(
+		Ifx_CAN_N	*node,
+		uint32			ramBaseAddress,
+		uint16			txBuffersStartAddress,
+		IfxCan_TxBufferId	txBufferNumber)
+numberOfConfigBytes = 8;
+txBufferSize = numberOfConfigBytes + numOfDataBytes;
+txBufferIndex = txBufferSize * ((uint16) txBufferNumber);
+txBufferElementAddress = ramBaseAddress + txBufferStartAddress + txBufferIndex;
+
+nodeConfig[i].messageRAM.baseAddress = (uint32) (can_used_module[NODE_CONFIG[i].module_index]);
+
+Ifx_CAN *can_used_module[CAN_USED_MODULES_NUM] = 
+{
+	&MODULE_CAN0;
+	&MODULE_CAN1;
+	&MODULE_CAN2
+};
+
+#define	MODULE_CAN0		((*(Ifx_CAN*)0xF0200000u))
+#define	MODULE_CAN1		((*(Ifx_CAN*)0xF0210000u))
+#define 	MODULE_CAN2		((*(Ifx_CAN*)0xF0220000u))
+
+{{./pasted_image.png?width=600}}
+
+SFR		Special Function Register
+
+

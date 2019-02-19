@@ -1,0 +1,94 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2019-02-18T09:13:52+08:00
+
+====== Rx Buffer ======
+Created Monday 18 February 2019
+
+typedef volatile struct _Ifx_CAN_RXMSG
+{
+	Ifx_CAN_R0	R0;			/* Register 0*/
+	Ifx_CAN_R1	R1;			/* Register 1*/
+	Ifx_CAN_DB	DB[64];	/* Data Byte m*/
+}Ifx_CAN_RXMSG;
+
+typedef union
+{
+	Ifx_UReg_32Bit		U;				/* Unsigned access */
+	Ifx_SReg_32Bit		I;				/* Signed access */
+	Ifx_CAN_R0_Bits		B;				/* Bitfield access */
+} Ifx_CAN_R0;
+
+typedef struct _Ifx_CAN_R0_Bits
+{
+	Ifx_UReg_32Bit	ID:29;				/* [28:0] Identifier (rwh) */
+	Ifx_UReg_32Bit	RTR:1;				/* [29:29] Remote Transmission Request (rwh) */
+	Ifx_UReg_32Bit	XTD:1;				/* [30:30] Extended Identifier (rwh) */
+	Ifx_URge_32Bit	ESI:1;				/* [31:31] Error State Indicator (rwh) */
+} Ifx_CAN_R0_Bits;
+
+typedef union
+{
+	Ifx_UReg_32Bit		U;				/* Unsigned access */
+	Ifx_SReg_32Bit		I;				/* Signed access */
+	Ifx_CAN_R1_Bits		B;				/* Bitfield access */
+} Ifx_CAN_R1;
+
+typedef struct _Ifx_CAN_R1_Bits
+{
+	Ifx_UReg_32Bit	RXTS:16;			/* [15:0] Rx Timestamp (rwh) */
+	Ifx_UReg_32Bit	DLC:4;				/* [19:16] Data Length Code (rwh) */
+	Ifx_UReg_32Bit	BRS:1;				/* [20:20] Bit Rate Swtich (rwh) */
+	Ifx_UReg_32Bit	FDF:1;				/* [21:21] Frame Data Format (rwh) */
+	Ifx_UReg_32Bit	reserved_22:2;	/* [23:22] Internal Reserved */
+	Ifx_UReg_32Bit	FIDX:7;			/* [30:24] Filter Index (rwh) */
+	Ifx_UReg_32Bit	ANMF:1;			/* [31:31] Accepted Non-Matching Frame (rwh) */
+} Ifx_CAN_R1_Bits;
+
+typedef union
+{
+	Ifx_UReg_8Bit	U;					/* Unsigned access */
+	Ifx_UReg_8Bit	I;					/* Signed access */
+	Ifx_CAN_DB_Bits	B;					/* Bitfield access */
+} Ifx_CAN_DB;
+
+typedef struct _Ifx_CAN_DB_Bits
+{
+	Ifx_UReg_8Bit	DB:8;				/* [7:0] Data Byte m (rwh) */
+}Ifx_CAN_DB_Bits;
+
+Ifx_CAN_RXMSG			*rxBufferElement;
+
+rxBufferElement = IfxCan_Node_getRxFifo0ElementAddress(node->node, node->messageRAM.baseAddress, node->messageRAM.rxFifo0StartAddress, bufferId);
+
+IFX_EXTERN	Ifx_CAN_RXMSG	*IfxCan_Node_getRxFifo0ElementAddress(
+		Ifx_CAN_N	*node,
+		uint32 ramBaseAddress,
+		uint16 rxFifo0StartAddress,
+		IfxCan_RxBufferId	rxBufferNumber)
+numOfConfigBytes = 8;
+numOfDataBytes = IfxCan_Node_getRxFifo0DataFieldSize(node);
+
+typedef enum
+{
+	IfxCan_DataFieldSize_8;				/* 8 byte data field */
+	IfxCan_DataFieldSize_12;			/* 12 byte data field */
+	IfxCan_DataFieldSize_16;			/* 16 byte data field */
+	IfxCan_DataFieldSize_20;			/* 20 byte data field */
+	IfxCan_DataFieldSize_24;			/* 24 byte data field */
+	IfxCan_DataFieldSize_32;			/* 32 byte data field */
+	IfxCan_DataFieldSize_48;			/* 48 byte data field */
+	IfxCan_DataFieldSize_64;			/* 64 byte data field */
+}  IfxCan_DataFieldSize;
+
+rxFifoElementSize = numOfconfigBytes + numOfDataBytes;
+
+
+
+
+
+
+
+
+
+

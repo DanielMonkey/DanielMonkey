@@ -1,0 +1,13 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2019-02-19T14:04:38+08:00
+
+====== Interrupt ======
+Created Tuesday 19 February 2019
+
+/* disable interrupt */
+boolean interruptState = IfxCpu_disableInterrupts();
+
+/* enable interrupts again */
+IfxCpu_restoreInterrupts(interruptState);
+

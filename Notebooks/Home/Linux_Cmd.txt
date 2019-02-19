@@ -26,5 +26,7 @@ ssh nvidia@10.19.225.148
 3. copy file to Xavier
 scp file_name user_name@ip_addr:/routine/to/put/the/file
 
+4. Show the path
+pwd
 
 
