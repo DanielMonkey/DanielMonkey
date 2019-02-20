@@ -11,3 +11,15 @@ UDP
 			udp_new()
 			udp_bind()
 			udp_recv()
+
+tegra_aurix_can_server_recv
+	can_src_ip = *addr;
+	can_src_port = port;
+
+IP_ADDR_ANY - ip_addr.h
+TEGRA_AURIX_CAN_SERVER_PORT
+TEGRA_CLIENT_PORT 	0xEBEB	-  ethernet_can_config.h
+
+
+
+

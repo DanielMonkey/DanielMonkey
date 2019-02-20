@@ -1,0 +1,13 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2019-02-20T10:03:50+08:00
+
+====== Shell Programming ======
+Created Wednesday 20 February 2019
+
+http://www.runoob.com/linux/linux-shell.html
+
+#!/bin/bash 
+#!/bin/sh
+#!告诉系统其后路径所指定的程序即使解释此脚本文件的shell程序。
+

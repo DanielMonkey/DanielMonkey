@@ -1,0 +1,30 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2019-02-20T09:37:22+08:00
+
+====== SocketCAN ======
+Created Wednesday 20 February 2019
+
+https://www.kernel.org/doc/Documentation/networking/can.txt
+
+sudo
+> ip link set can0 type can bitrate 500000 dbitrate 2000000 berrreport on fd on
+> ip link set up can0
+> ip link set down can0
+> cangen can0 -I 168 -L 8 -g 10 -n 50 -v -v
+
+nvidia@tegra-ubuntu:~/Documents$ cansend can0 0x12345
+
+Wrong CAN-frame format! Try:
+
+	<can_id>#{R|data}          for CAN 2.0 frames
+	<can_id>##<flags>{data}    for CAN FD frames
+
+<can_id> can have 3 (SFF) or 8 (EFF) hex chars
+{data} has 0..8 (0..64 CAN FD) ASCII hex-values (optionally separated by '.')
+<flags> a single ASCII Hex value (0 .. F) which defines canfd_frame.flags
+
+e.g. 5A1#11.2233.44556677.88 / 123#DEADBEEF / 5AA# / 123##1 / 213##311
+	 1F334455#1122334455667788 / 123#R for remote transmission request.
+
+nvidia@tegra-ubuntu:~/Documents$ cansend can0 6A1#DEADBEEF

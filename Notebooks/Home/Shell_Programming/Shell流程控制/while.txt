@@ -1,0 +1,18 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2019-02-20T15:39:01+08:00
+
+====== while ======
+Created Wednesday 20 February 2019
+
+while循环用于不断执行一系列命令，也用于从输入文件中读取数据；命令通常为测试条件。其格式为：
+
+while condition
+do
+	command
+done
+
+while循环可用于读取键盘信息。
+
+
+

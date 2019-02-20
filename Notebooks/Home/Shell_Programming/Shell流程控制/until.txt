@@ -1,0 +1,21 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2019-02-20T15:42:41+08:00
+
+====== until ======
+Created Wednesday 20 February 2019
+
+until循环执行一系列命令直至条件为true时停止。
+until循环与while循环在处理方式上刚好相反。
+一般while循环优于until循环，但在某些时候——也只是极少数情况下，until循环更加有用。
+until语法格式：
+
+until condition
+do
+	command
+done
+
+condition一般为条件表达式，如果返回值为false，则继续执行循环体内的语句，否则跳出循环。
+
+
+

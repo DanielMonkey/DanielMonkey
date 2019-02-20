@@ -1,0 +1,24 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2019-02-20T15:41:32+08:00
+
+====== 无限循环 ======
+Created Wednesday 20 February 2019
+
+无线循环语法格式：
+while :
+do
+	command
+done
+
+或者
+while true
+do
+	command
+done
+
+或者
+for (( ; ; ))
+
+
+

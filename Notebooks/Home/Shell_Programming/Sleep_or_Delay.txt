@@ -1,0 +1,18 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2019-02-20T10:58:24+08:00
+
+====== Sleep or Delay ======
+Created Wednesday 20 February 2019
+
+How do I pause for 5 seconds or 2 minutes in my bash shell script on a Linux or Unix-like systems?
+
+You need to use the sleep command to add delay for a specified amout of time. 
+The syntax is as follows for gnu/bash sleep command:
+sleep NUMBER[SUFFIX]
+Where SUFFIX may be:
+1. s for seconds (the default)
+2. m for minutes
+3. h for hours
+4. d for days
+

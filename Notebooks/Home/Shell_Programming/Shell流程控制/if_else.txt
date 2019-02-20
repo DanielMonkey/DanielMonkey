@@ -1,0 +1,48 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2019-02-20T15:25:26+08:00
+
+====== if else ======
+Created Wednesday 20 February 2019
+
+if
+if语句语法格式：
+if condition
+then
+	command1
+	command2
+	...
+	commandN
+fi
+
+写成一行（适用于终端命令提示符）：
+if [ $(ps -ef | grep -c "ssh") -gt 1]; then echo "true"; fi
+
+末尾的fi就是if倒过来写，后面还会遇到类似的。
+
+if else
+if else语法格式：
+if condition
+then
+	command1
+	command2
+	...
+	commandN
+else
+	command
+fi
+
+if else-if else
+if else-if else语法格式
+if condition1
+then
+	command1
+elif condition2
+then
+	command2
+else
+	commandN
+fi
+
+if else语句经常与test命令结合使用，
+
