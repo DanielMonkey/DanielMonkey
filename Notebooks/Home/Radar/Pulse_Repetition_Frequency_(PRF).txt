@@ -1,0 +1,9 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2019-02-21T10:17:59+08:00
+
+====== Pulse Repetition Frequency (PRF) ======
+Created Thursday 21 February 2019
+
+The Pulse Repetition Frequency (PRF) of the radar system is the number of pulses that are transmitted per second.
+

@@ -23,5 +23,47 @@ The theoretical maximum accuracy with which a distance can be measured depends o
 	
 	If the duration of the pulse is know (which cannot be the case with primary radar, but with secondary radar), then this random error can be reduced mathematically by simultaneous evaluation of the front and rear edges of the pulse.
 	
+	Systematic Measurement Errors
+	With a pulse radar, the run time is generally measured from the rising edge of the transmit pulse to the rising edge of the echo signal. The accurary of this measurement depends on the magnitude of the clock frequency for this time measurement. Measurement results between the cycles are not possible and generate a systematic measurement error.
+	Practically, the accuracy depends on the size of the individual range-cells in the signal processing. 
+	ICAO recommends a range cell size of 1/128 NM, i.e. about 14.5 m, for air traffic control air surveillance radar, which corresponds to a time interval of almost 10 nanoseconds.
+	With a CW radar, the measurement of the phase shift of the received signal relative to the current phase of the transmitter may contain (albeit ambiguous) distance information.
+	The accuracy of an FMCW radar also depends on the transmitter, especially on the slope and linearity of the frequency drift.
+
+Accuracy in Angle Measurement
+The accuracy of the angle measurement depends both on internal signal processing methods and on external conditions. Anomalous propagation condiitons, which frequently occur due to changes in air pressure in height angle measurements, can in  principle also occur in side angles and form a random error. However, more frequent systematic error sources occur internally.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 	
 	

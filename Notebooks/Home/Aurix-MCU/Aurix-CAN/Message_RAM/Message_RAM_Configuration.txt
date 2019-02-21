@@ -1,0 +1,11 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2019-02-20T17:25:46+08:00
+
+====== Message RAM Configuration ======
+Created Wednesday 20 February 2019
+
+When operated in CAN FD mode the required Message RAM size strongly depends on the element size configured for Rx FIFO0, Rx FIFO1, Rx Buffers, and Tx Buffers via RXESCi.F0DS, RXESCi.F1DS, RXESCi.RBDS, and TXESCi.TBDS.
+
+{{./pasted_image.png?width=600}}
+
