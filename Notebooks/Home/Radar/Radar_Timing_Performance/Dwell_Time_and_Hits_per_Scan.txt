@@ -14,4 +14,48 @@ The dwell time can be calculated using the following equation:
 {{./pasted_image.png}}
 
 Hits per Scan
+The value of the hits per scan //m// says how many echo signals per single target during every antenna rotation are received. The hit number stands e.g. for a search radar with a rotating antenna for the number of the received echo pulses of a single target per antenna turn. The dwell time TD and the pulse repetition time PRT determine the value of hits per scan.
+{{./pasted_image001.png}}
+In order to evaluate the target position in radar systems with sufficient accurary, hit numbers from 1 to 20 are necessary (depending on the working principle of the radar system). The greater the number of hits per scan, the more accurate will be the angle measurement and the better the MTI performance.
+
+For analogue displays, the size and brightness of the target character on the screen is also determined by how many hits per scan the target has received. A measurement of the accurate azimuth of the target is still defined herein the center of the blip on the screen. (The distance is measured at the front edge of this blip).
+
+Many radars use [[../../Pulse_Integration.txt|pulse integration]] in the radar signal processing to distinguish the target signals from noise and interference pulses. If the number of this per scan is too small, this target can be suppressed by the increased threshold values because of these disturbance.
+
+In the case of a digital plotextractor, which uses the method of sliding window to determine the azimuth, a predetermined number of hits per scan must also be achieved.
+A radar with a monopulse antenna requires only one pulse for the accurate azimuth measurement. However, monopulse radars also often require two, three, or more pulses for moving target indication.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

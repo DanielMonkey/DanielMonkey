@@ -1,0 +1,48 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2019-02-21T17:26:43+08:00
+
+====== Time-dependences in Radar ======
+Created Thursday 21 February 2019
+
+{{./pasted_image.png}}
+
+Radar parameters such as antenna rotations per minute, dwell time, maximum unambiguous range, pulse repetition frequency (PRF), maximum number of hits per target are strongly interdependent. Finally also all other radar characteristics such as range and azimuth resolution, blind speed etc could be derived from this basic timing considerations. 
+A classic radar (i.e. radar, not using monopulse technology) operating as an ATC-Radar needs a data renewal time of less than 5 seconds. This requirement limits the receiving time and the maximum unambiguous ranges as following:
+
+Since the radar processing in this surveillance radar is still in real time (with relatively low, but constant delay), the data renewal time depends on the antenna revolution time. To direct in the same azimuth angle after 5 seconds, so that the radar can measure the co-ordinates again, the antenna must turn with 12 revolutions per minute at least.
+
+The dwell time, the time that an antenna beam spends on a target, depends predominantly on the antennas horizontally beam width and the turn speed of the antenna. If we assume, that a well designed parabolic antenna got a beam width of 1.6 degress, the full circle of 360 degrees is divided by 360º / 1.6º = 225 different directions. 5 seconds divided by the number of 225 gives a dwell time of 5 s / 225 = 22.22 milliseconds.
+
+These radar sets need a given number of hits per scan. This is necessary, to integrate the signals (see pulse integration) of different pulse periods for a better distinction of wanted signals from unwanted noise, as well as to measure a correct angular direction. Assumed a necessary number of 20 hits per scan, the maximum pulse period take a time of 1 millisecond therefore. Assuming a receiving time less than 1 millisecond, the maximum unambiguous range of the ATC-radar is smaller than 150 kilometers. If the radar uses a staggered pulse repetition frequency to avoid blind speeds in radar signal processing, then the smallest period gives the base to the range calculation. So we must calculate with a period of about 0.8 ms instead of 1 ms. The maximum unambiguous range of this given ATC-radar is 120 kilometers or 65 nautical mile therefore.
+
+So we can see, that the time scheduling of radar is very important. Most of parameters are fixed and the maximum range of given radar set is time dependent predetermined. Additional measuring of an elevation angle is not possible often. To promise a higher range, demands fundamental changes in the radar signal processing as like as monopulse technology and/or digital beamforming. Even small changes in the needed number of hits per scan (as a possible alternative to increase the receiving time to achieve a better unambiguous range) have negative influence on the radars probability of detection.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -16,6 +16,8 @@ Suppose the radar emits a pulse that strikes a target and returns to the radar i
 * If t = T then the return signal arrives exactly when the next pulse has been emitted.
 * If t > T then the return signal arrives after the next pulse has been emitted and there is an ambiguity, ie the radar cannot tell whether the return signal has come from the first or second pulse.
 
+{{./pasted_image001.png}}
+{{./pasted_image002.png}}
 The greater the pulse repetition frequency fp (in pulses per second), the shorter the pulse repetition time T (interpulse period) and the shorter the maximum unambiguous range Rmax of the radar. Rmax must be greater than the Maximum Display Range (so called: instrumented range).
 
 staggered PRT
