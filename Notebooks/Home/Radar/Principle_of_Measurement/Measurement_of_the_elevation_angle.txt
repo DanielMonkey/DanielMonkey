@@ -9,4 +9,5 @@ The elevation angle is the angle between the horizontal plane and the line of si
 
 Altitude- or height-finding radars use a very narrow fan beam in the vertical plane. Height-finding radar systems that also determine bearing must have a narrow beam in the horizontal plane in addition to the one in the vertical plane. The beam is mechanically or electronically scanned in elevation to pinpoint targets. If an echo signal is detected in the receiver, then the current elevation angle is equal to the direction of the antenna pattern.
 
-{{~/Pictures/elevation_angle.png}}
+{{./pasted_image.png}}
+

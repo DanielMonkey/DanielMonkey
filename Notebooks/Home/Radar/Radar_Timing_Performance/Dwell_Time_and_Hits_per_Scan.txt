@@ -1,0 +1,17 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2019-02-21T16:40:09+08:00
+
+====== Dwell Time and Hits per Scan ======
+Created Thursday 21 February 2019
+
+Dwell Time
+The time that an antenna beam spends on a target is called dwell time TD. The dwell time of a 2D-search radar depends predominatly on
+* the antenna horizontally beam width ΘAZ and 
+* the speed of rotation n of the antenna (rotations per minute)
+
+The dwell time can be calculated using the following equation:
+{{./pasted_image.png}}
+
+Hits per Scan
+

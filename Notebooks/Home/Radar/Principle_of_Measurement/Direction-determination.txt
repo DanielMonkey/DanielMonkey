@@ -13,4 +13,5 @@ The accuracy of angular measurement is determined by the directivity, which is a
 
 The True Bearing (referenced to true north) of a radar target is the angle between true north and a line pointed directly at the target. This angle is measured in the horizontal plan and in a clockwise direction from the true north.
 
-{{~/Pictures/bearing.png}}
+{{./pasted_image.png}}
+

@@ -1,0 +1,44 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2019-02-21T15:32:27+08:00
+
+====== Duty Cycle ======
+Created Thursday 21 February 2019
+
+Peak- and Average Power
+The energy content of a continuous-wave radar transmission may be easily figured because the transmitter operates continuously.
+{{./pasted_image002.png}}
+
+However, pulsed radar transmitters are switched on and off to provide range timing information with each pulse. The amount of energy in this waveform is important because maximum range is directly related to transmitter output power.
+The more energy the radar system transmits, the greater the target detection range will be. The energy content of the pulse is equal to the peak (maximum) power level of the pulse multiplied by the pulse width. However, meters used to measure power in a radar system do so over a period of time that is longer than the pulse width. For this reason, pulse-repetition time is included in the power calculations for transmitters. Power measured over such a period of time is referred to as average power.
+{{./pasted_image001.png}}
+
+Peak power must be calculated more often than average power. This is because most measurement instruments measure average power directly. 
+Transposing the upper equation gives us a common way for calculating peak power/average power.
+Since the storage of the energy in the modulator, the power supply must make plant for the transmitter available a little more than the average power only.
+
+Duty cycle
+The production of pulse width (τ) and pulse-repetition frequency (prf) as the reciprocal of the pulse period (T) in the above formula is called duty cycle of a radar system.
+Duty cycle is the fraction of time that a system is in an "active" state. In particular, it is used in the following contexts: Duty cycle is the propertion of time during which a component, device, or system is operated. Suppose a transmitter operates for 1 microsecond, and is shut off for 99 microseconds, then is run for 1 microsecond again, and so on. The transmitter runs for one out of 100 microseconds, or 1/100 of the time, and its duty cycle is therefore 1/100, or 1 percent. 
+The duty cycle is used to calculated both the peak power and average power of a radar system.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

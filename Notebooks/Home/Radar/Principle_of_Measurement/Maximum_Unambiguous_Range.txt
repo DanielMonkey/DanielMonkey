@@ -8,7 +8,8 @@ Created Thursday 14 February 2019
 The maximum unambiguous range (Rmax) is the longest range to which a transmitted pulse can travel out to and back again between consecutive transmitted pulses. 
 In other words, Rmax is the maximum distance radar energy can travel round trip between pulses and still produce reliable information.
 
-{{~/Pictures/unambiguous.png}}
+{{./pasted_image.png}}
+
 The relationship between the PRF or their reciprocal value interpulse period T (PRT) and Rmax determines the unambiguous range of the radar.
 Suppose the radar emits a pulse that strikes a target and returns to the radar in round trip time t:
 * If t < T then the return signal arrives before the next pulse has been emitted.

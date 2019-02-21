@@ -1,0 +1,59 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2019-02-21T10:17:59+08:00
+
+====== Pulse Repetition Frequency (PRF) ======
+Created Thursday 21 February 2019
+
+
+The Pulse Repetition Frequency (PRF) of the radar system is the number of pulses that are transmitted per second.
+
+{{./pasted_image002.png}}
+
+The time between the beginning of one pulse and the start of the next pulse is called pulse-repetition time (PRT) and is equal to the reciprocal of PRF.
+
+Receiving Time
+Generally, the receiving time is time between the transmitter pulses. The receiving time is always smaller than the difference between the pulse repetition and the length of the transmitters pulse. It is sometimes also limited by a so-called dead time, in which the receiver is already switched off just before the next transmitting pulse.
+In some radars between the transmitting pulse and the receiving time there is a short recovery time of the duplexer. This recovery time occurs when the duplexer must switch off the receiver response to the high transmitting power. At very low transmitting power, however, can already be received during the transmit pulse also. The receiving time includes the transmission time then.
+
+Dead Time
+If the receiving time ends before the next transmitting pulse, the result is a dead time. During the dead time are carried out system test loops in modern radars generally.
+Radars that use a phased-array antenna, urgently need such a dead time. For within this time, the phase shifters of the antenna must be reprogrammed to prepare the antenna for the next direction of the anennas beam. This can take up to 200 microseconds, why then the dead time takes quite large values compared with the receive time.
+In this dead time the receiver is already switched off because during the reprogramming the antenna can not provide received signals. Because during this time, no real data can be processed in any case, this time is used to perform internal testing procedures in the modules of the receive path. This is done in order to verify the operational readiness of certain electronic circuit, and to adjust them, if necessary. For this purpose signals are generated with known size. These signals are fed into the receive paths and their processing in the individual modules is monitored. However, the video processor switches off these pulses, so that they do not appear on the screen. If necessary as a result of the tests the modules can be automatically reconfigured and it can be written a detailed error message.
+
+Burst-Mode
+{{./pasted_image003.png}}
+
+The distribution of the dead time does not have to be uniform. 
+It can be also be transmitted a number of pulses in rapid succession one after the other with each a short receive time, before dead time appears.
+For example, if several pulse periods are orientated in the same direction (as like necessary for pulse pair processing) and moving target detection), then a dead time is not needed. This have advantages for the time budget of the radar. A random unwanted change in phase angle of the generator is not likely after a shorter time. Therefore, the radar will be more accurate in the distance measurement. 
+Simultaneously, the pulse repetition frequency changes in this short period of time: it is very higher than the average. The higher the pulse repetion frequency, the better is the unambiguous measurement of the velocity (see Doppler ambiguity).
+
+didactical radars
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
