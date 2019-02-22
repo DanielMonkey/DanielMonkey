@@ -1,0 +1,53 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2019-02-22T10:17:40+08:00
+
+====== Radial Speed ======
+Created Friday 22 February 2019
+
+Each motion with a given velocity has a direction: It is a vector therefore. In relation to a direction of observation, this motion-vector can be broken down into two components:
+* the motion along the radial (either directly toward or away from the observer, called radial speed);
+* the motion perpendicular to that radial (called tangential speed).
+
+The diagonal of the rectangle, which is described by these two vectors, is again the real speed of the observed object. The length of the vector expresses the magnitude of the velocity (the longer the arrow, the faster the speed); the direction of the vector is consistent with the direction of movement (the source of the aircraft).
+
+All the radar "sees" is that part of motion along the radial (i.e. along the path of the antenna beam). Mostly this is NOT the real course of the object, but the portion of the object's motion that is moving either directly toward or away from the radar.
+
+The radial speed of an airplane is the part of the speed which acts towards the radar or away from it.
+
+Perpendicular to this is the vector of tangential speed. The tangential speed has an effect on the antenna control of target tracking radars.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,88 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2019-02-22T15:38:43+08:00
+
+====== Phased Array Antenna ======
+Created Friday 22 February 2019
+
+A phased array antenna is composed of lots of radiating elements each with a phase shifter. Beams are formed by shifting the phase of the signal emitted from each radiating element, to provide constructive/destructive interference so as to steer the beams in the desired direction.
+
+{{./pasted_image.png}}
+In the figure 1 (left) both radiating elements are fed with the same phase. The signal is amplified by constructive interference in the main direction. The beam sharpness is improved by the destructive interference.
+In the figure 1 (right), the signal is emitted by the upper radiating element with a phase shift of 22 degrees later than of the lower radiating element. Because of this the main direction of the emitted sum-signal is moved slightly upwards.
+(Note: Radiating elements have been used without reflector in the figure. Therefore the back lobe of the shown antenna diagrams is just as large as the main lobe.)
+
+The main beam always points in the direction of the increasing phase shift. Well, if the signal to be radiated is delivered through an electronic phase shifter giving a continuous phase shift then the beam direction will be electronically adjustable. However, this cannot be extended unlimitedly. The highest value, which can be achieved for the Field of View (FOV) of a olanar phased array antenna is 120º (60º left and 60ºright). With the sine theorem the necessary phase moving can be calculated.
+
+The following figure graphically shows the matrix of radiating elements. Arbitrary antenna constructions can be used as a spotlight in an antenna field. For a phased array antenna is decisive that the single radiating elements are steered for with a regular phase moving and the main direction of the beam therefore is changed.
+More sophsticated radar sets use the benefits of a Digital Beamforming architecture.
+
+Advantages
+* high gain width los side lobes
+* Ability to permit the beam to jump from one target to the next in a few microseconds
+* Ability to provide an agile beam under computer control
+* arbitrarily modes of surveillance and tracking
+* free eligible Dwell Time
+* multifunction operation by emitting several beams simultaneously
+* Fault of single components reduces the capability and beam sharpness, but the system remains operational
+
+Disadvantages
+* the coverage is limited to a 120 degree sector in azimuth and elevation
+* deformation of the beam while the deflection
+* low frequency agility
+* very complex structure (processor, phase shifters)
+* still high costs
+
+Possible Arrangements
+Linear Arrays
+{{./pasted_image001.png}}
+These antenna consist of lines whose elements are fed about a common phase shifter. A number of vertically about each other mounted linear arrays form a flat antenna.
+* Advantage: simple arragement
+* Disadvantage: Ray deflection only in a single plane possible
+
+This kind of the phased-arry antenna is commonly used, if the beam-deflection is required in a single plane only because a turn of the complete antenna is anyway carried out.
+
+Planar Arrays
+{{./pasted_image002.png}}
+These antenna arrays completely consist of singles radiating elements and each of it gets an own phase shifter. The elements are ordered in a matrix array. The planar arrangement of all elements forms the complete phased-array antenna.
+* Advantage: Beam steering in two planes or even the digital beamforming is possible.
+* Disadvantage: complicated arrangement and more electronically controlled phase shifter needed.
+
+Frequency Scanning Array
+Frequency scanning is a special case of the phased array antenna where the main beam steering occurs by the frequency scanning of the exciter. The beam stearing is a function of the transmitted frequency. This type of antenna is called a frequency scanning array. The normal arrangement is to feed the different radiating elements from one folded waveguide. The frequency scanning array is a special case of serial feeding type of a phased array antenna and is based on a particular property of wave propagation in waveguides. The phase difference between two radiating elements is n*360º at the normal frequency.
+
+By changing the frequency, the angle ΘS between the axis of the main beam and the normal on the array antenna changes. Height information is generated using the following philosophy:
+* If the transmitted frequency rises then the beam travels up the face of the antenna
+* If the transmitted frequency falls then the beam travels down the face of the antenna.
+
+As frequency is varied, the beam axis will change, and scanning can be accomplished in elevation. The radar set is designed so that it keeps track of the frequencies as they are transmitted and then detects and converts the returned frequencies into 3D display data.
+
+Note that frequency scanning reduces the value of using frequency change as a means of achieving other valuable effects (benefits of pulse compression).
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

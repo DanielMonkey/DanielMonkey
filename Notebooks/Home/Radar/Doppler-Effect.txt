@@ -1,0 +1,91 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2019-02-22T09:55:40+08:00
+
+====== Doppler-Effect ======
+Created Friday 22 February 2019
+
+In radar technology the Doppler Effect is using for the following tasks:
+* Speed measuring
+* MTI - Moving Target Indication
+* in air-or space-based radar systems for precise determination of lateral distances.
+
+The Doppler-Effect is the apparent change in frequency or pitch when a sound source moves either toward or away from the listener, or when the listener moves either toward or away from the sound source. This principle, discovered by the Austrian physicist Christian Doppler, applies to all wave motion.
+
+The apparent change in frequency between the source of a wave and the receiver of the wave is because of relative motion between the source and the receiver. To understand the Doppler effect, first assume that the frequency of a sound from a sournce is held constant. The wavelength of the sound will also remain constant. If both the source and the receiver of the sound remain stationary, the receiver will hear the same frequency sound produced by the source. This is because the receiver is receiving the same number of waves per second that the source is producing.
+
+Now, if either the source or the receiver or both move toward the other, the receiver will perceive a higher frequency sound. This is because the receiver will receive a greater number of sound waves per second and interpret the greater number of waves as a higher frequency sound. Conversely, if the source and the receiver are moving apart, the receiver will receive a smaller number of sound waves per second and will perceive a lower frequency sound. In both cases, the frequency of the sound produced by the source will have remained constant.
+
+{{./pasted_image.png}}
+The equation is valid, if the speed if the source of a wave is like the radial speed. 
+But the airplane usually flies in another direction than the direction towards to the radar. Only the radial speed is then also measured. However, this is different from the aim speed so that the following equation is valid:
+{{./pasted_image001.png}}
+
+
+Derivation of the Doppler-frequency formula
+{{./pasted_image002.png}}
+The phase shifting φ of an electromagnetic wave from the radar antenna to the aim and back results from the ratio of the covered distance and the wavelength of the transmitted energy multiplied with the scale of the full circle (2*π):
+{{./pasted_image003.png}}
+
+If the aim has the radial speed
+{{./pasted_image004.png}}
+then the value of the phase changes to
+{{./pasted_image005.png}}
+This is equivalent to the Doppler-frequency fD according to:
+{{./pasted_image006.png}}
+This means: In practice the Doppler-frequency occurs twice at a radar. 
+Once on the way from the radar to the aim, and then for the reflected (and already afflicted by a Doppler-shift) energy on the way back.
+
+Normalized Doppler Frequency
+The Doppler frequency depends on two variables: the aim radial speed and the carrier frequency of the radar transmitter. If the frequency of the transmitter is constant, then the Doppler frequency is a measure of the radial speed.
+Modern radars are frequency diversity radars mostly. Their transmitters frequency isn't constant. Here the influence of different transmit frequencies is usually still low. But if the transmission frequencies are in different frequency bands, then a common radar signal processing is not possible. In digital radar signal processing, the Doppler frequency will be divided by the actual transmitted frequency in order to elimitate the influence of different transmit frequencies then:
+{{./pasted_image007.png}}
+Now the Doppler frequency is a measure of the radial speed only and is called "normalized". The received echo signals from different radar frequencies can be processed in common now.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

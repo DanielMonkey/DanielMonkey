@@ -1,0 +1,74 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2019-02-21T18:24:24+08:00
+
+====== Continuous Wave Radar ======
+Created Thursday 21 February 2019
+
+{{./pasted_image.png}}
+Continuous Wave Radar (CW radar) sets transmit a high-frequency signal continuously. The echo signal is received and processed permanently. One have to resolve two problems with this principle:
+* prevent a direct connection of the transmitted energy into the receiver (feedback connection)
+* assign the received echoes to a time system to be able to do run time measurements.
+
+A direct connection of the transmitted energy into the receiver can be prevented by:
+* spatial separation of the transmitting antenna and the receiving antenna, e.g. the aim is illuminated by a strong transmitter and the receiver is located in the missile flying direction towards the aim;
+* frequency dependent separation by the Doppler-frequency during the measurement of speeds.
+
+Doppler Radar
+An unmodulated continuous wave radar emits a constant frequency with constant amplitude. The received echo signal either has exactly the same frequency, or the echo signal is shifted by the Doppler frequency (with a reflector moving at a radial velocity). CW radras that specialize in measuring this Doppler frequency are called Doppler radars.
+
+A runtime measurement is not necessary at all with a Doppler radar for speed measurement, since no distance determination is carried out. 
+If a runtime measurement is to be carried out, then a time reference of the received echo to the transmitted signal can be estiblished by modulating the transmitted signal. 
+This modulation, i.e. the actual time at which the transmitted signal changes in frequency or amplitude, can be registered in the receiver after the delay time and thus makes time measurement possible. Such modulation, however, results in other radar classes, which subsequently use completely different measurement principles (for example, frequency modulation: FMCW radar). Amplitude modulation at 100% modulation is also conceivable and would lead to a pulse radar. A radar that emits an unmodulated oscillation can only detect the speed of an object via the Doppler effect. It is not possible to determine distances or distinguish different targets in the same direction.
+
+Function
+{{./pasted_image001.png}}
+The continuous wave radar evaluates the phase difference φ between the transmitted signal and the received signal. The magnitude of this phase difference is the ratio of the wavelength of the transmitted signal to the distance travelled by the electromagnetic wave, multiplied by the degree division of the full circile (2*π). The magnitude of this phase difference is the ratio of the wavelength of the transmitted signal to the distance traveled. If the distance to the reflector does not change, then it is constant and is calculated according to:
+{{./pasted_image002.png}}
+The factor 2 to the distance r means that the signal has to pass through this distance twice (round trip). The minus sign is generated because a phase jump of 180º occurs during reflection. A direct calculation of a distance from this phase difference is not possible. 
+For example, it would only be possible if the distance were between 0 and 2π (≙ φ < 360º). From this distance ambiguities arise due to the periodicity of the sine wave.
+If the distance to the reflector is not constant, but changes, for example, with a relative constant speed to the transmitting antenna, and phase difference also changes as a function of time:
+{{./pasted_image003.png}}
+
+A time-dependent and constant change in the phase difference between two sinusoidal signals over the measurement period corresponds to a sinusoidal signal curve again. This can also be measured as a frequency: the Doppler frequency. In most cases, this is the audio frequency range. At a constant transmission frequency, this Doppler frequency is proportional to the radial speed.
+
+Block diagram of CW radar
+{{./pasted_image004.png}}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
