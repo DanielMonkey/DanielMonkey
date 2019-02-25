@@ -1,0 +1,151 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2019-02-25T09:15:38+08:00
+
+====== Frequency-Modulated Continuous Wave Radar (FMCW Radar) ======
+Created Monday 25 February 2019
+
+FMCW radar (Frequency-Modulated Continuous Wave radar = FMCW radar) is a special type of radar sensor which radiates continuous transmission power like a simple continuous wave radar (CW-Radar). In contrast to this CW radar FMCW radar can change its operating frequency during the measurements through runtime measurements are only technically possible with these changes in frequency (or phase).
+
+Simple continuous wave radar devices without frequency modulation have the disadvantage that it cannot determine target range because it lacks the time mark necessary to allow the system to time accurately the transmit and receive cycle and to convert this into range. Such a time reference for measuring the distance of stationary objects, but can be generated using of frequency modulation of the transmitted signal. In this method, a signal is transmitted, which increases or decreases in the frequency periodically. When an echo signal is received, that range of frequency gets a delay Δt (by runtime shift) like to as the pulse radar technique. In pulse radar, however, the runtime must be measured directly. In FMCW radar are measured the differences in phase or frequency between the actually transmitted and the received signal instead.
+
+The basic features of FMCW radar are:
+* Ability to measure very small ranges to the target (the minimal measured range is comparable to the transmitted wavelength);
+* Ability to measure simultaneously the target range and its relative velocity;
+* Very high accuracy of range measurement;
+* Signal processing after mixing is performed at a low frequency range, considerably simplifying the realization of the processing circuits;
+* Safety from the absence of the pulse radiation with a high peak power.
+
+{{./pasted_image.png}}
+
+Principle of measurement
+Characteristics of FMCW radar are:
+* The distance measurement is accomplished by comparing the frequency of the received signal to a reference (usually directly the transmission signal).
+* The duration of the transmitted waveform T is substantially greater than the required receiving time for the installed distance measuring range.
+
+The distance R to the reflecting object can be determined by the following relations:
+{{./pasted_image001.png}}
+
+If the change in frequency is linear over a wide range, then the radar range can be determined by a simple frequency comparison. The frequency difference Δf is proportional to the distance R. Since only the absolute amount of the difference frequency can be measured (negative numbers for frequency doesn't exist), the results are at a linearly increasing frequency equal to a frequency decreasing (in a static scenario: without Doppler effects).
+If the reflecting object has a radial speed with respect to the receving antenna, then the echo signal gets a Doppler frequency fD (caused by the speed). The radar measures not only the difference frequency Δf to the current frequency (caused by the runtime), but addtional a Doppler frequency fD (caused by the speed). The radar then measures depending on the movement direction and the direction of the linear modulation only the sum or the difference between the difference frequency as the carries of the distance information, and of the Doppler frequency as a carrier of the velocity information. If the measurement is made during a falling edge of a saw tooth (see right part of Figuire 3), then the Doppler frequency fD is subtracted by the runtime frequency change. If the reflecting object is moving away from the radar, then the frequency of the echo signal is reduced by the Doppler frequency additionally. Now, if the measurement is performed with a sawtooth as shown in Figure 1, then the received echo signal (the green graph) is moved not only by the run time to the right, but also by the Doppler freuqency down. The measured difference Δf is by the Doppler frequency fD higher than according to the real run time should be.
+
+Maximum Range and Range Resolution
+By suitable choise of the frequency deviation per unit of time can be determined the radar resolution, and by choise of the duration of the increasing of the frequency (the longer edge of the red sawtooth in Figure 1), can be determined the maxium non-ambiguous range. 
+The maximum frequency shift and steepness of the edge can be varied depending on the capabilities of the technology implemented circuit.
+
+The maximum unambiguous range is determined by the necessary temporal overlap of the (delayed) received signal with the transmitted signal. This is usually much larger than the energetic range, i.e. the limitations by the free space loss.
+
+For the range resolution of an FMCW radar, the bandwidth BW of the transmitted signal is decisive (as in so-called chirp radar). However, the technical possibilities of Fast Fourier Transformation are limited in time (i.e. by the during of the sawtooth T). The resolution of the FMCW radar is determined by the frequency change that occurs within this time limit.
+{{./pasted_image002.png}}
+
+The reciprocal of the duration of the sawtooth pulse leads to the smallest possible detectable frequency. This can be expressed in the equation (1) as |Δf| and results in a range resolution capability of the FMCW radar.
+
+Example
+For example, a given radar with a linear frequency shift with a duratin of 1 ms, can provide a maximum unambiguous range of less than 150 km theoretically. This value results from the remaining necessarily overlap of the transmission signal with the echo signal (see Figure 1) to get enough time for measuring a difference frequency. Most this range can never be achieved due to low power of the ransmitter. Thus always remains enough time for a measurement of the difference frequency.
+If the maximum possible frequency shift for the transmitter's modulation is 250 MHz, then depending on this edge steepness a delay time of 4 ns obtains 1kHz frequency difference. This corresponds to a range resolution of 0.6 m.
+This example shows impressively the advantage of the FMCW radar: A pulse radar must measure these 4 ns delay differences, resulting in a considerable technical complexity. A difference in frequency of 1 kHz, however, is much easier to measure because it is in audio range.
+
+Signal bandwidth of FMCW-Radar can be from 1 MHz to 390 MHz. (Its upper border is mostly limited by administrative reasons. For example the mostly used for FMCW-applications European ISM-radio band is defined from 24, 000 MHz to 24, 250 MHz with a given band width of 250 MHz.) As the bandwidth increases, the achievable range resolution is decreasing and this means the monitored objects can be seen more accurate. The maximum detected range becomes smaller when the bandwidth increases. This can be shown in the following table:
+
+{{./pasted_image003.png}}
+
+As with any radar in the FMCW radar, besides the allocated bandwidth, the antenna beamwidth determines the angular resolution in detecting objects.
+
+Modulation pattern
+There are several possible modulation patterns which can be used for different measurement purposes:
+{{./pasted_image005.png}}
+* Sawtooth modulation
+	This modulation pattern is used in relatively large range (maximum distance) combined with a negligible influence of Doppler frequency (for example, a maritime navigation radar).
+* Triangular modulation
+	This modulation allows easy separation of the difference frequency Δf of the Doppler frequency fD
+* Square-wave modulation
+	This modulation is used for a very precise distance measurement at close range by phase comparison of the two echo signal frequencies. It has the disadvantage, that the echo signals from several targets cannot be separated from each other, and that this process enables only a small unambiguous measuring range.
+* Stepped modulation (staircase voltage)
+	This is used for interferometric measurements and expands the unambiguous measuring range.
+* Sinusoidal modulation
+	Sinusoidal modulation forms have been used in the past. These could be easily realized by a motor turning a capacitor plate in the resonance chamber of the transmitter oscillator. The radar then used only the relatively linear part of the sine function near the zero crossing.
+
+Sawtooth linear frequency changing
+In a linear sawthooth frequency changing (see Figure 1) a delay will shift the echo signal in time (i.e. to the right in the picture). This results in a frequency difference between the actual frequency and the delayed echo signal, which is a measure of the distance of the reflecting object. This frequency difference is called "beat frequency". 
+An occurring Doppler frequency would now move the frequency of the entire echo signal either up (moving towards the radar) or down (moving away from the radar). 
+In this form of modulation, the receiver has no way to separate the two frequencies. Thus, the Doppler frequency will occur only as a measurement error in the distance calculation. In the choice of an optimum frequency sweep can be considered a priori, that the expected Doppler frequencies are as small as the resolution as least, that the measurement error is as small as possible.
+
+Triangular frequency changing
+{{./pasted_image006.png}}
+In a triangular-shapped frequency changing, a distance measurement can be performed on both the rising and on the falling edge. 
+In Figure 3, an echo signal is shifted due to the running time compared to the transmission signal to the right. Without a Doppler frequency, the amount of the frequency difference during the rising edge is equal to the measurement during the falling edge.
+A Doppler frequency shifts the echo signal in height (green graph in the Figure 3). It appears the sum of the frequency difference Δf and the Doppler frequency fD at the rising edge, and the difference between these two frequencies at the falling edge. This opens up the possibility of making an accurate distance determination, despite the frequency shift caused by the Doppler frequency, which then consists of the arithmetic average of the two parts of measurements at different edges of the triangular pattern. At the same time the accurate Doppler frequency can be determined from two measurements. The difference between the two difference frequencies is twice the Doppler frequency. Since the two differential frequencies, however, are not simultaneously available, this comparison requires digital signal processing, with intermediate storage of the measured results. The Doppler-frequency-adjusted frequency for the distance determination and the Doppler frequency of a moving target is calculated by:
+{{./pasted_image007.png}}
+The frequency f(R) can then be used in the formula (1) to calculate the exact distance.
+
+{{./pasted_image008.png}}
+However, this method has the disadvantage that, if appear a plurality of reflective objects, the measured Doppler frequencies cannot be uniquely associated with a target. The assignment of the wrong Doppler frequency to a destination in the wrong distance can lead to ghost targets. In Figure 4 a graphical solution is shown. The position of a first target results from the function {{./pasted_image009.png}} The intersection of the two lines is the position of the target 1. When a second object ([ ...]2) with a second Doppler frequency appears. Just then both pairs of linear slopes give a total of four intersections, two of which are the ghost targets. The position of ghost targets also depends on the steepness of the modulation pattern. Therefore, the problem can be resolved by measuring cycles with different slope steepness's: then there to be shown only those targets, of which the coordinates are measured in both cycles in the same position.
+
+Block Diagram of an FMCW radar sensor
+{{./pasted_image010.png}}
+An FMCW radar consists essentially of the transceiver and a control unit with a microprocessor. The transceiver is a compact module, and usually includes the patch antenna implemented as separate transmit and receive antenna. 
+The high frequency is generated by a voltage controlled oscillator which directly feeds the transmitting antenna, or its power is additionally amplified. A part of the high frequency is coupled out and fed to a mixer which down converts the received and amplified echo signal in the baseband.
+
+The control board contains a microprocessor that controls the transceiver, converts the echo signals in a digital format as well (usually via USB cable) ensures the connection to a personal computer or laptop. Using a digital to analogue converter, the control voltage is provided to the frequency control. The output voltage of the mixer is digitized.
+
+If using a single antenna, then due to the method (simultaneously transmitting the receiving) the FMCW radar needs a ferrite cuiculator to separate the transmitting and receiving signals. In the currently used patch antennas, however, the use of separate transmitting and receiving antennas is much cheaper. On a common substrate are placed directly above each other, a transmitting antenna array and a receiving antenna array. The polarization direction is rotated by 180º against each other often. Often is reduced by an additional shielding plate a direct "crossstalk" (i.e. a direct positive feedback between the two antennas). Since the measurement is performed as a frequency difference between the transmitting and receiving signal, the signal which is produced by this direct coupling can be suppressed due to the very small frequency difference.
+
+In pure CW radar applications only the Doppler frequency must be processed. This includes frequencies only up to 16.5 kHz by using an FMCW transceiver operating in K-Band (about 24 GHz) and the expected speeds for recording are up to 360 kilometers per hour. Therefore as microprocessor there can be used a simple stereo audio processor, which is produced in large quantities and is used for example in sound cards for home computers. Even in the FSK method (rectangular pattern modulation) such a processor can be used conditionally.
+In contrast, the receiver in a FMCW radar application must be able to process the whole transmitter's frequency shift. Thus frequencies up to 250 MHz are expected in the received signal. This has a significant impact on the bandwidth of the subsequent amplifier and the necessary sampling frequency of the analogue-to-digital converter. Thus, the signal processing board of FMCW radar is considerably more expensive with respect to the CW radar.
+
+There are currently on the market many inexpensive FMCW radar sensors or FMCW radar modules, which contain a complete transceiver with integrated patch antenna array so-called "front-end" of FMCW radar device. These modules include as the core usually the MMIC module.
+
+Imaging FMCW radar
+This radar method is used in the so called Broadband Radar™ as navigational radar for maritime applications. Here, the frequency sweep is stopped, however, after reaching the maximum measurement range. Therefore, the transmission signal looks more like a signal of pulse radar using intrapulse modulation. This break has no direct influence on the maximum measuring distance here. However, it is necessary to read the measured data from a buffer, and to transmit them lossless through narrowband line to the display unit. Due to its operation - the frequency comparison of the received echo signal with the transmitted signal, which is available across the entire distance - it remains an FMCW radar, it will only intermittently switched off for a few milliseconds, as more data are simply not needed.
+An imaging radar must perform a distance measurement for each point on the monitor. A range resolution that is more dependent here on the size of a pixel of this screen and from the ability of the signal processing to provide the data in the required speed. It is required a high-resolution screen with the pixel resolution, that as a minimum for each range difference two pixels must be available, so even if the measured signal is exactly between the position of two pixels, both pixels 'light up' and upon movement of the target, the number of pixels used, and thus the relative brightness of the target character is the same.
+
+Non-imaging FMCW radar
+The measurement result of this FMCW radar is presented either as a numeric value to a pointer instrument or digitized as alpha-numberic display on a screen. It can be measured only as single dominant object, but this one with a very high accuracy down to the centimeter range. This method of distance determination is for example as used in aircraft radio altimeter.
+Even an analogue pointer instrument can serve as an indicator for an FMCW radar. The moving coil meter has a greater inductive impedence for higher frequencies and therefore exhibits a value dependent on the frequency, which is then, however, not linear.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

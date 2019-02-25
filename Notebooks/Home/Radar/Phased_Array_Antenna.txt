@@ -49,6 +49,8 @@ These antenna arrays completely consist of singles radiating elements and each o
 * Disadvantage: complicated arrangement and more electronically controlled phase shifter needed.
 
 Frequency Scanning Array
+{{./pasted_image003.png}}
+
 Frequency scanning is a special case of the phased array antenna where the main beam steering occurs by the frequency scanning of the exciter. The beam stearing is a function of the transmitted frequency. This type of antenna is called a frequency scanning array. The normal arrangement is to feed the different radiating elements from one folded waveguide. The frequency scanning array is a special case of serial feeding type of a phased array antenna and is based on a particular property of wave propagation in waveguides. The phase difference between two radiating elements is n*360º at the normal frequency.
 
 By changing the frequency, the angle ΘS between the axis of the main beam and the normal on the array antenna changes. Height information is generated using the following philosophy:
@@ -58,6 +60,34 @@ By changing the frequency, the angle ΘS between the axis of the main beam and t
 As frequency is varied, the beam axis will change, and scanning can be accomplished in elevation. The radar set is designed so that it keeps track of the frequencies as they are transmitted and then detects and converts the returned frequencies into 3D display data.
 
 Note that frequency scanning reduces the value of using frequency change as a means of achieving other valuable effects (benefits of pulse compression).
+
+Phase-increment Calculating
+{{./pasted_image004.png}}
+The phase shift Δφ between two successive elements is constant and is called phase-increment. How large is this phase shift to reach a certain value of the beam steering?
+A linear arrangement by isotropic radiating elements is looked at.
+{{./pasted_image005.png}}
+{{./pasted_image006.png}}
+{{./pasted_image007.png}}
+
+Example given:
+* A radar set works with a wavelength of λ = 10 cm.
+* The distance between the radiating elements is 15 cm.
+* We can neglect the propagation time differences by the feeds.
+* The beam steering shall be {{./pasted_image008.png}}
+
+Task:
+* Which value shall have to have the phase shifter to no. 8 (on the left side) to get this beam steering?
+
+We start with the calculation of the phase-increment.
+Because of the trigonometrical function we need a calculator anyway: {{./pasted_image009.png}}
+This means the radiating element no. 8 needs the phase shift value 
+{{./pasted_image010.png}}
+
+On reason of the periodicity of the sine function a phase shifting of n*360º is the same as 0º. Therefore we can as long as deduct 360º till there is a angle between 0º and 360º of the result. We get therefore for the the phase shifter number 8 (left corner) a phase shift value of {{./pasted_image011.png}}
+
+A part of this phase shift is realized by the delay in the feeding line yet.
+
+
 
 
 
