@@ -29,4 +29,7 @@ scp file_name user_name@ip_addr:/routine/to/put/the/file
 4. Show the path
 pwd
 
+5. DriveWorks
+export LD_LIBRARY_PATH=/usr/local/lib/:${LD_LIBRARY_PATH}
+/samples/bin
 

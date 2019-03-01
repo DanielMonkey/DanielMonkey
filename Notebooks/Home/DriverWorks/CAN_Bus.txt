@@ -1,0 +1,141 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2019-02-28T17:06:16+08:00
+
+====== CAN Bus ======
+Created Thursday 28 February 2019
+
+# ./sample_canbus_interpreter --help
+--dbc: default=.././data/samples/sensors/can/sample.dbc
+--driver: default=can.virtual
+--params: default=file=.././data/samples/sensors/can/canbus_dbc.can
+Usage: ./sample_canbus_interpreter
+		--driver=can.virtual                    : one of the available CAN drivers (see sample_sensors_info)
+		--params=file=canbus_dbc.can    : comma separated key=value parameters for the sensor (see sample_sensor_info for a set of supported parameters)
+		--dbc=sample.dbc                : input dbc file. (set to plugin, to run plugin-based interpreter)
+
+
+# ./sample_canbus_logger --help
+--driver: default=can.virtual
+--filter: default=000:000
+--hwtime: default=1
+--params: default=file=.././data/samples/sfm/triangulation/canbus.can
+--send_i_understand_implications: default=0
+--send_id: default=6FF
+Usage: ./sample_canbus_logger
+		--driver=can.virtual                    : one of the available CAN drivers (see sample_sensors_info)
+		--params=file=canbus.can,arg2=value     : comma separated key=value parameters for the sensor (see sample_sensor_info for a set of supported parameters)
+		--send_i_understand_implications=10     : If > 0 random CAN messages with given delay in msec will be sent
+												: WARNING - do not use this functionality in a production environment, sending routines should be used to test the connectivity in a separated environment  
+		--send_id=6FF                           : CAN message ID when sending messages (see send_i_understand_implications)
+		--hwtime=0                              : To disable hardware timestamps
+		--filter=1A2:FFF,100:300,3A:0F,...      : Pass any number of CAN ids and masks to add a filter.
+												: A filter can be specified by adding comma separated id:mask values to the --filter= argument.
+												: A message is considered passing if <received_can_id> & mask == id & mask
+
+# ./sample_canbus_logger --driver=can.socket --params=device=can0
+# ./sample_canbus_logger --driver=can.aurix --params=ip=10.42.0.146,bus=a,aport=50000,bport=60395 --send_i_understand_implications=100 --send_id=4AB --hwtime=1
+
+# ./sample_canbus_logger --driver=can.aurix --params=ip=10.42.0.28,bus=a,aport=50000,bport=60395
+
+# ./sample_sensors_info 
+[01-01-1970 00:06:01] Platform: Detected XAVIERP3479 - P3479
+[01-01-1970 00:06:01] Initialize DriveWorks SDK v1.5.3582
+[01-01-1970 00:06:01] Release build with GNU 5.4.0 from heads/buildbrain-branch-0-g0d13493 against Drive PDK v5.0.13.2Custom build for Desay SV
+[01-01-1970 00:06:01] TimeSource: monotonic epoch time offset is 0
+[01-01-1970 00:06:05] Platform: number of GPU devices detected 1
+[01-01-1970 00:06:05] Platform: currently selected GPU device integrated ID 0
+[01-01-1970 00:06:05] SDK: No resources mounted, some modules will not function properly
+[01-01-1970 00:06:05] SDK: Create NvMediaDevice
+[01-01-1970 00:06:05] egl::Display: found 1 EGL devices
+[01-01-1970 00:06:05] egl::Display: use drm device: drm-nvdc
+Platform: OS_LINUX: 
+   Sensor [0] : can.socket ? device=can0[,fifo-size=1024]
+   Sensor [1] : can.virtual ? file=/path/to/file.can[,create_seek,default_timeout_us,time-offset=0]
+   Sensor [2] : camera.virtual ? video/file=filepath.{h264,raw,lraw}[,timestamp=file.txt][,create_seek][,time-offset=0]
+   Sensor [3] : camera.nvidia-ip ? host=<ip_addr>, port=<TCP port number>
+   Sensor [4] : camera.usb ? device=0[,mode={0,a,b}]
+   Sensor [5] : camera.pointgrey ? device=0[,fps=30]
+   Sensor [6] : gps.uart ? device=/dev/ttyXXX[,baud={1200,2400,4800,9600,19200,38400,57600,115200}[,format=nmea0183][,fifo-size=1024]]
+   Sensor [7] : gps.virtual ? file=filepath.bin[xsens-raw-gps=false,create_seek,default_timeout_us,time-smoothing=true,time-offset=0]
+   Sensor [8] : gps.xsens ? device=0[,frequency=100,xsens-raw-gps=false,time-smoothing=true,fifo-size=1024,baudrate=115200,stop-bits=2]
+   Sensor [9] : gps.novatel ? [fifo-size=1024]
+   Sensor [10] : gps.dataspeed ? can-proto=can.socket,can-params=device=canX[,fifo-size=1024]
+   Sensor [11] : imu.uart ? device=/dev/ttyXXX[,baud={1200,2400,4800,9600,19200,38400,57600,115200}[,format=xsens_nmea][,fifo-size=1024]]
+   Sensor [12] : imu.xsens ? device=0[,frequency=100,time-smoothing=true,fifo-size=1024,baudrate=115200,stop-bits=2]
+   Sensor [13] : imu.virtual ? file=filepath.bin[,create_seek,default_timeout_us,time-smoothing=true][,fifo-size=1024][,time-offset=0]
+   Sensor [14] : imu.novatel ? [fifo-size=1024]
+   Sensor [15] : imu.dataspeed ? can-proto=can.socket,can-params=device=canX[,fifo-size=1024]
+   Sensor [16] : imu.bosch ? can-proto=can.socket,can-params=device=canX[,fifo-size=1024]
+   Sensor [17] : imu.continental ? can-proto=can.socket,can-params=device=canX[,fifo-size=1024]
+   Sensor [18] : lidar.virtual ? file=filepath.bin[,create_seek,default_timeout_us,decoder=filepath.so,time-smoothing=false,decoding=true,time-offset=0]
+   Sensor [19] : lidar.socket ? ip=X.X.X.X,port=XXXX,device={QUAN_M81A, IBEO_LUX, IBEO_LUX_8L, VELO_VLP16, VELO_VLP16HR, VELO_HDL32E, VELO_VLP32C, VELO_HDL64E, CUSTOM},scan-frequency=XX.X[,protocol=xxx,m]
+   Sensor [20] : radar.virtual ? file=filepath.bin,time-smoothing=true[,decoder=filepath.so,create_seek,default_timeout_us,decoding=true,time-offset=0]
+   Sensor [21] : radar.socket ? ip=X.X.X.X,port=XXXX,device={DELPHI_ESR2_5, CONTINENTAL_ARS430, CONTINENTAL_ARS430_RDI, CUSTOM},multicast-ip=X.X.X.X],time-smoothing=true,isInverted=false,slave=false[,dec]
+   Sensor [22] : radar.can ? can-driver=can.xxx,can-bus=xxx,can-base-id=0x460,device={CONTINENTAL_ARS430_CAN}[,aurix-can-ip=X.X.X.X.X],[aurix-can-aport=XXXX][,aurix-can-bport=XXXX][,virtual-file=filepath]
+
+Platform: OS_DRIVE_V5L: 
+   Sensor [0] : can.socket ? device=can0[,fifo-size=1024]
+   Sensor [1] : can.aurix ? ip=10.0.0.1,bus={a,b,c,d}[,aport=50000,bport=60395][config-file=/path/to/EasyCanConfigFile.conf][,fifo-size=1024]
+   Sensor [2] : can.virtual ? file=/path/to/file.can[,create_seek,default_timeout_us,time-offset=0]
+   Sensor [3] : camera.gmsl ? camera-type={ar0231-rccb-bae-sf3324, ar0231-rccb-bae-sf3325, ar0144-cccc-none-gazet1},output-format={yuv+raw+data}[,slave={0,1}][,fifo-size={3..20}][,custom-board=0]camera-g]
+   Sensor [4] : camera.slave ? host=<ip_addr>,port=<tcp_port_num>,siblingIndex=<sibling-num>,mode={fifo,mailbox},output-format={yuv+raw+data},camera-group={a,b,c},fifo-size={3..16}
+   Sensor [5] : camera.virtual ? video/file=filepath.{h264,raw,lraw}[,timestamp=file.txt][,create_seek][,time-offset=0]
+   Sensor [6] : camera.usb ? device=0[,mode={0,a,b}]
+   Sensor [7] : camera.pointgrey ? device=0[,fps=30]
+   Sensor [8] : camera.nvidia-ip ? host=[ip_addr], port=[TCP port number]
+   Sensor [9] : gps.uart ? device=/dev/ttyXXX[,baud={1200,2400,4800,9600,19200,38400,57600,115200}[,format=nmea0183]][,fifo-size=1024]
+   Sensor [10] : gps.virtual ? file=filepath.bin[,xsens-raw-gps=false,create_seek,default_timeout_us,time-smoothing=false,time-offset=0]
+   Sensor [11] : gps.xsens ? device=0[,frequency=100,xsens-raw-gps=false,time-smoothing=false,fifo-size=1024,baudrate=115200,stop-bits=2]
+   Sensor [12] : gps.novatel ? [fifo-size=1024]
+   Sensor [13] : gps.dataspeed ? can-proto=can.socket,can-params=device=canX[,fifo-size=1024]
+   Sensor [14] : imu.uart ? device=/dev/ttyXXX[,baud={1200,2400,4800,9600,19200,38400,57600,115200}[,format=xsens_nmea]][,fifo-size=1024]
+   Sensor [15] : imu.xsens ? device=0[,frequency=100,time-smoothing=false,fifo-size=1024,baudrate=115200,stop-bits=2]
+   Sensor [16] : imu.virtual ? file=filepath.bin[,create_seek,default_timeout_us,time-smoothing=false,time-offset=0]
+   Sensor [17] : imu.novatel ? [fifo-size=1024]
+   Sensor [18] : imu.dataspeed ? can-proto=can.socket,can-params=device=canX[,fifo-size=1024]
+   Sensor [19] : imu.bosch ? can-proto=can.socket,can-params=device=canX[,fifo-size=1024]
+   Sensor [20] : imu.continental ? can-proto=can.socket,can-params=device=canX[,fifo-size=1024]
+   Sensor [21] : lidar.virtual ? file=filepath.bin[,create_seek,default_timeout_us,time-smoothing=false,decoding=true,time-offset=0]
+   Sensor [22] : lidar.socket ? ip=X.X.X.X,port=XXXX,device={QUAN_M81A, IBEO_LUX, IBEO_LUX_8L, VELO_VLP16, VELO_VLP16HR, VELO_HDL32E, VELO_VLP32C, VELO_HDL64E, CUSTOM},scan-frequency=XX.X[,protocol=xxx,m]
+   Sensor [23] : radar.virtual ? file=filepath.bin,time-smoothing=true[,decoder=filepath.so,create_seek,default_timeout_us,decoding=true,time-offset=0]
+   Sensor [24] : radar.socket ? ip=X.X.X.X,port=XXXX,device={DELPHI_ESR2_5, CONTINENTAL_ARS430, CONTINENTAL_ARS430_RDI, CUSTOM},multicast-ip=X.X.X.X,time-smoothing=true,isInverted=false,slave=false[,deco]
+   Sensor [25] : radar.can ? can-driver=can.xxx,can-bus=xxx,can-base-id=0x460,device={CONTINENTAL_ARS430_CAN}[,aurix-can-ip=X.X.X.X.X],[aurix-can-aport=XXXX][,aurix-can-bport=XXXX][,virtual-file=filepath]
+
+Platform: OS_QNX - CURRENT: 
+   Sensor [0] : can.socket ? device=can0
+   Sensor [1] : can.aurix ? ip=10.0.0.1,bus={a,b,c,d}[,aport=50000,bport=60395][config-file=/path/to/EasyCanConfigFile.conf][,fifo-size=1024]
+   Sensor [2] : can.virtual ? file=/path/to/file.can[,create_seek][,time-offset=0]
+   Sensor [3] : camera.gmsl ? camera-group={a,b,c,d},camera-count={1,2,3,4},camera-type={ar0231-rccb-bae-sf3324, ar0231-rccb-bae-sf3325},output-format={yuv+raw+data}[,slave={0,1}][,fifo-size={3..20}][,cu]
+   Sensor [4] : camera.virtual ? video/file=filepath.{h264,raw}[,timestamp=file.txt][,create_seek][,time-offset=0]
+   Sensor [5] : gps.uart ? device=/dev/ttyXXX[,baud={1200,2400,4800,9600,19200,38400,57600,115200}[,format=nmea0183]][,fifo-size=1024]
+   Sensor [6] : gps.virtual ? file=filepath.bin[,xsens-raw-gps=false,create_seek,default_timeout_us,time-smoothing=false,time-offset=0]
+   Sensor [7] : gps.xsens ? device=0[,frequency=100,xsens-raw-gps=false,time-smoothing=false,fifo-size=1024,baudrate=115200,stop-bits=2]
+   Sensor [8] : gps.dataspeed ? can-proto=can.socket/aurix,can-params=device=canX[,fifo-size=1024]
+   Sensor [9] : imu.uart ? device=/dev/ttyXXX[,baud={1200,2400,4800,9600,19200,38400,57600,115200}[,format=xsens_nmea]][,fifo-size=1024]
+   Sensor [10] : imu.virtual ? file=filepath.bin[,create_seek,default_timeout_us,time-smoothing=false,time-offset=0]
+   Sensor [11] : imu.xsens ? device=0[,frequency=100,time-smoothing=false,fifo-size=1024,baudrate=115200,stop-bits=2]
+   Sensor [12] : imu.dataspeed ? can-proto=can.socket/aurix,can-params=device=canX[,fifo-size=1024]
+   Sensor [13] : imu.bosch ? can-proto=can.socket/aurix,can-params=device=canX[,fifo-size=1024]
+   Sensor [14] : imu.continental ? can-proto=can.socket/aurix,can-params=device=canX[,fifo-size=1024]
+   Sensor [15] : lidar.virtual ? file=filepath.bin[,create_seek,default_timeout_us,time-smoothing=false,time-offset=0]
+   Sensor [16] : lidar.socket ? ip=X.X.X.X,port=XXXX,device={QUAN_M81A, IBEO_LUX, IBEO_LUX_8L, VELO_VLP16, VELO_VLP16HR, VELO_HDL32E, VELO_VLP32C, VELO_HDL64E, CUSTOM},scan-frequency=XX.X[,protocol=xxx,m]
+   Sensor [17] : radar.virtual ? file=filepath.bin,time-smoothing=true[,decoder=filepath.so,create_seek,default_timeout_us,decoding=false,time-offset=0]
+   Sensor [18] : radar.socket ? ip=X.X.X.X,port=XXXX,device={DELPHI_ESR2_5, CONTINENTAL_ARS430, CONTINENTAL_ARS430_RDI, CUSTOM},multicast-ip=X.X.X.X],time-smoothing=true,isInverted=false[,decoder=filepat]
+   Sensor [19] : radar.can ? can-driver=can.xxx,can-bus=xxx,can-base-id=0x460,device={CONTINENTAL_ARS430_CAN}[,aurix-can-ip=X.X.X.X.X],[aurix-can-aport=XXXX][,aurix-can-bport=XXXX][,virtual-file=filepath]
+
+[01-01-1970 00:06:05] SDK: Release NvMediaDevice
+[01-01-1970 00:06:06] Driveworks SDK released
+[01-01-1970 00:06:06] SDK: Release NvMedia2D
+
+
+
+
+
+
+
+
+
+
+
+

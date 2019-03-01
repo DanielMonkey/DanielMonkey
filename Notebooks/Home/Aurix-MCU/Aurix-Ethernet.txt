@@ -22,4 +22,38 @@ TEGRA_CLIENT_PORT 	0xEBEB	-  ethernet_can_config.h
 
 
 
+AsPduId 0x00000000, AsPduLen 0x00000026,
+ Dst 0x01, Src 0x04,
+ Len 0x0026, Timestamp 0x009ad869,
+ AppSelector 0x000000ca, MsgId 0x00000103
+
+
+--------------------
+RECEIVED 22 bytes of EasyCan message data
+--------------------
+
+
+--------------------
+CAN message number 0
+--------------------
+ID80000aa0 CH0 DLC8 TSS4026536464 TSNS4026536208
+Payload byte 0: 0
+Payload byte 1: 0
+Payload byte 2: 0
+Payload byte 3: 0
+Payload byte 4: 0
+Payload byte 5: 0
+Payload byte 6: 0
+Payload byte 7: 0
+
+{{./pasted_image.png}}
+
+{{./pasted_image001.png}}
+
+{{./pasted_image002.png}}
+
+{{./pasted_image003.png}}
+
+{{./pasted_image004.png}}
+
 

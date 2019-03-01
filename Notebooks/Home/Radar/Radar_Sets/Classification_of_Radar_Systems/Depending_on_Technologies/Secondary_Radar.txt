@@ -5,3 +5,5 @@ Creation-Date: 2019-02-25T15:21:24+08:00
 ====== Secondary Radar ======
 Created Monday 25 February 2019
 
+Radar was born in the due to the pressure of war. The need of detect "hostile" aircraft led to a vast investment in intellect and money to develop RADAR. Classical Radar (now called Primary Radar) by definition is non cooperative technology, that is it needs no co-operation from the "Target" being detected. Why do we need a different system then?
+As well as seeing "hostile" aircraft it soon became apparent that Radar was a good tool to see "friendly" aircraft and hence control and direct them. If the "friendly" aircraft is fitted with the transponder (transmitting responder), then it send  a strong signal back as an "echo". An active also encoded response signal which is returned to the radar set then is generated in the transponder. This proved very useful for the millitary in seeing their own aircraft clearly. In this response can be contained much more information, as a sprimary radar unit is able to acquire (E.g. an Altitude, an identification code or also any technical problems on board such as radioconstact loss ...).
