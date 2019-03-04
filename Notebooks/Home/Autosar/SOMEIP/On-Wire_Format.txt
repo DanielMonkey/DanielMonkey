@@ -1,0 +1,72 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2019-03-01T17:52:46+08:00
+
+====== On-Wire Format ======
+Created Friday 01 March 2019
+
+In principle, SOME/IP communication consists of messages sent between devices or subscribers over IP. Consider the following picture:
+{{./pasted_image.png?width=700}}
+There you see two devices (A and B); Device A sends a SOME/IP message to B and gets one message back. The underlying transport protocol can be TCP or UDP; for the message itself this makes no difference. No we assume that on device B is running a service which offers a function that is called from device A by this message and the message back is the answer.
+
+SOME/IP messages have two parts: header and payload. 
+In the picture you see that the header consists mainly of identifiers:
+* Service ID: unique identifier for each service
+* Method ID: 0 - 32767 for methods, 32768 - 65535 for events
+* Length: length of payload in byte (covers also the next IDs, that means 8 additional bytes)
+* Client ID: unique identifier for the calling client inside the ECU; has to be unique in the overall vehicle
+* Session ID: identifier for session handling; has to be incremented for each call
+* Protocol Version: 0x01
+* Interface Version: major version of the service interface
+* Message Type:
+	- REQUEST						(0x00)		A request expecting a response (event void)
+	- REQUEST_NO_RETURN			(0x01)		A fire&forget request
+	- NOTIFICATION					(0x02)		A request of a notification/event callback expecting no response
+	- RESPONSE						(0x80)		The response message
+* Return Code:
+	- E_OK										(0x00)		No error occurred
+	- E_NOT_OK								(0x02)		An unspecified error occurred
+	- E_WRONG_INTERFACE_VERSION		(0x08)		Interface version mismatch
+	- E_MALFORMED_MESSAGE			(0x09)		Deserialization error, so that payload cannot be deserialized
+	- E_WRONG_MESSAGE_TYPE			(0x0A)		An unexpected message type was received (e.g. REQUEST_NO_RETURN for a method defined as REQUEST)
+
+We see that there are "REQUESTs" and "RESPONSEs" for normal function calls and notification messages for events to which the client has been subscribed. Errors are reported as normal responses or notifications but with an appropriate return code.
+
+The payload contains the serialized data. 
+The picture shows the serialization in the simple case that the transmitted data structure is a nested structure with only base data types. In this case it is easy: the structure elements are just flattened, that means that they are simply written to one after the other into the payload.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,12 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2019-03-01T18:14:24+08:00
+
+====== SOMEIP Protocol ======
+Created Friday 01 March 2019
+
+In this section mainly 2 points are important and shall be described now:
+* the so-called transport bindings (UDP and TCP)
+* the basic communication patterns publish/subscribe and request/response.
+
+
