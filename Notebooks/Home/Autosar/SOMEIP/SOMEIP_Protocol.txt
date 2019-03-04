@@ -9,4 +9,39 @@ In this section mainly 2 points are important and shall be described now:
 * the so-called transport bindings (UDP and TCP)
 * the basic communication patterns publish/subscribe and request/response.
 
+As mentioned above the underlying transport protocol can be UDP or TCP. 
+In the UDP case the SOME/IP messages are not fragmented; it can be that more than one message is in one UDP packet but one message cannot be longer than a UDP package can be (up to 1400 Bytes).
+Bigger messages must be transported via TCP. In this case all the robustness features of TCP are used. If a synchronization error in the TCP stream occurs, the SOME/IP specification allows so-call magic cookies in order to find again the beginning of the next message.
+
+Please note that service interfaces must be instantiated and because there might be several instances of the same interface there must be an additional identifier for the instance defined (instance ID). However the instance ID is not part of the header of the SOME/IP message. The instance is identified via the port number of the transport protocol; that means that it is not possible that several instance of the same interface are offered on the same port.
+
+Please take now a look at the following picture which shows the basic SOME/IP communication patterns:
+{{./pasted_image.png?width=700}}
+In addition to the standard REQUEST/RESPONSE mechanism for remote procedure calls there is also the PUBLISH/SUBSCRIBE pattern for events. Note that events in the SOME/IP protocol are always grouped in an event group; therefore it is only possible to subscribe to event groups and not to the event itself. The SOME/IP specification also knows "fields"; in this case the setter/getter methods are following the REQUEST/RESPONSE pattern and notification messages of changes are events. The subscription itself is done via the SOME/IP service discovery.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

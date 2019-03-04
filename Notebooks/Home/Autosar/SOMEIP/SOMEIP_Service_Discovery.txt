@@ -1,0 +1,16 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2019-03-04T15:18:26+08:00
+
+====== SOMEIP Service Discovery ======
+Created Monday 04 March 2019
+
+The SOME/IP Service Discovery is used to locate service instances and to detect if service instances are running as well as implementing the Publish/Subscribe handling.
+This is mainly done via so-called offer messages; that means that each device broadcasts (multicasts) messages which contain all the services which are offered by this device. 
+SOME/IP SD messages are sent via UDP.
+If services are required by client applications but at the moment not offered, then also "find messages" can be sent.
+Other SOME/IP SD messages can be used for publishing or subscribing an eventgroup.
+
+The following picture shows the general structure of a SOME/IP SD message.
+{{./pasted_image.png?width=700}}
+
