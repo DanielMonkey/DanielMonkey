@@ -1,0 +1,69 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2019-03-04T18:27:59+08:00
+
+====== g++ Introduction ======
+Created Monday 04 March 2019
+
+程序g++是将gcc默认语言设为C++的一个特殊的版本，链接时它自动使用C++标准库而不用C标准库。通过遵循源码的命名规范并指定对应库的名字，用gcc来编译链接C++程序是可行的，如下例所示：
+$ gcc main.cpp -lstdc++ -o main
+
+最简单的编译方式：
+$ g++ helloworld.cpp
+
+通常我们使用-o选项指定可执行程序的文件名，以下实例生成一个helloworld的可执行文件：
+$ g++ helloworld.cpp -o helloworld
+
+g++常用命令选项
+选项							解释
+-ansi							只支持ANSI标准的C语法。这一选项将禁止GNU C的某些特色，例如asm或typeof关键词
+-c								只编译生成目标文件
+-DMACRO						以字符串“1”定义MACRO宏
+-DMACRO=DEFN				以字符串“DEFN”定义MACRO宏
+-E								只运行C预编译器。
+-g								生成调试信息。GNU调试器可利用该信息。
+-IDIRECTORY					指定额外的头文件搜索路径DIRECTORY。
+-LDIRECTORY					指定额外的函数库搜索路径DIRECTORY。
+-ILIBRARY						链接时搜索制定的函数库LIBRARY。
+-o								FILE生成指定的输出文件。用在生成可执行文件时。
+-O0							不进行优化处理。
+-O								或-O1优化生成代码。
+-O2							进一步优化。
+-O3							比-O2更进一步优化，包括inline函数。
+-shared						生成共享目标文集那。通常用在建立共享库时。
+-static							禁止使用共享连接。
+-UMACRO						取消对MACRO宏的定义。
+-w								不生成任何警告信息。
+-Wall							生成所有警告信息。
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
