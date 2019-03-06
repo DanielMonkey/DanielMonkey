@@ -1,0 +1,15 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2019-03-06T16:53:08+08:00
+
+====== Application ======
+Created Wednesday 06 March 2019
+
+The init method must be called first after creating a vsomeip application and executes the following steps to initialize it:
+* Loading the configuration
+* Determining routing configuration and initialization of the routing
+* Installing signal handlers
+
+The start method has to be called after init in order to start the message processing. The received messages are processed via sockets and registered callbacks are used to pass them to the user application.
+
+
