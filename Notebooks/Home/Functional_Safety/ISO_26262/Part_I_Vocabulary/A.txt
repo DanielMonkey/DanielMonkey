@@ -1,0 +1,59 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2019-03-08T17:52:45+08:00
+
+====== A ======
+Created Friday 08 March 2019
+
+allocation
+assignment of a requirement to an architectural element
+NOTE Intent is not to divide an atomic requirement into multiple requirements. Tracing of an atomic system level requirement to multiple lower level atomic requirements is allowed.
+
+anomaly
+condition that deviates from expectations, based, for example, on requirements, specifications, design documents, user documents, standards, or on experience.
+NOTE Anomalies can be discovered, among other times, during the review, testing, analysis, compilation, or use of components or applicable documentation.
+
+architecture
+representation of the structure of the item or functions or systems or elements that allows identification of building blocks, their boundaries and interfaces, and includes the allocation of functions to hardware and software elements
+
+assessment
+examination of a characteristic of an item or element
+NOTE A level of independence of the party or parties performing the assessment is associated with each assessment
+
+audit
+examination of an implemented process
+
+Automotive Safety Integrity Level
+ASIL
+one of four levels to specify the item's or element's necessary requirements of ISO 26262 and safety measures to apply for avoiding an unreasonable residual risk, with D representing the most stringent and A the least stringent level
+
+ASIL decomposition
+apportioning of safety requirements redundantly to sufficiently independent elements, with the objective of reducing the ASIL of the redundant safety requirements that are allocated to the corresponding elements
+
+availability
+capability of a product to be in a state to execute the function required under given conditions, at a certain time or in a given period, supporting the required external resources are available.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,11 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2019-03-12T14:49:58+08:00
+
+====== 05 Time Base Provider ======
+Created Tuesday 12 March 2019
+
+Definition:
+A Time Base Provider is the role that a <Bus>TSyn module takes for a given Time Base.
+Therefore a <Bus>TSyn module can contain only one Time Base provider or more than one Time Base provider. Time Base providers are either of type importer or exporter, whereas an importer acts as Time Slave and an exporter acts as Time Master. 
+A Time Gateway consists of one Time Base importer and one or more Time Base exporters for a given Time Base. In order to limit the terminology importers are denoted as slaves and exporters are denoted as masters.

@@ -1,0 +1,29 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2019-03-07T09:43:44+08:00
+
+====== Logger ======
+Created Thursday 07 March 2019
+
+# ./sample_canbus_logger --help
+--driver: default=can.virtual
+--filter: default=000:000
+--hwtime: default=1
+--params: default=file=.././data/samples/sfm/triangulation/canbus.can
+--send_i_understand_implications: default=0
+--send_id: default=6FF
+Usage: ./sample_canbus_logger
+		--driver=can.virtual                    : one of the available CAN drivers (see sample_sensors_info)
+		--params=file=canbus.can,arg2=value     : comma separated key=value parameters for the sensor (see sample_sensor_info for a set of supported parameters)
+		--send_i_understand_implications=10     : If > 0 random CAN messages with given delay in msec will be sent
+												: WARNING - do not use this functionality in a production environment, sending routines should be used to test the connectivity in a separated environment  
+		--send_id=6FF                           : CAN message ID when sending messages (see send_i_understand_implications)
+		--hwtime=0                              : To disable hardware timestamps
+		--filter=1A2:FFF,100:300,3A:0F,...      : Pass any number of CAN ids and masks to add a filter.
+												: A filter can be specified by adding comma separated id:mask values to the --filter= argument.
+												: A message is considered passing if <received_can_id> & mask == id & mask
+
+# ./sample_canbus_logger --driver=can.socket --params=device=can0
+# ./sample_canbus_logger --driver=can.aurix --params=ip=10.42.0.146,bus=a,aport=50000,bport=60395 --send_i_understand_implications=100 --send_id=4BB --hwtime=1
+
+# ./sample_canbus_logger --driver=can.aurix --params=ip=10.42.0.28,bus=a,aport=50000,bport=60395

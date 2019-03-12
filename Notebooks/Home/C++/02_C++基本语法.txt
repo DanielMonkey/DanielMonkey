@@ -2,7 +2,7 @@ Content-Type: text/x-zim-wiki
 Wiki-Format: zim 0.4
 Creation-Date: 2019-03-05T18:11:44+08:00
 
-====== C++基本语法 ======
+====== 02 C++基本语法 ======
 Created Tuesday 05 March 2019
 
 C++程序可以定义为对象的集合，这些对象通过调用彼此的方法进行交互。

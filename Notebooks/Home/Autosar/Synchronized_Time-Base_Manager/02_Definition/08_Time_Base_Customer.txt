@@ -1,0 +1,58 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2019-03-12T16:03:14+08:00
+
+====== 08 Time Base Customer ======
+Created Tuesday 12 March 2019
+
+{{./pasted_image.png?width=600}}
+a) Active Customer
+This kind of customer autonomously calls the Synchronized Time-Base Manager either
+* To read time information (arrow "2" in Figure 1) from the Synchronized Time-Bas Manager or
+* To update (arrow "3" in Figure 1) the Time Base maintained by the Synchronized Time-Base Manager according to application information.
+
+b) Triggered Customer
+This kind of customer is triggered by the Synchronized Time-Base Manager (arrow "1" in Figure 1). 
+Thus, the Synchronized Time-Base Manager itself is aware of the required functionality of the customer, and uses the defined interface of the customer to access it.
+This functionality is currently limited to synchronization of OS Schedule Tables.
+
+c) Notification Customer
+This kind of customer is notified by the Synchronized Time-Base Manager (arrow "4" in Figure 1), if the following Time Base related events occur:
+* Time Base status has changed (e.g. a timeout has occurred for a Time Base)
+* Time Base value has reached a give value, which has been previously set by the customer (arrow "5" in Figure 1).
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,12 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2019-03-12T16:12:57+08:00
+
+====== 09 Time Domain ======
+Created Tuesday 12 March 2019
+
+Definition:
+A Time Domain denotes which components (e.g. nodes, communication systems) are linked to a certain Time Base. 
+A Time Domain can contain no or more than one Time Sub-domains.
+If the timing hierarchy of a Time Domain contains no Time Gateways, i.e. all nodes are connected to the same bus system, then there is no dedicated Time Sub-domain which otherwise would be equal to the Time Domain itself.
+

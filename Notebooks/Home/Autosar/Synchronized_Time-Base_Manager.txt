@@ -1,0 +1,27 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2019-03-08T15:43:02+08:00
+
+====== Synchronized Time-Base Manager ======
+Created Friday 08 March 2019
+
+Synchronized Time-Base Manager (StbM) module
+The purpose of the Synchronized Time-Base Manager is to provide Syncrhonized Time Bases to its customers, i.e., time bases, which are synchronized with time bases on other nodes of a distributed system.
+
+Use Cases
+* Synchronization of RunnableEntities
+An arbitrary number of RunnableEntities must be executed synchronously. 
+Synchronous means that they shall start with a well-defined and guaranteed relative offset.
+
+Typical examples of this use case are the sensor data read out or synchronous actuator triggering by different RunnableEntities. 
+
+* Provision of absolute time value
+The application (and other BSW modules) shall provide a central module that is responsible for the provision of information about the absolute time and passage of time.
+
+Typical examples of this use case are:
+1. Sensor data fusion: Data from various sensor systems like radar or stereo multi-purpose cameras can be temporally correlated.
+2. Event data recording: In some cases, e.g. crash, it is desirable to store data about the events and the internal state of different ECUs. For a temporal correlation of these events and states a common time base is required.
+3. Access to synchronized calendar time for diagnostic events storage.
+
+
+

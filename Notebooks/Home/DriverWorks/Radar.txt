@@ -12,3 +12,6 @@ Radar replay sample which playback .bin video streams in a GL window.
 	Enables/disables sample profiling
 --protocol: default=radar.virtual
 
+   Sensor [17] : radar.virtual ? file=filepath.bin,time-smoothing=true[,decoder=filepath.so,create_seek,default_timeout_us,decoding=false,time-offset=0]
+   Sensor [18] : radar.socket ? ip=X.X.X.X,port=XXXX,device={DELPHI_ESR2_5, CONTINENTAL_ARS430, CONTINENTAL_ARS430_RDI, CUSTOM},multicast-ip=X.X.X.X],time-smoothing=true,isInverted=false[,decoder=filepat]
+   Sensor [19] : radar.can ? can-driver=can.xxx,can-bus=xxx,can-base-id=0x460,device={CONTINENTAL_ARS430_CAN}[,aurix-can-ip=X.X.X.X.X],[aurix-can-aport=XXXX][,aurix-can-bport=XXXX][,virtual-file=filepath]

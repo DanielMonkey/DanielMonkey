@@ -2,7 +2,7 @@ Content-Type: text/x-zim-wiki
 Wiki-Format: zim 0.4
 Creation-Date: 2019-03-04T18:27:59+08:00
 
-====== g++ Introduction ======
+====== 01 g++ Introduction ======
 Created Monday 04 March 2019
 
 程序g++是将gcc默认语言设为C++的一个特殊的版本，链接时它自动使用C++标准库而不用C标准库。通过遵循源码的命名规范并指定对应库的名字，用gcc来编译链接C++程序是可行的，如下例所示：

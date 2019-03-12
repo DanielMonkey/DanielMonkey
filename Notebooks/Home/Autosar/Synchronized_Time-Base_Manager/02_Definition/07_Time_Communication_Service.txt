@@ -1,0 +1,13 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2019-03-12T15:57:36+08:00
+
+====== 07 Time Communication Service ======
+Created Tuesday 12 March 2019
+
+Definition:
+A Time Communication Service is an interaction between Time Bases which is performed by Time Base providers.
+Time communication services are message based between a Time Master and one or more Time Slaves or between one Time Slave and his Time Master.
+
+Figure 3 shows a network topology example and the related terminology.
+{{./pasted_image.png?width=800}}

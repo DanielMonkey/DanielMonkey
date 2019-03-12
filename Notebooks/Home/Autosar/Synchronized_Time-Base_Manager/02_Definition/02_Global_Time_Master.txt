@@ -1,0 +1,10 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2019-03-08T17:31:40+08:00
+
+====== 02 Global Time Master ======
+Created Friday 08 March 2019
+
+Definition:
+A Global Time Master is the global owner and origin for a certain Time Base and on the top of the Time Base hierarchy for that Time Base.
+

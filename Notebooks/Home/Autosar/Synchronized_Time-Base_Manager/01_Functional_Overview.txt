@@ -1,0 +1,60 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2019-03-08T16:36:23+08:00
+
+====== 01 Functional Overview ======
+Created Friday 08 March 2019
+
+{{./pasted_image.png?width=600}}
+The Synchronized Time-Base Manager itself does not provide means like network time protocols or time agreement protocols to synchronize its (local) Time Bases to Time Bases on other nodes.
+It interacts with the <Bus> TSyn modules of the BSW to achieve such synchronization. Those modules take as shown in Figure 1 the role of a Time Base Provider and support above mentionaed time protocols.
+
+With the information retrieved from the provider modules, the Synchronized Time-Base Manager is able to synchronize its Time Bases to Time Bases on other nodes.
+
+BSW modules and SW-C, which take the role of a customer, consume the time information provided and managed by the Synchronized Time-Base Manager.
+Three types of customers may be distinguished:
+* Triggered customer
+* Active customer
+* Notification customer
+
+Thus, the Synchronized Time-Base Manager acts as Time Base broker by offering the customers access to Synchronized Time Bases. Doing so, the Synchronized Time-Base Manager abstracts from the "real" Time Base provider.
+
+{{./pasted_image001.png?width=600}}
+Providing access to Synchronized Time Bases between the updates of the Time Base Providers is usually realized by using a Hardware Reference Clock; often in combination with a Software Counter which keeps track of the Hardware Reference Clock's overflows. Together Software Counter and Hardware Reference clock form the Virtual Local Time (despite the anme Virtual Local Time is actually realized implementation).
+
+This time is subsequently used to drive the time of the Time Bases, taking account their Rate Deviations and Offsets to the Virtual Local Time.
+
+The API for accessing the Synchronized Time Bases is provided to application software components as well as to other BSW modules.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

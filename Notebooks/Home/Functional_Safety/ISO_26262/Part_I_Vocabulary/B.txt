@@ -1,0 +1,15 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2019-03-08T18:09:04+08:00
+
+====== B ======
+Created Friday 08 March 2019
+
+baseline
+version of a set of one or more work products, items or elements that is under configuration management and used as a basis for further development through the change management process.
+
+branch coverage
+percentage of branches of the control flow that have been executed
+NOTE 1 100% branch coverage implies 100% statement coverage
+NOTE 2 An if-statement always has two branches - condition true and condition false - independent of the existence of an else-clause.
+

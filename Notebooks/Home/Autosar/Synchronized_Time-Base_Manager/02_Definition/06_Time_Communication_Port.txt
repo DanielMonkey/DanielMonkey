@@ -1,0 +1,9 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2019-03-12T15:56:35+08:00
+
+====== 06 Time Communication Port ======
+Created Tuesday 12 March 2019
+
+Definition:
+A Time Communication Port is a physical communication interface (in AUTOSAR coverable by the item: Physical Connector) at an ECU which is used to transport time information.

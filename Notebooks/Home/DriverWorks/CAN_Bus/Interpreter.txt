@@ -1,0 +1,63 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2019-03-07T09:24:04+08:00
+
+====== Interpreter ======
+Created Thursday 07 March 2019
+
+# ./sample_canbus_interpreter --help
+--dbc: default=.././data/samples/sensors/can/sample.dbc
+--driver: default=can.virtual
+--params: default=file=.././data/samples/sensors/can/canbus_dbc.can
+Usage: ./sample_canbus_interpreter
+		--driver=can.virtual                    : one of the available CAN drivers (see sample_sensors_info)
+		--params=file=canbus_dbc.can    : comma separated key=value parameters for the sensor (see sample_sensor_info for a set of supported parameters)
+		--dbc=sample.dbc                : input dbc file. (set to plugin, to run plugin-based interpreter)
+
+
+# ./sample_canbus_interpreter --dbc=../../tmp/Python_Script/DriveWork_Sample.dbc --driver=can.aurix --params=ip=10.42.0.146,bus=a,aport=50000,bport=60395
+Program Arguments:
+--dbc=.././data/samples/sensors/can/sample.dbc
+--driver=can.aurix
+--params=ip=10.42.0.146,bus=a,aport=50000,bport=60395
+
+[01-01-1970 00:27:17] Received from 10.42.0.146:50000 - 46 bytes, src=4, dst=1, app=202, time=1641686, id=259, length=38
+[01-01-1970 00:27:17] Received at least 1 CAN messages within 22 bytes
+[01-01-1970 00:27:17] CAN messages [2720] for 0 at 4026536468026536
+[01-01-1970 00:27:17] Parsed 1 CAN messages, found 1 messages on selected EasyCAN bus.
+4026536468026536 [0xaa0] -> 0x0 0x0 0x0 0x0 0x0 0x0 0x0 0x0 
+
+
+interpreter CAN DBC,
+Like 0xAA0, in CAN dbc could be 0x80000AA0, in dec is 2147486368, which has 10 characters.
+But in DRIVEWORKS, the DBC_MAX_MESSAGE_ID_LEN is defined to 9, which does not consider the flag. 
+We can mannual update the CAN ID to remove the flag, like 0xAA0, just dec 2720 in dbc file. Then the interpreter could work well.
+The standard CAN ID works well.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

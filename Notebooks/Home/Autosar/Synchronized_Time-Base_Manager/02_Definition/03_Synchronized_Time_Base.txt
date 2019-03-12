@@ -1,0 +1,16 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2019-03-12T13:04:32+08:00
+
+====== 03 Synchronized Time Base ======
+Created Tuesday 12 March 2019
+
+Definition:
+A Synchronized Time Base is a Time Base existing at a processing entity (actor / processor / node of a distributed system) that is synchronized with Time Bases at different processing entities. A Synchronized Time Base can be achieved by time protocols or time agreement protocols that derive the Synchronized Time Base in a defined way from one or more physical Time Bases. Examples are the network time protocol (NTP) and FlexRay time agreement protocol.
+
+The synchronization will apply to the clock rate and optionally apply also to the clock absolute value.
+
+A Synchronized Time Base allows synchronized action of the processing units. Synchronized Time Bases are ofthen called "Global Time".
+
+More than one Synchronized Time Base can exist at one processing unit, e.g. a FlexRay node will have the Synchronized Time Base retrieved from the FlexRay time agreement protocol in the network cluster but might also have a Synchronized Time Base derived from the time provided by a UTC time server (which is based on a set of atomic clocks). Both Synchronized Time Bases will probably have slightly different rate, and there is no relationship defined between their absolute values.
+

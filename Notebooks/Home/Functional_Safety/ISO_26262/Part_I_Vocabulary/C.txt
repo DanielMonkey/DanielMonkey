@@ -1,0 +1,12 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2019-03-12T16:52:46+08:00
+
+====== C ======
+Created Tuesday 12 March 2019
+
+calibration data
+data that will be applied after the software build in the development process
+EXAMPLE Parameters (e.g. value for low idle speed, engine characteristic diagrams); vehicle specific parameters (adaptation values) (e.g. limit stop for throttle value); variant coding (e.g. country code, left-hand/right-hand steering).
+NOTE Calibration data cannot contain executable or interpretable code.
+

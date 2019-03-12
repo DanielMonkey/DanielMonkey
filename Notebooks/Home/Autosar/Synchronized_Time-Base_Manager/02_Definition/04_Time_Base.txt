@@ -1,0 +1,24 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2019-03-12T13:18:57+08:00
+
+====== 04 Time Base ======
+Created Tuesday 12 March 2019
+
+Definition:
+A Time Base is a unique time entity characterized by:
+* Progression of time, which denotes how time progresses, i.e. the rate (i.e. the rate is derived from a local quartz oscillator) and absolute changes of the time value at certain point in times (e.g. effects of offset correction in FlexRay).
+* Ownership, which denotes who is the owner of the time base.  A distributed FlexRay Time Bae e.g. has multiple owners and the progression of time with respect to rate and offset corrections is a result of involving a subset of FlexRay nodes.
+* Reference to the physical world, i.e. whether the Time Base is a relative Time Base counting local operation time of an ECU or representing an absolute time like UTC. A Time Base can have more than one reference, e.g. it can be a relative time which in combination with an offset value also represents an absolute time.
+
+Examples of Time Bases in vehicles are:
+* Absolute, which is based on a GPS based time
+* Relative, which represents the accumulated overall operating time of a vehicle, i.e. this Time Base does not start with a value of zero whenever the vehicle starts operating
+* Relative, starting at zero when the ECU begins its operation
+
+Special case "Pure Local Time Base":
+A Pure Local Time Base is a Time Base with a local scope as it is neither propagated to other nodes nor received from other ndoes.
+A Pure Local Time Base will only locally be set and read. It is therefore possible to have multiple Pure Local Time Bases with the same Time Domain number in various nodes in parallel. A Pure Local Time Base bahaves like a Synchronized Time Base since it progresses in time,  however it is not synchronized via Timesync Modules. Pure Local Time Bases behaving like Offset Time Bases are not supported.
+
+
+

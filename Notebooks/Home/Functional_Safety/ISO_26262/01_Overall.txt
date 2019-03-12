@@ -1,0 +1,70 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2019-03-07T17:24:53+08:00
+
+====== 01 Overall ======
+Created Thursday 07 March 2019
+
+Road vechicles - Functional safety:
+- Part 1: Vocabulary
+- Part 2: Management of functional safety
+- Part 3: Concept phase
+- Part 4: Product development at the system level
+- Part 5: Product development at the hardware level
+- Part 6: Product development at the software level
+- Part 7: Production and operation
+- Part 8: Supporting processes
+- Part 9: Automotive Safety Integrity Level (ASIL) - oriented and safety-oriented analyses
+- Part 10: Guideline on ISO 26262
+
+This adaptation applies to all activities during the safety lifecycle of safety-related systems comprised of electrical, electronic and software components.
+
+the domain of system safety engineering
+
+With the trend of increasing technological complexity, software content and mechatronic implementation, there are increasing risks from systematic failure and random hardware failure. ISO26262 includes guidance to avoid these risks by providing appropriate requirements and processes.
+
+ISO26262:
+a) provides an automotive safety lifecycle (management, development, production, operation, service, decommissioning) and supports tailoring the necessary activities during these lifecycle phases;
+b) provides an automotive-specific risk-based approach to determine integrity levels [Automotive Safety Integrity Levels (ASIL)];
+c) uses ASILs to specify applicable requirements of ISO 26262 so as to avoid unreasonable residual risk;
+d) provides requirements for validation and confirmation measure to ensure a sufficient and acceptable level of safety being achieved;
+e) provides requirements for relations with suppliers;
+
+Functional safety is influenced by the development process (including such activities as requirements specification, design, implementation, integration, verification, validation and configuration), the production and service processes and by the management processes.
+
+Safety issues are intertwined with common function-oriented and quality-oriented development activities and work products. ISO26262 addresses the safet-related aspects of development activities and work products.
+
+{{./pasted_image.png?width=800}}
+
+ISO26262 is intended to be applied to safety-related systems that include one or more electrical and/or electronic (E/E) systems and that are installed in series production passenger cars with a maximum gross vehicle mass up to 3500 kg.
+ISO26262 does not address unique E/E systems in special purpose vehicles such as vehicles designed for drivers with disabilities.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
