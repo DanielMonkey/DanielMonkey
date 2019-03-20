@@ -7,3 +7,5 @@ Created Thursday 28 February 2019
 
 export LD_LIBRARY_PATH=/usr/local/lib/:${LD_LIBRARY_PATH}
 /samples/bin
+
+

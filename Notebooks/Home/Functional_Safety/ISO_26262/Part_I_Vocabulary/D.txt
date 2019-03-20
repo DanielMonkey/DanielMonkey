@@ -1,0 +1,57 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2019-03-19T17:26:40+08:00
+
+====== D ======
+Created Tuesday 19 March 2019
+
+dedicated measure
+measure to ensure the failure rate claimed in the evaluation of the probability of violation of safety goals.
+EXAMPLE Design feature [such as hardware part over-design (e.g. electrical or thermal stress rating) or physical separation (e.g. spacing of contacts on a printed circuit board)]; special sample test of incoming material to reduce the risk of occurrence of failure modes which contribute to the violation of safety goals; burn-in testl dedicated control plan.
+
+degradation
+strategy for providing safety by design after the occurrence of failures.
+NOTE Degradation can include reduced functionality, reduced performance, or both reduced functionality and performance.
+
+dependent failures
+failures whose probability of simultaneous or successive occurrence cannot be expressed as the simple product of the unconditional probabilities of each of them
+NOTE 1 Dependent failures A and B can be characterized when
+PAB ≠ PA x PB
+where
+PAB is the probability of the simultaneous occurrence of failure A and failure B;
+PA is the probability of the occurrence of failure A;
+PB is the probability of the occurrence of failure B;
+NOTE 2 Dependent failures include common cause failure and cascading failures.
+
+detected fault
+fault whose presence is detected within a prescribed time by a safety mechanism that prevents the fault from being latent
+EXAMPLE The fault can be detected by a dedicated safety mechanism (e.g. detection of the error and notifying the driver via an alerting device on the instrument panel) as defined in the functional safety concept.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

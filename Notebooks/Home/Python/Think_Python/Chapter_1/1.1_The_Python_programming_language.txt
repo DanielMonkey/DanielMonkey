@@ -1,0 +1,51 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2019-03-20T14:18:19+08:00
+
+====== 1.1 The Python programming language ======
+Created Wednesday 20 March 2019
+
+high-level language
+low-level language - machine languages / assembly languages
+
+Loosely speaking, computers can only run programs written in low-level languages. So programs written in a high-level language have to be processed before they can run. This extra processing takes some time, which is a small disadvantage of high-level languages.
+
+The advantages are enormous.
+First, it is much easier to program in a high-level language.
+Second, high-level languages are portable.
+
+Two kinds of programs process high-level languages into low-level languages: interpreters and compilers.
+
+
+{{./pasted_image.png}}
+An interpreter reads a high-level program and executes it, meaning that it does what the program says. It processes the program a little at a time, alternately reading lines and performing computations.
+Figure 1.1 shows the structure of an interpreter.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

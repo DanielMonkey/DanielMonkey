@@ -1,0 +1,42 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2019-03-14T10:48:33+08:00
+
+====== DockerBuidler ======
+Created Thursday 14 March 2019
+
+daniyang@daniyang:~/my_dw/sdk$ id -nG
+daniyang adm cdrom sudo dip plugdev lpadmin sambashare
+daniyang@daniyang:~/my_dw/sdk$ su - ${USER}
+Password: 
+daniyang@daniyang:~$ cd my_dw/
+daniyang@daniyang:~/my_dw$ cd sdk/
+daniyang@daniyang:~/my_dw/sdk$ id -nG
+daniyang adm cdrom sudo dip plugdev lpadmin sambashare docker
+daniyang@daniyang:~/my_dw/sdk$ source tools/dockerbuilder/setup.sh
+
+
+DockerBuilder (dkb) have two major commands:
+
+1. lunch [combo_name]
+  Simply select from the menu and build one of the pre-defined combinations.
+	$ lunch                                     # select from memu, interactively
+	$ get_available_lunch_combos                # show the menu
+	$ lunch drive-linux-release-nonexperimental # select by combo name, non-interactively
+
+  Naming of lunch combo:
+	Hardware  -    OS     - CMAKE_BUILD_TYPE (opt level) - build experimental components?
+  [host|drive]-[linux|qnx]-[release|debug|relwithdebinfo]-[experimental|nonexperimental]
+
+
+2. dkb your_cmd_line
+  Run your any cmd line inside a docker container selected by your previous 'lunch' command
+  You can do this by simply appending 'dkb' before your original command line. E.g.,
+	$ dkb echo "hello"
+	$ dkb cmake -DYOUR_CMAKE_OPTIONS ..
+	$ dkb make -j12 install
+  With 'dkb' you can customize your own build steps.
+
+- Bonus:
+	$ lunch_go                                  # one-liner before going out for lunch
+	$ dkb bash                                  # connect you to the docker behind scene

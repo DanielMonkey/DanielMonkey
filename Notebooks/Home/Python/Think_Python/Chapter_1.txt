@@ -1,0 +1,16 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2019-03-20T14:12:29+08:00
+
+====== Chapter 1 ======
+Created Wednesday 20 March 2019
+
+The way of the program
+This way of thinking combines some of the best features of mathematics, engineering, and natural science.
+
+The single most important skill for a computer scientist is problem solving.
+Problem solving means the ability to formulate problems, think creatively about solutions, and express a solution clearly and accurately.
+
+On one level, you will be learning to program, a useful skill by itself. 
+On another level, you will use programming as a means to an end.
+

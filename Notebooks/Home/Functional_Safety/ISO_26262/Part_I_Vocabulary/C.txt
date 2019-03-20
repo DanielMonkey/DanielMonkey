@@ -10,3 +10,78 @@ data that will be applied after the software build in the development process
 EXAMPLE Parameters (e.g. value for low idle speed, engine characteristic diagrams); vehicle specific parameters (adaptation values) (e.g. limit stop for throttle value); variant coding (e.g. country code, left-hand/right-hand steering).
 NOTE Calibration data cannot contain executable or interpretable code.
 
+candidate
+item or element whose definition and conditions of use are identical to, or have a very high degree of commanality with, an item or element that is already released and in operation.
+NOTE This definition applies where candidate is used in the context of a proven in use argument.
+
+cascading failure
+failure of an element of an item causing another element or elements of the same item to fail
+NOTE Cascading failures are dependent failures that are not common cause failures. See Figure 2, Failure A.
+{{./pasted_image.png}}
+
+common cause failure
+CCF
+failure of two or more elements of an item resulting from a single specific event or root cause
+NOTE Common cause failures are dependent failures that are not cascading failures. See Figure 3.
+{{./pasted_image001.png}}
+
+component
+non-system level element that is logically and technically separable and is comprised of more than one hardware part or of one or more software units.
+NOTE A component is a part of a system.
+
+configuration data
+data that is assigned during software build and that controls the software build process
+EXAMPLE Pre-processor instructions; software build scripts (e.g. XML configuration files).
+NOTE 1 Configuration data cannot contain executable or interpretable code.
+NOTE 2 Configuration data controls the software build. Only code, or data selected by configuration data can be included in the executable code.
+
+confirmation measure
+confirmation review, audit or assessment concerning functional safety
+
+confirmation review
+confirmation that a work product meets the requirements of ISO 26262 with the required level of independence of the reviewer
+NOTE 1 A complete list of confirmation reviews is given in ISO 26262-2
+NOTE 2 The goal of confirmation reviews is to ensure compliance with ISO 26262.
+
+controllability
+ability to avoid a specified harm or damage through the timely reactions of the persons involved, possibly with support from external measures.
+NOTE 1 Persons involved can include the driver, passengers or persons in the vicinity of the vehicle's exterior.
+NOTE 2 The parameter C in hazard analysis and risk assessment represents the potential for controllability.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
