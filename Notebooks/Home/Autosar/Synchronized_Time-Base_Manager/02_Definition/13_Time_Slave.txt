@@ -1,0 +1,9 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2019-03-20T17:44:17+08:00
+
+====== 13 Time Slave ======
+Created Wednesday 20 March 2019
+
+Definition:
+A Time Slave is an entity which is the recipient for a certain Time Base within a certain segment of a communication network, being a consumer for this Time Base.

@@ -1,0 +1,42 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2019-03-21T15:13:08+08:00
+
+====== 18 Time Correction ======
+Created Thursday 21 March 2019
+
+Definition:
+Time Correction in Time Slaves is the process of adjusting the value of the local instance of the Time Base to the value of the Global Time Base.
+In Time Masters, Time Correction is the process of eliminating the deviation of an Offset Clock compared to its corresponding Synchronized Time Base.
+Time Correction can be divided into Rate Correction, which corrects rate deviations and Offset Correction, which corrects absolute time deviations. Offset Correction can be furthermore divided into (Offset Correction By) Jump Correction or (Offset Correction By) Rate Adaption.
+{{./pasted_image.png}}
+Note:
+* Rate Deviation: This means that the time progresses at different rates in the local instance of the Time Base and the Global Time Base. Such deviations can occur if, for example, the local hardware reference clock is driven by a crystal whose frequency is off due to manufacturing tolerances and/or thermal effects.
+* Time Offset: This means that the local instance of the Time Base and the Global Time Base are not synchronized precisely. Such deviations occur when the rate of the local hardware reference clock is not accurate and because the synchronization with the global Time Base is influenced by jitter effects, software delays and counter granularities.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

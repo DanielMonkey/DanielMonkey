@@ -1,0 +1,11 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2019-03-21T15:32:04+08:00
+
+====== 20 Offset Correction ======
+Created Thursday 21 March 2019
+
+Definition:
+Offset Correction corrects absolute time deviations (offsets). Depending on the magnitude of the offset and the configuration of StbM, this correction is either performed by Jump Correction or Rate Adaption.
+Offset Correction is independent from Rate Correction. It is performed each time the local instance of the Time Base is synchronized to its Global Time Base.
+

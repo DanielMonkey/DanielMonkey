@@ -1,0 +1,71 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2019-03-20T15:02:12+08:00
+
+====== E ======
+Created Wednesday 20 March 2019
+
+electrical and/or electronic system
+E/E system
+system that consists of electrical and/or electronic elements, including programmable electronic elements
+EXAMPLE Power supply; sensor or other input device; communication path; actuator or other output device.
+
+element
+system or part of a system including components, hardware, software, hardware parts, and software parts.
+
+embedded software
+fully-integrated software to be executed on a processing element
+NOTE The processing element is normally a micro-controller, a field programmable gate array (FPGA) or an application-specific integrated circuit (ASIC), but it can also be a more complex component or subsystem
+
+emergency operation
+degraded functionality from the state in which a fault occurred until the transition to a safe state is achieved as defined in the warning and degradation concept.
+
+emergency operation interval
+specified time-span that emergency operation is needed to support the warning and degradation concept.
+NOTE Emergency operation is part of the warning and degradation concept.
+
+error
+discrepancy between a computed, observed or measured value or condition, and the true, specified or theoretically correct value or condition
+NOTE 1 An error can arise as a result of unforeseen operating conditions or due to a fault within the system, subsystem or component being considered.
+NOTE 2 A fault can manifest itself as an error within the considered element and the error can ultimately cause a failure.
+
+exposure
+state of being in an operational situation that can be hazardous if coincident with the failure mode under analysis
+
+external measure
+measure that is separate and distinct from the item which reduces or mitigates the risks resulting from the item.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

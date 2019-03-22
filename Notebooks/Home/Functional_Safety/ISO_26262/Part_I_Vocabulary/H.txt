@@ -1,0 +1,29 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2019-03-21T16:37:22+08:00
+
+====== H ======
+Created Thursday 21 March 2019
+
+hardware architecture metrics
+metrics for the assessment of the effectiveness of the hardware architecture with respect to safety
+NOTE The single-point fault metric and the latent fault metric are the hardware architectural metrics.
+
+hardware part
+hardware which cannot be subdivided
+
+harm
+physical injury or damage to the health of persons
+
+hazard
+potential source of harm caused by malfunctioning behaviour of the item
+NOTE This definition is restricted to the scope of ISO 26262; a more general definition is potential source of harm.
+
+hazard analysis and risk assessment
+method to identify and categorize hazardous events of items and to specify safety goals and ASILs related to the prevention or mitigation of the associated hazards in order to avoid unreasonable risk.
+
+hazardous event
+combination of a hazard and an operational situation
+
+homogeneous redundancy
+multiple but identical implementations of a requirement

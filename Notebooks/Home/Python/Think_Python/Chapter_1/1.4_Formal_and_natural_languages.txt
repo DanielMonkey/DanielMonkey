@@ -1,0 +1,61 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2019-03-21T14:21:10+08:00
+
+====== 1.4 Formal and natural languages ======
+Created Thursday 21 March 2019
+
+Natural languages are the languages people speak, such as English, Spanish, and French. They were not designed by people (although people try to impose some order on them); they evolved naturally.
+
+Formal languages are languages that are designed by people for specific applications.
+
+Programming languages are formal languages that have been designed to express computations.
+
+Formal languages tend to have strict rules about syntax.
+Syntax rules come in two flavors, pertaining to tokens and structure.
+Tokens are the basic elements of the language, such as words, numbers, and chemical elements.
+The scond type of syntax rule pertains to the structure of a statement ; that is, the way the tokens are arranged.
+
+When you read a sentence in English or a statement in a formal language, you have to figure out what the structure of the sentence is (although in a natural language you do this subconsciously). This process is called parsing.
+
+Although formal and natural languages have many features in common - tokens, structure, syntax, and semantics - there are some differences:
+ambiguity: Natural languages are full of ambiguity, which people deal with by using contextual clues and other information. Formal languages are designed to be nearly or completely unambiguous, which means that any statement has exactly one meaning, regardless of context.
+redundancy: In order to make up for ambiguity and reduce misunderstandings, natural languages employ lots of redundancy. As a result, they are ofthen verbose. Formal languages are less redundant and more concise.
+literalness: Natual languages are full of idiom and metaphor. If I say, "The penny dropped," there is probably no penny and nothing dropping (this idiom means that someone realized something after a period of confusion). Formal languages mean exactly what they say.
+
+Here are some suggestions for reading programs (and other formal languages). 
+First, remember that formal languages are much more dense than natural languages, so it takes longer to read them.
+Also, the structure is very important, so it is usually not a good idea to read from top to bottom, left to right. Instead, learn to parse the program in your head, identifying the tokens and interpreting the structure.
+Finally, the details matter. Small errors in spelling and punctuation, which you can get away with in natural languages, can make a big difference in a formal language.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

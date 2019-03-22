@@ -1,0 +1,37 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2019-03-21T15:25:15+08:00
+
+====== 19 Rate Correction ======
+Created Thursday 21 March 2019
+
+{{./pasted_image.png?width=400}}
+Definition:
+Rate Correction corrects the rate-deviation of a local hardware reference clock. This correction is done by a multiplicative correction factor which is used in addition to the clock's preconfigured rate.
+Rate Correction determines the correction factor in the scope of a measurement. This correction factor is however not fixed but updated after each successful measurement.
+The working principle of Rate Correction is not to adjust the local hardware reference clock in order to let it progress with the correct rate. Instead Rate Correction only corrects the values of the local instance of the Time Base on-the-fly when they are read.
+
+{{./pasted_image001.png}}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

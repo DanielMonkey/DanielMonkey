@@ -1,0 +1,13 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2019-03-20T17:33:43+08:00
+
+====== 10 Time Gateway ======
+Created Wednesday 20 March 2019
+
+Definition:
+A Time Gateway is a set of entities where one entity is acting as Time Slave for a certain Time Base.
+The other (one or more) entities are acting as Time Masters which are distributing this Time Base to sets of Time Slaves. 
+A Timesync ECU can contain multiple Time Gateways.
+A Time Gateway can be connected to different types of bus systems (e.g. the slave side could be connected to a FlexRay bus whereas the master side could be connected to a CAN bus system).
+

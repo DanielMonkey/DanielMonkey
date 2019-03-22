@@ -1,0 +1,44 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2019-03-20T18:42:34+08:00
+
+====== 08 C++修饰符类型 ======
+Created Wednesday 20 March 2019
+
+C++允许在char、int和double数据类型前放置修饰符。
+修饰符用于改变基本类型的含义，所以它更能满足各种情境的需求。
+下面列出数据类型修饰符：
+* signed
+* unsigned
+* long
+* short
+
+修饰符singed、unsigned、long和short可应用于整型，signed和unsigned可应用于字符型，long可应用与双精度型。
+修饰符signed和unsgned也可以作为long或short修饰符的前缀。例如：unsigned long int。
+
+C++允许使用速记符号来 声明无符号短整型或无符号长整数。你可以不写int，只写单词unsigned、short或unsigned、long，int是隐含的。
+
+C++中的类型限定符
+类型限定符提供了变量的额外信息。
+
+限定符				含义
+const				const类型的对象在程序执行期间不能被修改改变。
+volatile			修饰符volatile告诉编译器不需要优化volatile声明的变量，让程序可以直接从内存中读取变量。对于一般的变量编译器会对变量进行优化，将内存中的变量放在寄存器中以加快读写效率。
+restrict			由restrict修饰的指针是唯一一种访问它所指向的对象的方式。只有C99增加了新的类型限定符restrict。
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

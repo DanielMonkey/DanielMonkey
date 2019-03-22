@@ -1,0 +1,65 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2019-03-20T17:50:45+08:00
+
+====== 17 Virtual Local Time ======
+Created Wednesday 20 March 2019
+
+Definition:
+The Virtual Local Time is a time which is driven by the OS counter or a hardware clock and which in turn drives a Synchronized Time Base.
+The associated Synchronized Time Base has an offset to the Virtual Local Time.
+For Time Slaves there is usually also a deviation in rate caused by different clock drifts of the HW reference clocks used by Time Master and Time Slave.
+
+The term Virtual Local Time describes a Time Base whose time progresses monotonously without jumps.
+
+Virtual Local Time Bases are necessary for interpolating
+* local instances of Synchronized Time Bases (in either Master or Slave)
+* Pure Local Time Bases
+* and Offset Time Bases (in case of rate correction)
+
+In addition, Virtual Local Time Bases can be used to measure timespans, i.e., for rate correction measurement intervals or timeouts.
+
+Virtual Local Time Bases are based on a hardware clock and can be derived from various sources:
+* OS counter
+* GPT counter
+* Ethernet freerunning counter (used for ingress and egress timestamping)
+
+It is possible to use different Virtual Local Time Bases in parallel.
+
+Although the different counter sources vary regarding tick duration and counter width, each derived Virtual Local Time Base has the same width (64 bit) and tck duration (1 ns).
+To achieve this, it is necessary to count overflows of the counters and to convert counter specific tick durations if required.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

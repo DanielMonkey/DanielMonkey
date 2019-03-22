@@ -1,0 +1,16 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2019-03-20T17:39:22+08:00
+
+====== 12 Time Master ======
+Created Wednesday 20 March 2019
+
+Definition:
+A Time Master is an entity which is the master for a certain Time Base and which propagates this Time Base to a set of Time Slaves within a certain segment of a communication network, being a source for this Time Base.
+If a Time Master is also the owner of the Time Base then he is the Global Time Master. 
+A Time Gateway typically consists of one Time Slave and one ore more Time Masters. 
+When mapping time entities to real ECUs it has to be noted, that an ECU could be Time Master (or even Global Time Master) for one Time Base and Time Slave for another Time Base.
+
+Special Case "Pure Local Time Master":
+A Pure Local Time Master is an entity which is the master of a Pure Local Time Base and which does therefore not propagate this time base to any Time Slave.
+

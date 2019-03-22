@@ -1,0 +1,10 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2019-03-21T15:35:01+08:00
+
+====== 21 Jump Correction ======
+Created Thursday 21 March 2019
+
+Definition:
+Jump Correction corrects absolute time offsets in a single step by adding the offset to the local instance of the Time Base (which is equivalent to taking over the value of the Global Time Base).
+{{./pasted_image.png}}

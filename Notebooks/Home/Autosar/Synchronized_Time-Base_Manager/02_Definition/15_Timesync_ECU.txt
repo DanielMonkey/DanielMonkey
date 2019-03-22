@@ -1,0 +1,10 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2019-03-20T17:47:04+08:00
+
+====== 15 Timesync ECU ======
+Created Wednesday 20 March 2019
+
+Definition:
+A Timesync ECU is an ECU which is part of a Time Domain by containing one or more Time Slaves or Time Masters.
+

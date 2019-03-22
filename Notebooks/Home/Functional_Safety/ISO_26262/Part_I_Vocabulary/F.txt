@@ -1,0 +1,96 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2019-03-20T16:41:37+08:00
+
+====== F ======
+Created Wednesday 20 March 2019
+
+failure
+termination of the ability of an element, to perform a function as required
+NOTE Incorrect specification is a source of failure.
+
+failure mode
+manner in which an element or an item fails
+
+failure rate
+probability density of failure divided by probability of survival for a hardware element.
+NOTE The failure rate is assumed to be constant and is generally denoted as "λ".
+
+fault
+abnormal condition that can cause an element or an item to fail
+NOTE 1 Permanent, intermittent and transient faults (especially soft-errors) are considered.
+NOTE 2 An intermittent fault occurs time and time again, then disappears. This type of fault can occur when a component is on the verge of breaking down or, for example, due to a glitch in a switch. Some systematic faults (e.g. timing marginalities) could lead to intermittent faults.
+
+fault model
+representation of failure modes resulting from faults.
+NOTE Fault models are generally based on field experience or reliability handbooks.
+
+fault reaction time
+time-span from the detection of a fault to reaching the safe state.
+See Figure 4.
+{{./pasted_image.png?width=700}}
+
+fault tolerant time interval
+time-span in which a fault or faults can be present in a system before a hazardous event occurs.
+
+field data
+data obtained from the use of an item or element including cumulative operating hours, all failures and in-service anomalies
+NOTE Field data normally comes from customer use.
+
+formal notation
+description technique that has both its syntax and semantics completely defined
+EXAMPLE Z notation (Zed); NuSMV (symbolic model checker); Prototype Verification System (PVS); Vienna Development Method (VDM).
+
+formal verification
+method used to prove the correctness of a system against the specification in formal notation of its required behavior
+
+freedom from interference
+absence of cascading failures between two or more elements that could lead to the violation of a safety requirement
+EXAMPLE 1 Element 1 is free of interference from element 2 if no failure of element 2 can cause element 1 to fail.
+EXAMPLE 2 Element 3 interferes with element 4 if there exists a failure of element 3 that causes element 4 to fail.
+
+functional concept
+specification of the intended functions and their interactions necessary to achieve the desired behaviour
+NOTE The functional concept is developed during the concept phase.
+
+functional safety
+absense of unreasonable risk due to hazards caused by malfunctioning behaviour of E/E systems
+
+functional safety concept
+specification of the functional safety requirements, with associated information, their allocation to architectural elements, and their interaction necessary to achieve the safety goals.
+
+functional safety requirement
+specification of implementation-independent safety behaviour, or implementation-independent safety measure, including its safety-related attributes
+NOTE 1 A functional safety requirement can be a safety requirement implemented by a safety-related E/E system, or by a safety-related system of other technologies, in order to achieve or maintain a safe state for the item taking into account a determined hazardous event.
+NOTE 2 The functional safety requirements might be specified independently of the technology used in the concept phase, of product development.
+NOTE 3 Safety-related attributes include information about ASIL.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

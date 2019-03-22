@@ -1,0 +1,9 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2019-03-20T17:45:55+08:00
+
+====== 14 Time Sub-domain ======
+Created Wednesday 20 March 2019
+
+Definition:
+A Time Sub-domain denotes which components (e.g. nodes) are linked to a certain Time Base whereas the scope is limited to one communication bus.

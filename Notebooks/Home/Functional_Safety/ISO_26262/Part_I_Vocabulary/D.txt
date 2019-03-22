@@ -27,6 +27,47 @@ detected fault
 fault whose presence is detected within a prescribed time by a safety mechanism that prevents the fault from being latent
 EXAMPLE The fault can be detected by a dedicated safety mechanism (e.g. detection of the error and notifying the driver via an alerting device on the instrument panel) as defined in the functional safety concept.
 
+development interface agreement
+DIA
+agreement between customer and supplier in which the responsibilities for activities, evidence or work products to be exchanged by each party are specified.
+
+diagnostic coverage
+proportion of the hardware element failure rate that is detected or controlled by the implemented safety mechanisms
+NOTE 1 Diagnostic coverage can be assessed with regard to residual faults or with regard to latent multiplepoint faults that might occur in a hardware element.
+NOTE 2 The difinition can be represented in terms of the equations given in ISO 26262-5.
+NOTE 3 Safety mechanisms implemented at different levels in the architecture can be considered.
+
+diagnostic test interval
+amount of time between the executions of online diagnostic tests by a safety mechanism.
+
+distributed development
+development of an item or element with development responsibility divided between the customer and supplier(s) for the entire item or element, or for subsystesms.
+NOTE Customer and supplier are roles of the cooperating parties.
+
+diversity
+different solutions satisfying the same requirement with the aim of independence.
+EXAMPLE Diverse programming; diverse hardware.
+NOTE Diversity does not guarantee independence, but addresses certain types of common causes failures.
+
+dual-point failure
+failure resulting from the combination of two independent faults that leads directly to the violation of a safety goal.
+NOTE 1 Dual-point failures are multiple-point failures of order 2.
+NOTE 2 Dual-point failures that are addressed in ISO26262 include those where one fault affects a safety-related element and another fault affects the corresponding safety mechanism intended to achieve or maintain a safe state.
+NOTE 3 For a dual-point failure to directly violate a safety goal, the presence of both independent faults is necessary, i.e. the violation of a safety goal due to a combination of a residual fault with a safe fault is not considered a dual-point failure since the residual fault leads to a violation of a safety goal with or without the presence of a second independent fault.
+
+dual-point fault
+individual fault that, in combination with another independent fault, leads to a dual-point failure
+NOTE 1 A dual-point fault can only be recognized after the identification of dual-point failure, e.g. from cut set analysis of a fault tree.
+NOTE 2 See also multiple-point fault
+
+
+
+
+
+
+
+
+
 
 
 

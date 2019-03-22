@@ -1,0 +1,10 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2019-03-20T17:48:27+08:00
+
+====== 16 Timesync Module ======
+Created Wednesday 20 March 2019
+
+Definition:
+Timesync Modules (<Bus>TSyn modules) are bus specific modules to receive or transmit time information on bus systems by applying bus specific mechanisms. 
+A Timesync module can serve multiple communication buses of the same type.

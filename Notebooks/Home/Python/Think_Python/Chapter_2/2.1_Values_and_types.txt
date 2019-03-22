@@ -1,0 +1,14 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2019-03-21T16:01:06+08:00
+
+====== 2.1 Values and types ======
+Created Thursday 21 March 2019
+
+A value is one of the basic things a program works with, like a letter or a number.
+These values belong to different types: 2 is an integer, and 'Hello, World!' is a string, so-called because it contains a "string" of letters. You (and the interpreter) can identify strings because they are enclosed in quotations marks.
+
+If you are not sure what type a value has, the interpreter can tell you.
+>>>type('Hello, World!')
+<type 'str'>
+

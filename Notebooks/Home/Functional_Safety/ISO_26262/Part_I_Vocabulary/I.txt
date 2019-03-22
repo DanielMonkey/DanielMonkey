@@ -1,0 +1,27 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2019-03-21T16:46:49+08:00
+
+====== I ======
+Created Thursday 21 March 2019
+
+independence
+absence of dependent failures between two or more elements that could lead to the violation of a safety requirement, or organizational separation of the parties performing an action
+NOTE By definition, ASIL decomposition or confirmation measures include requirements on independence.
+
+independent failures
+failures whose probability of simultaneous or successive occurrence can be expressed as the simple product of their unconditional probabilities
+
+informal notation
+description technique that does not have its syntax completely defined
+EXAMPLE Description in figure or diagram.
+NOTE An incomplete syntax definition implies that the semantics are also not completely defined.
+
+informal verification
+verification methods not considered as semi-formal or formal verification techniques
+EXAMPLE Design review; model review.
+
+inheritance
+passing attributes of requirements in an unchanged manner to the next level of detail during the development process
+
+initial ASIL
