@@ -1,0 +1,57 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2019-03-22T15:40:20+08:00
+
+====== M ======
+Created Friday 22 March 2019
+
+malfunctioning behaviour
+failure or unintended behaviour of an item with respect to its design intent
+
+model-based development
+development that uses models to describe the functional behaviour of the elements to be developed
+NOTE Depending on the level of abstraction used for such a model, the model can be used for simulation or code generation or both.
+
+modification
+authorized alteration of an item
+NOTE 1 Modification is used in ISO 26262 with respect to re-use for lifecycle tailoring.
+NOTE 2 A change is applied during the lifecycle of an item, while a modification is applied to create a new item from an existing item.
+
+multiple-point failure
+failure, resulting from the combination of several independent faults, which leads directly to the violation of a safety goal
+NOTE For a multiple-point failure to directly violate a safety goal, the presence of all independent faults is necessary, i.e. the violation of a safety goal due to a combination of a residual fault with other independent faults is not considered a mutliple-point failure.
+
+multiple-point fault
+individual fault that, in combination with other independent faults, leads to a multiple-point failure 
+NOTE A multiple-point fault can only be recognized after the identification of multiple-point failure, e.g. from cut set analysis of a fault tree.
+
+multiple-point fault detection interval
+time span to detect multiple-point fault before it can contribute to a mutliple-point failure
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

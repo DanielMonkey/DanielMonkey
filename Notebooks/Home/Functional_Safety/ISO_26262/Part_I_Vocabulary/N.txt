@@ -1,0 +1,13 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2019-03-22T15:52:12+08:00
+
+====== N ======
+Created Friday 22 March 2019
+
+new development
+process of creating an item having previously unspecified functionality, a novel implementation of an existing functionality, or both
+
+non-functional hazard
+hazard that arises due to factors other than incorrect functioning of the E/E system, safety-related systems of other technologies, or external measures
+

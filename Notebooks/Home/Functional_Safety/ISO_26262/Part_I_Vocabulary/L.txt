@@ -1,0 +1,13 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2019-03-22T15:36:31+08:00
+
+====== L ======
+Created Friday 22 March 2019
+
+latent fault
+multiple-point fault whose presence is not detected by a safety mechanism nor perceived by the driver within the multiple-point fault detection interval.
+
+lifecycle
+entirely of phases from concept through decommissioning of the item
+

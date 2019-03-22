@@ -6,3 +6,10 @@ Creation-Date: 2019-03-21T15:36:44+08:00
 Created Thursday 21 March 2019
 
 Definition:
+Rate Adaption corrects time offsets gradually within a predefined timespan.
+Hereto, Rate Adaption switches the rate of the local instance of the Time Base temporarily to a different value. This rate is chosen to completely eliminate the offset within the preconfigured timespan.
+Like Rate Correction, Rate Adaption does not adjust the local instance of the Time Base (including hardware reference clock). It merely corrects the clock values on-the-fly when they are read.
+
+Note: Rate Adaption and Rate Correction use a similar mechanism. They are however completely independent from each other.
+
+{{./pasted_image.png}}

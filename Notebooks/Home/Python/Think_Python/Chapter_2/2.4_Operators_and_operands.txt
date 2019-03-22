@@ -5,3 +5,16 @@ Creation-Date: 2019-03-21T16:18:20+08:00
 ====== 2.4 Operators and operands ======
 Created Thursday 21 March 2019
 
+Operators are special symbols that represent computations like addition and multiplication. 
+The values the operator is applied to are called operands.
+
+The operators +, -, *, / and ** perform addition, substruction, multiplication, division and exponentiation.
+
+In some other languages, ^ is used for exponentiation, but in Python it is a bitwise operator called XOR.
+
+floor division
+When both of the operands are integers, the result is also an integer; floor division chops off the fraction part.
+In Python 3, the result of this division is a float. The new operator // performs floor division.
+
+If either of the operands is a floating-point number, Python performs floating-point division, and the result is a float.
+

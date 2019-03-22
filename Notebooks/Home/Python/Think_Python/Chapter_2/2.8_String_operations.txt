@@ -1,0 +1,16 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2019-03-22T16:29:36+08:00
+
+====== 2.8 String operations ======
+Created Friday 22 March 2019
+
+In general, you can't perform mathematical operations on strings, even if the strings look like numbers.
+
+The + operator works with strings, but it might not do what you expect: it performs concatention, which means joining the strings by linking them end-to-end.
+
+The * operator also works on strings; it performs repetition. If one of the operands is a string, the other has to be an integer.
+
+This use of + and * makes sense by analogy with addition and multiplication.
+On the other hand, there is a significant way in which string concatenation and repetition are different from integer addition and multiplication.
+

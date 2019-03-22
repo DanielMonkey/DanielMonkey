@@ -1,0 +1,70 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2019-03-22T16:41:39+08:00
+
+====== P ======
+Created Friday 22 March 2019
+
+partitioning
+separation of functions or elements to achieve a design
+NOTE Partitioning can be used for fault containment to avoid cascading failures. To achieve freedom from interference between partitioned design elements, additional non-functional requirements can be introduced.
+
+passenger car
+vehicle designed and constructed primarily for the carriage of persons and their luggage, their goods, or both, having not more than a seating capacity of eight, in addtion to the driver, and without space for standing passengers
+
+perceived fault
+fault whose presence is deduced by the driver with a prescribed time interval
+EXAMPLE The fault can be directly perceived through obvious limitation of system behaviour or performance.
+
+permanent fault
+fault that occurs and stays until removed or repaired
+NOTE Direct current (d.c.) faults, e.g. stuck-at and bridging faults, are permanent faults. Systematic faults manifest themselves mainly as permanent faults.
+
+phase
+stage in the safety lifecycle that is specified in a distinct part of ISO 26262
+NOTE The phases in ISO 26262 are specified in distinct parts, i.e. ISO 26262-3, ISO 26262-4, ISO 26262-5, ISO 26262-6, and ISO 26262-7 specify, respectively, the phases of:
+* concept
+* product development at the system level
+* product development at the hardware level
+* product development at the software level, and
+* product and operation
+
+proven in use argument
+evidence, based on analysis of field data resulting from use of a candidate, that the probability of any failure of this candidate that could impair a safety goal of an item that uses it meets the requirements for the applicable ASIL.
+
+proven in use credit
+substitution of a given set of lifecycle subphases with corresponding work products by a proven in use argument
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

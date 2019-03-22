@@ -1,0 +1,14 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2019-03-22T16:14:32+08:00
+
+====== 2.5 Expressions and statements ======
+Created Friday 22 March 2019
+
+An expression is a combination of values, variables, and operations.
+A value all by itself is considered an expression
+
+A statement is a unit of code that the Python interpreter can execute. 
+
+Technically an expression is also a statement, but it is probably simpler to think of them as different things. The important difference is that an expression has a value; a statement does not.
+

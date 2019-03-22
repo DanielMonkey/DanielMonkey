@@ -1,0 +1,23 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2019-03-22T16:36:59+08:00
+
+====== O ======
+Created Friday 22 March 2019
+
+operating mode
+perceivable functional state of an item or element
+EXAMPLE System off; system active; system passive; degraded operation; emergency operation
+
+operating time
+cumulative time that an item or element is functioning
+
+operational situation
+scenario that can occur during a vehicle's life
+EXAMPLE Driving; parking; maintenance;
+
+other technology
+technology different from E/E technologies within the scope of ISO 26262
+EXAMPLE Mechanical technology; hydraulic technology
+NOTE Other technologies can either be considered in the specification of the functional safety concept, during the allocation of safety requirements, or as an external measure
+

@@ -25,3 +25,53 @@ inheritance
 passing attributes of requirements in an unchanged manner to the next level of detail during the development process
 
 initial ASIL
+ASIL resulting from the hazard analysis or the ASIL resulting from a preceding ASIL decomposition.
+NOTE The initial ASIL is the starting point for ASIL decomposition or further ASIL decomposition.
+
+inspection
+examination of work products, following a formal procedure, in order to detect anomalies
+NOTE 1 Inspection is a means of verification.
+NOTE 2 Inspection differs from testing in that it does not normally involve the operation of the associated item or element.
+NOTE 3 Any anomalies that are detected are usually addressed by rework, followed by re-inspection of the reworked products.
+NOTE 4 A formal procedure normally includes a previously defined procedure, checklist, moderator and review of the results.
+
+intended functionality
+behaviour specified for an item, system, or elment excluding safety mechanisms
+
+item
+system or array of systems to implement a function at the vehicle level, to which ISO 26262 is applied
+
+item development
+complete process of implementing an item
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

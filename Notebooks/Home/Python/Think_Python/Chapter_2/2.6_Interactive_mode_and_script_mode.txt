@@ -1,0 +1,15 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2019-03-22T16:17:50+08:00
+
+====== 2.6 Interactive mode and script mode ======
+Created Friday 22 March 2019
+
+One of the benefits of working with an interpreted language is that you can test bits of code in interactive mode before you put them in a script. 
+But there are differences between interactive mode and script mode that can be confusing.
+
+In script mode an expression, all by itself, has no visible effect.
+Python actually evaluates the expression, but it doesn't display the value unless you tell it to.
+
+A script usually contains a sequence of statements. If there is more than one statement, the results appear one at a time as the statements execute.
+
