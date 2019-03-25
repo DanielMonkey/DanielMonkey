@@ -1,0 +1,15 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2019-03-25T16:18:17+08:00
+
+====== 7.1 Startup behavior ======
+Created Monday 25 March 2019
+
+This chapter describes the actions, which shall be performed during StbM_Init().
+StbM_Init() shall establish the initial state of the module to prepare the module for the actual functionality of providing Global Time Bases to the customers.
+
+[SWS_StbM_00171]⌈
+For each Time Base configured to be stored non-volatile (StbMStoreTimebaseNonVolatile == STORAGE_AT_SHUTDOWN], the Time Base value shall be loaded from NvM. In case ther restore is not successful, the Time Base shall start with zero.
+⌋(RS_TS_00004)
+Note: The futher details on the NvM handling is intentionally left open. The implementer could choose e.g. between the ReadAll/WriteAll functionality from NvM; or explicit NvM-Block configuration and synchronization; also block restore via callback or via constant.
+

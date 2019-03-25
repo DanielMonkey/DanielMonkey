@@ -1,0 +1,13 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2019-03-25T16:42:39+08:00
+
+====== 3.4 Composition ======
+Created Monday 25 March 2019
+
+So far, we have looked at the elements of a program - variables, expressions, and statement - in isolation, without talking about how to combine them.
+
+One of the most useful features of programming languages is their ability to take small building blocks and compose them.
+
+Almost anywhere you can put a value, you can put an arbitrary expression, with one exception: the left side of an assignment statement has to be a variable name. Any other expression on the left side is a syntax error.
+

@@ -1,0 +1,13 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2019-03-25T15:56:08+08:00
+
+====== 3.3 Match functions ======
+Created Monday 25 March 2019
+
+Python has a math module that provides most of the familiar mathematical functions. A module is a file that contains a collection of related functions.
+
+Before we can use the module, we have to import it.
+
+The module object contains the functions and variables defined in the module. To access one of the functions, you have to specify the name of the module and the name of the function, separately by a dot (also known as a period). This format is called dot notation.
+

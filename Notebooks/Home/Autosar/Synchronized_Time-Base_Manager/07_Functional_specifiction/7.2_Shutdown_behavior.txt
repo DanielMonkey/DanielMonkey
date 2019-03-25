@@ -1,0 +1,13 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2019-03-25T17:12:17+08:00
+
+====== 7.2 Shutdown behavior ======
+Created Monday 25 March 2019
+
+[SWS_StbM_00172]⌈
+For each Time Base configured to be stored non-volatile (StbMStoreTimeBaseNonVolatile == STORAGE_AT_SHUTDOWN), the value shall be stored to NvM latest at shutdown.
+⌋(RS_TS_00024)
+
+
+

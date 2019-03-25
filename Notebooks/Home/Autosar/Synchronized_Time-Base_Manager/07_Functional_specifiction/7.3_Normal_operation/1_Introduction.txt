@@ -1,0 +1,15 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2019-03-25T17:16:12+08:00
+
+====== 1 Introduction ======
+Created Monday 25 March 2019
+
+A Global Time network contains of a Time Master and at least one Time Slave.
+The Time Master is distributing via Time Synchronization messages the Global Time Base to the connected Time Slaves for each Time Domain.
+For CAN and Ethernet, the Time Slave corrects the received Global Time Base by considering the Time Stamp at the transmitter side and the own generated receiver Time Stamp. 
+For FlexRay, the Time Synchronization mechanism is based on the local time of the FlexRay Bus.
+
+The local instance of the Time Base (derived from a HW reference clock) will be updated with the latest received valid value of the Global Time Base and runs autonomously until the next value of the Global Time Base is received.
+
+{{./pasted_image.png?width=700}}

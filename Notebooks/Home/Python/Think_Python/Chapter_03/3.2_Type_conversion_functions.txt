@@ -1,0 +1,14 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2019-03-25T15:52:41+08:00
+
+====== 3.2 Type conversion functions ======
+Created Monday 25 March 2019
+
+Python provides build-in functions that convert values from one type to another. The int function takes any value and converts it to an integer, if it can, or complains otherwise.
+int can convert floating-type values to integers, but it doesn't round off; it chops off the fraction part.
+
+float converts integers and strings to floating-point numbers.
+
+Finally, str converts its argument to a string.
+

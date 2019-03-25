@@ -1,0 +1,9 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2019-03-25T16:10:19+08:00
+
+====== 04 OS Schedule Table ======
+Created Monday 25 March 2019
+
+The Synchronized Time-Base Manager shall perform the functionality of synchronizing OS ScheduleTables with a respective Synchronized Time Base. 
+However, the StbM considers only the case when the targeted OS ScheduleTable is explicitly synchronized. The implicit synchronization does not affect the StbM, because the synchronization mechanism bypasses the module. Thus, when talking in the following about synchronization of OS ScheduleTables, always the explicit one is meant.

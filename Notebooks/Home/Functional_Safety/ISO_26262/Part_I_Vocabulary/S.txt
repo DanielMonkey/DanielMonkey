@@ -1,0 +1,119 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2019-03-25T14:16:55+08:00
+
+====== S ======
+Created Monday 25 March 2019
+
+safe fault
+fault whose occurrence will not significantly increase the probability of violation of a safety goal
+NOTE 1 As shown in ISO 26262-5:2011, Annex B, both non-safety and safety-related elements can have safe faults.
+NOTE 2 Single-point faults, residual faults and dual-point faults do not constitute safe faults.
+NOTE 3 Unless shown relevant in the safety concept, multiple-point faults with higher order than 2 can be considered as safe faults
+
+safe state
+operating mode of an item without an unreasonable level of risk
+EXAMPLE Intended operating mode; degraded operating mode; switched-off mode.
+
+safety
+absense of unreasonable risk
+
+safety activity
+activity performed in one or more subphases of the safety lifecycle
+
+safety architecture
+set of elements and their interaction to fulfil the safety requirements
+
+safety case
+argument that the safety requirements for an item are complete and satisfied by evidence compiled from work products of the safety activities during development
+NOTE Safety case can be extended to cover safety issues beyond the scope of ISO 26262
+
+safety culture
+policy and strategy used within an organization to support the development, production and operation of safety-related systems
+NOTE See ISO 26262-2:2011, Annex B.
+
+safety goal
+top-level safety requirement as a result of the hazard analysis and risk assessment
+NOTE One safety goal can be related to several hazards, and several safety goals can be related to a single hazard.
+
+safety manager
+role filled by the person responsible for the functional safety management during the item development
+
+safety measure
+activity or technical solution to avoid or control systematic failures and to detect random hardware failures or control random hardware failures, or mitigate their harmful effects
+NOTE 1 Examples of safety measures are FMEA and software without the use of global variables.
+NOTE 2 Safety measures include safety mechanisms
+
+safety mechanism
+technical solution implemented by E/E functions or elements, or by other technologies, to detect faults or control in order to achieve or maintain a safe state
+NOTE 1 Safety mechanisms are implemented within the item to prevent faults from leading to single-point failures or to reduce residual failures and to prevent faults from being latent.
+NOTE 2 The safety mechanism is either
+a) able to transition to, or maintain, the item in a safe state, or
+b) able to alert the driver such that the driver is expected to control the effect of the failure
+as defined in the functional safety concept.
+
+safety plan
+plan to manage and guide the execution of the safet activities of a project including dates, milestones, tasks, deliverables, responsibilities and resources
+
+safet-related element
+element that has the potential to contribute to the violation of or achievement of a safety goal
+NOTE Fail-safe elements are considered safety-related if they can contribute to at least one safety goal.
+
+safety-related function
+function that has the potential to contribute to the violation of a safety goal
+
+safety-related special characteristic
+characteristic of an item or an element, or else their production process, for which reasonably foreseeable deviation could impact, contribute to, or cause any potential reduction of functional safety
+NOTE 1 Term special characteristics are defined in ISO/TS 16949.
+NOTE 2 Safet-related special characteristics are derived during the development phase of the item or the elements.
+EXAMPLE Temperature range; expiration date; fastening torque; production tolerance; configuration.
+
+safety validation
+assurance, based on examination and tests, that the safety goals are sufficient and have been achieved
+NOTE ISO 26262-4 provides suitable methods for validation.
+
+semi-formal notation
+description technique whose syntax is completely defined but whose semantics definition can be incomplete
+EXAMPLE System Analysis and Design Techniques (SADT); Unified Modeling Language (UML)
+
+semi-formal verification
+verification that is based on a description given in semi-formal notation
+EXAMPLE Use of test vectors generated from a semi-formal model to test that the system behaviour matches the model.
+
+service note
+documentation of safety information to be considered when performing maintenance procedures for the item
+EXAMPLE Safety-related characteristics; safety operation that can be required.
+
+severity
+estimate of the extent of harm to one or more individuals that can occur in a potentially hazardous situation.
+NOTE The parameter "S" in hazard analysis and risk assessment represents the potential severity of harm.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

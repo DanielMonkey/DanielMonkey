@@ -1,0 +1,76 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2019-03-25T13:59:04+08:00
+
+====== R ======
+Created Monday 25 March 2019
+
+random hardware failure
+failure that can occur unpredictably during the lifetime of a hardware element and that follows a probability distribution
+NOTE Random hardware failure rates can be predicted with reasonable accuracy.
+
+reasonably foreseeable event
+event that is technically possible and has a credible or measurable rate of occurrence
+
+redundancy
+existence of means in addition to the means that would be sufficient for an element to perform a required function or to represent information
+NOTE Redundancy is used in ISO 26262 with respect to achieving a safety goal or a specified safety requirement, or to representing safety-related information
+EXAMPLE 1 Duplicated functional components can be an instance of redundancy for the purpose of increasing availability or allowing fault detection
+EXAMPLE 2 The addition of parity bits to data representing safety-related information provides redundancy for the purpose of allowing fault detection.
+
+regression strategy
+strategy to verify that an implemented change did not affect the unchanged, existing and previously verified parts or properties of an item or an element
+
+residual fault
+portion of a fault that by itself leads to the violation of a safety goal, occurring in a hardware element, where that portion of the fault is not covered by safety mechanisms
+NOTE This presumes that the hardware element has safety mechanism coverage for only a portion of its faults.
+EXAMPLE If low (60%) coverage is claimed for a failure mode, the other 40% of that same failure mode is the residual fault.
+
+residual risk
+risk remaining after the development of safety measures
+
+review
+examination of a work product, for achievement of the intended work product gaol, according to the purpose of the review
+NOTE Reviews can be supported by checklists.
+
+risk
+combination of the probability of occurrence of harm and the severity of that harm
+
+robust design
+design that has the ability to function correctly in the presence of invalid inputs or stressful environmental conditions
+NOTE Robustness can be understood as follows:
+- for software, robustness is the ability to respond to abnormal inputs and conditions
+- for hardware, robustness is the ability to be immune to environmental stress and stable over the service life within design limits
+- in the context of ISO 26262, robustness is the ability to provide safe behaviour at boundaries.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

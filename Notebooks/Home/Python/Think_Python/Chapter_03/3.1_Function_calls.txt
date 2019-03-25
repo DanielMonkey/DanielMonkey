@@ -1,0 +1,16 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2019-03-25T15:46:14+08:00
+
+====== 3.1 Function calls ======
+Created Monday 25 March 2019
+
+In the context of programming, a function is a named sequence of statements that performs a computation.
+When you define a function, you specify the name and the sequence of statements.
+Later, you can "call" the function by name. 
+We have already seen one example of a function call:
+>>> type(32)
+<type 'int'>
+The name of the function is type. The expression in parentheses is called argument of the function. The result, for this function, is the type of the argument.
+
+It is common to say that a function "takes" an argument and "return" a result. The result is called the return value.
