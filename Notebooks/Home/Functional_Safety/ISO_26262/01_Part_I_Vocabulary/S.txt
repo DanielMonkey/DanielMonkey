@@ -88,6 +88,47 @@ severity
 estimate of the extent of harm to one or more individuals that can occur in a potentially hazardous situation.
 NOTE The parameter "S" in hazard analysis and risk assessment represents the potential severity of harm.
 
+single-point failure
+failure that results from a single-point fault and that leads directly to the violation of a safety goal
+NOTE 1 A single-point failure is dquivalent to a residual failure for an element with 0% diagnostic coverage.
+NOTE 2 If at least one safety mechanism is defined for an HW element (e.g. a wathdog for a microcontroller), then no faults of the considered hardware element are single-point faults.
+
+single-point fault
+fault in an element that is not covered by a safety mechanism and that leads directly to the violation of a safety goal
+NOTE See also single-point failure
+
+software component
+one or more software units
+
+software tool
+computer program used in the development of  an item or element
+
+software unit
+atomic level software component of the software architecture that can be subjected to stand-alone testing.
+
+special-purpose vehicle
+vehicle intended to perform a function that requires special body arrangements, equipment or both
+EXAMPLE Motor caravan; armoured vehicle; ambulance; hearse; trailer caravan; mobile crane
+NOTE ECE TRANS/WP.29/78/Rev.1/Amend.2 provides definitions for special-purpose vehicles.
+
+statement coverage
+percentage of statements within the software that have been executed
+
+subphase
+subdivision of a stage in the safety lifecycle that is specified in a distinct clause of ISO 26262
+EXAMPLE Hazard analysis and risk assessment is a subphase of the safety lifecycle specified in ISO 26262-3:2011, Clause 7.
+
+system
+set of elements that relates at least a sensor, a controller and an actuator with one another
+NOTE 1 The related sensor or actuator can be included in the system, or can be external to the system.
+NOTE 2 An element of a system can also be another system.
+
+systematic failure
+failure, related in a deterministic way to a certain cause, that can only be eliminated by a change of the design or of the manufacturing process, operational procedure, documentation or other relevant factors
+
+systematic fault
+fault whose failure is manifested in a deterministic way tha can only be prevented by applying process or design measures
+
 
 
 

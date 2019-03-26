@@ -1,0 +1,8 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2019-03-26T18:03:47+08:00
+
+====== Camera ======
+Created Tuesday 26 March 2019
+
+./nvmipp_raw -cf ddpx-a.conf -d 0 -c SF3325-CSI-A   --aggregate 1

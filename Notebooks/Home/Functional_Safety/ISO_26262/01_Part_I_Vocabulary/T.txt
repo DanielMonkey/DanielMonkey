@@ -1,0 +1,56 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2019-03-26T17:06:52+08:00
+
+====== T ======
+Created Tuesday 26 March 2019
+
+technical safety concept
+specification of the technical safety requirements and their allocation to system elements for implementation by the system design
+
+technical safety requirement
+requirement derived for implementation of associated functional safety requirements
+NOTE The derived requirement includes requirements for mitigation.
+
+testing
+process of planning, preparing, and operating or exercising an item or an element to verify that it satisfies requirements, to detect anomalies, and to create confidence in its behavior
+
+transient fault
+fault that occurs once and subsequently disappears
+NOTE Transient faults can appear due to electromagnetic interference, which can lead to bit-flips. Soft errors such as Single Event Upset (SEU) and Single Event Transient (SET) are transient faults.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

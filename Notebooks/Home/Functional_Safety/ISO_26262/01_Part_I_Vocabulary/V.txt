@@ -1,0 +1,16 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2019-03-26T17:14:21+08:00
+
+====== V ======
+Created Tuesday 26 March 2019
+
+verification
+determination of completeness and correct specification or implementation of requirements from a phase or subphase
+
+verification review
+verification activity to ensure that the result of a development activity fulfils the project requirements, or technical requirements, or both
+NOTE 1 Individual requirements on verification reviews are given in specific clauses of individual parts of ISO 26262.
+NOTE 2 The goal of verification reviews is technical correctness and completeness of the item or element with respect to use cases and failure modes.
+EXAMPLE Technical review; walk-through; inspection.
+

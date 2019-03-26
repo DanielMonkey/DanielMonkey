@@ -1,0 +1,18 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2019-03-26T16:02:48+08:00
+
+====== Git-Firmware ======
+Created Tuesday 26 March 2019
+
+git clone https://git-master.nvidia.com/r/tegra/drive-mcu-autosar
+
+git clone https://git-master.nvidia.com/r/3rdparty/eb
+
+git clone https://git-master.nvidia.com/r/3rdparty/vector
+
+git clone https://git-master.nvidia.com/r/3rdparty/altium
+
+https://gitlab-master.nvidia.com/driveav/dw/sdk.git
+
+ssh://git@gitlab-master.nvidia.com:12051/driveav/dw/sdk.git

@@ -1,0 +1,44 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2019-03-25T17:25:53+08:00
+
+====== 1.1.1 Synchronized and Offset Time Bases ======
+Created Monday 25 March 2019
+
+The Time Domains 0 to 15 are Synchronized Time Bases.
+
+The Time Domains 16 to 31 are offset Time Bases. An Offset Time Base is linked to a Synchronized Time Base only by system wide configuration.
+
+{{./pasted_image.png?width=400}}
+
+Example:
+For an Offset Time Base with Time Domain number 17 the OFFSET Timesync messages on CAN and FR always contain 17-16 = 1 in the Time Domain field (Note that the OFS Sub-TLVs within the AUTOSAR TLV on Ethernet always contain 17 in the Time Domain field). However the underlying Synchronized Time Base could have Time Domain number 0, i.e., SYNC and FUP Timesync messages contain 0 in the Time Domain field. 
+Another Offset Time Base with Time Domain number 18 (2 in the Time Domain field), is also based on the underlying Synchronized Time Base 0. An Offset Time Base might have leaps in time, e.g. after GPS time becomes available.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,7 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2019-03-26T17:38:52+08:00
+
+====== 02 Part II Management of functional safety ======
+Created Tuesday 26 March 2019
+

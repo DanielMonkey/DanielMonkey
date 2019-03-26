@@ -1,0 +1,25 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2019-03-26T17:21:43+08:00
+
+====== W ======
+Created Tuesday 26 March 2019
+
+walk-through
+systematic examination of work products in order to detect anomalies
+NOTE 1 Walk-through is a means of verification.
+NOTE 2 Walk-through is differs from testing in that it does not normally involve the operation of the associated item or element.
+NOTE 3 Any anomalies that are detected are usually addressed by rework, followed by a walk-through of the reworked work products.
+EXAMPLE During a walk-through, the developer explains the work product step-by-step to one or more assessors. The objective is to create a common understanding of the work product and to identify any anomalies within the work product. Both inspections and walk-throughs are types of peer review, where a walk-through is a less stringent form of peer review than an inspection.
+
+warning and degradation concept
+specification of how to alert the driver of potentially reduced functionality and of how to provide this reduced functionality to reach a safe state
+
+well-trusted
+previously used without known safety anomalies
+EXAMPLE Well-trusted design principle; well-trusted tool; well-trusted hardware component.
+
+work product
+result of one or more associated requirements of ISO 26262
+NOTE A reference can be independent document containing the complete information of a work product or a list of reference to the complete information of a work product.
+
