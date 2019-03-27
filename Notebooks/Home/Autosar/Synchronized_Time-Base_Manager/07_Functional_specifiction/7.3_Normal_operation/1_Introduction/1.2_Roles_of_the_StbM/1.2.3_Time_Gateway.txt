@@ -1,0 +1,12 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2019-03-27T15:22:49+08:00
+
+====== 1.2.3 Time Gateway ======
+Created Wednesday 27 March 2019
+
+A Time Gateway in the StbM is a Time Base which is referenced by one Time Slave and one or more Time Masters. The Time Slave, which references a StbM Time Gateway receives Timesync messages on the corresponding bus and passes the received Time Base values to the StbM. 
+Every Time Master referencing the Time Gateway retrieves the Gateway Time Base values from the StbM and transmits those on the bus. Depending on configuration the reception on slave side can or can not automatically trigger the transmission on the master side.
+
+So, Timesync messages are not routed directly through an AUTOSAR Time Gateway. This is because routing delays need to be compensated.
+

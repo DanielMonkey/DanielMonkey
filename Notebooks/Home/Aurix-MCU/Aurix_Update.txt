@@ -1,0 +1,19 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2019-03-27T16:01:58+08:00
+
+====== Aurix Update ======
+Created Wednesday 27 March 2019
+
+Linux OTA check the firmware version:
+sudo /bin/bash /etc/systemd/scripts/nv_aurix_check_fw.sh
+Update the firmware with the following command:
+For ACH:
+sudo /bin/bash /etc/systemd/scripts/nv_aurix_check_fw.sh -auto_update
+For ACR:
+sudo /usr/bin/nv_aurix_update -i <aurix_fw_file_path> -u <update_fw_file_path>
+
+QNX OTA
+/bin/ksh /proc/boot/nv_aurix_check_fw.sh
+Force update
+/bin/ksh /proc/boot/nv_aurix_check_fw.sh -force_update <firmware file name>

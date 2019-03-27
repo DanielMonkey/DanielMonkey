@@ -1,0 +1,8 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2019-03-27T15:21:13+08:00
+
+====== 1.2.2 Time Slave ======
+Created Wednesday 27 March 2019
+
+In the role of a Time Slave the StbM updates its internally maintained local Time Base based on Global Time Base values, which are provided by the corresponding Timesync module.

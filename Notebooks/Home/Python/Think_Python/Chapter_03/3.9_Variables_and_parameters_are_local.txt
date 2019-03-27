@@ -1,0 +1,10 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2019-03-27T17:20:43+08:00
+
+====== 3.9 Variables and parameters are local ======
+Created Wednesday 27 March 2019
+
+When you create a variable inside a function, it is local, which means that it only exists inside the function.
+
+Parameters are also local.

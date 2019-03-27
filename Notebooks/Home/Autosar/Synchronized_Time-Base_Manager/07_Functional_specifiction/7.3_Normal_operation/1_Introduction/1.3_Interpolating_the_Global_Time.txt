@@ -1,0 +1,62 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2019-03-27T15:29:57+08:00
+
+====== 1.3 Interpolating the Global Time ======
+Created Wednesday 27 March 2019
+
+The Synchronized Time-Base Manager has to interpolate the local instance of the Global Time Base between the updates
+* from the Timesync Modules (for a Time Slave) and
+* from the application (for a Time Master)
+
+Interpolation is done based on the Virtual Local Time, which is a local time reference derived from some kind of HW counter.
+
+Interpolation is done in principle according to the formula
+TL = TGSync + (TV - TVSync) * r
+With
+* TL: Current value of the local instance of the Global Time
+* TGSync: Global Time value (part of the Main Time Tuple)
+* TV: Current value of the Virtual Local Time
+* TVSync: Virtual Local Time value (part of the Main Time Tuple)
+* r: optional Rate and Offset-By-Rate correction - if not used set to 1 for Synchronized Time Bases and 0 for Offset Time Bases.
+
+TGSynch and TVSync form the Main Time Tuple.
+
+For every Time Base there is more than one Time Tuple but there is only one Time Tuple which is used to interpolate the local instance of the Time Base. This Time Tuple is denoted as the Main Time Tuple.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

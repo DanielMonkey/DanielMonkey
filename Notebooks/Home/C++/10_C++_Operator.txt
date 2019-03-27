@@ -21,6 +21,17 @@ Created Monday 25 March 2019
 假设变量A的值为10,变量B的值为20,则
 {{./pasted_image002.png?width=600}}
 
+逻辑运算符
+假设变量A的值为1,变量B的值为0,则：
+{{./pasted_image003.png?width=600}}
+
+位运算符
+位运算符作用于位，并逐位执行操作。&、|和^的真值表如下所示：
+{{./pasted_image004.png?width=600}}
+下表显示了C++支持的位运算符。假设变量A的值为60,变量B的值为13,则：
+{{./pasted_image005.png?width=600}}
+
+
 
 
 

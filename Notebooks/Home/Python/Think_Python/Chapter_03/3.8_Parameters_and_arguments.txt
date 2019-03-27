@@ -1,0 +1,19 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2019-03-27T17:15:16+08:00
+
+====== 3.8 Parameters and arguments ======
+Created Wednesday 27 March 2019
+
+Some of the built-in functions we have seen require arguments.
+Some functions take more than one argument.
+
+Inside the function, the arguments are assigned to variables called parameters.
+
+The same rules of composition that apply to built-in functions also apply to user-defined functions.
+
+The argument is evaluated before the function is called.
+
+You can also use a variable as argument.
+The name of the variable we pass as an argument has nothing to do with the name of the parameter. It doen't matter what the value was called back home.
+
