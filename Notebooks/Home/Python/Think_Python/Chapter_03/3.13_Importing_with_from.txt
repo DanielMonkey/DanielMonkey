@@ -1,0 +1,24 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2019-04-08T15:21:23+08:00
+
+====== 3.13 Importing with from ======
+Created Monday 08 April 2019
+
+Python provides two ways to import modules; we have already seen one:
+>>> import math
+
+If you import math, you get a module object named math. The module object contains constants like pi and functions like sin and exp.
+But if you try to access pi directly, you get an error.
+
+As an alternative, you can import an object from a module like this:
+>>> from math import pi
+
+Or you can use the star operator to import everything from the module:
+>>> from math import *
+
+The advantage of importing everything from the math module is that your code can be more concise.
+The disadvantage is that there might be conflicts between names defined in different modules, or between a name from a module and one of your variables.
+
+Make sure that the code you are looking at is the code you are running.
+

@@ -36,4 +36,6 @@ export LD_LIBRARY_PATH=/usr/local/lib/:${LD_LIBRARY_PATH}
 6. Mirror Tasking Compiler and EB Tresos Studio license
 ssh -L 9090:hqlicense01.nvidia.com:9090 -L 56654:hqlicense01.nvidia.com:56654 o-xterm -N -v -g
 
+sudo dhclient eth0
+
 

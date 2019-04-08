@@ -1,0 +1,41 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2019-03-28T14:09:09+08:00
+
+====== 2.1 Overview of the safety lifecycle ======
+Created Thursday 28 March 2019
+
+{{./pasted_image.png?width=800}}
+
+The ISO 26262 safety lifecycle (see Figure 2) encompasses the principal safety activities during the concept phase, product development, production, operation, service and decommissioning. Planning, coordinating and documenting the safety activities of all phases of the safety lifecycle are key management tasks.
+
+Figure 2 represents the reference safety lifecycle model. Tailoring of the safety lifecycle, including iterations of subphases, is allowed.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

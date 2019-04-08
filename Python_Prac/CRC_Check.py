@@ -1,0 +1,12 @@
+a_1 = 0x02
+a_2 = 0x00
+a_3 = 0x00
+a_4 = 0x04
+a_5 = 0xA0
+a_6 = 0x60
+
+b = a_1 + a_2 + a_3 + a_4 + a_5 + a_6
+
+crc = 0x100 - (b & 0xFF)
+
+print "CRC is 0x%02x" % crc

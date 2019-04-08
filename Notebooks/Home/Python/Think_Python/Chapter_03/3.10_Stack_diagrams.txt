@@ -5,3 +5,40 @@ Creation-Date: 2019-03-27T17:22:05+08:00
 ====== 3.10 Stack diagrams ======
 Created Wednesday 27 March 2019
 
+{{./pasted_image.png}}
+To keep track of which variables can be used where, it is sometimes useful to draw a stack diagram. Like state diagrams, stack diagrams show the value of each variable, but they also show the function each variable belongs to.
+
+Each function is represented by a frame. A frame is a box with the name of a function beside it and the parameters and variables of the function inside it.
+
+The frames are arranged in a stack that indicates which function called which, and so on.
+
+__main__, which is a special name for the topmost frame.
+When you create a variable outside of any function, it belongs to __main__.
+
+Each parameter refers to the same value as its corresponding argument.
+
+If an error occurs during a function all, Python prints the name of the function, and the name of the function that called it, and the name of the function that called that, all the way back to __main__.
+
+This list of functions is called a traceback. It tells you what program file the error occurred in, and what line, and what functions were executing at the time. It also shows the line of code that caused the error.
+The order of the functions in the traceback is the same as the order of the frames in the stack diagram. The function that is currently running is at the bottom.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

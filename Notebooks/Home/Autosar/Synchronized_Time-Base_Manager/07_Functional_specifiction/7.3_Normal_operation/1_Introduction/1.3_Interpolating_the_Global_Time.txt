@@ -24,6 +24,45 @@ TGSynch and TVSync form the Main Time Tuple.
 
 For every Time Base there is more than one Time Tuple but there is only one Time Tuple which is used to interpolate the local instance of the Time Base. This Time Tuple is denoted as the Main Time Tuple.
 
+The precision of a Time Base depends on the handling of the Main Time Tuple:
+* when and how is it interpolated by the StbM
+* for a Time Master or Time Gateway: how is it transmitted by the Timesync Modules
+* for a Time Slave or Time Gateway: how is it received by the Timesync Modules
+
+Regarding the interpolation by the StbM it is obvious that the precision depends on rounding effects and the granularity of the HW counters, e.g., if the Main Time Tuple would be updated in every StbM_MainFunction() while the applied rate correction value is small.
+
+If requesting a Global Time by the application would always lead to an update of the Main Tuple, the frequency of those requests would influence the precision as well.
+
+It is therefore necessary to ensure that updates of the Main Time Tuple don't happen too often.
+
+The Main Time Tuple shall be updated however
+* after setting a new Global Time or a new Rate Correction value by the application
+* after obtaining a new Time Tuple from a Timesync Module
+
+The Main Time Tuple shall not be update:
+* on every invocation of StbM_MainFunction()
+* every time a Global Time value is requested by either StbM_GetCurrentTime(), StbM_GetCurrentTimeExtended() or StbM_BusGetCurrentTime()
+
+Once a new Time Tuple (denoted as Received Time Tuple [TGRx; TVRx]) is obtained from a Timesync Module (i.e., after reception of Timesync message(s)), the StbM determines a Time Tuple (denoted as Synclocal Time Tuple [TLSync; TVSync]) of the local instance of the Global Time by using the Virtual Local Time of the Received Time Tuple as reference (i.e., TV = TVRx).
+
+In case of actually performing Offset Correction By Rate Adaption (i.e., the mechanism is enabled and the prerequisites are fulfilled), the Main Time Tuple is not overwritten by the Received Time Tuple, instead the Main Time Tuple is overwritten by the Synclocal Time Tuple of the local instance of the Global Time.
+Otherwise the Main Time Tuple is overwritten by the Received Time Tuple.
+
+The Main Time Tuple can be updated if a certain time has elapsed since the last update.
+
+The Main Time Tuple [TGSync; TVSync] is managed by the StbM. Each time TGSync is updated, TVSync has to be updated as well and vice versa.
+
+Below the application, in the BSW, the Time of a Time Base is always managed via the Time Tuple structure:
+* Timesync Modules provide the received Global Time in form of a Time Tuple to the StbM
+* Timesync Modules obtain the Global Time to transmit as a Time Tuple
+* A Global Time value set by the application is immediately extended to a Time Tuple by adding the current value of the Virtual Local Time
+
+It is essential to always adhere to the integrity of the Time Tuple.
+
+
+
+
+
 
 
 

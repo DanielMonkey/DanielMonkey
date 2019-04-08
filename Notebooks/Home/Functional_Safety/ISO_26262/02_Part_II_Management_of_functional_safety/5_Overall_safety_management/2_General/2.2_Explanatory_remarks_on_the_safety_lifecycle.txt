@@ -1,0 +1,10 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2019-03-28T14:15:43+08:00
+
+====== 2.2 Explanatory remarks on the safety lifecycle ======
+Created Thursday 28 March 2019
+
+ISO 26262 specifies requirements with regard to specific phases and subphases of the safety lifecycle, but also includes requirements that apply to several, or all, phases of the safety lifecycle, such as the requirements for the management of functional safety.
+
+The key management tasks are to plan, coordinate and track the activities related to functional safety. These management tasks apply to all phases of the safety lifecycle. The requirements for the management of functional safety are given in this part, which distinguishes:

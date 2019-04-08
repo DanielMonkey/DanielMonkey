@@ -1,0 +1,11 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2019-03-28T14:07:34+08:00
+
+====== 1 Objective ======
+Created Thursday 28 March 2019
+
+The objective of this clause is to define the requirements for the organizations that are responsible for the safety lifecycle, or that perform safety activities in the safety lifecycle.
+
+This clause serves as a prerequisite to the activities in the ISO 26262 safety lifecycle.
+
