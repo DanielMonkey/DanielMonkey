@@ -35,9 +35,11 @@ We can mannual update the CAN ID to remove the flag, like 0xAA0, just dec 2720 i
 The standard CAN ID works well.
 
 
+# ./sample_canbus_interpreter --dbc=/samples/data/samples/sensors/can/cadillac_ct6_object.dbc --driver=can.aurix --params=ip=10.42.0.146,bus=a,aport=50000,bport=60395
 
+# ./sample_canbus_interpreter --dbc=/samples/data/samples/sensors/can/2551088_nl-5-modify.dbc --driver=can.aurix --params=ip=10.42.0.146,bus=a,aport=50000,bport=60395
 
-
+# ./sample_canbus_interpreter --dbc=/samples/data/samples/sensors/can/nl-5-modify_T1.dbc --driver=can.aurix --params=ip=10.42.0.146,bus=a,aport=50000,bport=60395
 
 
 

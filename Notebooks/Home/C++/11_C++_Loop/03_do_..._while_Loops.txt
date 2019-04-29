@@ -1,0 +1,43 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2019-04-25T18:40:36+08:00
+
+====== 03 do ... while Loops ======
+Created Thursday 25 April 2019
+
+do ... while循环		除了它是在循环主题结尾测试条件外，其他与while语句类似。
+
+不像for和while循环，它们是在循环头部测试循环条件。do ... while循环是在循环的尾部检查它的条件。
+do ... while循环与while循环类似，但是do ... while循环会确保至少执行一次循环。
+
+语法：
+C++中do ... while循环的语法：
+do
+{
+   statement(s);
+}while( condition );
+请注意，条件表达式出现在循环的尾部，所以循环中的statement(s)会在条件被测试之前至少执行一次。
+如果条件为真，控制流会跳转回上面的do，然后重新执行循环中的statement(s)。这个过程会不断重复，直到给定条件变为假为止。
+
+流程图：
+{{./pasted_image.png}}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

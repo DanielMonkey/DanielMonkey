@@ -1,0 +1,21 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2019-04-28T18:16:01+08:00
+
+====== 05 break ======
+Created Sunday 28 April 2019
+
+break语句		终止loop或switch语句，程序流将继续执行紧接着loop或switch的下一条语句。
+
+C++中break语句有以下两种用法：
+1. 当break语句出现在一个循环内时，循环会立即终止，且程序流将继续执行紧接着循环的下一条语句。
+2. 它可以用于终止switch语句中的一个case。
+如果你使用的是嵌套循环（即下一个循环内嵌套另一个循环），break语句会停止执行最内曾的循环，然后开始执行该块之后的下一行代码。
+
+语法：
+C++中break语句的语法：
+break;
+
+流程图：
+{{./pasted_image.png}}
+

@@ -1,0 +1,46 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2019-04-08T18:09:29+08:00
+
+====== 01 While Loop ======
+Created Monday 08 April 2019
+
+while循环		当给定条件为真时，重复语句或语句组。它会在执行循环主体之前测试条件。
+
+只要给定的条件为真，while循环语句会重复执行一个目标语句。
+
+语法：
+C++中while循环的语法：
+while(condition)
+{
+   statement(s);
+}
+在这里，statement(s)可以是一个单独的语句，也可以是几个语句组成的代码块。
+condition可以是任意的表达式，当为任意非零值时都为真。当条件为真时执行循环。
+当条件为假时，程序将继续执行紧接着循环的下一条语句。
+
+{{./pasted_image.png}}
+
+在这里，while循环的关键点是循环可能一次都不会执行。当条件被测试且结果为假时，会跳过循环主体，直接执行紧接着while循环的吓一跳语句。
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

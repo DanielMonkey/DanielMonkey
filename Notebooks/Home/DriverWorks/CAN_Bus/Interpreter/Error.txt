@@ -1,0 +1,60 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2019-04-09T16:10:12+08:00
+
+====== Error ======
+Created Tuesday 09 April 2019
+
+#  ./sample_canbus_interpreter --dbc=/samples/data/samples/sensors/can/cadillac_ct6_object.dbc --driver=can.aurix --params=ip=10.42.0.146,bus=a,aport=500005
+Program Arguments:
+--dbc=/samples/data/samples/sensors/can/cadillac_ct6_object.dbc
+--driver=can.aurix
+--params=ip=10.42.0.146,bus=a,aport=50000,bport=60395
+
+[01-01-1970 02:08:24] Platform: Detected XAVIERP3479 - P3479
+[01-01-1970 02:08:24] Initialize DriveWorks SDK v1.5.3582
+[01-01-1970 02:08:24] Release build with GNU 5.4.0 from heads/buildbrain-branch-0-g0d13493 against Drive PDK v5.0.13.2Custom build for Desay SV
+[01-01-1970 02:08:24] TimeSource: monotonic epoch time offset is 0
+[01-01-1970 02:08:27] Platform: number of GPU devices detected 1
+[01-01-1970 02:08:27] Platform: currently selected GPU device integrated ID 0
+[01-01-1970 02:08:28] SDK: No resources mounted, some modules will not function properly
+[01-01-1970 02:08:28] SDK: Create NvMediaDevice
+[01-01-1970 02:08:28] egl::Display: found 1 EGL devices
+[01-01-1970 02:08:28] egl::Display: use drm device: drm-nvdc
+[01-01-1970 02:08:28] SensorFactory::createSensor() -> can.aurix, ip=10.42.0.146,bus=a,aport=50000,bport=60395
+Create DBC-based CAN message interpreter
+[01-01-1970 02:08:28] DBC parser: only support unsigned signals up to 32bit
+[01-01-1970 02:08:28] DBC parser: only support unsigned signals up to 32bit
+[01-01-1970 02:08:28] DBC parser: only support unsigned signals up to 32bit
+[01-01-1970 02:08:28] DBC parser: only support unsigned signals up to 32bit
+[01-01-1970 02:08:28] DBC parser: only support unsigned signals up to 32bit
+[01-01-1970 02:08:28] DBC parser: only support unsigned signals up to 32bit
+[01-01-1970 02:08:28] DBC parser: only support unsigned signals up to 32bit
+[01-01-1970 02:08:28] DBC parser: only support unsigned signals up to 32bit
+[01-01-1970 02:08:28] DBC parser: only support unsigned signals up to 32bit
+[01-01-1970 02:08:28] DBC parser: only support unsigned signals up to 32bit
+[01-01-1970 02:08:28] DBC parser: only support unsigned signals up to 32bit
+[01-01-1970 02:08:28] DBC parser: only support unsigned signals up to 32bit
+[01-01-1970 02:08:28] DBC parser: only support unsigned signals up to 32bit
+[01-01-1970 02:08:28] DBC parser: only support unsigned signals up to 32bit
+[01-01-1970 02:08:28] DBC parser: only support unsigned signals up to 32bit
+[01-01-1970 02:08:28] DBC parser: only support unsigned signals up to 32bit
+[01-01-1970 02:08:28] DBC parser: only support unsigned signals up to 32bit
+[01-01-1970 02:08:28] DBC parser: only support unsigned signals up to 32bit
+[01-01-1970 02:08:28] DBC parser: only support unsigned signals up to 32bit
+[01-01-1970 02:08:28] DBC parser: only support unsigned signals up to 32bit
+[01-01-1970 02:08:28] DBC parser: only support unsigned signals up to 32bit
+[01-01-1970 02:08:28] DBC parser: only support unsigned signals up to 32bit
+[01-01-1970 02:08:28] DBC parser: only support unsigned signals up to 32bit
+[01-01-1970 02:08:28] DBC parser: only support unsigned signals up to 32bit
+[01-01-1970 02:08:28] DBC parser: only support unsigned signals up to 32bit
+[01-01-1970 02:08:28] DBC parser: only support unsigned signals up to 32bit
+[01-01-1970 02:08:28] Driveworks exception thrown: DW_BUFFER_FULL: VectorFixed::push_back: full.
+
+Cannot create DBC-based CAN message interpreter
+[01-01-1970 02:08:28] EndpointUDP: started 10.42.0.146:50000
+[01-01-1970 02:08:59] EndpointUDP: interrupted connection to 10.42.0.146:50000 - close endpoint
+[01-01-1970 02:08:59] EndpointUDP: stopped 10.42.0.146:50000
+[01-01-1970 02:08:59] SDK: Release NvMediaDevice
+[01-01-1970 02:08:59] Driveworks SDK released
+[01-01-1970 02:08:59] SDK: Release NvMedia2D

@@ -23,8 +23,8 @@ Usage: ./sample_canbus_logger
 												: A filter can be specified by adding comma separated id:mask values to the --filter= argument.
 												: A message is considered passing if <received_can_id> & mask == id & mask
 
-# ./sample_canbus_logger --driver=can.socket --params=device=can0
-# ./sample_canbus_logger --driver=can.aurix --params=ip=10.42.0.146,bus=a,aport=50000,bport=60395 --send_i_understand_implications=1000 --send_id=4BB --hwtime=1
+# ./sample_canbus_logger --driver=can.socket --params=device=can0 --send_i_understand_implications=1000 --send_id=323 --hwtime=1
+# ./sample_canbus_logger --driver=can.aurix --params=ip=10.42.0.146,bus=a,aport=50000,bport=60395 --send_i_understand_implications=1000 --send_id=123 --hwtime=1
 
 # ./sample_canbus_logger --driver=can.aurix --params=ip=10.42.0.28,bus=a,aport=50000,bport=60395
 

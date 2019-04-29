@@ -1,0 +1,7 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2019-04-26T13:03:09+08:00
+
+====== QNX ======
+Created Friday 26 April 2019
+

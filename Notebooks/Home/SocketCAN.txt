@@ -28,3 +28,22 @@ e.g. 5A1#11.2233.44556677.88 / 123#DEADBEEF / 5AA# / 123##1 / 213##311
 	 1F334455#1122334455667788 / 123#R for remote transmission request.
 
 nvidia@tegra-ubuntu:~/Documents$ cansend can0 6A1#DEADBEEF
+
+
+nvidia@tegra-ubuntu:~$ sudo ip link set can0 type can bitrate 500000 dbitrate 2000000 berr-reporting on fd on
+nvidia@tegra-ubuntu:~$ sudo ip link set up can0
+nvidia@tegra-ubuntu:~$ sudo ip link set can0 mtu 72
+nvidia@tegra-ubuntu:~$ cangen -f can0 -I 233 -L 64 -g 100 -n 5 -v -v
+
+<can_id>##<flags>{data}    for CAN FD frames
+<can_id> can have 3 (SFF) or 8 (EFF) hex chars
+{data} has 0..8 (0..64 CAN FD) ASCII hex-values (optionally separated by '.')
+<flags> a single ASCII Hex value (0 .. F) which defines canfd_frame.flags
+
+For example:
+cansend can0 5A1##D00.11.22.33.44.55.66.77.88.99.AA.BB.CC.DD.EE.FF
+send out 16 bytes CAN FD message 0x5A1.
+
+nvidia@tegra-ubuntu:~$ cangen -f can0 -I 233 -L 64 -g 100 -n 2 -v -v
+  can0  233  [64]  84 4E 13 7F 25 9F 0E 33 84 4E 13 7F 25 9F 0E 33 84 4E 13 7F 25 9F 0E 33 84 4E 13 7F 25 9F 0E 33 84 4E 13 7F 25 9F 0E 33 84 4E 13 7F 25 9F 0E 33 84 4E 13 7F 25 9F 0E 33 84 4E 13 7F 25 9F 0E 33
+  can0  233  [64]  FA 3B C3 2F B1 F4 B6 18 FA 3B C3 2F B1 F4 B6 18 FA 3B C3 2F B1 F4 B6 18 FA 3B C3 2F B1 F4 B6 18 FA 3B C3 2F B1 F4 B6 18 FA 3B C3 2F B1 F4 B6 18 FA 3B C3 2F B1 F4 B6 18 FA 3B C3 2F B1 F4 B6 18

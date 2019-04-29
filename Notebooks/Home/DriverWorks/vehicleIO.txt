@@ -1,0 +1,49 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2019-04-24T15:52:06+08:00
+
+====== vehicleIO ======
+Created Wednesday 24 April 2019
+
+# ./sample_vehicleio 
+Program Arguments:
+--dbc=.././data/samples/sensors/can/AutonomousVehicleCANSignals.dbc
+--driver=can.virtual
+--params=file=.././data/samples/vehicleio/can.bin
+--rig=.././data/samples/vehicleio/rig.json
+--type=dataspeed
+[01-01-1970 00:17:18] Platform: Detected XAVIERP3479 - P3479
+[01-01-1970 00:17:18] Initialize DriveWorks SDK v1.5.3582
+[01-01-1970 00:17:18] Release build with GNU 5.4.0 from heads/buildbrain-branch-0-g0d13493 against Drive PDK v5.0.13.2Custom bV
+[01-01-1970 00:17:18] TimeSource: monotonic epoch time offset is 0
+[01-01-1970 00:17:22] Platform: number of GPU devices detected 1
+[01-01-1970 00:17:22] Platform: currently selected GPU device integrated ID 0
+[01-01-1970 00:17:22] SDK: No resources mounted, some modules will not function properly
+[01-01-1970 00:17:22] SDK: Create NvMediaDevice
+[01-01-1970 00:17:22] SDK: use EGL display as provided
+[01-01-1970 00:17:22] Loading rig file: .././data/samples/vehicleio/rig.json
+[01-01-1970 00:17:25] SensorFactory::createSensor() -> can.virtual, file=.././data/samples/vehicleio/can.bin
+[01-01-1970 00:17:25] CAN: no seek table found at .././data/samples/vehicleio/can.bin.seek, seeking is not available.
+[01-01-1970 00:17:25] DataSpeed: constructed
+[01-01-1970 00:17:25] VehicleIO: mode override 256
+VehicleIO sample: Status
+steeringWheelAngle: -0.0506145
+throttleValue: 0.231281
+brake value: 0.1364
+faults: 0
+overrides: 8
+
+VehicleIO sample: Status
+steeringWheelAngle: -0.0506145
+throttleValue: 0.231281
+brake value: 0.13637
+faults: 0
+overrides: 8
+
+[01-01-1970 00:17:27] DataSpeed: destructed
+[01-01-1970 00:17:27] SDK: Release NvMediaDevice
+[01-01-1970 00:17:27] Driveworks SDK released
+[01-01-1970 00:17:27] SDK: Release NvMedia2D
+
+
+# ./sample_vehicleio --driver=can.aurix --params=ip=10.42.0.146,bus=a,aport=50000,bport=60395

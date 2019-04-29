@@ -1,0 +1,105 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2019-04-26T13:03:14+08:00
+
+====== CAN ======
+Created Friday 26 April 2019
+
+./nvcan_send -d can0 -f 2 -id 123 -b -data FFEEDDCCBBAA99887766554433221100FEEFDCCDBAAB98897667544532231001FFEEDDCCBBAA99887766554433221100FEEFCDDCBAAB98897667544532231001 -v
+
+./nvcan_send -d can0 -f 2 -id 123 -b -data FFEEDDCCBBAA99887766554433221100 -v
+
+./nvcan_send -d can0 -f 0 -id 233  -data 0011AABBCCDDEEFF -v
+
+./nvcan_dump -d can0 -n 1 -t 20000 -f /tmp/PythonScrp/nvcan_dump_T60.txt -v
+
+devc-nvcan -q 40 -gfc 0 -d can0 -baddr 0x0c310000 &
+
+scp nvcan_dump_T20.txt daniyang@10.19.225.92:/home/daniyang/Shared/07_Run_File/
+
+
+
+# devc-nvcan -h
+devc-nvcan is the CAN resource manager
+Usage: devc-nvcan [options]
+Options:
+-h                         Prints usage
+-d        <can0/can1>      The CAN controller to initialize.
+-baddr    <address>        Base address of the CAN controller to initialize.
+						   Initialization fails if '-d' or '-baddr' are absent
+-q        <size>           Size of the Read Queue in the CAN driver. Default:30 
+-gfc     <value in hex>      global filter configuration. Default: 3F - Reject Remote and Non Matching Frames 
+							 bit0 -      Remote Frames Standard       : 0 - Accept,  1 - reject  : Default - 1 
+							 bit1 -      Remote Frames Extended       : 0 - Accept,  1 - reject  : Default - 1
+							 bit2 bit3 - Non matching Frames Standard : 00 - Accept, 11 - reject : Default - 11
+							 bit4 bit5 - Non matching Frames Extended : 00 - Accept, 11 - reject : default - 11
+-v                           Enable Debug prints 
+
+Eg: devc-nvcan -q 40 -gfc 0 -d can0 -baddr 0xc310000
+Eg: devc-nvcan -q 40 -gfc 0 -d can1 -baddr 0xc320000
+
+
+nvidia@tegra-ubuntu:~$ sudo ip -details -statistics link show can0
+7: can0: <NOARP,UP,LOWER_UP,ECHO> mtu 72 qdisc pfifo_fast state UNKNOWN mode DEFAULT group default qlen 10
+	link/can  promiscuity 0 
+	can <BERR-REPORTING,FD> state ERROR-PASSIVE (berr-counter tx 0 rx 127) restart-ms 0 
+	  bitrate 500000 sample-point 0.870 
+	  tq 20 prop-seg 43 phase-seg1 43 phase-seg2 13 sjw 1
+	  mttcan: tseg1 2..255 tseg2 0..127 sjw 1..127 brp 1..511 brp-inc 1
+	  dbitrate 2000000 dsample-point 0.720 
+	  dtq 20 dprop-seg 8 dphase-seg1 9 dphase-seg2 7 dsjw 1
+	  mttcan: dtseg1 1..31 dtseg2 0..15 dsjw 1..15 dbrp 1..15 dbrp-inc 1
+	  clock 50000000
+	  re-started bus-errors arbit-lost error-warn error-pass bus-off
+	  0          107        0          1          5          0         
+	RX: bytes  packets  errors  dropped overrun mcast   
+	1736       126      107     0       0       0       
+	TX: bytes  packets  errors  dropped carrier collsns 
+	0          0        0       0       0       0    
+
+
+
+
+nvidia@tegra-ubuntu:~$ sudo ip link set can0 type can help
+Usage: ip link set DEVICE type can
+	[ bitrate BITRATE [ sample-point SAMPLE-POINT] ] | 
+	[ tq TQ prop-seg PROP_SEG phase-seg1 PHASE-SEG1
+ 	  phase-seg2 PHASE-SEG2 [ sjw SJW ] ]
+
+	[ dbitrate BITRATE [ dsample-point SAMPLE-POINT] ] | 
+	[ dtq TQ dprop-seg PROP_SEG dphase-seg1 PHASE-SEG1
+ 	  dphase-seg2 PHASE-SEG2 [ dsjw SJW ] ]
+
+	[ loopback { on | off } ]
+	[ listen-only { on | off } ]
+	[ triple-sampling { on | off } ]
+	[ one-shot { on | off } ]
+	[ berr-reporting { on | off } ]
+	[ fd { on | off } ]
+	[ fd-non-iso { on | off } ]
+	[ presume-ack { on | off } ]
+
+	[ restart-ms TIME-MS ]
+	[ restart ]
+
+	Where: BITRATE	:= { 1..1000000 }
+		  SAMPLE-POINT	:= { 0.000..0.999 }
+		  TQ		:= { NUMBER }
+		  PROP-SEG	:= { 1..8 }
+		  PHASE-SEG1	:= { 1..8 }
+		  PHASE-SEG2	:= { 1..8 }
+		  SJW		:= { 1..4 }
+		  RESTART-MS	:= { 0 | NUMBER }
+
+sudo ip link set can0 type can bitrate 500000 sample-point 0.81 dbitrate 2000000 dsample-point 0.81 berr-reporting on fd on
+
+candump -n 50 can0
+
+sudo ip -details -statistics link show can0
+
+
+
+
+
+
+

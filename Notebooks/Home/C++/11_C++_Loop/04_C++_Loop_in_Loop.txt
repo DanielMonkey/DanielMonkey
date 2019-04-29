@@ -1,0 +1,13 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2019-04-28T18:06:19+08:00
+
+====== 04 C++ Loop in Loop ======
+Created Sunday 28 April 2019
+
+嵌套循环		你可以在while、for或do ... while循环内使用一个或多个循环。
+
+一个循环内可以嵌套另一个循环。C++允许至少256个嵌套层次。
+
+关于嵌套循环有一点值得注意，你可以在任何类型的循环内嵌套其他任何类型的循环。比如，一个for循环可以嵌套在一个while循环内，反之亦然。
+

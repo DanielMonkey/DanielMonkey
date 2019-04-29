@@ -1,0 +1,1053 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2019-04-18T09:57:54+08:00
+
+====== ARP Package ======
+Created Thursday 18 April 2019
+
+nvidia@tegra-ubuntu:~$ ping 10.42.0.146
+PING 10.42.0.146 (10.42.0.146) 56(84) bytes of data.
+64 bytes from 10.42.0.146: icmp_seq=1 ttl=255 time=1.57 ms
+64 bytes from 10.42.0.146: icmp_seq=2 ttl=255 time=0.485 ms
+64 bytes from 10.42.0.146: icmp_seq=3 ttl=255 time=0.765 ms
+64 bytes from 10.42.0.146: icmp_seq=4 ttl=255 time=0.667 ms
+64 bytes from 10.42.0.146: icmp_seq=5 ttl=255 time=0.650 ms
+64 bytes from 10.42.0.146: icmp_seq=6 ttl=255 time=0.642 ms
+64 bytes from 10.42.0.146: icmp_seq=7 ttl=255 time=0.632 ms
+64 bytes from 10.42.0.146: icmp_seq=8 ttl=255 time=0.557 ms
+^C
+--- 10.42.0.146 ping statistics ---
+8 packets transmitted, 8 received, 0% packet loss, time 7126ms
+rtt min/avg/max/mdev = 0.485/0.746/1.574/0.323 ms
+
+
+ethernet_input: dest:ff:ff:ff:ff:ff:ff, src:00:04:4b:e0:dd:44, type:806
+etharp_update_arp_entry: 10.42.0.28 - 00:04:4b:e0:dd:44
+etharp_find_entry: found empty entry 0
+etharp_find_entry: selecting empty entry 0
+etharp_update_arp_entry: updating stable entry 0
+etharp_arp_input: incoming ARP request
+etharp_arp_input: replying to ARP request for our IP address
+ethernet_input: dest:00:04:4b:e0:dd:46, src:00:04:4b:e0:dd:44, type:800
+etharp_ip_input: updating ETHARP table.
+etharp_update_arp_entry: 10.42.0.28 - 00:04:4b:e0:dd:44
+etharp_find_entry: found matching entry 0
+etharp_update_arp_entry: updating stable entry 0
+etharp_send_ip: sending packet 0x70011168
+etharp_timer
+ethernet_input: dest:00:04:4b:e0:dd:46, src:00:04:4b:e0:dd:44, type:800
+etharp_ip_input: updating ETHARP table.
+etharp_update_arp_entry: 10.42.0.28 - 00:04:4b:e0:dd:44
+etharp_find_entry: found matching entry 0
+etharp_update_arp_entry: updating stable entry 0
+etharp_send_ip: sending packet 0x70011168
+ethernet_input: dest:00:04:4b:e0:dd:46, src:00:04:4b:e0:dd:44, type:800
+etharp_ip_input: updating ETHARP table.
+etharp_update_arp_entry: 10.42.0.28 - 00:04:4b:e0:dd:44
+etharp_find_entry: found matching entry 0
+etharp_update_arp_entry: updating stable entry 0
+etharp_send_ip: sending packet 0x70011168
+ethernet_input: dest:00:04:4b:e0:dd:46, src:00:04:4b:e0:dd:44, type:800
+etharp_ip_input: updating ETHARP table.
+etharp_update_arp_entry: 10.42.0.28 - 00:04:4b:e0:dd:44
+etharp_find_entry: found matching entry 0
+etharp_update_arp_entry: updating stable entry 0
+etharp_send_ip: sending packet 0x70011168
+ethernet_input: dest:00:04:4b:e0:dd:46, src:00:04:4b:e0:dd:44, type:800
+etharp_ip_input: updating ETHARP table.
+etharp_update_arp_entry: 10.42.0.28 - 00:04:4b:e0:dd:44
+etharp_find_entry: found matching entry 0
+etharp_update_arp_entry: updating stable entry 0
+etharp_send_ip: sending packet 0x70011168
+ethernet_input: dest:00:04:4b:e0:dd:46, src:00:04:4b:e0:dd:44, type:800
+etharp_ip_input: updating ETHARP table.
+etharp_update_arp_entry: 10.42.0.28 - 00:04:4b:e0:dd:44
+etharp_find_entry: found matching entry 0
+etharp_update_arp_entry: updating stable entry 0
+etharp_send_ip: sending packet 0x70011168
+etharp_timer
+ethernet_input: dest:00:04:4b:e0:dd:46, src:00:04:4b:e0:dd:44, type:800
+etharp_ip_input: updating ETHARP table.
+etharp_update_arp_entry: 10.42.0.28 - 00:04:4b:e0:dd:44
+etharp_find_entry: found matching entry 0
+etharp_update_arp_entry: updating stable entry 0
+etharp_send_ip: sending packet 0x70011168
+ethernet_input: dest:00:04:4b:e0:dd:46, src:00:04:4b:e0:dd:44, type:800
+etharp_ip_input: updating ETHARP table.
+etharp_update_arp_entry: 10.42.0.28 - 00:04:4b:e0:dd:44
+etharp_find_entry: found matching entry 0
+etharp_update_arp_entry: updating stable entry 0
+etharp_send_ip: sending packet 0x70011168
+
+
+nvidia@tegra-ubuntu:~$ ping 10.42.0.146
+PING 10.42.0.146 (10.42.0.146) 56(84) bytes of data.
+64 bytes from 10.42.0.146: icmp_seq=1 ttl=255 time=0.546 ms
+64 bytes from 10.42.0.146: icmp_seq=2 ttl=255 time=0.781 ms
+64 bytes from 10.42.0.146: icmp_seq=3 ttl=255 time=0.748 ms
+64 bytes from 10.42.0.146: icmp_seq=4 ttl=255 time=0.734 ms
+64 bytes from 10.42.0.146: icmp_seq=5 ttl=255 time=0.701 ms
+64 bytes from 10.42.0.146: icmp_seq=6 ttl=255 time=0.592 ms
+^C
+--- 10.42.0.146 ping statistics ---
+6 packets transmitted, 6 received, 0% packet loss, time 5102ms
+rtt min/avg/max/mdev = 0.546/0.683/0.781/0.090 ms
+
+
+ethernet_input: dest:00:04:4b:e0:dd:46, src:00:04:4b:e0:dd:44, type:800
+etharp_ip_input: updating ETHARP table.
+etharp_update_arp_entry: 10.42.0.28 - 00:04:4b:e0:dd:44
+etharp_find_entry: found matching entry 0
+etharp_update_arp_entry: updating stable entry 0
+etharp_send_ip: sending packet 0x70011168
+ethernet_input: dest:00:04:4b:e0:dd:46, src:00:04:4b:e0:dd:44, type:800
+etharp_ip_input: updating ETHARP table.
+etharp_update_arp_entry: 10.42.0.28 - 00:04:4b:e0:dd:44
+etharp_find_entry: found matching entry 0
+etharp_update_arp_entry: updating stable entry 0
+etharp_send_ip: sending packet 0x70011168
+etharp_timer
+ethernet_input: dest:00:04:4b:e0:dd:46, src:00:04:4b:e0:dd:44, type:800
+etharp_ip_input: updating ETHARP table.
+etharp_update_arp_entry: 10.42.0.28 - 00:04:4b:e0:dd:44
+etharp_find_entry: found matching entry 0
+etharp_update_arp_entry: updating stable entry 0
+etharp_send_ip: sending packet 0x70011168
+ethernet_input: dest:00:04:4b:e0:dd:46, src:00:04:4b:e0:dd:44, type:800
+etharp_ip_input: updating ETHARP table.
+etharp_update_arp_entry: 10.42.0.28 - 00:04:4b:e0:dd:44
+etharp_find_entry: found matching entry 0
+etharp_update_arp_entry: updating stable entry 0
+etharp_send_ip: sending packet 0x70011168
+ethernet_input: dest:00:04:4b:e0:dd:46, src:00:04:4b:e0:dd:44, type:800
+etharp_ip_input: updating ETHARP table.
+etharp_update_arp_entry: 10.42.0.28 - 00:04:4b:e0:dd:44
+etharp_find_entry: found matching entry 0
+etharp_update_arp_entry: updating stable entry 0
+etharp_send_ip: sending packet 0x70011168
+ethernet_input: dest:00:04:4b:e0:dd:46, src:00:04:4b:e0:dd:44, type:800
+etharp_ip_input: updating ETHARP table.
+etharp_update_arp_entry: 10.42.0.28 - 00:04:4b:e0:dd:44
+etharp_find_entry: found matching entry 0
+etharp_update_arp_entry: updating stable entry 0
+etharp_send_ip: sending packet 0x70011168
+
+
+
+
+nvidia@tegra-ubuntu:~$ ping 10.42.0.146
+PING 10.42.0.146 (10.42.0.146) 56(84) bytes of data.
+64 bytes from 10.42.0.146: icmp_seq=1 ttl=255 time=11247 ms
+64 bytes from 10.42.0.146: icmp_seq=2 ttl=255 time=10242 ms
+64 bytes from 10.42.0.146: icmp_seq=3 ttl=255 time=9218 ms
+64 bytes from 10.42.0.146: icmp_seq=4 ttl=255 time=8195 ms
+64 bytes from 10.42.0.146: icmp_seq=5 ttl=255 time=7172 ms
+64 bytes from 10.42.0.146: icmp_seq=7 ttl=255 time=5124 ms
+64 bytes from 10.42.0.146: icmp_seq=8 ttl=255 time=4101 ms
+^C
+--- 10.42.0.146 ping statistics ---
+18 packets transmitted, 7 received, 61% packet loss, time 17358ms
+rtt min/avg/max/mdev = 4101.345/7900.271/11247.811/2425.496 ms, pipe 12
+
+
+ethernet_input: dest:ff:ff:ff:ff:ff:ff, src:00:04:4b:e0:dd:44, type:806
+etharp_update_arp_entry: 10.42.0.28 - 00:04:4b:e0:dd:44
+etharp_find_entry: found matching entry 0
+etharp_update_arp_entry: updating stable entry 0
+etharp_arp_input: incoming ARP request
+etharp_arp_input: ARP request was not for us.
+ethernet_input: dest:ff:ff:ff:ff:ff:ff, src:00:04:4b:e0:dd:44, type:806
+etharp_update_arp_entry: 10.42.0.28 - 00:04:4b:e0:dd:44
+etharp_find_entry: found matching entry 0
+etharp_update_arp_entry: updating stable entry 0
+etharp_arp_input: incoming ARP request
+etharp_arp_input: ARP request was not for us.
+ethernet_input: dest:ff:ff:ff:ff:ff:ff, src:00:04:4b:e0:dd:44, type:806
+etharp_update_arp_entry: 10.42.0.28 - 00:04:4b:e0:dd:44
+etharp_find_entry: found matching entry 0
+etharp_update_arp_entry: updating stable entry 0
+etharp_arp_input: incoming ARP request
+etharp_arp_input: ARP request was not for us.
+ethernet_input: dest:ff:ff:ff:ff:ff:ff, src:00:04:4b:e0:dd:44, type:806
+etharp_update_arp_entry: 10.42.0.28 - 00:04:4b:e0:dd:44
+etharp_find_entry: found matching entry 0
+etharp_update_arp_entry: updating stable entry 0
+etharp_arp_input: incoming ARP request
+etharp_arp_input: ARP request was not for us.
+ethernet_input: dest:ff:ff:ff:ff:ff:ff, src:00:04:4b:e0:dd:44, type:806
+etharp_update_arp_entry: 10.42.0.28 - 00:04:4b:e0:dd:44
+etharp_find_entry: found matching entry 0
+etharp_update_arp_entry: updating stable entry 0
+etharp_arp_input: incoming ARP request
+etharp_arp_input: ARP request was not for us.
+ethernet_input: dest:ff:ff:ff:ff:ff:ff, src:00:04:4b:e0:dd:44, type:806
+etharp_update_arp_entry: 10.42.0.28 - 00:04:4b:e0:dd:44
+etharp_find_entry: found matching entry 0
+etharp_update_arp_entry: updating stable entry 0
+etharp_arp_input: incoming ARP request
+etharp_arp_input: ARP request was not for us.
+ethernet_input: dest:ff:ff:ff:ff:ff:ff, src:00:04:4b:e0:dd:44, type:806
+etharp_update_arp_entry: 10.42.0.28 - 00:04:4b:e0:dd:44
+etharp_find_entry: found matching entry 0
+etharp_update_arp_entry: updating stable entry 0
+etharp_arp_input: incoming ARP request
+etharp_arp_input: ARP request was not for us.
+ethernet_input: dest:ff:ff:ff:ff:ff:ff, src:00:04:4b:e0:dd:44, type:806
+etharp_update_arp_entry: 10.42.0.28 - 00:04:4b:e0:dd:44
+etharp_find_entry: found matching entry 0
+etharp_update_arp_entry: updating stable entry 0
+etharp_arp_input: incoming ARP request
+etharp_arp_input: ARP request was not for us.
+etharp_timer
+ethernet_input: dest:ff:ff:ff:ff:ff:ff, src:00:04:4b:e0:dd:44, type:806
+etharp_update_arp_entry: 10.42.0.28 - 00:04:4b:e0:dd:44
+etharp_find_entry: found matching entry 0
+etharp_update_arp_entry: updating stable entry 0
+etharp_arp_input: incoming ARP request
+etharp_arp_input: ARP request was not for us.
+ethernet_input: dest:00:04:4b:e0:dd:46, src:00:04:4b:e0:dd:44, type:800
+etharp_ip_input: updating ETHARP table.
+etharp_update_arp_entry: 10.42.0.28 - 00:04:4b:e0:dd:44
+etharp_find_entry: found matching entry 0
+etharp_update_arp_entry: updating stable entry 0
+etharp_send_ip: sending packet 0x70011168
+ethernet_input: dest:00:04:4b:e0:dd:46, src:00:04:4b:e0:dd:44, type:800
+etharp_ip_input: updating ETHARP table.
+etharp_update_arp_entry: 10.42.0.28 - 00:04:4b:e0:dd:44
+etharp_find_entry: found matching entry 0
+etharp_update_arp_entry: updating stable entry 0
+etharp_send_ip: sending packet 0x70011168
+ethernet_input: dest:00:04:4b:e0:dd:46, src:00:04:4b:e0:dd:44, type:800
+etharp_ip_input: updating ETHARP table.
+etharp_update_arp_entry: 10.42.0.28 - 00:04:4b:e0:dd:44
+etharp_find_entry: found matching entry 0
+etharp_update_arp_entry: updating stable entry 0
+etharp_send_ip: sending packet 0x70011168
+ethernet_input: dest:00:04:4b:e0:dd:46, src:00:04:4b:e0:dd:44, type:800
+etharp_ip_input: updating ETHARP table.
+etharp_update_arp_entry: 10.42.0.28 - 00:04:4b:e0:dd:44
+etharp_find_entry: found matching entry 0
+etharp_update_arp_entry: updating stable entry 0
+etharp_send_ip: sending packet 0x70011168
+ethernet_input: dest:00:04:4b:e0:dd:46, src:00:04:4b:e0:dd:44, type:800
+etharp_ip_input: updating ETHARP table.
+etharp_update_arp_entry: 10.42.0.28 - 00:04:4b:e0:dd:44
+etharp_find_entry: found matching entry 0
+etharp_update_arp_entry: updating stable entry 0
+etharp_send_ip: sending packet 0x70011168
+ethernet_input: dest:00:04:4b:e0:dd:46, src:00:04:4b:e0:dd:44, type:800
+etharp_ip_input: updating ETHARP table.
+etharp_update_arp_entry: 10.42.0.28 - 00:04:4b:e0:dd:44
+etharp_find_entry: found matching entry 0
+etharp_update_arp_entry: updating stable entry 0
+etharp_send_ip: sending packet 0x70011168
+ethernet_input: dest:00:04:4b:e0:dd:46, src:00:04:4b:e0:dd:44, type:800
+etharp_ip_input: updating ETHARP table.
+etharp_update_arp_entry: 10.42.0.28 - 00:04:4b:e0:dd:44
+etharp_find_entry: found matching entry 0
+etharp_update_arp_entry: updating stable entry 0
+etharp_send_ip: sending packet 0x70011168
+
+
+
+
+
+
+
+nvidia@tegra-ubuntu:~$ ping 10.42.0.146
+PING 10.42.0.146 (10.42.0.146) 56(84) bytes of data.
+From 10.42.0.28 icmp_seq=9 Destination Host Unreachable
+64 bytes from 10.42.0.146: icmp_seq=2 ttl=255 time=11264 ms
+64 bytes from 10.42.0.146: icmp_seq=3 ttl=255 time=10241 ms
+64 bytes from 10.42.0.146: icmp_seq=4 ttl=255 time=9218 ms
+64 bytes from 10.42.0.146: icmp_seq=5 ttl=255 time=8194 ms
+64 bytes from 10.42.0.146: icmp_seq=7 ttl=255 time=6148 ms
+^C
+--- 10.42.0.146 ping statistics ---
+14 packets transmitted, 5 received, +1 errors, 64% packet loss, time 13294ms
+rtt min/avg/max/mdev = 6148.949/9013.743/11264.973/1760.406 ms, pipe 12
+
+
+
+
+
+ethernet_input: dest:ff:ff:ff:ff:ff:ff, src:00:04:4b:e0:dd:44, type:806
+etharp_arp_input: netif IP is 0x92002a0a, dest IP is 0x2f002a0a.
+etharp_update_arp_entry: 10.42.0.28 - 00:04:4b:e0:dd:44
+etharp_find_entry: found matching entry 0
+etharp_update_arp_entry: updating stable entry 0
+etharp_arp_input: incoming ARP request
+etharp_arp_input: ARP request was not for us.
+ethernet_input: dest:ff:ff:ff:ff:ff:ff, src:00:04:4b:e0:dd:44, type:806
+etharp_arp_input: netif IP is 0x92002a0a, dest IP is 0x2c002a0a.
+etharp_update_arp_entry: 10.42.0.28 - 00:04:4b:e0:dd:44
+etharp_find_entry: found matching entry 0
+etharp_update_arp_entry: updating stable entry 0
+etharp_arp_input: incoming ARP request
+etharp_arp_input: ARP request was not for us.
+ethernet_input: dest:ff:ff:ff:ff:ff:ff, src:00:04:4b:e0:dd:44, type:806
+etharp_arp_input: netif IP is 0x92002a0a, dest IP is 0x27002a0a.
+etharp_update_arp_entry: 10.42.0.28 - 00:04:4b:e0:dd:44
+etharp_find_entry: found matching entry 0
+etharp_update_arp_entry: updating stable entry 0
+etharp_arp_input: incoming ARP request
+etharp_arp_input: ARP request was not for us.
+ethernet_input: dest:ff:ff:ff:ff:ff:ff, src:00:04:4b:e0:dd:44, type:806
+etharp_arp_input: netif IP is 0x92002a0a, dest IP is 0x31002a0a.
+etharp_update_arp_entry: 10.42.0.28 - 00:04:4b:e0:dd:44
+etharp_find_entry: found matching entry 0
+etharp_update_arp_entry: updating stable entry 0
+etharp_arp_input: incoming ARP request
+etharp_arp_input: ARP request was not for us.
+ethernet_input: dest:ff:ff:ff:ff:ff:ff, src:00:04:4b:e0:dd:44, type:806
+etharp_arp_input: netif IP is 0x92002a0a, dest IP is 0x1d002a0a.
+etharp_update_arp_entry: 10.42.0.28 - 00:04:4b:e0:dd:44
+etharp_find_entry: found matching entry 0
+etharp_update_arp_entry: updating stable entry 0
+etharp_arp_input: incoming ARP request
+etharp_arp_input: ARP request was not for us.
+ethernet_input: dest:ff:ff:ff:ff:ff:ff, src:00:04:4b:e0:dd:44, type:806
+etharp_arp_input: netif IP is 0x92002a0a, dest IP is 0x25002a0a.
+etharp_update_arp_entry: 10.42.0.28 - 00:04:4b:e0:dd:44
+etharp_find_entry: found matching entry 0
+etharp_update_arp_entry: updating stable entry 0
+etharp_arp_input: incoming ARP request
+etharp_arp_input: ARP request was not for us.
+ethernet_input: dest:ff:ff:ff:ff:ff:ff, src:00:04:4b:e0:dd:44, type:806
+etharp_arp_input: netif IP is 0x92002a0a, dest IP is 0x2b002a0a.
+etharp_update_arp_entry: 10.42.0.28 - 00:04:4b:e0:dd:44
+etharp_find_entry: found matching entry 0
+etharp_update_arp_entry: updating stable entry 0
+etharp_arp_input: incoming ARP request
+etharp_arp_input: ARP request was not for us.
+ethernet_input: dest:ff:ff:ff:ff:ff:ff, src:00:04:4b:e0:dd:44, type:806
+etharp_arp_input: netif IP is 0x92002a0a, dest IP is 0x37002a0a.
+etharp_update_arp_entry: 10.42.0.28 - 00:04:4b:e0:dd:44
+etharp_find_entry: found matching entry 0
+etharp_update_arp_entry: updating stable entry 0
+etharp_arp_input: incoming ARP request
+etharp_arp_input: ARP request was not for us.
+etharp_timer
+ethernet_input: dest:ff:ff:ff:ff:ff:ff, src:00:04:4b:e0:dd:44, type:806
+etharp_arp_input: netif IP is 0x92002a0a, dest IP is 0x30002a0a.
+etharp_update_arp_entry: 10.42.0.28 - 00:04:4b:e0:dd:44
+etharp_find_entry: found matching entry 0
+etharp_update_arp_entry: updating stable entry 0
+etharp_arp_input: incoming ARP request
+etharp_arp_input: ARP request was not for us.
+ethernet_input: dest:ff:ff:ff:ff:ff:ff, src:00:04:4b:e0:dd:44, type:806
+etharp_arp_input: netif IP is 0x92002a0a, dest IP is 0x2e002a0a.
+etharp_update_arp_entry: 10.42.0.28 - 00:04:4b:e0:dd:44
+etharp_find_entry: found matching entry 0
+etharp_update_arp_entry: updating stable entry 0
+etharp_arp_input: incoming ARP request
+etharp_arp_input: ARP request was not for us.
+ethernet_input: dest:ff:ff:ff:ff:ff:ff, src:00:04:4b:e0:dd:44, type:806
+etharp_arp_input: netif IP is 0x92002a0a, dest IP is 0x29002a0a.
+etharp_update_arp_entry: 10.42.0.28 - 00:04:4b:e0:dd:44
+etharp_find_entry: found matching entry 0
+etharp_update_arp_entry: updating stable entry 0
+etharp_arp_input: incoming ARP request
+etharp_arp_input: ARP request was not for us.
+ethernet_input: dest:ff:ff:ff:ff:ff:ff, src:00:04:4b:e0:dd:44, type:806
+etharp_arp_input: netif IP is 0x92002a0a, dest IP is 0x2f002a0a.
+etharp_update_arp_entry: 10.42.0.28 - 00:04:4b:e0:dd:44
+etharp_find_entry: found matching entry 0
+etharp_update_arp_entry: updating stable entry 0
+etharp_arp_input: incoming ARP request
+etharp_arp_input: ARP request was not for us.
+ethernet_input: dest:ff:ff:ff:ff:ff:ff, src:00:04:4b:e0:dd:44, type:806
+etharp_arp_input: netif IP is 0x92002a0a, dest IP is 0x2c002a0a.
+etharp_update_arp_entry: 10.42.0.28 - 00:04:4b:e0:dd:44
+etharp_find_entry: found matching entry 0
+etharp_update_arp_entry: updating stable entry 0
+etharp_arp_input: incoming ARP request
+etharp_arp_input: ARP request was not for us.
+ethernet_input: dest:ff:ff:ff:ff:ff:ff, src:00:04:4b:e0:dd:44, type:806
+etharp_arp_input: netif IP is 0x92002a0a, dest IP is 0x1f002a0a.
+etharp_update_arp_entry: 10.42.0.28 - 00:04:4b:e0:dd:44
+etharp_find_entry: found matching entry 0
+etharp_update_arp_entry: updating stable entry 0
+etharp_arp_input: incoming ARP request
+etharp_arp_input: ARP request was not for us.
+ethernet_input: dest:ff:ff:ff:ff:ff:ff, src:00:04:4b:e0:dd:44, type:806
+etharp_arp_input: netif IP is 0x92002a0a, dest IP is 0x31002a0a.
+etharp_update_arp_entry: 10.42.0.28 - 00:04:4b:e0:dd:44
+etharp_find_entry: found matching entry 0
+etharp_update_arp_entry: updating stable entry 0
+etharp_arp_input: incoming ARP request
+etharp_arp_input: ARP request was not for us.
+ethernet_input: dest:ff:ff:ff:ff:ff:ff, src:00:04:4b:e0:dd:44, type:806
+etharp_arp_input: netif IP is 0x92002a0a, dest IP is 0x1d002a0a.
+etharp_update_arp_entry: 10.42.0.28 - 00:04:4b:e0:dd:44
+etharp_find_entry: found matching entry 0
+etharp_update_arp_entry: updating stable entry 0
+etharp_arp_input: incoming ARP request
+etharp_arp_input: ARP request was not for us.
+etharp_timer
+etharp_timer
+ethernet_input: dest:ff:ff:ff:ff:ff:ff, src:00:04:4b:e0:dd:44, type:806
+etharp_arp_input: netif IP is 0x92002a0a, dest IP is 0x2b002a0a.
+etharp_update_arp_entry: 10.42.0.28 - 00:04:4b:e0:dd:44
+etharp_find_entry: found matching entry 0
+etharp_update_arp_entry: updating stable entry 0
+etharp_arp_input: incoming ARP request
+etharp_arp_input: ARP request was not for us.
+ethernet_input: dest:00:04:4b:e0:dd:46, src:00:04:4b:e0:dd:44, type:800
+etharp_ip_input: updating ETHARP table.
+etharp_update_arp_entry: 10.42.0.28 - 00:04:4b:e0:dd:44
+etharp_find_entry: found matching entry 0
+etharp_update_arp_entry: updating stable entry 0
+etharp_send_ip: sending packet 0x70011168
+ethernet_input: dest:00:04:4b:e0:dd:46, src:00:04:4b:e0:dd:44, type:800
+etharp_ip_input: updating ETHARP table.
+etharp_update_arp_entry: 10.42.0.28 - 00:04:4b:e0:dd:44
+etharp_find_entry: found matching entry 0
+etharp_update_arp_entry: updating stable entry 0
+etharp_send_ip: sending packet 0x70011168
+ethernet_input: dest:00:04:4b:e0:dd:46, src:00:04:4b:e0:dd:44, type:800
+etharp_ip_input: updating ETHARP table.
+etharp_update_arp_entry: 10.42.0.28 - 00:04:4b:e0:dd:44
+etharp_find_entry: found matching entry 0
+etharp_update_arp_entry: updating stable entry 0
+etharp_send_ip: sending packet 0x70011168
+ethernet_input: dest:00:04:4b:e0:dd:46, src:00:04:4b:e0:dd:44, type:800
+etharp_ip_input: updating ETHARP table.
+etharp_update_arp_entry: 10.42.0.28 - 00:04:4b:e0:dd:44
+etharp_find_entry: found matching entry 0
+etharp_update_arp_entry: updating stable entry 0
+etharp_send_ip: sending packet 0x70011168
+ethernet_input: dest:00:04:4b:e0:dd:46, src:00:04:4b:e0:dd:44, type:806
+etharp_arp_input: netif IP is 0x92002a0a, dest IP is 0x92002a0a.
+etharp_update_arp_entry: 10.42.0.28 - 00:04:4b:e0:dd:44
+etharp_find_entry: found matching entry 0
+etharp_update_arp_entry: updating stable entry 0
+etharp_arp_input: incoming ARP request
+etharp_arp_input: replying to ARP request for our IP address
+ethernet_input: dest:00:04:4b:e0:dd:46, src:00:04:4b:e0:dd:44, type:806
+etharp_arp_input: netif IP is 0x92002a0a, dest IP is 0x92002a0a.
+etharp_update_arp_entry: 10.42.0.28 - 00:04:4b:e0:dd:44
+etharp_find_entry: found matching entry 0
+etharp_update_arp_entry: updating stable entry 0
+etharp_arp_input: incoming ARP request
+etharp_arp_input: replying to ARP request for our IP address
+ethernet_input: dest:00:04:4b:e0:dd:46, src:00:04:4b:e0:dd:44, type:800
+etharp_ip_input: updating ETHARP table.
+etharp_update_arp_entry: 10.42.0.28 - 00:04:4b:e0:dd:44
+etharp_find_entry: found matching entry 0
+etharp_update_arp_entry: updating stable entry 0
+etharp_send_ip: sending packet 0x70011168
+
+nvidia@tegra-ubuntu:~$ ping 10.42.0.146
+PING 10.42.0.146 (10.42.0.146) 56(84) bytes of data.
+From 10.42.0.28 icmp_seq=1 Destination Host Unreachable
+64 bytes from 10.42.0.146: icmp_seq=5 ttl=255 time=8196 ms
+64 bytes from 10.42.0.146: icmp_seq=6 ttl=255 time=7172 ms
+64 bytes from 10.42.0.146: icmp_seq=7 ttl=255 time=6149 ms
+64 bytes from 10.42.0.146: icmp_seq=8 ttl=255 time=12256 ms
+64 bytes from 10.42.0.146: icmp_seq=9 ttl=255 time=11233 ms
+64 bytes from 10.42.0.146: icmp_seq=10 ttl=255 time=10209 ms
+64 bytes from 10.42.0.146: icmp_seq=11 ttl=255 time=9186 ms
+64 bytes from 10.42.0.146: icmp_seq=12 ttl=255 time=8163 ms
+64 bytes from 10.42.0.146: icmp_seq=14 ttl=255 time=6138 ms
+64 bytes from 10.42.0.146: icmp_seq=15 ttl=255 time=5124 ms
+64 bytes from 10.42.0.146: icmp_seq=16 ttl=255 time=4101 ms
+^C
+--- 10.42.0.146 ping statistics ---
+22 packets transmitted, 11 received, +1 errors, 50% packet loss, time 21446ms
+rtt min/avg/max/mdev = 4101.157/7993.754/12256.456/2448.956 ms, pipe 13
+
+ethernet_input: dest:00:04:4b:e0:dd:46, src:00:04:4b:e0:dd:44, type:800
+etharp_ip_input: updating ETHARP table.
+etharp_update_arp_entry: 10.42.0.28 - 00:04:4b:e0:dd:44
+etharp_find_entry: found matching entry 0
+etharp_update_arp_entry: updating stable entry 0
+etharp_send_ip: sending packet 0x70011168
+ethernet_input: dest:00:04:4b:e0:dd:46, src:00:04:4b:e0:dd:44, type:800
+etharp_ip_input: updating ETHARP table.
+etharp_update_arp_entry: 10.42.0.28 - 00:04:4b:e0:dd:44
+etharp_find_entry: found matching entry 0
+etharp_update_arp_entry: updating stable entry 0
+etharp_send_ip: sending packet 0x70011168
+ethernet_input: dest:00:04:4b:e0:dd:46, src:00:04:4b:e0:dd:44, type:800
+etharp_ip_input: updating ETHARP table.
+etharp_update_arp_entry: 10.42.0.28 - 00:04:4b:e0:dd:44
+etharp_find_entry: found matching entry 0
+etharp_update_arp_entry: updating stable entry 0
+etharp_send_ip: sending packet 0x70011168
+ethernet_input: dest:00:04:4b:e0:dd:46, src:00:04:4b:e0:dd:44, type:800
+etharp_ip_input: updating ETHARP table.
+etharp_update_arp_entry: 10.42.0.28 - 00:04:4b:e0:dd:44
+etharp_find_entry: found matching entry 0
+etharp_update_arp_entry: updating stable entry 0
+etharp_send_ip: sending packet 0x70011168
+ethernet_input: dest:00:04:4b:e0:dd:46, src:00:04:4b:e0:dd:44, type:800
+etharp_ip_input: updating ETHARP table.
+etharp_update_arp_entry: 10.42.0.28 - 00:04:4b:e0:dd:44
+etharp_find_entry: found matching entry 0
+etharp_update_arp_entry: updating stable entry 0
+etharp_send_ip: sending packet 0x70011168
+ethernet_input: dest:00:04:4b:e0:dd:46, src:00:04:4b:e0:dd:44, type:800
+etharp_ip_input: updating ETHARP table.
+etharp_update_arp_entry: 10.42.0.28 - 00:04:4b:e0:dd:44
+etharp_find_entry: found matching entry 0
+etharp_update_arp_entry: updating stable entry 0
+etharp_send_ip: sending packet 0x70011168
+ethernet_input: dest:00:04:4b:e0:dd:46, src:00:04:4b:e0:dd:44, type:806
+etharp_arp_input: netif IP is 0x92002a0a, dest IP is 0x92002a0a.
+etharp_update_arp_entry: 10.42.0.28 - 00:04:4b:e0:dd:44
+etharp_find_entry: found matching entry 0
+etharp_update_arp_entry: updating stable entry 0
+etharp_arp_input: incoming ARP request
+etharp_arp_input: replying to ARP request for our IP address
+ethernet_input: dest:00:04:4b:e0:dd:46, src:00:04:4b:e0:dd:44, type:806
+etharp_arp_input: netif IP is 0x92002a0a, dest IP is 0x92002a0a.
+etharp_update_arp_entry: 10.42.0.28 - 00:04:4b:e0:dd:44
+etharp_find_entry: found matching entry 0
+etharp_update_arp_entry: updating stable entry 0
+etharp_arp_input: incoming ARP request
+etharp_arp_input: replying to ARP request for our IP address
+ethernet_input: dest:00:04:4b:e0:dd:46, src:00:04:4b:e0:dd:44, type:806
+etharp_arp_input: netif IP is 0x92002a0a, dest IP is 0x92002a0a.
+etharp_update_arp_entry: 10.42.0.28 - 00:04:4b:e0:dd:44
+etharp_find_entry: found matching entry 0
+etharp_update_arp_entry: updating stable entry 0
+etharp_arp_input: incoming ARP request
+etharp_arp_input: replying to ARP request for our IP address
+etharp_timer
+ethernet_input: dest:ff:ff:ff:ff:ff:ff, src:00:04:4b:e0:dd:44, type:806
+etharp_arp_input: netif IP is 0x92002a0a, dest IP is 0x92002a0a.
+etharp_update_arp_entry: 10.42.0.28 - 00:04:4b:e0:dd:44
+etharp_find_entry: found matching entry 0
+etharp_update_arp_entry: updating stable entry 0
+etharp_arp_input: incoming ARP request
+etharp_arp_input: replying to ARP request for our IP address
+ethernet_input: dest:ff:ff:ff:ff:ff:ff, src:00:04:4b:e0:dd:44, type:806
+etharp_arp_input: netif IP is 0x92002a0a, dest IP is 0x92002a0a.
+etharp_update_arp_entry: 10.42.0.28 - 00:04:4b:e0:dd:44
+etharp_find_entry: found matching entry 0
+etharp_update_arp_entry: updating stable entry 0
+etharp_arp_input: incoming ARP request
+etharp_arp_input: replying to ARP request for our IP address
+ethernet_input: dest:ff:ff:ff:ff:ff:ff, src:00:04:4b:e0:dd:44, type:806
+etharp_arp_input: netif IP is 0x92002a0a, dest IP is 0x92002a0a.
+etharp_update_arp_entry: 10.42.0.28 - 00:04:4b:e0:dd:44
+etharp_find_entry: found matching entry 0
+etharp_update_arp_entry: updating stable entry 0
+etharp_arp_input: incoming ARP request
+etharp_arp_input: replying to ARP request for our IP address
+ethernet_input: dest:ff:ff:ff:ff:ff:ff, src:00:04:4b:e0:dd:44, type:806
+etharp_arp_input: netif IP is 0x92002a0a, dest IP is 0x92002a0a.
+etharp_update_arp_entry: 10.42.0.28 - 00:04:4b:e0:dd:44
+etharp_find_entry: found matching entry 0
+etharp_update_arp_entry: updating stable entry 0
+etharp_arp_input: incoming ARP request
+etharp_arp_input: replying to ARP request for our IP address
+ethernet_input: dest:ff:ff:ff:ff:ff:ff, src:00:04:4b:e0:dd:44, type:806
+etharp_arp_input: netif IP is 0x92002a0a, dest IP is 0x92002a0a.
+etharp_update_arp_entry: 10.42.0.28 - 00:04:4b:e0:dd:44
+etharp_find_entry: found matching entry 0
+etharp_update_arp_entry: updating stable entry 0
+etharp_arp_input: incoming ARP request
+etharp_arp_input: replying to ARP request for our IP address
+ethernet_input: dest:00:04:4b:e0:dd:46, src:00:04:4b:e0:dd:44, type:800
+etharp_ip_input: updating ETHARP table.
+etharp_update_arp_entry: 10.42.0.28 - 00:04:4b:e0:dd:44
+etharp_find_entry: found matching entry 0
+etharp_update_arp_entry: updating stable entry 0
+etharp_send_ip: sending packet 0x70011168
+ethernet_input: dest:00:04:4b:e0:dd:46, src:00:04:4b:e0:dd:44, type:800
+etharp_ip_input: updating ETHARP table.
+etharp_update_arp_entry: 10.42.0.28 - 00:04:4b:e0:dd:44
+etharp_find_entry: found matching entry 0
+etharp_update_arp_entry: updating stable entry 0
+etharp_send_ip: sending packet 0x70011168
+ethernet_input: dest:00:04:4b:e0:dd:46, src:00:04:4b:e0:dd:44, type:800
+etharp_ip_input: updating ETHARP table.
+etharp_update_arp_entry: 10.42.0.28 - 00:04:4b:e0:dd:44
+etharp_find_entry: found matching entry 0
+etharp_update_arp_entry: updating stable entry 0
+etharp_send_ip: sending packet 0x70011168
+etharp_timer
+etharp_timer
+ethernet_input: dest:00:04:4b:e0:dd:46, src:00:04:4b:e0:dd:44, type:800
+etharp_ip_input: updating ETHARP table.
+etharp_update_arp_entry: 10.42.0.28 - 00:04:4b:e0:dd:44
+etharp_find_entry: found matching entry 0
+etharp_update_arp_entry: updating stable entry 0
+etharp_send_ip: sending packet 0x70011168
+ethernet_input: dest:00:04:4b:e0:dd:46, src:00:04:4b:e0:dd:44, type:800
+etharp_ip_input: updating ETHARP table.
+etharp_update_arp_entry: 10.42.0.28 - 00:04:4b:e0:dd:44
+etharp_find_entry: found matching entry 0
+etharp_update_arp_entry: updating stable entry 0
+etharp_send_ip: sending packet 0x70011168
+ethernet_input: dest:00:04:4b:e0:dd:46, src:00:04:4b:e0:dd:44, type:800
+etharp_ip_input: updating ETHARP table.
+etharp_update_arp_entry: 10.42.0.28 - 00:04:4b:e0:dd:44
+etharp_find_entry: found matching entry 0
+etharp_update_arp_entry: updating stable entry 0
+etharp_send_ip: sending packet 0x70011168
+ethernet_input: dest:00:04:4b:e0:dd:46, src:00:04:4b:e0:dd:44, type:800
+etharp_ip_input: updating ETHARP table.
+etharp_update_arp_entry: 10.42.0.28 - 00:04:4b:e0:dd:44
+etharp_find_entry: found matching entry 0
+etharp_update_arp_entry: updating stable entry 0
+etharp_send_ip: sending packet 0x70011168
+ethernet_input: dest:00:04:4b:e0:dd:46, src:00:04:4b:e0:dd:44, type:800
+etharp_ip_input: updating ETHARP table.
+etharp_update_arp_entry: 10.42.0.28 - 00:04:4b:e0:dd:44
+etharp_find_entry: found matching entry 0
+etharp_update_arp_entry: updating stable entry 0
+etharp_send_ip: sending packet 0x70011168
+ethernet_input: dest:00:04:4b:e0:dd:46, src:00:04:4b:e0:dd:44, type:800
+etharp_ip_input: updating ETHARP table.
+etharp_update_arp_entry: 10.42.0.28 - 00:04:4b:e0:dd:44
+etharp_find_entry: found matching entry 0
+etharp_update_arp_entry: updating stable entry 0
+etharp_send_ip: sending packet 0x70011168
+ethernet_input: dest:00:04:4b:e0:dd:46, src:00:04:4b:e0:dd:44, type:800
+etharp_ip_input: updating ETHARP table.
+etharp_update_arp_entry: 10.42.0.28 - 00:04:4b:e0:dd:44
+etharp_find_entry: found matching entry 0
+etharp_update_arp_entry: updating stable entry 0
+etharp_send_ip: sending packet 0x70011168
+ethernet_input: dest:00:04:4b:e0:dd:46, src:00:04:4b:e0:dd:44, type:800
+etharp_ip_input: updating ETHARP table.
+etharp_update_arp_entry: 10.42.0.28 - 00:04:4b:e0:dd:44
+etharp_find_entry: found matching entry 0
+etharp_update_arp_entry: updating stable entry 0
+etharp_send_ip: sending packet 0x70011168
+
+
+nvidia@tegra-ubuntu:~$ ping 10.42.0.146
+PING 10.42.0.146 (10.42.0.146) 56(84) bytes of data.
+64 bytes from 10.42.0.146: icmp_seq=1 ttl=255 time=1.46 ms
+64 bytes from 10.42.0.146: icmp_seq=2 ttl=255 time=0.666 ms
+64 bytes from 10.42.0.146: icmp_seq=3 ttl=255 time=0.679 ms
+64 bytes from 10.42.0.146: icmp_seq=4 ttl=255 time=0.759 ms
+64 bytes from 10.42.0.146: icmp_seq=5 ttl=255 time=0.307 ms
+64 bytes from 10.42.0.146: icmp_seq=6 ttl=255 time=0.314 ms
+^C
+--- 10.42.0.146 ping statistics ---
+6 packets transmitted, 6 received, 0% packet loss, time 5079ms
+rtt min/avg/max/mdev = 0.307/0.698/1.466/0.387 ms
+
+ethernet_input: dest:ff:ff:ff:ff:ff:ff, src:00:04:4b:e0:dd:44, type:806
+etharp_arp_input: netif IP is 0x92002a0a, dest IP is 0x92002a0a.
+etharp_update_arp_entry: 10.42.0.28 - 00:04:4b:e0:dd:44
+etharp_find_entry: found empty entry 0
+etharp_find_entry: selecting empty entry 0
+etharp_update_arp_entry: updating stable entry 0
+etharp_arp_input: incoming ARP request
+etharp_arp_input: replying to ARP request for our IP address
+ethernet_input: dest:00:04:4b:e0:dd:46, src:00:04:4b:e0:dd:44, type:800
+etharp_ip_input: updating ETHARP table.
+etharp_update_arp_entry: 10.42.0.28 - 00:04:4b:e0:dd:44
+etharp_find_entry: found matching entry 0
+etharp_update_arp_entry: updating stable entry 0
+etharp_send_ip: sending packet 0x70011168
+etharp_timer
+ethernet_input: dest:00:04:4b:e0:dd:46, src:00:04:4b:e0:dd:44, type:800
+etharp_ip_input: updating ETHARP table.
+etharp_update_arp_entry: 10.42.0.28 - 00:04:4b:e0:dd:44
+etharp_find_entry: found matching entry 0
+etharp_update_arp_entry: updating stable entry 0
+etharp_send_ip: sending packet 0x70011168
+ethernet_input: dest:00:04:4b:e0:dd:46, src:00:04:4b:e0:dd:44, type:800
+etharp_ip_input: updating ETHARP table.
+etharp_update_arp_entry: 10.42.0.28 - 00:04:4b:e0:dd:44
+etharp_find_entry: found matching entry 0
+etharp_update_arp_entry: updating stable entry 0
+etharp_send_ip: sending packet 0x70011168
+ethernet_input: dest:00:04:4b:e0:dd:46, src:00:04:4b:e0:dd:44, type:800
+etharp_ip_input: updating ETHARP table.
+etharp_update_arp_entry: 10.42.0.28 - 00:04:4b:e0:dd:44
+etharp_find_entry: found matching entry 0
+etharp_update_arp_entry: updating stable entry 0
+etharp_send_ip: sending packet 0x70011168
+ethernet_input: dest:00:04:4b:e0:dd:46, src:00:04:4b:e0:dd:44, type:800
+etharp_ip_input: updating ETHARP table.
+etharp_update_arp_entry: 10.42.0.28 - 00:04:4b:e0:dd:44
+etharp_find_entry: found matching entry 0
+etharp_update_arp_entry: updating stable entry 0
+etharp_send_ip: sending packet 0x70011168
+ethernet_input: dest:00:04:4b:e0:dd:46, src:00:04:4b:e0:dd:44, type:800
+etharp_ip_input: updating ETHARP table.
+etharp_update_arp_entry: 10.42.0.28 - 00:04:4b:e0:dd:44
+etharp_find_entry: found matching entry 0
+etharp_update_arp_entry: updating stable entry 0
+etharp_send_ip: sending packet 0x70011168
+
+nvidia@tegra-ubuntu:~$ ping 10.42.0.146
+PING 10.42.0.146 (10.42.0.146) 56(84) bytes of data.
+64 bytes from 10.42.0.146: icmp_seq=1 ttl=255 time=0.882 ms
+64 bytes from 10.42.0.146: icmp_seq=2 ttl=255 time=0.623 ms
+64 bytes from 10.42.0.146: icmp_seq=3 ttl=255 time=0.655 ms
+64 bytes from 10.42.0.146: icmp_seq=4 ttl=255 time=0.803 ms
+64 bytes from 10.42.0.146: icmp_seq=5 ttl=255 time=0.799 ms
+^C
+--- 10.42.0.146 ping statistics ---
+5 packets transmitted, 5 received, 0% packet loss, time 4050ms
+rtt min/avg/max/mdev = 0.623/0.752/0.882/0.100 ms
+
+ethernet_input: dest:00:04:4b:e0:dd:46, src:00:04:4b:e0:dd:44, type:800
+etharp_ip_input: updating ETHARP table.
+etharp_update_arp_entry: 10.42.0.28 - 00:04:4b:e0:dd:44
+etharp_find_entry: found matching entry 0
+etharp_update_arp_entry: updating stable entry 0
+etharp_send_ip: sending packet 0x70011168
+ethernet_input: dest:00:04:4b:e0:dd:46, src:00:04:4b:e0:dd:44, type:800
+etharp_ip_input: updating ETHARP table.
+etharp_update_arp_entry: 10.42.0.28 - 00:04:4b:e0:dd:44
+etharp_find_entry: found matching entry 0
+etharp_update_arp_entry: updating stable entry 0
+etharp_send_ip: sending packet 0x70011168
+ethernet_input: dest:00:04:4b:e0:dd:46, src:00:04:4b:e0:dd:44, type:800
+etharp_ip_input: updating ETHARP table.
+etharp_update_arp_entry: 10.42.0.28 - 00:04:4b:e0:dd:44
+etharp_find_entry: found matching entry 0
+etharp_update_arp_entry: updating stable entry 0
+etharp_send_ip: sending packet 0x70011168
+etharp_timer
+ethernet_input: dest:00:04:4b:e0:dd:46, src:00:04:4b:e0:dd:44, type:800
+etharp_ip_input: updating ETHARP table.
+etharp_update_arp_entry: 10.42.0.28 - 00:04:4b:e0:dd:44
+etharp_find_entry: found matching entry 0
+etharp_update_arp_entry: updating stable entry 0
+etharp_send_ip: sending packet 0x70011168
+ethernet_input: dest:00:04:4b:e0:dd:46, src:00:04:4b:e0:dd:44, type:800
+etharp_ip_input: updating ETHARP table.
+etharp_update_arp_entry: 10.42.0.28 - 00:04:4b:e0:dd:44
+etharp_find_entry: found matching entry 0
+etharp_update_arp_entry: updating stable entry 0
+etharp_send_ip: sending packet 0x70011168
+
+ubuntu@tegra-ubuntu:~$ ping 10.42.0.146
+PING 10.42.0.146 (10.42.0.146) 56(84) bytes of data.
+64 bytes from 10.42.0.146: icmp_seq=1 ttl=255 time=8195 ms
+64 bytes from 10.42.0.146: icmp_seq=2 ttl=255 time=7171 ms
+64 bytes from 10.42.0.146: icmp_seq=3 ttl=255 time=6147 ms
+64 bytes from 10.42.0.146: icmp_seq=4 ttl=255 time=5124 ms
+64 bytes from 10.42.0.146: icmp_seq=6 ttl=255 time=10208 ms
+64 bytes from 10.42.0.146: icmp_seq=7 ttl=255 time=9185 ms
+64 bytes from 10.42.0.146: icmp_seq=8 ttl=255 time=8162 ms
+64 bytes from 10.42.0.146: icmp_seq=9 ttl=255 time=7139 ms
+64 bytes from 10.42.0.146: icmp_seq=10 ttl=255 time=6138 ms
+64 bytes from 10.42.0.146: icmp_seq=11 ttl=255 time=5124 ms
+64 bytes from 10.42.0.146: icmp_seq=12 ttl=255 time=4101 ms
+^C
+--- 10.42.0.146 ping statistics ---
+17 packets transmitted, 11 received, 35% packet loss, time 16331ms
+rtt min/avg/max/mdev = 4101.579/6972.816/10208.289/1778.555 ms, pipe 11
+
+ethernet_input: dest:ff:ff:ff:ff:ff:ff, src:00:04:4b:e0:dd:44, type:806
+etharp_arp_input: netif IP is 0x92002a0a, dest IP is 0x2d002a0a.
+etharp_update_arp_entry: 10.42.0.28 - 00:04:4b:e0:dd:44
+etharp_find_entry: found matching entry 0
+etharp_update_arp_entry: updating stable entry 0
+etharp_arp_input: incoming ARP request
+etharp_arp_input: ARP request was not for us.
+ethernet_input: dest:ff:ff:ff:ff:ff:ff, src:00:04:4b:e0:dd:44, type:806
+etharp_arp_input: netif IP is 0x92002a0a, dest IP is 0x2f002a0a.
+etharp_update_arp_entry: 10.42.0.28 - 00:04:4b:e0:dd:44
+etharp_find_entry: found matching entry 0
+etharp_update_arp_entry: updating stable entry 0
+etharp_arp_input: incoming ARP request
+etharp_arp_input: ARP request was not for us.
+ethernet_input: dest:ff:ff:ff:ff:ff:ff, src:00:04:4b:e0:dd:44, type:806
+etharp_arp_input: netif IP is 0x92002a0a, dest IP is 0x31002a0a.
+etharp_update_arp_entry: 10.42.0.28 - 00:04:4b:e0:dd:44
+etharp_find_entry: found matching entry 0
+etharp_update_arp_entry: updating stable entry 0
+etharp_arp_input: incoming ARP request
+etharp_arp_input: ARP request was not for us.
+ethernet_input: dest:ff:ff:ff:ff:ff:ff, src:00:04:4b:e0:dd:44, type:806
+etharp_arp_input: netif IP is 0x92002a0a, dest IP is 0x2c002a0a.
+etharp_update_arp_entry: 10.42.0.28 - 00:04:4b:e0:dd:44
+etharp_find_entry: found matching entry 0
+etharp_update_arp_entry: updating stable entry 0
+etharp_arp_input: incoming ARP request
+etharp_arp_input: ARP request was not for us.
+ethernet_input: dest:ff:ff:ff:ff:ff:ff, src:00:04:4b:e0:dd:44, type:806
+etharp_arp_input: netif IP is 0x92002a0a, dest IP is 0x30002a0a.
+etharp_update_arp_entry: 10.42.0.28 - 00:04:4b:e0:dd:44
+etharp_find_entry: found matching entry 0
+etharp_update_arp_entry: updating stable entry 0
+etharp_arp_input: incoming ARP request
+etharp_arp_input: ARP request was not for us.
+ethernet_input: dest:ff:ff:ff:ff:ff:ff, src:00:04:4b:e0:dd:44, type:806
+etharp_arp_input: netif IP is 0x92002a0a, dest IP is 0x2e002a0a.
+etharp_update_arp_entry: 10.42.0.28 - 00:04:4b:e0:dd:44
+etharp_find_entry: found matching entry 0
+etharp_update_arp_entry: updating stable entry 0
+etharp_arp_input: incoming ARP request
+etharp_arp_input: ARP request was not for us.
+ethernet_input: dest:ff:ff:ff:ff:ff:ff, src:00:04:4b:e0:dd:44, type:806
+etharp_arp_input: netif IP is 0x92002a0a, dest IP is 0x2d002a0a.
+etharp_update_arp_entry: 10.42.0.28 - 00:04:4b:e0:dd:44
+etharp_find_entry: found matching entry 0
+etharp_update_arp_entry: updating stable entry 0
+etharp_arp_input: incoming ARP request
+etharp_arp_input: ARP request was not for us.
+ethernet_input: dest:ff:ff:ff:ff:ff:ff, src:00:04:4b:e0:dd:44, type:806
+etharp_arp_input: netif IP is 0x92002a0a, dest IP is 0x2f002a0a.
+etharp_update_arp_entry: 10.42.0.28 - 00:04:4b:e0:dd:44
+etharp_find_entry: found matching entry 0
+etharp_update_arp_entry: updating stable entry 0
+etharp_arp_input: incoming ARP request
+etharp_arp_input: ARP request was not for us.
+ethernet_input: dest:ff:ff:ff:ff:ff:ff, src:00:04:4b:e0:dd:44, type:806
+etharp_arp_input: netif IP is 0x92002a0a, dest IP is 0x30002a0a.
+etharp_update_arp_entry: 10.42.0.28 - 00:04:4b:e0:dd:44
+etharp_find_entry: found matching entry 0
+etharp_update_arp_entry: updating stable entry 0
+etharp_arp_input: incoming ARP request
+etharp_arp_input: ARP request was not for us.
+ethernet_input: dest:ff:ff:ff:ff:ff:ff, src:00:04:4b:e0:dd:44, type:806
+etharp_arp_input: netif IP is 0x92002a0a, dest IP is 0x31002a0a.
+etharp_update_arp_entry: 10.42.0.28 - 00:04:4b:e0:dd:44
+etharp_find_entry: found matching entry 0
+etharp_update_arp_entry: updating stable entry 0
+etharp_arp_input: incoming ARP request
+etharp_arp_input: ARP request was not for us.
+ethernet_input: dest:ff:ff:ff:ff:ff:ff, src:00:04:4b:e0:dd:44, type:806
+etharp_arp_input: netif IP is 0x92002a0a, dest IP is 0x2d002a0a.
+etharp_update_arp_entry: 10.42.0.28 - 00:04:4b:e0:dd:44
+etharp_find_entry: found matching entry 0
+etharp_update_arp_entry: updating stable entry 0
+etharp_arp_input: incoming ARP request
+etharp_arp_input: ARP request was not for us.
+ethernet_input: dest:00:04:4b:e0:dd:46, src:00:04:4b:e0:dd:44, type:800
+etharp_ip_input: updating ETHARP table.
+etharp_update_arp_entry: 10.42.0.28 - 00:04:4b:e0:dd:44
+etharp_find_entry: found matching entry 0
+etharp_update_arp_entry: updating stable entry 0
+etharp_send_ip: sending packet 0x70011168
+ethernet_input: dest:00:04:4b:e0:dd:46, src:00:04:4b:e0:dd:44, type:800
+etharp_ip_input: updating ETHARP table.
+etharp_update_arp_entry: 10.42.0.28 - 00:04:4b:e0:dd:44
+etharp_find_entry: found matching entry 0
+etharp_update_arp_entry: updating stable entry 0
+etharp_send_ip: sending packet 0x70011168
+ethernet_input: dest:00:04:4b:e0:dd:46, src:00:04:4b:e0:dd:44, type:800
+etharp_ip_input: updating ETHARP table.
+etharp_update_arp_entry: 10.42.0.28 - 00:04:4b:e0:dd:44
+etharp_find_entry: found matching entry 0
+etharp_update_arp_entry: updating stable entry 0
+etharp_send_ip: sending packet 0x70011168
+ethernet_input: dest:00:04:4b:e0:dd:46, src:00:04:4b:e0:dd:44, type:800
+etharp_ip_input: updating ETHARP table.
+etharp_update_arp_entry: 10.42.0.28 - 00:04:4b:e0:dd:44
+etharp_find_entry: found matching entry 0
+etharp_update_arp_entry: updating stable entry 0
+etharp_send_ip: sending packet 0x70011168
+ethernet_input: dest:00:04:4b:e0:dd:46, src:00:04:4b:e0:dd:44, type:806
+etharp_arp_input: netif IP is 0x92002a0a, dest IP is 0x92002a0a.
+etharp_update_arp_entry: 10.42.0.28 - 00:04:4b:e0:dd:44
+etharp_find_entry: found matching entry 0
+etharp_update_arp_entry: updating stable entry 0
+etharp_arp_input: incoming ARP request
+etharp_arp_input: replying to ARP request for our IP address
+etharp_timer
+etharp_timer
+ethernet_input: dest:00:04:4b:e0:dd:46, src:00:04:4b:e0:dd:44, type:800
+etharp_ip_input: updating ETHARP table.
+etharp_update_arp_entry: 10.42.0.28 - 00:04:4b:e0:dd:44
+etharp_find_entry: found matching entry 0
+etharp_update_arp_entry: updating stable entry 0
+etharp_send_ip: sending packet 0x70011168
+ethernet_input: dest:00:04:4b:e0:dd:46, src:00:04:4b:e0:dd:44, type:806
+etharp_arp_input: netif IP is 0x92002a0a, dest IP is 0x92002a0a.
+etharp_update_arp_entry: 10.42.0.28 - 00:04:4b:e0:dd:44
+etharp_find_entry: found matching entry 0
+etharp_update_arp_entry: updating stable entry 0
+etharp_arp_input: incoming ARP request
+etharp_arp_input: replying to ARP request for our IP address
+ethernet_input: dest:00:04:4b:e0:dd:46, src:00:04:4b:e0:dd:44, type:800
+etharp_ip_input: updating ETHARP table.
+etharp_update_arp_entry: 10.42.0.28 - 00:04:4b:e0:dd:44
+etharp_find_entry: found matching entry 0
+etharp_update_arp_entry: updating stable entry 0
+etharp_send_ip: sending packet 0x70011168
+ethernet_input: dest:00:04:4b:e0:dd:46, src:00:04:4b:e0:dd:44, type:806
+etharp_arp_input: netif IP is 0x92002a0a, dest IP is 0x92002a0a.
+etharp_update_arp_entry: 10.42.0.28 - 00:04:4b:e0:dd:44
+etharp_find_entry: found matching entry 0
+etharp_update_arp_entry: updating stable entry 0
+etharp_arp_input: incoming ARP request
+etharp_arp_input: replying to ARP request for our IP address
+ethernet_input: dest:00:04:4b:e0:dd:46, src:00:04:4b:e0:dd:44, type:800
+etharp_ip_input: updating ETHARP table.
+etharp_update_arp_entry: 10.42.0.28 - 00:04:4b:e0:dd:44
+etharp_find_entry: found matching entry 0
+etharp_update_arp_entry: updating stable entry 0
+etharp_send_ip: sending packet 0x70011168
+ethernet_input: dest:00:04:4b:e0:dd:46, src:00:04:4b:e0:dd:44, type:800
+etharp_ip_input: updating ETHARP table.
+etharp_update_arp_entry: 10.42.0.28 - 00:04:4b:e0:dd:44
+etharp_find_entry: found matching entry 0
+etharp_update_arp_entry: updating stable entry 0
+etharp_send_ip: sending packet 0x70011168
+ethernet_input: dest:00:04:4b:e0:dd:46, src:00:04:4b:e0:dd:44, type:800
+etharp_ip_input: updating ETHARP table.
+etharp_update_arp_entry: 10.42.0.28 - 00:04:4b:e0:dd:44
+etharp_find_entry: found matching entry 0
+etharp_update_arp_entry: updating stable entry 0
+etharp_send_ip: sending packet 0x70011168
+ethernet_input: dest:00:04:4b:e0:dd:46, src:00:04:4b:e0:dd:44, type:800
+etharp_ip_input: updating ETHARP table.
+etharp_update_arp_entry: 10.42.0.28 - 00:04:4b:e0:dd:44
+etharp_find_entry: found matching entry 0
+etharp_update_arp_entry: updating stable entry 0
+etharp_send_ip: sending packet 0x70011168
+ethernet_input: dest:00:04:4b:e0:dd:46, src:00:04:4b:e0:dd:44, type:800
+etharp_ip_input: updating ETHARP table.
+etharp_update_arp_entry: 10.42.0.28 - 00:04:4b:e0:dd:44
+etharp_find_entry: found matching entry 0
+etharp_update_arp_entry: updating stable entry 0
+etharp_send_ip: sending packet 0x70011168
+
+
+
+
+
+
+
+
+ethernet_input: dest:00:04:4b:e0:dd:46, src:00:04:4b:e0:dd:44, type:800
+etharp_ip_input: updating ETHARP table.
+etharp_update_arp_entry: 10.42.0.28 - 00:04:4b:e0:dd:44
+etharp_find_entry: found matching entry 0
+etharp_update_arp_entry: updating stable entry 0
+
+
+
+Dest IP is 0x0a, 0x2a, 0x00, 0x92.
+ethernet_input: dest:ff:ff:ff:ff:ff:ff, src:00:04:4b:e0:dd:44, type:806
+etharp_arp_input: netif IP is 0x92002a0a, dest IP is 0x92002a0a.
+etharp_update_arp_entry: 10.42.0.28 - 00:04:4b:e0:dd:44
+etharp_find_entry: found matching entry 0
+etharp_update_arp_entry: updating stable entry 0
+etharp_arp_input: incoming ARP request
+etharp_arp_input: replying to ARP request for our IP address
+
+
+Shell>low_level_input: len=62
+0 0xff, 1 0xff, 2 0xff, 3 0xff, 4 0xff, 5 0xff, 6 0x00, 7 0x04, 8 0x4b, 9 0xe0.
+10 0xdd, 11 0x44, 12 0x08, 13 0x06, 14 0x00, 15 0x01, 16 0x08, 17 0x00, 18 0x06, 19 0x04.
+20 0x00, 21 0x01, 22 0x00, 23 0x04, 24 0x4b, 25 0xe0, 26 0xdd, 27 0x44, 28 0x0a, 29 0x2a.
+30 0x00, 31 0x1c, 32 0x00, 33 0x00, 34 0x00, 35 0x00, 36 0x00, 37 0x00, 38 0x0a, 39 0x2a.
+40 0x00, 41 0x92, 42 0x00, 43 0x00, 44 0x00, 45 0x00, 46 0x00, 47 0x00, 48 0x00, 49 0x00.
+50 0x00, 51 0x00, 52 0x00, 53 0x00, 54 0x00, 55 0x00, 56 0xb5, 57 0xfb, 58 0x13, 59 0xca.
+60 0x28, 61 0x97
+ethernet_input: dest:ff:ff:ff:ff:ff:ff, src:00:04:4b:e0:dd:44, type:806
+etharp_arp_input: netif IP is 0x92002a0a, dest IP is 0x92002a0a.
+etharp_update_arp_entry: 10.42.0.28 - 00:04:4b:e0:dd:44
+etharp_find_entry: found empty entry 0
+etharp_find_entry: selecting empty entry 0
+etharp_update_arp_entry: updating stable entry 0
+etharp_arp_input: incoming ARP request
+etharp_arp_input: replying to ARP request for our IP address
+Transmit message count: 0x0002
+0 0x00, 1 0x04, 2 0x4b, 3 0xe0, 4 0xdd, 5 0x44, 6 0x00, 7 0x04, 8 0x4b, 9 0xe0.
+10 0xdd, 11 0x46, 12 0x08, 13 0x06, 14 0x00, 15 0x01, 16 0x08, 17 0x00, 18 0x06, 19 0x04.
+20 0x00, 21 0x02, 22 0x00, 23 0x04, 24 0x4b, 25 0xe0, 26 0xdd, 27 0x46, 28 0x0a, 29 0x2a.
+30 0x00, 31 0x92, 32 0x00, 33 0x04, 34 0x4b, 35 0xe0, 36 0xdd, 37 0x44, 38 0x0a, 39 0x2a.
+40 0x00, 41 0x1c, 42 0x00, 43 0x00, 44 0x00, 45 0x00, 46 0x00, 47 0x00, 48 0x00, 49 0x00.
+50 0x00, 51 0x00, 52 0x00, 53 0x00, 54 0x00, 55 0x00, 56 0xb5, 57 0xfb, 58 0x13, 59 0xca.
+60 0x00, 61 0x00
+Dest IP is 0x0a, 0x2a, 0x00, 0x1c.
+low_level_output: signal length: 62
+low_level_output: tx Count: 0x00000002
+
+low_level_input: len=100
+0 0x00, 1 0x04, 2 0x4b, 3 0xe0, 4 0xdd, 5 0x46, 6 0x00, 7 0x04, 8 0x4b, 9 0xe0.
+10 0xdd, 11 0x44, 12 0x08, 13 0x00, 14 0x45, 15 0x00, 16 0x00, 17 0x54, 18 0x1c, 19 0xed.
+20 0x40, 21 0x00, 22 0x40, 23 0x01, 24 0x08, 25 0xbb, 26 0x0a, 27 0x2a, 28 0x00, 29 0x1c.
+30 0x0a, 31 0x2a, 32 0x00, 33 0x92, 34 0x08, 35 0x00, 36 0xc0, 37 0xa2, 38 0x07, 39 0xab.
+40 0x00, 41 0x01, 42 0xf7, 43 0x2d, 44 0xbd, 45 0x5c, 46 0x00, 47 0x00, 48 0x00, 49 0x00.
+50 0xb7, 51 0x53, 52 0x05, 53 0x00, 54 0x00, 55 0x00, 56 0x00, 57 0x00, 58 0x10, 59 0x11.
+60 0x12, 61 0x13
+ethernet_input: dest:00:04:4b:e0:dd:46, src:00:04:4b:e0:dd:44, type:800
+etharp_ip_input: updating ETHARP table.
+etharp_update_arp_entry: 10.42.0.28 - 00:04:4b:e0:dd:44
+etharp_find_entry: found matching entry 0
+etharp_update_arp_entry: updating stable entry 0
+etharp_send_ip: sending packet 0x70011168
+Transmit message count: 0x0003
+0 0x00, 1 0x04, 2 0x4b, 3 0xe0, 4 0xdd, 5 0x44, 6 0x00, 7 0x04, 8 0x4b, 9 0xe0.
+10 0xdd, 11 0x46, 12 0x08, 13 0x00, 14 0x45, 15 0x00, 16 0x00, 17 0x54, 18 0x1c, 19 0xed.
+20 0x40, 21 0x00, 22 0xff, 23 0x01, 24 0x49, 25 0xba, 26 0x0a, 27 0x2a, 28 0x00, 29 0x92.
+30 0x0a, 31 0x2a, 32 0x00, 33 0x1c, 34 0x00, 35 0x00, 36 0xc8, 37 0xa2, 38 0x07, 39 0xab.
+40 0x00, 41 0x01, 42 0xf7, 43 0x2d, 44 0xbd, 45 0x5c, 46 0x00, 47 0x00, 48 0x00, 49 0x00.
+50 0xb7, 51 0x53, 52 0x05, 53 0x00, 54 0x00, 55 0x00, 56 0x00, 57 0x00, 58 0x10, 59 0x11.
+60 0x12, 61 0x13
+Dest IP is 0x07, 0xab, 0x00, 0x01.
+low_level_output: signal length: 100
+low_level_output: tx Count: 0x00000003
+
+
+Shell>low_level_input: len=100
+0 0x00, 1 0x04, 2 0x4b, 3 0xe0, 4 0xdd, 5 0x46, 6 0x00, 7 0x04, 8 0x4b, 9 0xe0.
+10 0xdd, 11 0x44, 12 0x08, 13 0x00, 14 0x45, 15 0x00, 16 0x00, 17 0x54, 18 0x60, 19 0xc6.
+20 0x40, 21 0x00, 22 0x40, 23 0x01, 24 0xc4, 25 0xe1, 26 0x0a, 27 0x2a, 28 0x00, 29 0x1c.
+30 0x0a, 31 0x2a, 32 0x00, 33 0x92, 34 0x08, 35 0x00, 36 0xb8, 37 0x87, 38 0x07, 39 0xac.
+40 0x00, 41 0x01, 42 0x43, 43 0x2e, 44 0xbd, 45 0x5c, 46 0x00, 47 0x00, 48 0x00, 49 0x00.
+50 0x73, 51 0x6d, 52 0x05, 53 0x00, 54 0x00, 55 0x00, 56 0x00, 57 0x00, 58 0x10, 59 0x11.
+60 0x12, 61 0x13
+ethernet_input: dest:00:04:4b:e0:dd:46, src:00:04:4b:e0:dd:44, type:800
+etharp_ip_input: updating ETHARP table.
+etharp_update_arp_entry: 10.42.0.28 - 00:04:4b:e0:dd:44
+etharp_find_entry: found matching entry 0
+etharp_update_arp_entry: updating stable entry 0
+etharp_send_ip: sending packet 0x70011168
+Transmit message count: 0x0006
+0 0x00, 1 0x04, 2 0x4b, 3 0xe0, 4 0xdd, 5 0x44, 6 0x00, 7 0x04, 8 0x4b, 9 0xe0.
+10 0xdd, 11 0x46, 12 0x08, 13 0x00, 14 0x45, 15 0x00, 16 0x00, 17 0x54, 18 0x60, 19 0xc6.
+20 0x40, 21 0x00, 22 0xff, 23 0x01, 24 0x05, 25 0xe1, 26 0x0a, 27 0x2a, 28 0x00, 29 0x92.
+30 0x0a, 31 0x2a, 32 0x00, 33 0x1c, 34 0x00, 35 0x00, 36 0xc0, 37 0x87, 38 0x07, 39 0xac.
+40 0x00, 41 0x01, 42 0x43, 43 0x2e, 44 0xbd, 45 0x5c, 46 0x00, 47 0x00, 48 0x00, 49 0x00.
+50 0x73, 51 0x6d, 52 0x05, 53 0x00, 54 0x00, 55 0x00, 56 0x00, 57 0x00, 58 0x10, 59 0x11.
+60 0x12, 61 0x13
+Dest IP is 0x07, 0xac, 0x00, 0x01.
+low_level_output: signal length: 100
+low_level_output: tx Count: 0x00000006
+
+
+low_level_input: len=62
+0 0x00, 1 0x04, 2 0x4b, 3 0xe0, 4 0xdd, 5 0x46, 6 0x00, 7 0x04, 8 0x4b, 9 0xe0.
+10 0xdd, 11 0x44, 12 0x08, 13 0x06, 14 0x00, 15 0x01, 16 0x08, 17 0x00, 18 0x06, 19 0x04.
+20 0x00, 21 0x01, 22 0x00, 23 0x04, 24 0x4b, 25 0xe0, 26 0xdd, 27 0x44, 28 0x0a, 29 0x2a.
+30 0x00, 31 0x1c, 32 0x00, 33 0x00, 34 0x00, 35 0x00, 36 0x00, 37 0x00, 38 0x0a, 39 0x2a.
+40 0x00, 41 0x92, 42 0x00, 43 0x00, 44 0x00, 45 0x00, 46 0x00, 47 0x00, 48 0x00, 49 0x00.
+50 0x00, 51 0x00, 52 0x00, 53 0x00, 54 0x00, 55 0x00, 56 0xbf, 57 0x66, 58 0x93, 59 0x71.
+60 0xaa, 61 0x33
+ethernet_input: dest:00:04:4b:e0:dd:46, src:00:04:4b:e0:dd:44, type:806
+etharp_arp_input: netif IP is 0x92002a0a, dest IP is 0x92002a0a.
+etharp_update_arp_entry: 10.42.0.28 - 00:04:4b:e0:dd:44
+etharp_find_entry: found matching entry 0
+etharp_update_arp_entry: updating stable entry 0
+etharp_arp_input: incoming ARP request
+etharp_arp_input: replying to ARP request for our IP address
+Transmit message count: 0x000b
+0 0x00, 1 0x04, 2 0x4b, 3 0xe0, 4 0xdd, 5 0x44, 6 0x00, 7 0x04, 8 0x4b, 9 0xe0.
+10 0xdd, 11 0x46, 12 0x08, 13 0x06, 14 0x00, 15 0x01, 16 0x08, 17 0x00, 18 0x06, 19 0x04.
+20 0x00, 21 0x02, 22 0x00, 23 0x04, 24 0x4b, 25 0xe0, 26 0xdd, 27 0x46, 28 0x0a, 29 0x2a.
+30 0x00, 31 0x92, 32 0x00, 33 0x04, 34 0x4b, 35 0xe0, 36 0xdd, 37 0x44, 38 0x0a, 39 0x2a.
+40 0x00, 41 0x1c, 42 0x00, 43 0x00, 44 0x00, 45 0x00, 46 0x00, 47 0x00, 48 0x00, 49 0x00.
+50 0x00, 51 0x00, 52 0x00, 53 0x00, 54 0x00, 55 0x00, 56 0xbf, 57 0x66, 58 0x93, 59 0x71.
+60 0x00, 61 0x00
+Dest IP is 0x0a, 0x2a, 0x00, 0x1c.
+low_level_output: signal length: 62
+low_level_output: tx Count: 0x0000000b
+
+
+
+
+
+
+
+
+
+
