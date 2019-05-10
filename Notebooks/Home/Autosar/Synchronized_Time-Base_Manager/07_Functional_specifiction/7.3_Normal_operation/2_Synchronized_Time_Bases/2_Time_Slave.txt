@@ -1,0 +1,17 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2019-04-29T11:32:56+08:00
+
+====== 2 Time Slave ======
+Created Monday 29 April 2019
+
+[SWS_StbM_00179]
+For Time Bases 0 to 15 each invocation of StbM_BusSetGlobalTime() shall update the corresponding Main Time Tuple and set the User Data and the Time Base Status accordingly.
+(RS_TS_00007, RS_TS_00009)
+
+Note: To update the Main Time Tuple does not mean to automatically overwrite the Main Time Tuple with the Received Time Tuple.
+
+[SWS_StbM_00438]
+The StbM shall determine for Time Bases 0 to 15 on each invocation of StbM_BusSetGlobalTime() the Synclocal Time Tuple [TLSync; TVSync] by using the value of the Virtual Local Time of the Received Time Tuple as reference (i.e., TVRx is used for TV when calculating TL in [SWS_StbM_00355]). The Synclocal Time Tuple shall be determined using the Main Time Tuple before the Main Time Tuple itself is updated.
+(RS_TS_00007, RS_TS_00009)
+

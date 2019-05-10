@@ -1,0 +1,105 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2019-04-29T09:35:21+08:00
+
+====== 2 Synchronized Time Bases ======
+Created Monday 29 April 2019
+
+[SWS_StbM_00180]
+After initialization the StbM shall maintain the Local Time of each Time Base autonomously via a hardware reference clock (referenced by StbMLocalTimeClock).
+(RS_TS_00008, RS_TS_00002)
+
+Note: While no Global Time Base value has yet been set/received (GLOBAL_TIME_BASE bit is not yet set), the StbM shall maintain the Local Time of each Time Base (i.e., progress the time) starting at the value restored from NvM or at value 0 (depending on setting of StbMStoreTimebaseNonVolatile).
+
+Note: Progressing the time means that the Virtual Local Time as part of the Main Time Tuple needs to be retrieved once the Global Time part of the Main Time Tuple was either set to 0 or to the value restored from NvM.
+
+[SWS_StbM_00173]
+For Time Domains 0 to 15 StM_GetCurrentTime() and StbM_GetCurrentTimeExtended() shall return for the requested Time Domain the time of the Time Base, the related Status and the User Data. The currect time of the Time Base shall be derived from the associated Virtual Local Time, which is derived from either the referenced OS counter, a GPT or a referenced Ethernet controller (refer to StbMLocalTimeHardware).
+(RS_TS_00005, RS_TS_00006, RS_TS_00014)
+
+[SWS_StbM_00178]
+If EthIfGlobalTimeSupport (referenced via StbMLocalTimeHardware ECUC_StbM_00053:, if set to EthTSynGlobalTimeDomain) is set to TRUE for a Synchronized Time Base, The StbM shall get the current value of the freerunning HW counter from the corresponding Ethernet Controller via EthIf_GetCurrentTime().
+RS_TS_00008, RS_TS_00002.
+
+[SWS_StbM_00434]
+For Time Domains 0 to 15 StbM_GetCurrentTime(), StbM_GetCurrentTimeExtended(), and StbM_BusGetCurrentTime() shall return E_NOT_OK if the value of the associated Virtual Local Time could not be retrieved.
+(RS_TS_00005, RS_TS_00006, RS_TS_00014)
+
+Note: Retrieving a Virtual Local Time value may fail for several reasons, e.g., if the related hardware counter was not yet activated.
+
+[SWS_StbM_00435]
+For Time Base 0 to 15 StbM_BusGetCurrentTime() shall return for the requested Time Domain the Time Tuple [TL; TV] of the Time Base, the related Status and the User Data. The current time of the Time Base shall be derived from the associated Virtual Local Time, which is derived from either the referenced OS counter, a GPT or a referenced Ethernet controller (refere to StbMLocalTimeHardware).
+(RS_TS_00005, RS_TS_00006, RS_TS00014)
+
+[SWS_StbM_00436]
+Although the retrieved value of the Virtual Local Time and the time which is returned by StbM_GetCurrentTime(), StbM_GetCurrentTimeExtended(), and StbM_BusGetCurrentTime() form a new Time Tuple [TL; TV], this tuple shall only replace the Main Time Tuple if the requirements as specified in [SWS_StbM_00433] are met.
+(RS_TS_00005, RS_TS_00006, RS_TS00014)
+
+Note: Prohibiting the update of the Main Time Tuple after e.g. every invocation of StbM_BusGetCurrentTime() and StbM_GetCurrentTime() prevents worsening the precision of the requested Time Base due to rounding errors.
+
+[SWS_StbM_00352]
+In the scope of StbM_GetCurrentTime(), StbM_GetCurrentTimeExtended() and StbM_BusGetCurrentTime(), StbM shall use the factor (stbMClockPrescaler / StbMClockFrequency) to convert the time of its local hardware reference clock to the actual time of the Virtual Local Time.
+(RS_TS_00018)
+
+Note: Rationale is that a tick duration of the hardware reference clock does not necessarily have to match the resolution of the Virtual Local Time.
+
+[SWS_StbM_00437]
+StbM_GetCurrentVirtualLocalTime() shall return the value of the Virtual Local Time of the associated Time Base.
+If the Virtual Local Time could not be determined (e.g., the underlying hardware counter was not yet activated), StbM_GetCurrentVirtualLocalTime() shall return E_NOT_OK.
+(RS_TS_00006, RS_TS_00008, RS_TS_00033)
+
+Note: StbM_GetCurrentVirtualLocalTime() is called by the TimeSync modules with an established protection against interruptions.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

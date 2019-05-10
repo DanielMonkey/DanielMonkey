@@ -7,19 +7,20 @@ Created Friday 26 April 2019
 
 ./nvcan_send -d can0 -f 2 -id 123 -b -data FFEEDDCCBBAA99887766554433221100FEEFDCCDBAAB98897667544532231001FFEEDDCCBBAA99887766554433221100FEEFCDDCBAAB98897667544532231001 -v
 
-./nvcan_send -d can0 -f 2 -id 123 -b -data FFEEDDCCBBAA99887766554433221100 -v
+./nvcan_send -d can0 -f 2 -id 244 -b -data FFEEDDCCBBAA99887766554433221100 -v
 
 ./nvcan_send -d can0 -f 0 -id 233  -data 0011AABBCCDDEEFF -v
 
-./nvcan_dump -d can0 -n 1 -t 20000 -f /tmp/PythonScrp/nvcan_dump_T60.txt -v
+./nvcan_dump -d can0 -n 1 -t 20000 -f /tmp/PythonScrp/nvcan_dump_T20.txt -v
 
 devc-nvcan -q 40 -gfc 0 -d can0 -baddr 0x0c310000 &
 
 scp nvcan_dump_T20.txt daniyang@10.19.225.92:/home/daniyang/Shared/07_Run_File/
 
+./nvcan_gen -d can0 -f 2 -id 244 -b -data FFEEDDCCBBAA99887766554433221100 -tint 500 -n 1 -total 200
 
+# devc-nvcan -d can0 -f 2 -id 244 -b -data FFEEDDCCBBAA99887766554433221100 -tint 1000 -n 1 -total 200
 
-# devc-nvcan -h
 devc-nvcan is the CAN resource manager
 Usage: devc-nvcan [options]
 Options:

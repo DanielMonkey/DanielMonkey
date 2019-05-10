@@ -1,0 +1,10 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2019-05-07T14:31:59+08:00
+
+====== 1 Global Time Master ======
+Created Tuesday 07 May 2019
+
+[SWS_StbM_00181]
+On a valid invocation of StbM_SetGlobalTime(), StbM_UpdateGlobalTime(), or StbM_SetOffset() the StbM shall set the GLOBAL_TIME_BASE bit within timeBaseStatus of the corresponding Time Base and shall clear all other bits.
+(RS_TS_00009)

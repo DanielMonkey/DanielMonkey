@@ -29,3 +29,20 @@ Usage: ./sample_canbus_logger
 # ./sample_canbus_logger --driver=can.aurix --params=ip=10.42.0.28,bus=a,aport=50000,bport=60395
 
 # ./sample_canbus_logger --driver=can.aurix --params=ip=10.42.0.28,bus=a,aport=54545,bport=60350 --send_i_understand_implications=1000 --send_id=4BB --hwtime=1
+
+
+
+[01-01-1970 00:57:29] Received from 10.42.0.146:50000 - 46 bytes, src=4, dst=1, app=202, time=3453656, id=259, length=38
+[01-01-1970 00:57:29] Received at least 1 CAN messages within 22 bytes
+[01-01-1970 00:57:29] CAN messages [259] for 0 at 4026536468026536
+[01-01-1970 00:57:29] Parsed 1 CAN messages, found 1 messages on selected EasyCAN bus.
+4026536468026536 -> 103  [8] 00 00 00 00 00 00 00 00 
+
+[01-01-1970 00:52:07] Received from 10.42.0.146:50000 - 46 bytes, src=4, dst=1, app=202, time=3131236, id=259, length=38
+[01-01-1970 00:52:07] Received at least 1 CAN messages within 22 bytes
+[01-01-1970 00:52:07] CAN messages [2720] for 0 at 4026536468026536
+[01-01-1970 00:52:07] Parsed 1 CAN messages, found 1 messages on selected EasyCAN bus.
+4026536468026536 -> AA0  [8] 00 00 00 00 00 00 00 00 
+
+
+

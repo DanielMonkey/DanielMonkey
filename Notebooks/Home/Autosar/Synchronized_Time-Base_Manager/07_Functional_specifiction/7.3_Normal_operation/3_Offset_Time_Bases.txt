@@ -1,0 +1,22 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2019-04-30T09:51:09+08:00
+
+====== 3 Offset Time Bases ======
+Created Tuesday 30 April 2019
+
+An Offset Time Base only exists in combination with its underlying Synchronized Time Base.
+
+The Absolute Time value of an Offset Time Base is given by adding the Offset Time value of an Offset Time Base to the time value of the underlying Synchronized Time Base.
+
+[SWS_StbM_00191]
+StbM_SetOffset() and StbM_GetOffset() shall only accept Offset Time Bases with a timeBaseId 16 to 31.
+(RS_TS_00012, RS_TS00013)
+
+[SWS_StbM_00177]
+For Time Bases to 16 to 31 the StbM_GetCurrentTime() and StbM_GetCurrentTimeExtended() shall return for the requested Time Base an absolute time value calculated by adding the given offset to the current Time Base of the referenced Time Base via StbMOffsetTimeBase (ECUC_StbM_00030).
+(RS_TS_00013)
+
+[SWS_StbM_00193]
+Configuration Constraint: The parameter StbMOffsetTimesBase shall only be valid for StbMSynchronizedTimeBaseIdentifier 16 to 31.
+

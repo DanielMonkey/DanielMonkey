@@ -1,0 +1,47 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2019-04-30T10:52:25+08:00
+
+====== 4 Pure Local Time Bases ======
+Created Tuesday 30 April 2019
+
+A Pure Local Time Base will only locally be set and read. A Pure Local Time Base behaves like a Synchronized Time Base since it progresses in time, however it is not synchronized via Timesync modules. So, only a subset of APIs is supported by Pure Local Time Base. Pure Local Time Bases behaving like an Offset Time Bases are not supported.
+
+[SWS_StbM_00413]
+After initialization the StbM shall maintain the Time of each Pure Local Time Base autonomously via a hardware reference clock (referenced by StbMLocalTimeClock).
+(RS_TS_00008, RS_TS_00002)
+
+Note: While no Time Base value has yet been set (GLOBAL_TIME_BASE bit is not yet set), the StbM shall maintain the time value of each Pure Local Time Base (i.e., progress the time) starting at the value 0.
+
+[SWS_StbM_00398]
+For Pure Local Time Bases StbM_GetCurrentTime() and StbM_GetCurrentTimeExtended() shall return the User Data as set by StbM_SetGlobalTime(), StbM_UpdateGlobalTime() or StbM_SetUserData() by the local Pure Local Time Master.
+(RS_TS_00015)
+
+[SWS_StbM_00399]
+For Pure Local Time Bases all bits of the Time Base status timeBaseStatus shall be set to 0, except for bit GLOBAL_TIME_BASE.
+GLOBAL_TIME_BASE shall be set to 1, by a valid invocation of StbM_SetGlobalTime() or StbM_UpdateGlobalTime() and only set to 0 by StbM_Init().
+(RS_TS_00009)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

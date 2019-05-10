@@ -59,6 +59,15 @@ Below the application, in the BSW, the Time of a Time Base is always managed via
 
 It is essential to always adhere to the integrity of the Time Tuple.
 
+The Main Time Tuple shall only be updated
+* after setting a new Global Time or a new Rate Correction value by the application
+* after obtaining a Received Time Tuple (i.e., a new Time Tuple) from a Timesync Module
+* after the Offset Correction By Rate Adaption interval 
+
+However, the Main Time Tuple may be updated if there has been no update for more than 3s.
+Note: The 3s interval is derived from the value range of 32 bit results (e.g., when calculating the Virtual Local Time difference, i.e., 4.29 sec) with some safety margin. This is to prevent too frequent updates of the Main Time Tuple, which would lead to accumulation of rounding errors.
+
+
 
 
 

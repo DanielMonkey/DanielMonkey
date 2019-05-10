@@ -1,0 +1,13 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2019-04-29T11:29:28+08:00
+
+====== 1 Global Time Master ======
+Created Monday 29 April 2019
+
+[SWS_StbM_00342]
+On a valid invocation of StbM_SetGlobalTime() or StbM_UpdateGlobalTime() the StbM update the Main Time Tuple of the corresponding Synchronized Time Base.
+Within the functions StbM_SetGlobalTime() and StbM_UpdateGlobalTime() the StbM shall retrieve the value of the Virtual Local Time (as part of the Local Time tuple) as soon as possible in order to improve precision of the Time Base.
+(RS_TS_00010, RS_TS_00002)
+
+Note: In order to improve precision further it may be beneficial for applications to call StbM_SetGlobalTime() or StbM_UpdateGlobalTime() with locked interrupts.

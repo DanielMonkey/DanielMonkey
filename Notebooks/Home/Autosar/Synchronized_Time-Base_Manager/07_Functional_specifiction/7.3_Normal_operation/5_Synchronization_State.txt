@@ -1,0 +1,89 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2019-04-30T11:11:22+08:00
+
+====== 5 Synchronization State ======
+Created Tuesday 30 April 2019
+
+For Offset Time Bases StbM_GetCurrentTime() and StbM_GetCurrentTimeExtended() shall derive the status timeBaseStatus to be returned with the actual time value as follows from the status of the actual Offset Time Base and the Synchronized Time Base (referenced via parameter StbMOffsetTimeBase (ECUC_StbM_00030):
+
+Bit Name			Bit Position		Description
+TIMEOUT			Bit 0 (LSB)
+* 0: No Timeout occurred - neither for Offset nor for referenced Synchronized Time Base
+* 1: Timeout occurred for Offset or for referenced Synchronized Time Base
+
+Reserved			Bit 1
+Bit 1: Always 0 (reserved for future usage)
+
+SYNC_TO_GATEWAY			Bit2
+* 0: Local Offset and referenced Synchronized Time Base is synchronous to Global Offset Time Master
+* 1: Local Offset or referenced Synchronized Time Base updates are based on a Time Gateway below the Global Time master
+
+GLOBAL_TIME_BASE		Bit 3
+* 0: Local Offset and referenced Synchronized Time Base are based on Local Time Base reference clock only (never synchronized with Global Time Base)
+* 1: Local Offset and referenced Synchronized Time Base have been synchronized with Global Time Base at least once
+
+TIMELEAP_FUTURE			Bit 4
+* 0: No leap into the future within the received time for the Offset and referenced Synchronized Time Base
+* 1: Leap into the future within the received time for the Offset or referenced Synchronized Time Base exceeds a configured threshold
+
+TIMELEAP_PAST				Bit 5
+* 0: No leap into the past within the received time for the Offset and referenced Synchronized Time Base
+* 1: Leap into the past within the received time for the Offset or referenced Synchronized Time Base exceeds a configured threshold
+(RS_TS_00005)
+
+[SWS_StbM_00262]
+For Synchronized Time Bases StbM_GetTimeBaseStatus() shall return 
+* the status of the corresponding Synchronized Time Base via syncTimeBaseStatus and
+* 0 via offsetTimeBaseStatus
+
+For Offset Time Bases StbM_GetTimeBaseStatus() shall return
+* the status of the corresponding Offset Time Base via offsetTimeBaseStatus and
+* the status of the related Synchronized Time Base (referenced by ECUC_StbM_00030:) via syncTimeBaseStatus.
+
+For Pure Local Time Bases StbM_GetTimeBaseStatus() shall return
+* the status of the corresponding Time Base (refer to [SWS_StbM_00399]) via syncTimeBaseStatus and
+* 0 via offsetTimeBaseStatus
+(RS_TS_00005)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

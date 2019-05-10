@@ -1,0 +1,129 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2019-05-07T14:34:02+08:00
+
+====== 2 Time Slaves ======
+Created Tuesday 07 May 2019
+
+Usually a Time Slave starts its local Time Base from 0. So, after initialization the 1st check against StbMTimeLeapFurueThreshold / StbMTimeLeapPastThreshold would most likely always fail and the TIMELEAP_FUTURE / TIMELEAP_PAST bit would be always set. To avoid this, threshold monitoring will start only after a first valid Time Base value has been received.
+
+[SWS_StbM_00182]
+For each Time Base where a Time Slave or a Time Gateway Slave Port belongs to, an invocation of StbM_BusSetGlobalTime() shall check, if the Global Time difference between the Received Time (i.e., the updated Time Base value) and the Synclocal Time (i.e., the current Time Base value) exceeds the configured threhold of StbMTimeLeapFutureThreshold (ECUC_StbM_00041:), i.e., TGRx - TLSync > StbMTimeLeapFutureThreshold, if at least one Time Base value has been successfully received before.
+With:
+* TLSync = Global Time part of the Synclocal Time Tuple
+* TGRx = Global Time part of the Received Time Tuple
+
+In case the threshold is exceeded the StbM shall set the TIMELEAP_FUTURE bit within timeBaseStatus of the Time Base.
+
+If the next StbMClearTimeleapCount updates are within the threshold of StbMTimeLeapFutureThreshold the StbM shall clear the TIMELEAP_FUTURE bit within timeBaseStatus of the Time Base.
+
+A threshold of 0 shall deactivate this check.
+(RS_TS_00009)
+
+[SWS_StbM_00305]
+For each Time Base where a Time Slave or a Time Gateway Slave Port belongs to, an invocation of StbM_BusSetGlobalTime() shall check, if the Global Time difference between the Synclocal Time (i.e., the current Time Base value) and the Received Time (i.e., the updated Time Base value) exceeds the configured threshold of StbMTimeLeapPastThreshold (ECUC_StbM_00042:), i.e., TLSync - TGRx > StbMTimeLeapPastThreshold, if at least one Time Base value has been successfully received before.
+
+With:
+* TLSync = Global Time part of the Synclocal Time Tuple
+* TGRx = Global Time part of the Received Time Tuple
+
+In case the threshold is exceeded the StbM shall set the TIMELEAP_PAST bit with timeBaseStatus of the Time Base.
+
+If the next StbMClearTimeleapCount updates are within the threshold of StbMTimeLeapPastThreshold the StbM shall clear the TIMELEAP_PAST bit within timeBaseStatus of the Time Base.
+
+A threshold of 0 shall deactive this check.
+(RS_TS_00009)
+
+Note: 
+After a longer timeout a time leap is likely to be detected (either StbMTimeLeapFutureThreshold or StbMTimeLeapPastThreshold is exceeded), although the time drift was within the acceptable range.  A time leap could also occur if a Time Slaves continues operating while a Time Master performs a restart.
+
+Additional measures could be taken on application level to cope with those situations.
+
+Note:
+If set, a TIMELEAP_FUTURE/TIMELEAP_PAST bit remains set while a timeout is active (i.e., while the TIMEOUT bit is set) and also beyond, if StbMClearTimeleapCount updates within the threshold of StbMTimeLeapFutureTreshold/StbMTimeLeapPastThreshold have not yet happend.
+
+[SWS_StbM_00425]
+For Time Slaves and Time Gateways StbM_GetTimeLeap() shall return the Global Time difference between the Received Time and the Synclocal Time, i.e., TGRx - TLSync, which is calculated upon each, except the very first, valid invocation of StbM_BusSetGlobalTime() for the corresponding Time Base.
+With 
+* TLSync = Global Time part of the Synclocal Time Tuple
+* TGRx = Global Time part of the Received Time Tuple
+
+If the calculated time difference exceeds the value range of the timeJump parameter of StbM_GetTimeLeap() the returned time difference shall be limited to either the maximum negative or the maximum positive value of the type of timeJump (refer to StbM_TimeDiffType).
+
+StbM_GetTimeLeap() shall return E_NOT_OK until the second valid invocation of StbM_BusSetGlobalTime() for the corresponding Time Base.
+(RS_TS_00009)
+
+[SWS_StbM_00183]
+For each Time Base where a Time Slave belongs to, the StbM shall observe the timeout StbMSyncLossTimeout [[(ECUC_StbM_00028:).]] The timeout shall be measured from last invocation of StbM_BusSetGlobalTime().
+If the timeout occurs, the StbM shall set the TIMEOUT bit within timeBaseStatus of the Time bse.
+
+An invocation of StbM_BusSetGlobalTime() shall clear the TIMEOUT bit.
+(RS_TS_00025, RS_TS_00009)
+
+Note: Refer to notes beneath [SWS_StbM_00187] for suitable time references for determining the StbMSyncLossTimeout (ECUC_StbM_00028:) timeout.
+
+[SWS_StbM_00187]
+For each Time Base where a Time Gateway Slave Port belongs to, the StbM shall observe the timeout StbMSyncLossTimeout [[(ECUC_StbM_00028:).]] The timeout shall be measured from last invocation of StbM_BusSetGlobalTime().
+If the timeout occurs, the StbM shall set the TIMEOUT bit with timeBaseStatus of the Time Base.
+
+An invocation of StbM_BusSetGlobalTime() shall clear the TIMEOUT bit.
+
+If the timeout occurs, the StbM shall set the SYNC_TO_GATEWAY bit within timeBaseStatus of the Time Base.
+(RS_TS_00025, RS_TS_00009)
+
+Note:
+The Global Time is only suitable as a time reference for determining the StbMSyncLossTimeout (ECUC_StbM_00028:) timeout, if time leap detection is configured appropriately - otherwise time leaps may shorten or lengthen the time interval unacceptably.
+
+Instead of the timeout StbMSyncLossTimeout (ECUC_StbM_00028:) should be measured either:
+* based on the Virtual Local Time or
+* by counting invocations of the main function StbM_MianFunction()
+
+In case of time span measurement based on the Virtual Local Time, the StbM shall check for a timeout condition of a Time Base within StbM_MainFunction() and all API functions, which return the Time Base Status (e.g. StbM_GetTimeBaseStatus() or StbM_GetCurrentTIme()).
+
+In case of time span measurement based on counting invocations of the StbM_MainFunction() the StbM shall check for a timeout condition of a Time Base within StbM_MainFunction(). When determining the number of invocations based on StbMMainFunctionPeriod (ECUC_StbM_00027:) and StbMSyncLossTimeout (ECUC_StbM_00028:), it has to be ensured, that the resulting timespan is not shorter than StbMSyncLossTimeout.
+
+Since a Status Notification is triggered inside StbM_MainFunction(), the other functions like e.g. StbM_GetTimeBaseStatus() might detect a timeout condition sooner than the corresponding Status Notification is actually triggered. Such a delayed Status Notifiction is considered acceptable.
+
+[SWS_StbM_00184]
+Every invocation of StbM_BusSetGlobalTime() shall set the SYNC_TO_GATEWAY bit within timeBaseStatus of the Time Base to the value of the SYNC_TO_GATEWAY bit within timeBaseStatus of the timeStampPtr argument passed to StbM_BusSetGlobalTime().
+(RS_TS_00009)
+
+[SWS_StbM_00185]
+For each Time Base where a Time Slave or a Time Gateway Slave Port belongs to an invocation of StbM_BusSetGlobalTime() shall set the GLOBAL_TIME_BASE bit within timeBaseStatus of the Time Base. Once set, the bit is never cleared.
+(RS_TS_00009)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,43 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2019-04-30T10:06:55+08:00
+
+====== 1 Global Time Master ======
+Created Tuesday 30 April 2019
+
+[SWS_StbM_00190]
+Each invocation of StbM_SetOffset() shall update the Main Time Tuple of the corresponding Offset Time Base. The Offset Time value and the User Data shall be set accordingly.
+(RS_TS_00013, RS_TS_00015)
+
+[SWS_StbM_00192]
+Each invocation of StbM_GetOffset() shall return the Offset Time value and the User Data of the corresponding Offset Time Base.
+(RS_TS_00013, RS_TS_00014)
+
+[SWS_StbM_00304]
+On invocation of StbM_SetGlobalTime() or StbM_UpdateGlobalTime() for Time Bases 16 to 31 the StbM shall check the GLOBAL_TIME_BASE bit within timeBaseStatus of the underlying Synchronized Time Base and shall return E_NOT_OK if is not set.
+
+If the GLOBAL_TIME_BASE bit is set:
+1. the StbM shall calculate the Offset Time by obtaining the actual Time Base value of the underlying Synchronized Time Base and subtract that from the Absolute Time value which is passed by StbM_SetGlobalTime() or StbM_UpdateGlobalTime()
+2. a) if the calculated Offset Time value is equal or greater than zero, the StbM shall update the corresponding Offset Time Base with the calcuated Offset Time value and the User Data that was passed by StbM_SetGlobalTime() or StbM_UpdateGlobalTime(),
+b) otherwise (calculated Offset Time value is less than zero) the StbM shall return E_NOT_OK via StbM_SetGlobalTime() or StbM_UpdateGlobalTime(), respectively.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
