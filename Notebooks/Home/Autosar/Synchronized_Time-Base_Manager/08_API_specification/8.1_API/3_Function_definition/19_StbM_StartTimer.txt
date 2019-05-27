@@ -1,0 +1,57 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2019-05-23T15:26:05+08:00
+
+====== 19 StbM StartTimer ======
+Created Thursday 23 May 2019
+
+[SWS_StbM_00272]
+{{./pasted_image.png}}
+(RS_TS_00017)
+
+[SWS_StbM_00296]
+If the switch StbMDevErrorDetect (ECUC_StbM_00012:) is set to TRUE, StbM_StartTimer() shall report to DET the development error STBM_E_PARAM, if called with a parameter timeBaseId, which
+* is not configured or
+* is within the reserved value range
+(SRS_BSW_00386, SRS_BSW_00323)
+
+[SWS_StbM_00406]
+If the switch StbMDevErrorDetect (ECUC_StbM_00012:) is set to TRUE, StbM_StartTimer() shall report to DET the development error STBM_E_PARAM, if called with a parameter customerId, which is not configured.
+(SRS_BSW_00386, SRS_BSW_00323)
+
+
+[SWS_StbM_00298]
+If the switch StbMDevErrorDetect (ECUC_StbM_00012:) is set to TRUE, StbM_StartTimer() shall report to DET the development error STBM_E_PARAM_POINTER, if called with a NULL pointer for parameter expireTime.
+(SRS_BSW_00386, SRS_BSW_00323)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

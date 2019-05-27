@@ -1,0 +1,22 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2019-05-23T15:17:20+08:00
+
+====== 17 StbM GetTimeLeap ======
+Created Thursday 23 May 2019
+
+[SWS_StbM_00267]
+{{./pasted_image.png}}
+{{./pasted_image001.png}}
+(RS_TS_00005)
+
+[SWS_StbM_00268]
+If the switch StbMDevErrorDetect (ECUC_StbM_00012:) is set to TRUE, StbM_GetTimeLeap() shall report to DET the development error STBM_E_PARAM, if called with a parameter timeBaseId, which is
+* is not configured or
+* refers to a Pure Local Time Base or
+* is within the reserved value range
+(SRS_BSW_00386, SRS_BSW_00323)
+
+[SWS_StbM_00269]
+If the switch StbMDevErrorDetect (ECUC_StbM_00012:) is set to TRUE, StbM_GetTimeLeap() shall report to DET the development error STBM_E_PARAM_POINTER, if called with a NULL pointer for parameter timeJump.
+(SRS_BSW_00386, SRS_BSW_00323)

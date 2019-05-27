@@ -1,0 +1,8 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2019-05-23T16:15:12+08:00
+
+====== 8.2 Service Interfaces ======
+Created Thursday 23 May 2019
+
+The interfaces and ports described here will be visible on the VFB and are used to generate the RTE between application software components and the Synchronized Time-Base Manager.

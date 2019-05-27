@@ -1,0 +1,16 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2019-05-17T17:18:57+08:00
+
+====== 7.5 Error Classification ======
+Created Friday 17 May 2019
+
+1. Development Errors
+[SWS_StbM_00041]
+The following errors and exceptions shall be detectable by the Synchronized Time-Base Manager depending on its build version (development/production mode).
+
+{{./pasted_image.png}}
+
+Note:
+There exist errors, which are of interest for the user of the Synchronized Time-Base Manager, but the source of failure is somewhere else (e.g., the FlexRay Time Base is not synchronized). Thus, they do not appear in he above-mentioned error list and the Synchronized Time-Base Manager does not perform an error handling for those kinds of errors.
+

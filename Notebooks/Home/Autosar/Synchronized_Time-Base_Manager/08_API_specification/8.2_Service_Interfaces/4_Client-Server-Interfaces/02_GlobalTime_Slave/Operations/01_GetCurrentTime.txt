@@ -1,0 +1,8 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2019-05-24T16:41:59+08:00
+
+====== 01 GetCurrentTime ======
+Created Friday 24 May 2019
+
+{{./pasted_image.png}}

@@ -5,3 +5,37 @@ Creation-Date: 2019-05-09T18:36:05+08:00
 ====== 6 Immediate Time Synchronization ======
 Created Thursday 09 May 2019
 
+All Timesync Modules are working independently of the StbM regarding the handling of the bus-specific Time Synchronization protocol (i.e. autonomous transmission of Timesync messages on the bus).
+
+Nevertheless it is necessary, that the StbM provides an interface, based on a timeBaseUpdateCounter, to allow the Timesync Modules to detect, if a Time Base has been updated or not and thus may perform an immediate transmission of Timesync messages, e.g. to speed up re-synchronization.
+
+StbM_GetTimeBaseUpdateCounter() allows the Timesync Modules to detect, whether a Time Base should be transmitted immediately in the subsequent <Bus>TSyn_MainFunction() cycle.
+
+[SWS_StbM_00414]
+StbM_GetTimeBaseUpdateCounter() shall return the value of the timeBaseUpdateCounter of the corresponding Time Base.
+(RS_TS_00001)
+
+[SWS_StbM_00351]
+For Synchronized and Offset Time Bases, the timeBaseUpdateCounter of a Time Base shall have the value range 0 to 255.
+(RS_TS_00011)
+
+[SWS_StbM_00350]
+* For Synchronized and Offset Time Bases on a valid invocation of StbM_SetGlobalTime(), StbM_BusSetGlobalTime(), or StbM_TriggerTimeTransmission() and
+* for Offset Time Bases on a valid invocation of StbM_SetOffset(), the StbM shall increment the timeBaseUpdateCounter of the corresponding Time Base by 1 (one).
+
+At 255 the timeBaseUpdateCounter shall wrap around to 0.
+(RS_TS_00011)
+
+Note:
+For Offset Time Bases the term "corresponding Time Base" refers to the Offset Time Base only and not to the underlying Synchronized Time Base.
+
+Note:
+StbM_UpdateGlobalTime() can be used instead of StbM_SetGlobalTime(), if the StbM shall not increment the timeBaseUpdateCounter of the corresponding Time Base.
+
+
+
+
+
+
+
+

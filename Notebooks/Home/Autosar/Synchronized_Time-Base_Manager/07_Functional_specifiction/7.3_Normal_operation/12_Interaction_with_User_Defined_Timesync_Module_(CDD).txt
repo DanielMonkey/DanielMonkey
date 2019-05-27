@@ -1,0 +1,9 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2019-05-17T16:36:54+08:00
+
+====== 12 Interaction with User Defined Timesync Module (CDD) ======
+Created Friday 17 May 2019
+
+User defined Time Base Providers are implemented by a CDD module.
+

@@ -1,0 +1,45 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2019-05-20T15:22:22+08:00
+
+====== 02 StbM Init ======
+Created Monday 20 May 2019
+
+[SWS_StbM_00052]
+{{./pasted_image.png}}
+(SRS_BSW_00101, SRS_BSW_00358, SRS_BSW_00414)
+
+The ECU State Manager calls the function StbM_Init() during the startup phase of the ECU in order to initialized the module. The StbM is not functional until this function has been called.
+
+[SWS_StbM_00100]
+A static status variable denoting if the StbM is initialized shall be initialized with value 0 before any APIs of the StbM are called.
+(SRS_BSW_00406)
+
+[SWS_StbM_00121]
+StbM_Init shall set the static status variable to a value not equal to 0.
+(SRS_BSW_00406)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

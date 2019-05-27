@@ -1,0 +1,19 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2019-05-23T15:48:51+08:00
+
+====== 4 Scheduled functions ======
+Created Thursday 23 May 2019
+
+StbM_MainFunction
+[SWS_StbM_00057]
+{{./pasted_image.png}}
+(SRS_BSW_00172, SRS_BSW_00373)
+
+[SWS_StbM_00407]
+The frequency of invocations of StbM_MainFunction is determined by the configuration parameter StbMMainFunctionPeriod.
+(SRS_BSW_00172)
+
+[SWS_StbM_00107]
+If OS is configured as triggered customer, the function StbM_MainFunction shall synchronize the referenced OS ScheduleTable.
+(RS_TS_00032, SRS_BSW_00333)

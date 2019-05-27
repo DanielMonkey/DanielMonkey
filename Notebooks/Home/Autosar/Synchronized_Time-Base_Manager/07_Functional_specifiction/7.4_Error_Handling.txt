@@ -1,0 +1,15 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2019-05-17T16:44:16+08:00
+
+====== 7.4 Error Handling ======
+Created Friday 17 May 2019
+
+[SWS_StbM_00031]
+If a triggered customer is configured (refer to ECUC_StbM_00004: StbMTriggeredCustomer), the Synchronized Time-Base Manager shall monitor the cyclic execution of the StbM_MainFunction(). This is to guarantee cyclic synchronization of OS schedule tables.
+(RS_TS_00025)
+
+[SWS_StbM_00199]
+For any StbM API service other than StbM_Init() and StbM_GetVersion() all out parameters shall remain untouched, if an error occurs during execution of that API service.
+(RS_TS_00025)
+

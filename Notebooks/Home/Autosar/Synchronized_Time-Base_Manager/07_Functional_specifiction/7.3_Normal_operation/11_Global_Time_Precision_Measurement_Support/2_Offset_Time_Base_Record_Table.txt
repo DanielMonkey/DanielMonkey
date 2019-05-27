@@ -1,0 +1,28 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2019-05-16T10:40:21+08:00
+
+====== 2 Offset Time Base Record Table ======
+Created Thursday 16 May 2019
+
+[SWS_StbM_00311]
+If Global Time Precision Measurement is enabled (refer to [SWS_StbM_00428] and [SWS_StbM_00307]) for the Time Base, the StbM shall establish a table to record values depending on the Offset Time Base with the following structure:
+Header {
+	uint8		OffsetTimeDomain;		# 1 byte
+	} # 1 byte
+Block 0 {
+	StbM_TimeStampType.seconds								GlbSeconds;			# 4 bytes, seconds
+	StbM_TimeStampType.nanoseconds						GlbNanoSeconds;	# 4 bytes, nanoseconds
+	StbM_TimeStampType.StbM_TimeBaseStatusType		TimeBaseStatus;		# 1 byte
+	} # 9 bytes
+Block 1 { ... }
+...
+Block (Block-Count - 1) { ... }
+(RS_TS_00034)
+
+[SWS_StbM_00383]
+If Global Time Precision Measurement is enabled (refer to [SWS_StbM_00428] and [SWS_StbM_00307]) for the Time Base, the Offset Time Base Record Table shall contain as many blocks as configured by StbMOffsetTimeRecordTableBlockCount [[(ECUC_StbM_00059:).]]
+(RS_TS_00034)
+
+
+

@@ -1,0 +1,85 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2019-05-15T10:22:38+08:00
+
+====== 10 Triggering Customers ======
+Created Wednesday 15 May 2019
+
+The OS provides the API SyncScheduleTable() to synchronize a schedule table to a counter value.
+
+[SWS_StbM_00020]
+The Synchronized Time-Base Manager must be able to interact with the OS as Triggered Customer. The module calls the OS API for synchronizing OS ScheduleTables.
+(SRS_BSW_00429, RS_TS_20001, RS_TS_00032)
+
+[SWS_StbM_00022]
+The Synchronized Time-Base Manager shall provide means to configure the Time Base to which the OS ScheduleTable should be synchronized (see container ECUC_StbM_00004: StbMTriggeredCustomer).
+(RS_TS_20001, RS_TS_00032)
+
+The schedule table to be synchronized is given by StbMOSScheduleTableRef (refer to ECUC_StbM_00007:) and the Time Base, which synchronizes the schedule table, is given by StbMSynchronizedTImeBaseRef.
+
+It is configurable at pre-compile time if an OS ScheduleTable shall be synchronized with a Synchronized Time Base.
+
+[SWS_StbM_00084]
+Customers of type Triggered Customer shall be invoked periodically by the Synchronized Time-Base Manager.
+(RS_TS_00032)
+
+[SWS_StbM_00093]
+The triggering period StbMTriggeredCustomerPeriod (refer to ECUC_StbM_00020:) shall be configurable for each Triggered Customer.
+(RS_TS_20001, RS_TS_00032)
+
+Based on the configuration, the Synchronized Time-Base Manager synchronizes the OS counter value of the associated OS ScheduleTable.
+
+[SWS_StbM_00302]
+The StbM shall set the synchronization count of the OS ScheduleTable via SyncScheduleTable().
+(RS_TS_00032)
+
+The Synchronized Time-Base Manager is not responsible for starting and stopping the execution of OS ScheduleTables.
+
+[SWS_StbM_00303]
+The StbM shall derive the synchronization count of the OS ScheduleTable in microseconds by calculating the modulus of the current Time Base value (converted to microseconds) and OsScheduleTableDuration (see OsScheduleTable container referenced by [[ECUC_StbM_00007:).]]
+(RS_TS_20001, RS_TS_00032)
+
+Note:
+This requires, that the ticks of an OS counter, which drives a schedule table, have a duration of 1 us.
+
+[SWS_StbM_00077]
+The Synchronized Time-Base Manager shall synchronize OS ScheduleTables only when the associated Synchronized Time Base is synchronized.
+(RS_TS_00032)
+
+[SWS_StbM_00092]
+The Synchronized Time-Base Manager shall check the OS for the status of the OS ScheduleTable by calling GetScheduleTableStatus() before performing the synchronization.
+
+The Synchronized Time-Base Manager shall synchronize only OS ScheduleTables that are in one of the states SCHEDULETALBE_WAITING, SCHEDULETABLE_RUNNING or SCHEDULETABLE_RUNNING_SYNCHRONOUS.
+(SRS_BSW_00429, RS_TS_00032)
+
+Note:
+The Synchronized Time-Base Manager should ignore possible errors caused by the sequential execution of a) getting OS ScheduleTable status and b) performing the synchronization (e.g., someone else might have called a service to stop the OS ScheduleTable in the meantime).
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

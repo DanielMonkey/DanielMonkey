@@ -1,0 +1,97 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2019-05-14T10:54:00+08:00
+
+====== 1 Time Notifications ======
+Created Tuesday 14 May 2019
+
+The StbM allows Notification Customers to register to be notified if a Customer specific alarm expires.
+{{./pasted_image.png}}
+[SWS_StbM_00421]
+If any StbMNotificationCustomer (ECUC_StbM_00050:) is configured, the StbM shall use one additional GPT source (referenced by StbMGptTimeRef ECUC_StbM_00039:), which is not used for other purposes.
+(RS_TS_00017)
+
+[SWS_StbM_00270]
+On invocation of StbM_StartTimer for a Time Notification Customer of a Time Base the StbM shall calculate the time CustomerTimerExpireTime when that Customer Timer will expire based on the corresponding Time Base.
+(RS_TS_00017)
+
+[SWS_StbM_00335]
+For currently active Time Notification Customers the StbM shall cyclically calculate and monitor in its StbM_MainFunction the differences between the current value of the corresponding Time Base and the expiration time 'CustomerTimerExpireTime'.
+(RS_TS_00017)
+
+Note:
+Cyclic recalculation accounts for asynchronious updates of the Time Base e.g. by StbM_BusSetGlobalTime().
+
+[SWS_StbM_00336]
+A time interval StbMTimerStartThreshold (ECUC_StbM_00063:) before a Customer Timer expires, the StbM shall calculate the time difference between CustomerTimerExpireTime and the current value of the corresponding Time Base.
+The StbM shall then start a GPT timer (ECUC_StbM_00039:) via Gpt_StartTimer() to be notified, when the time difference has elapsed.
+(RS_TS_00017)
+
+Note:
+StbMTimerStartThreshold should be set to a value greater then StbMMainFunctionPeriod to account for the jitter of the StbM_MainFunction.
+If the GPT timer expires for a Time Notification Customer, StbM_TimerCallback is called by the GPT.
+
+[SWS_StbM_00271]
+Upon invocation of StbM_TimerCallback, the StbM shall calculate the time difference between CustomerTimeExpireTime and the current value of the corresponding Time Base.
+
+If StbMTimeNotificationCallback (ECUC_StbM_00064:) is not NULL,
+* the StbM shall call the function <Customer>_TimeNotificationCallback<TimeBase>()
+else
+* the StbM shall call the service operation NotifyTime of the required port GlobalTime_TimeEvent_{TBName}_{CName}
+to inform the corresponding Time Notification Customer and return the value of the calculated time difference in the parameter deviationTime.
+(RS_TS_00017)
+
+Note:
+StbM_TimerCallback() is called in interrupt context. The operation NotifyTime may however only be called from task context. Therefore, the StbM has to decouple the interrupt context from the task context (e.g. by triggering an ExternalTriggerOccurredEvent). The details are considered to be implementation specific.
+
+Note:
+The StbM_TimerCallback notification function, which is implemented by the StbM and called by the Gpt, conforms to the <Gpt_Notification_<channel>> prototype. The configured notification function (StbM_TimerCallback) is declared via Gpt header.
+
+[SWS_StbM_00432]
+If the CustomerTimerExpireTime has been already passed, when the StbM checks for the first time if StbMTimerStartThreshold has been reached, the StbM shall call StbM_TimeNotificationCallback() immediately.
+(RS_TS_00017)
+
+Note:
+This can happen, if the Time Base jumps over the expiration time (i.e., CustomerTimerExpireTime) due to an invocation of StbM_BusSetGlobalTime but the GPT timer was not yet started.
+
+[SWS_StbM_00337]
+If multiple Customer Timers run and expire within the same interal StbMTimerStartThreshold, the StbM shall calculate all expiry points within the StbMTimerStartThreshold interval and re-start the same GPT timer for next expiry point after the previous expiry point has been reached.
+(RS_TS_00017)
+
+Caveat:
+If a StbM_BusSetGlobalTimer function call occurs and updates the Time Base, for which a GPT timer is running, the newly received Global Time value could be in the future relative to the Local Time of the Time Base. Depending on how far, that value is in the future, it could mean, that the timer expires too late (based on the new Global Time).
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

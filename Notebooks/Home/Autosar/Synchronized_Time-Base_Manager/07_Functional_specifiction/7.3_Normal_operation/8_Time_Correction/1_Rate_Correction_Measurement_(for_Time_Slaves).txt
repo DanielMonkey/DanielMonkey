@@ -1,0 +1,163 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2019-05-10T16:09:13+08:00
+
+====== 1 Rate Correction Measurement (for Time Slaves) ======
+Created Friday 10 May 2019
+
+Rate Correction detects and eliminates rate deviations of local instances of Time Bases. Rate Correction determines the rate deviation in the scope of a measurement. This rate deviation is used as correction factor which the StbM uses to correct the Time Base's time whenever it is determined (e.g., in the scope of StbM_GetCurrentTime() or StbM_BusGetCurrentTime()).
+
+Note:
+Applying rate correction is inaccurate for short intervals (and for small rate deviation values).
+
+[SWS_StbM_00377]
+The StbM shall not perform Rate Correction when the measurement duration StbMRateCorrectionMeasurementDuration (ECUC_StbM_00054:) is set to zero.
+(RS_TS_00018)
+
+[SWS_StbM_00376]
+For Rate Correction measurements, the StbM shall evaluate the TIMELEAP_FUTURE and TIMELEAP_PAST flags during measurements. The StbM shall discard the measurement, if any of the flags equals "Set".
+(RS_TS_00018)
+
+[SWS_StbM_00375]
+For Rate Correction measurements, the StbM shall evaluate state changes of the SYNC_TO_GATEWAY flag during measurements. The StbM shall discard the measurement if the flag state changes.
+(RS_TS_00018)
+
+[SWS_StbM_00374]
+For Rate Correction measurements, the StbM shall evaluate the TIMEOUT flag. The StbM shall discard the measurement, if the flag equals "Set".
+(RS_TS_00018)
+
+[SWS_StbM_00373]
+For Rate Correction, the StbM shall evaluate the TIMELEAP_FUTURE/TIMELEAP_PAST flags during the start of a measurement. The StbM shall not start a Rate Correction measurement when the state of any of the flags equals "Set".
+(RS_TS_00018)
+
+[SWS_StbM_000372]
+The StbM shall perform Rate Correction measurements to determine the rate deviation of each configured Time Base.
+(RS_TS_00018)
+
+[SWS_StbM_00371]
+The StbM shall perform Rate Correction measurements continuously. The end of a measurement marks the start of the next measurement.
+The start and end of measurements are always triggered by and aligned to the reception of time values for Synchronized or Offset Time Bases.
+(RS_TS_00018)
+
+{{./pasted_image.png}}
+[SWS_StbM_00370]
+During runtime the StbM shall determine the timespan of a Rate Correction measurement on the basis of the Virtual Local Time.
+(RS_TS_00018)
+
+Note:
+Simply counting StbM_BusSetGlobalTime() calls (caused by incoming Timesync messages) and deriving the timespan, which has passed from the cycle time, may lead to incorrection results, because the Timesync cycle time is allowed to vary.
+
+The Global Time is only suitable as a time reference for determining the timespan of a Rate Correction measurement, if time leap detection is configured appropriately - otherwise time leaps may shorten or lengthen the time interval unacceptably.
+
+Instead the timespan should be determined either
+* based on the Virtual Local Time or
+* by counting invocations of the main function StbM_MainFunction()
+
+In the latter case, when determing the number of invocations based on StbMMainfunctionPeriod and StbMRateCorrectionMeasurementDuration, it has to be enasured, that the resulting timespan is not shorter than StbMRateCorrectionMeasurementDuration.
+
+Note:
+For implementation details of the timespan measurement refer to Note after [SWS_StbM_00370]
+
+[SWS_StbM_00368]
+The StbM shall perform as many simultaneous Rate Correction measurements as configured by parameter: StbMRateCorrectionsPerMeasurementDuration [[(ECUC_StbM_00055:).]]
+(RS_TS_00018)
+
+[SWS_StbM_00367]
+Simultaneous Rate Correction measurements shall be started with a defined offset (ton) to yield Rate Corrections evently distributed over the measurement duration.
+ton = n * (StbMRateCorrectionMeasurementDuration / StbMRateCorrectionsPerMeasurementDuration) (where 'n' is the zero-based index of the current measurement).
+(RS_TS_00018)
+
+Note:
+If a Rate Correction measurement start is delayed e.g. due to a late reception of time values for Synchronized or Offset Time Bases (refer also to [SWS_StbM_00371]) such, that it would coincide with the start of a later simultaneous Rate Correction measurement, then the delayed measurement should be discarded and only the most recent one should be started. That is, only one of the simultaneous measurements is started at any reception of time values for Synchronized or Offset Time Bases.
+
+Note:
+The implementation can, e.g., be realized by storing the relevent time snapshots in chained lists. Alternatively, measurements can be seen as objects, which store their relevent data and can be used independently.
+
+[SWS_StbM_00366]
+At the start of a Rate Correction measurement, the StbM shall store the Received Time Tuple that is passed in the scope of the function StbM_BusSetGlobalTime(). The elements of the stored Time Tuple have the following denotation:
+* TGStart - Global Time part of the Recevied Time Tuple
+* TVStart - Virtual Local Time part of the Received Time Tuple
+(RS_TS_00018)
+
+Note:
+This is equivalent to an atomic Time Tuple assignment: [TGStart; TVStart] = [TGRx; TVRx].
+
+[SWS_StbM_00364]
+At the end of the Rate Correction measurement, the StbM shall store the Received Time Tuple that is passed in the scope of the function StbM_BusSetGlobalTime(). The elements of the stored Time Tuple have the following denotation:
+* TGStop - Global Time part of the Received Time Tuple
+* TVStop - Virutal Local Time part of the Received Time Tuple
+(RS_TS_00018)
+
+Note:
+This is equivalent to an atomic Time Tuple assignment: [TGStop; TVStop] = [TGRx; TVRx]
+
+[SWS_StbM_00361]
+At the end of a Rate Correction measurement, the StbM shall calculate the resulting correction rate (rrc) for Synchronized Time Bases as shown:
+rrc = (TGStop - TGStart) / (TVStop - TVStart)
+(RS_TS_00018)
+
+Note:
+To determine the resulting rate deviation the value 1 has to be substracted from rrc.
+
+[SWS_StbM_00362]
+The StbM shall use the same value for rrc and rorc until a new value has been calculated.
+(RS_TS_00018)
+
+Note:
+A newly calculated Rate Correction rrc or rorc is only applied to following time calculations.
+
+[SWS_StbM_00360]
+At the end of a Rate Correction measurement, the StbM shall calculate the resulting correction rate (rorc) for Offset Time Bases as shown:
+rorc = (TGStop - TGStart) / (TVStop - TVStart) + 1
+
+Note:
++1 is added for formal reasons in the formula for rorc. This is to have in [SWS_StbM_00397] and [SWS_StbM_00412] aligned value ranges for rate correction rorc and rrc and the corresponding rate deviation values.
+
+[SWS_StbM_00397]
+For Time Bases with StbMSynchronizedTimeBaseIdentifier 0 to 31 and StbMIsSystemWideGlobalTimeMaster = False, the StbM shall return on invocation of StbM_GetRateDeviation() the rate deviation, which has been calculated for that Time Base (i.e. rrc -1 for Synchronized Time Bases or rorc -1 for Offset Time Bases).
+
+If no rate deviation has been calculated, StbM_GetRateDeviation() shall return E_NOT_OK.
+(RS_TS_00018)
+
+[SWS_StbM_00412]
+For a Synchronized Time Base the StbM shall use rrc = 1, if a valid correction rate (rrc) has not yet been calculated or is not being calculated (refer [SWS_StbM_00377]) but shall be applied (refer to 7.3.8.2).
+
+For an Offset Time Base the StbM shall be use rorc = 1, if a valid correction rate (rorc) has not yet been calculated or is not being calculated (refer [SWS_StbM_00377]) but shall be applied (refer to 7.3.8.2).
+(RS_TS_00018)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

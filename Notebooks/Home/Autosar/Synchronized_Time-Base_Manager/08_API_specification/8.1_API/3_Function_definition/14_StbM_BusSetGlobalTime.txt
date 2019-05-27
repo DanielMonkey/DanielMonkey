@@ -1,0 +1,41 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2019-05-23T14:56:40+08:00
+
+====== 14 StbM BusSetGlobalTime ======
+Created Thursday 23 May 2019
+
+[SWS_StbM_00233]
+{{./pasted_image.png}}
+(RS_TS_00007, RS_TS_00030, RS_TS_00031, RS_TS_00034)
+
+[SWS_StbM_00234]
+If the switch StbMDevErrorDetect (ECUC_StbM_00012:) is set to TRUE, StbM_BusSetGlobalTime() shall report to DET the development error STBM_E_PARAM, if called with a parameter timeBaseId, which is
+* not configured or
+* refers to a Pure Local Time Base
+(SRS_BSW_00386, SRS_BSW_00323)
+
+Note:
+A parameter timeBaseId within the reserved value range indicates legacy use.
+
+[SWS_StbM_00235]
+If the switch StbMDevErrorDetect (ECUC_StbM_00012:) is set to TRUE, StbM_BusSetGlobalTime() shall report to DET the development error STBM_E_PARAM_POINTER, if called with a NULL pointer for parameter
+* globalTimePtr
+* measureDataPtr
+* localTimePtr
+(SRS_BSW_00386, SRS_BSW_00323)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,9 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2019-05-24T16:38:08+08:00
+
+====== 06 TriggerTimeTransmission ======
+Created Friday 24 May 2019
+
+{{./pasted_image.png}}
+

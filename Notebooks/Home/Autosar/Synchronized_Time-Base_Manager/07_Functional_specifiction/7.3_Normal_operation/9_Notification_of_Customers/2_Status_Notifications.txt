@@ -1,0 +1,137 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2019-05-14T11:48:22+08:00
+
+====== 2 Status Notifications ======
+Created Tuesday 14 May 2019
+
+The StbM allows Notification Customers to register to be notified of status change events for a Time Base. The StbM tracks for each registered Notification Customer the occurrence of various Time Base related events. Notification Customers can configure the StbM such, that they will be informed by a notification callback, if one or more events occur.
+
+[SWS_StbM_00277]
+For Synchronized, Offset and Pure Local Time Bases:
+* If parameter StbMNotificationInterface (ECUC_StbM_00068:) is set to either SR_INTERFACE or CALLBACK_AND_SR_INTERFACE, the StbM shall notify the application via the StatusNotification service interface.
+* If parameter StbMNotificationInterface is set to either CALLBACK or CALLBACK_AND_SR_INTERFACE, the StbM shall use the callback StatusNotificationCallBack<TimeBase> to notify a CDD about the status related events.
+* If parameter StbMNotificationInterface is set to NO_NOTIFACTION the notification mechanism shall be disabled for the give Time Base.
+The callback StatusNotificationCallBack<TimeBase> shall be set via configuration parameter StbMStatusNotificationCallback [[(ECUC_StbM_00046:).]]
+(RS_TS_20001, RS_TS_00016)
+
+[SWS_StbM_00279]
+For each Time Base the StbM has a configurable mask StbMStatusNotificationMask (ECUC_StbM_00045:), which allows to mask individually status event notifications.
+(RS_TS_20001, RS_TS_00016)
+
+[SWS_StbM_00284]
+The StbM shall detect the following status events:
+Status Event Name										Status Event Set Condition
+EV_GLOBAL_TIME_BASE
+* 1: GLOBAL_TIME_BASE in timeBaseStatus has chenged from 0 to 1
+* 0: otherwise
+
+EV_TIMEOUT_OCCURED
+* 1: TIMEOUT bit in timeBaseStatus has changed from 0 to 1
+* 0: otherwise
+
+EV_TIMEOUT_REMOVED
+* 1: TIMEOUT bit in timeBaseStatus has changed from1 to 0
+* 0: otherwise
+
+EV_TIMELEAP_FUTURE
+* 1: TIMELEAP_FUTURE bit in timeBaseStatus has changed from 0 to 1
+* 0: otherwise
+
+EV_TIMELEAP_FUTURE_REMOVED
+* 1: TIMELEAP_FUTURE bit in timeBaseStatus has changed from1 to 0
+* 0: otherwise
+
+EV_TIMELEAP_PAST
+* 1: TIMELEAP_PAST bit in timeBaseStatus has changed from 0 to 1
+* 0: otherwise
+
+EV_TIMELEAP_PAST_REMOVED
+* 1: TIMELEAP_PAST bit in timeBaseStatus has changed from1 to 0
+* 0: otherwise
+
+EV_SYNC_TO_SUBDOMAIN
+* 1: SYNC_TO_GATEWAY bit in timeBaseStatus has changed from 0 to 1
+* 0: otherwise
+
+EV_SYNC_TO_GLOBAL_MASTER
+* 1: SYNC_TO_GATEWAY bit in timeBaseStatus has changed from1 to 0
+* 0: otherwise
+
+EV_RESYNC
+* 1: resynchronization has occurred and a new time value has been applied
+* 0: otherwise
+
+EV_RATECORRECTION
+* 1: a valid rate correction has been calculated (not beyond this)
+* 0: otherwise
+(RS_TS_00016)
+
+[SWS_StbM_00278]
+For Synchronized and Offset Time Bases the StbM shall use a variable NotificationEvents of type StbM_TimeBaseNotificationType to keep track, if any status event (refer to [SWS_StbM_00284]) for the referenced Time Base occurs.
+
+If any status event occurs and the corresponding bit in the NotificationMask is set, the corresponding bit in the NotificationEvents variable is set, i.e., NotificationEvents contains the bits for the events, which are enabled within the NotificationMask mask (refer to [SWS_StbM_00284]).
+(RS_TS_20001)
+
+[SWS_StbM_00282]
+If any status event (refer to [SWS_StbM_00284]) occurs and the corresponding bit in the NotificationMask mask is set, the StbM shall report the value of the NotificationEvents variable 
+* via the callback function StatusNotificationCallback<TimeBase> (refer to parameter eventNotifications) and / or
+* via StatusNotification service interface (refer to data elment eventNotification) 
+depending on the setting of parameter StbMNotificationInterface [[(ECUC_StbM_00068:).]]
+
+If multiple status events occur simultaneously for the same Time Base, the StbM shall trigger the callback function StatusNotificationCallback<TimeBase> and the StatusNotification service interface only once.
+(RS_TS_20001)
+
+Note:
+If e.g. a (re)synchronization takes place several of the following events may occur simultaneously: EV_RESYNC, EV_TIMEOUT_REMOVED, EV_GLOBAL_TIME_BASE, EV_TIMELEAP_FUTURE, EV_TIMELEAP_PAST, EV_TIMELEAP_FUTURE_REMOVED / EV_TIMELEAP_PAST_REMOVED, EV_RATECORRECTION, EV_SYNC_TO_SUBDOMAIN and EV_SYNC_TO_GLOBAL_MASTER.
+
+[SWS_StbM_00280]
+After reporting a status event via the StatusNotificationCallback<TimeBase> API and the StatusNotification service interface the StbM shall reset NotificationEvents to 0.
+(RS_TS_00016)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

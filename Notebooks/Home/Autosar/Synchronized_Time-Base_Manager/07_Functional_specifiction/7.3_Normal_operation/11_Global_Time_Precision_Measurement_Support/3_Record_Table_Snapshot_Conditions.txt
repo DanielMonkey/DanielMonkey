@@ -1,0 +1,80 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2019-05-16T14:05:15+08:00
+
+====== 3 Record Table Snapshot Conditions ======
+Created Thursday 16 May 2019
+
+[SWS_StbM_00312]
+If Global Time Precision Measurement is enabled (refer to [SWS_StbM_00428] and [SWS_StbM_00307]) for the Time Base, on an invocation of StbM_BusSetGlobalTime() the StbM shall update all elements of the block of the recording table.
+If all blocks have been written and no notification via SyncTimeRecordBlockCallback<TimeBase> or OffsetTimeRecordBlockCallBack<TimeBase> has yet occurred to pass all blocks with their elements to the application, the StbM shall again overwrite the block containning the oldest measurement data with the incomming measurement data.
+(RS_TS_00034)
+
+Note:
+From the implementation point of view, this mechanism belongs to a ring buffer concept in case data cannot be forwarded to the Application fast enough.
+
+[SWS_StbM_00313]
+For Synchronized Time Bases, if Global Time Precision Measurement is enabled (refer to [SWS_StbM_00428] and [SWS_StbM_00307]) for the Time Base, on an invocation of StbM_BusSetGlobalTime() the StbM shall write the block elements LocSeconds and LocNanoSeconds to the related measurement recording table before updating the Main Time Tuple (i.e., updating the Local Time Base by the Global Time Base). LocSeconds and LocNanoSeconds are the elements of the Global Time part of the Synclocal Time Tuple (i.e., TLSync, see [SWS_StbM_00438]).
+(RS_TS_00034)
+
+[SWS_StbM_00314]
+For Synchronized Time Bases, if Global Time Precision Measurement is enabled (refer to [SWS_StbM_00428] and [SWS_StbM_00307]) for the Time Base, on an invocation of StbM_BusSetGlobalTime() the StbM shall write block elements GlbSeconds, GlbNanoSeconds, VirtualLocalTimeLow, RateDeviation, TimeBaseStatus and PathDelay to the related measurement recording table after updating Main Time Tuple (i.e., after updating the Local Time Base by the Global Time Base). GlbSecond, GlbNanoSeconds are the elements of the Global Time part of the Received Time Tuple (i.e., TGRx); VirtualLocalTimeLow is the nanosecondsLo element of the Virtual Local Time part of the Received Time Tuple (i.e., TVRx).
+(RS_TS_00034) 
+
+Note:
+PathDelay will be retrieved from the <Bus>TSyn module as PathDelay member of parameter measureDataPtr of StbM_BusSetGlobalTime().
+
+[SWS_StbM_00388]
+For Offset Time Bases, if Global Time Precision Measurement is enabled (refer to [SWS_StbM00428] and [SWS_StbM_00307]) for the Time Base, on an invocation of StbM_BusSetGlobalTime() the StbM shall write the block elements GlbSeconds, GlbNanoSeconds and TimeBaseStatus to the related measurement recording table.
+(RS_TS_00034)
+
+[SWS_StbM_00315]
+If Global Time Precision Measurement is enabled (refer to [SWS_StbM_00428] and [SWS_StbM_00307]) for the Time Base, the application collects the contents of the header of the Synchronized Time Base Record Table by calling StbM_GetSyncTimeRecordHead().
+(RS_TS_00034)
+
+[SWS_StbM_00316]
+If Global Time Precision Measurement is enabled (refer to [SWS_StbM_00428] and [SWS_StbM_00307]) for the Time Base, the application collects the contents of the header of the Offset Time Base Record Table by calling StbM_GetOffsetTimeRecordHead().
+(RS_TS_00034)
+
+[SWS_StbM_00317]
+If Global Time Precision Measurement is enabled (refer to [SWS_StbM_00428] and [SWS_StbM_00307]) for the Time Base, the StbM shall notify the Application by calling SyncTimeRecordBlockCallBack<TimeBase> in the next StbM_MainFunction() call cycle block by block (i.e., repeatedly) for all unread blocks (i.e., containing data that has yet not been passed to the Application), starting with the block containing the oldest data, and followed by the blocks in ascending order regarding their age (i.e., FIFO order), the block containing the newest data shall be passed last.
+
+The StbM shall ensure data integrity: a block shall not be passed if it currently being overwritten and a block that is passed shall be prevented from being overwritten and a block that is passed shall be prevented from being overwritten until processed by the Application.
+(RS_TS_00034)
+
+[SWS_StbM_00318]
+If Global Time Precision Measurement is enabled (refer to [SWS_StbM_00428] and [SWS_StbM_00307]) for the Time Base, the StbM shall notify the Application by calling OffsetTimeRecordBlockCallBack<TimeBase> in the next StbM_MainFunction() call cycle block by block (i.e., repeatedly) for all unread blocks (i.e., containing data that has yet not been passed to the Application), starting with the block containing the oldest data, and followed by the blocks in ascending order regarding their age (i.e., FIFO order), the block containing the newest data shall be passed last.
+
+The StbM shall ensure data integrity: a block shall not be passed if it currently being overwritten and a block that is passed shall be prevented from being overwritten until processed by the Application.
+(RS_TS_00034)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

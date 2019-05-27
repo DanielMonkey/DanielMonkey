@@ -1,0 +1,54 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2019-05-20T15:31:43+08:00
+
+====== 03 StbM GetCurrentTime ======
+Created Monday 20 May 2019
+
+[SWS_StbM_00195]
+{{./pasted_image.png}}
+(RS_TS_00005, RS_TS_00006, RS_TS_00029, RS_TS_00030, RS_TS_00031, RS_TS_00014)
+
+[SWS_StbM_00196]
+If the switch StbMDevErrorDetect (ECUC_StbM_00012:) is set to TRUE, StbM_GetCurrentTime() shall report to DET the development error STBM_E_PARAM, if called with a parameter timeBaseId, which is
+* not configure for
+* within the reserved value range.
+(SRS_BSW_00386, SRS_BSW_00323)
+
+[SWS_StbM_00197]
+If the switch StbMDevErrorDetect (ECUC_StbM_00012:) is set to TRUE, StbM_GetCurrentTime() shall report to DET the development error STBM_E_PARAM_POINTER, if called with a NULL pointer for parameter timeStamp or userData.
+(SRS_BSW_00386, SRS_BSW_00323)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

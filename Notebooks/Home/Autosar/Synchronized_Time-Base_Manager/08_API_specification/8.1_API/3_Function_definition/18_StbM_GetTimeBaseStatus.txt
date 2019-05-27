@@ -1,0 +1,41 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2019-05-23T15:23:19+08:00
+
+====== 18 StbM GetTimeBaseStatus ======
+Created Thursday 23 May 2019
+
+[SWS_StbM_00263]
+{{./pasted_image.png}}
+(RS_TS_00005)
+
+[SWS_StbM_00264]
+If the switch StbMDevErrorDetect (ECUC_StbM_00012:) is set to TRUE, StbM_GetTimeBaseStatus() shall report to DET the development error STBM_E_PARAM, if called with a parameter timeBaseId, which is
+* is not configured or
+* is within the reserved value range
+(SRS_BSW_00386, SRS_BSW_00323)
+
+[SWS_StbM_00386]
+If the switch StbMDevErrorDetect (ECUC_StbM_00012:) is set to TRUE, StbM_GetTimeBaseStatus() shall report to DET the development error STBM_E_PARAM_POINTER, if called with a NULL pointer for parameter syncTimeBaseStatus or offsetTimeBaseStatus.
+(SRS_BSW_00386, SRS_BSW_00323)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

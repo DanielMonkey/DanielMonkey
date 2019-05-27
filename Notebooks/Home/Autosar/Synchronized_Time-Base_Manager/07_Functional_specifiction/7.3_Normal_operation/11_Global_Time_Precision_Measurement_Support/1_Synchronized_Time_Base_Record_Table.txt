@@ -1,0 +1,73 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2019-05-16T09:49:44+08:00
+
+====== 1 Synchronized Time Base Record Table ======
+Created Thursday 16 May 2019
+
+[SWS_StbM_00308]
+If Global Time Precision Measurement is enabled (refer to [SWS_StbM_00428] and [SWS_StbM_00307]) for the Time Base, the StbM shall establish a table to record values depending on the Synchronized Time Base with the following structure:
+Header {
+	uint8		SynchronizedTimeDomain;		# 1 byte
+	uint32		HWfrequency;					# 4 bytes Hz
+	uint32		HWprescaler;						# 4 bytes
+	} # 9 bytes
+Block 0 {
+	StbM_TimeStampType.seconds							GlbSeconds;				# 4 bytes seconds
+	StbM_TimeStampType.nanoseconds					GlbNanoSeconds;		# 4 bytes nanoseconds
+	StbM_TimeStampType.StbM_TimeBaseStatusType	TimeBaseStatus;			# 1 bytes
+	uint32														VirtualLocalTimeLow;	# 4 bytes nanoseconds
+	StbM_RateDeviationType								RateDeviation;			# 2 bytes ppm
+	StbM_TimeStampType.seconds							LocSeconds;				#  bytes seconds
+	StbM_TimeStampType.nanoseconds					LocNanoSeconds;		# 4 bytes nanoseconds
+	uint32														PathDelay;				# 4 bytes nanoseconds
+	} # 27 bytes
+Block 1 { ... }
+...
+Block (Block-Count -1) { ... }
+(RS_TS_00034)
+
+[SWS_StbM_00309]
+If Global Time Precision Measurement is enabled (refer to [SWS_StbM_00428] and [SWS_StbM_00307]) for the Time Base, StbMClockfrequency (ECUC_StbM00051:) shall be mapped to the Header Element HWfrequency of the table belonging to the Synchronized Time Base unless the Virtual Local Time for the Time Base is provided by a Timesync module. In this case, HWfrequency shall be set to 1,000,000,000.
+(RS_TS_00034)
+
+[SWS_StbM_00310]
+If Global Time Precision Measurement is enabled (refer to [SWS_StbM_00428] and [SWS_StbM_00307]) for the Time Base, StbMClockprescaler (ECUC_StbM_00052:) shall be mapped to the Header Element HWprescaler of the table belonging to the Synchronized Time Base unless the Virtual Local Time for the Time Base is provided by a Timesync module. In this case, HWprescaler shall be set to 1.
+(RS_TS_00034)
+
+[SWS_StbM_00382]
+If Global Time Precision Measurement is enabled (refer to [SWS_StbM_00428] and [SWS_StbM_00307]) for the Time Base, the Synchronized Time Base Record Table shall contain as many blocks as configured by StbMSyncTimeRecordTableBlockCount [[(ECUC_StbM_00058:).]]
+(RS_TS_00034)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,113 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2019-05-14T10:01:48+08:00
+
+====== 3 Time Interpolation and Rate Correction for Global Time Masters ======
+Created Tuesday 14 May 2019
+
+Rate correction in Global Time Masters can be applied to Synchronized and Offset Time Bases (including Pure Local Time Bases).
+
+Use cases are setting the rate of a Pure Local Time Base to the rate of a received Synchronized Time Base or adjusting the rate of Synchronized Time Bases to external time sources (e.g., GPS).
+
+Rate correction is applied by setting a correction factor which the StbM uses to correct the Time Base's time whenever it is read (e.g., in the scope of StbM_GetCurrentTime() or StbM_BusGetCurrentTime()).
+
+The interpolation of the Time Base is based on the Main Time Tuple, the current value of the Virtual Local Time and the current Rate Correction value.
+
+[SWS_StbM_00395]
+If StbMAllowMasterRateCorrection equals TRUE, an invocation of StbM_SetRateCorrection() shall set the correction value. Otherwise StbM_SetRateCorrection() shall do nothing and return E_NOT_OK.
+(RS_TS_00018)
+
+[SWS_StbM_00411]
+The StbM shall apply rate correction to a Time Base, if StbMAllowMasterRateCorrection (ECUC_StbM_00043:) equals TRUE and a valid rate correction value has been set by StbM_SetRateCorrection(). 
+(RS_TS_00018)
+
+[SWS_StbM_00396]
+If the absolute value of the rate correction parameter rateDeviation, which is passed to Stb_SetRateCorrection(), is greater than StbMMasterRateDeviationMax, StbM_SetRateCorrection() shall set the actually rate correction value to either (StbMMasterRateDeviationMax) or (-StbMMasterRateDeviationMax) (depending on sign of rateDeviation).
+(RS_TS_00018)
+
+Note:
+The actual applied resulting rate will be 
+* for Synchronized Time Bases: rateDeviation + 1 (=rrc as given in [SWS_StbM_00424])
+* for Offset Time Bases: rateDeviation = (rorc - 1 as given in [SWS_StbM_00424])
+with rateDeviation: deviation value passed to StbM_SetRateCorrection()
+
+If aligning the rate of one Time Base to the rate of another one, it is possible to use StbM_GetRateDeviation() and pass the value as argument to StbM_SetRateCorrection().
+
+[SWS_StbM_00424]
+The StbM shall calculate the (rate corrected) time (TL) of its local instances of the Time Base as:
+TL = TGSync + (TV - TVSync) * r
+With
+* TV = Current value of the Virtual Local Time
+* TVSync = Virtual Local Time part of the Main Time Tuple
+* TGSync = Global Time part of the Main Time Tuple
+* r = Rate for correcting the Time Base with
+   r = rrc for Synchronized Time Bases
+   r = rorc - 1 for Offset Time Bases
+If StbMAllowMasterRateCorrection (ECUC_StbM_00043:) equals FALSE r shall be set to
+* 1 for Synchronized Time Bases
+* 0 for Offset Time Bases
+(i.e., no rate correction is applied).
+(RS_TS_00018)
+
+Note:
+TL and TV form a new temporary Time Tuple.
+
+[SWS_StbM_00442]
+For Synchronized Time Bases the Main Time Tuple shall be updated according to [SWS_StbM_00441] and [SWS_StbM_00342].
+
+In case of StbM_SetRateCorrection() the StbM shall calculate a temporary Time Tuple according to [SWS_StbM_00424] and replace the Main Time Tuple by this temporary Time Tuple.
+(RS_TS_00018)
+
+[SWS_StbM_00443]
+For Offset Time Bases the Main Time Tuple shall be updated according to [SWS_StbM_00441], [SWS_StbM_00190] and [SWS_StbM_00304].
+
+In case of StbM_SetRateCorrection() the StbM shall calculate a temporary Time Tuple according to [SWS_StbM_00424] and replace the Main Time Tuple by this temporary Time Tuple.
+(RS_TS_00018)
+
+[SWS_StbM_00422]
+* For Time Bases with StbMSynchronizedTimeBaseIdentifier 32 to 127 (ECUC_StbM_00021:) and 
+* for Time Bases with StbMSynchronizedTimeBaseIdentifier 0 to 31 and StbMIsSystemWideGlobalTimeMaster equals TRUE (ECUC_StbM_00036:)
+the StbM shall return on invocation of StbM_GetRateDeviation() the rate deviation that has been set by StbM_SetRateCorrection() for that Time Base.
+
+If no rate deviation has been set, StbM_GetRateDeviation() shall return E_NOT_OK.
+(RS_TS_00018)
+
+[SWS_StbM_00431]
+For the Time Master of a Synchronized Time Base the StbM shall use rrc = 1, if a valid correction rate (rrc) has not yet been set.
+For the Time Master of an Offset Time Base the StbM shall use rorc = 1, if a valid correction rate (rorc) has not yet been set.
+(RS_TS_00018)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

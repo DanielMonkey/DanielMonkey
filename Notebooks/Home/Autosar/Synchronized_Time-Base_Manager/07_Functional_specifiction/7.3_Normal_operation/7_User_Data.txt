@@ -1,0 +1,16 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2019-05-10T15:44:43+08:00
+
+====== 7 User Data ======
+Created Friday 10 May 2019
+
+User Data is part of each Global Time Base. User Data is set by the Global Time Master of each Time Base and distributed as part of the Timesync messages.
+User Data can be used to characterize the Time Base, e.g., regarding the quality of the underlying clock source or regarding the progress of time.
+
+User Data consists of up to three bytes. Due to the frame format of various Timesync messages it is not possible to transmit all three bytes on every bus system. It is the responsibility of the system designer to only use those User Data bytes that can be distributed inside the vehicle network.
+
+[SWS_StbM_00381]
+All functions that are setting User Data shall only set as many User Data bytes as defined within the userDataLength element of the StbM_UserDataType structure.
+If the userDataLength is equal to 0, no User Data bytes shall be set. User Data bytes that are not set shall remain at their previous value.
+(RS_TS_00015)

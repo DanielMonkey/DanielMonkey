@@ -1,0 +1,63 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2019-05-15T10:51:32+08:00
+
+====== 11 Global Time Precision Measurement Support ======
+Created Wednesday 15 May 2019
+
+To verify the precision of each Local Time Base compared to the Global Time Base a recording mechanism shall be optionally supported for Time Slaves and Time Gateways.
+In principle, the StbM takes a snapshot of all required data at the point in time, where a synchronization event takes place. The StbM provides access to those values by an actively pushed API function on each successful assembled data block. An Off-Board Tester collects each block and calculates the precision afterwards and maintains a history of recorded blocks and their elements accordingly.
+How and by which protocol the data will be transferred to the Off-Board Tester will be specified by the Application.
+
+{{./pasted_image.png}}
+[SWS_StbM_00307]
+The StbM shall support the Global Time precision measurement, if StbMTimeRecordingSupport (ECUC_StbM_00038:) is set to TRUE.
+(RS_TS_00034)
+
+[SWS_StbM_00428]
+The StbM shall do Global Time precision measurement only for Synchronized Time Bases and Offset Time Bases, for which StbMIsSystemWideGlobalTimeMaster (ECUC_StbM_00036:) is set to FALSE.
+(RS_TS_00034)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

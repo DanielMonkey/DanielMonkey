@@ -1,0 +1,50 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2019-05-20T15:44:24+08:00
+
+====== 05 StbM GetCurrentVirtualLocalTime ======
+Created Monday 20 May 2019
+
+[SWS_StbM_91006]
+{{./pasted_image.png}}
+[SWS_StbM_00444]
+If the switch StbMDevErrorDetect (ECUC_StbM_00012:) is set to TRUE, StbM_GetCurrentVirtualLocalTime() shall report to DET the development error STBM_E_PARAM_POINTER, if called with a NULL pointer for parameter localTimePtr.
+(SRS_BSW_00386, SRS_BSW_00323)
+
+[SWS_StbM_00445]
+If the switch StbMDevErrorDetect (ECUC_StbM_00012:) is set to TRUE, StbM_GetCurrentVirtualLocalTime() shall report to DET the development error STBM_E_PARAM, if called with parameter timeBaseId, which
+* is not configured for
+* is within the reserved value range.
+(SRS_BSW_00386, SRS_BSW_00323)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

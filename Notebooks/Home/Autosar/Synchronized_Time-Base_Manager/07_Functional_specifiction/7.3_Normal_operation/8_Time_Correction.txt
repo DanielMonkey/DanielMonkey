@@ -1,0 +1,13 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2019-05-10T16:05:55+08:00
+
+====== 8 Time Correction ======
+Created Friday 10 May 2019
+
+The Synchronized Time-Base Manager provides the ability for Time Slaves to perform Rate and Offset Correction.
+
+For Global Time Masters the StbM provides the ability to perform Rate Correction of their Time Base(s).
+
+Time Correction can be configured individually for each Time Base.
+

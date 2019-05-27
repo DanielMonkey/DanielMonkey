@@ -1,0 +1,25 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2019-05-23T15:36:15+08:00
+
+====== 21 StbM GetOffsetTimeRecordHead ======
+Created Thursday 23 May 2019
+
+[SWS_StbM_00325]
+{{./pasted_image.png}}
+(RS_TS_00034)
+
+[SWS_StbM_00326]
+The function StbM_GetOffsetTimeRecordHead() shall be pre compile time configurable ON/OFF by the configuration parameter: StbMTimeRecordingSupport (ECUC_StbM_00038:)
+(RS_TS_00034)
+
+[SWS_StbM_00327]
+If the switch StbMDevErrorDetect (ECUC_StbM_00012:) is set to TRUE, StbM_GetOffsetTimeRecordHead() shall report to DET the development error STBM_E_PARAM, if called with a parameter timeBaseId, which
+* is not configured or
+* refers to a Pure Local or a Synchronized Time Base or
+* is within the reserved value range
+(SRS_BSW_00386, SRS_BSW_00323)
+
+[SWS_StbM_00404]
+If the switch StbMDevErrorDetect (ECUC_StbM_00012:) is set to TRUE, StbM_GetOffsetTimeRecordHead() shall report to DET the development error STBM_E_PARAM_POINTER, if called with a NULL pointer for parameter offsetRecordTableHead.
+(SRS_BSW_00386, SRS_BSW_00323)

@@ -1,0 +1,13 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2019-05-23T16:06:37+08:00
+
+====== 2 OffsetTimeRecordBlockCallback ======
+Created Thursday 23 May 2019
+
+[SWS_StbM_00328]
+{{./pasted_image.png}}
+
+[SWS_StbM_00329]
+The function OffsetTimeRecordBlockCallback<timeBaseId>() shall be set by the parameter StbMSyncTimeRecordBlockCallback (ECUC_StbM_00060:)
+(RS_TS_00034)

@@ -1,0 +1,49 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2019-05-23T14:50:23+08:00
+
+====== 13 StbM BusGetCurrentTime ======
+Created Thursday 23 May 2019
+
+[SWS_StbM_91005]
+{{./pasted_image.png}}
+(RS_TS_00005, RS_TS_00006, RS_TS_00029, RS_TS_00031, RS_TS_00014)
+
+[SWS_StbM_00446]
+If the switch StbMDevErrorDetect (ECUC_StbM_00012:) is set to TRUE, StbM_BusGetCurrentTime() shall report to DET the development error STBM_E_PARAM, if called with a parameter timeBaseId, which is
+* referring to an Offset Time Base
+* not configured or
+* is within the reserved value range
+(SRS_BSW_00386, SRS_BSW_00323)
+
+[SWS_StbM_00447]
+If the switch StbMDevErrorDetect (ECUC_StbM_00012:) is set to TRUE, StbM_BusGetCurrentTime() shall report to DET the development error STBM_E_PARAM_POINTER, if called with a NULL pointer for parameter globalTimePtr, localTimePtr or userData.
+(SRS_BSW_00386, SRS_BSW_00323)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

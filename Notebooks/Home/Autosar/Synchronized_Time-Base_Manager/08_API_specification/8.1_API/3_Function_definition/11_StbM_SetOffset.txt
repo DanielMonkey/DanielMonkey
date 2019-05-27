@@ -1,0 +1,37 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2019-05-23T14:43:02+08:00
+
+====== 11 StbM SetOffset ======
+Created Thursday 23 May 2019
+
+[SWS_StbM_00223]
+{{./pasted_image.png}}
+{{./pasted_image001.png}}
+(RS_TS_00029, RS_TS_00013)
+
+[SWS_StbM_00224]
+If the switch StbMDevErrorDetect (ECUC_StbM_00012:) is set to TRUE, StbM_SetOffset() shall report to DET the development error STBM_E_PARAM, if called with a parameter timeBaseId, which is
+* not configured or
+* refers to a Synchronized or Pure Local Time Base or
+* is within the reserved value range
+(SRS_BSW_00386, SRS_BSW_00323)
+
+[SWS_StbM_00225]
+If the switch StbMDevErrorDetect (ECUC_StbM_00012:) is set to TRUE, StbM_SetOffset() shall report to DET the development error STBM_E_PARAM_POINTER, if called with a NULL pointer for parameter timeStamp or userData.
+(SRS_BSW_00386, SRS_BSW_00323)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

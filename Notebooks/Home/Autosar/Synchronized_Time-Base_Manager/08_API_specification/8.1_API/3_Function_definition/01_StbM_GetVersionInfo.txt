@@ -1,0 +1,15 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2019-05-20T15:09:12+08:00
+
+====== 01 StbM GetVersionInfo ======
+Created Monday 20 May 2019
+
+[SWS_StbM_00066]
+{{./pasted_image.png}}
+(SRS_BSW_00407)
+
+[SWS_StbM_00094]
+If development error detection for the StbM module is enabled the function StbM_GetVersionInfo shall raise the development error STBM_E_PARAM_POINTER and return if versioninfo is a NULL pointer (NULL_PTP).
+(SRS_BSW_00386, SRS_BSW_00337)
+

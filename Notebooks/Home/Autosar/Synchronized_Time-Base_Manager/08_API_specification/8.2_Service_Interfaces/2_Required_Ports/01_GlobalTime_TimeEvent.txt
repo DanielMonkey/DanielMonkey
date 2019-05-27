@@ -1,0 +1,10 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2019-05-24T15:28:33+08:00
+
+====== 01 GlobalTime TimeEvent ======
+Created Friday 24 May 2019
+
+{{./pasted_image.png}}
+(RS_TS_00035, RS_TS_00017)
+

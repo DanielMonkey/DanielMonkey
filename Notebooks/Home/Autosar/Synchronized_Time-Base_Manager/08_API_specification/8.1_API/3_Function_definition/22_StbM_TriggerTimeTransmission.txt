@@ -1,0 +1,38 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2019-05-23T15:39:58+08:00
+
+====== 22 StbM TriggerTimeTransmission ======
+Created Thursday 23 May 2019
+
+[SWS_StbM_00346]
+{{./pasted_image.png}}
+(RS_TS_00011)
+
+[SWS_StbM_00349]
+If the switch StbMDevErrorDetect (ECUC_StbM_00012:) is set to TRUE, StbM_TriggerTimeTransmission() shall report to DET the development error STBM_E_PARAM, if called with a parameter timeBaseId, which
+* is not configured or
+* refers to a Pure Local Time Base or
+* is within the reserved value range
+(SRS_BSW_00386, SRS_BSW_00323)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

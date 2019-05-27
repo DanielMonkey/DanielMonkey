@@ -1,0 +1,13 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2019-05-23T16:03:31+08:00
+
+====== 1 SyncTimeRecordBlockCallback ======
+Created Thursday 23 May 2019
+
+[SWS_StbM_00322]
+{{./pasted_image.png}}
+
+[SWS_StbM_00323]
+The function SyncTimeRecordBlockCallback<timeBaseId>() shall be set by the parameter StbMSyncTimeRecordBlockCallback (ECUC_StbM_00060:)
+(RS_TS_00034)

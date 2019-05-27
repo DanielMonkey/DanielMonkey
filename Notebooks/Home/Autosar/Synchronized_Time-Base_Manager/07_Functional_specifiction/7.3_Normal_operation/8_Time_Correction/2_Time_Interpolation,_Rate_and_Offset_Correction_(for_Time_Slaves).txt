@@ -1,0 +1,114 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2019-05-10T18:07:58+08:00
+
+====== 2 Time Interpolation, Rate and Offset Correction (for Time Slaves) ======
+Created Friday 10 May 2019
+
+Time interpolation happens whenever the current value of the local instance of a Time Base shall be determined. The calculation is based on the Main Time Tuple.
+
+If Rate Correction is enabled for a given Time Base the calculation includes the Calculated Rate Correction value (rrc for Synchronized Time Bases, rorc for Offset Time Bases).
+
+Whenever a new Global Time Tuple is received, there is a difference between the received Global Time and the Global Time of the Synclocal Time Tuple (see [SWS_StbM_00438], [SWS_StbM_00439]). This difference is denoted as offset.
+
+Offset Correction can be done in two ways:
+* Offset Correction By Jump: the Main Time Tuple is overwritten by the Received Time Tuple, i.e., the time of the local instance of the Time Base jumps to the value of the received Global Time.
+* Offset Correction by Rate Adaption: the Main Time Tuple is not overwritten by the Received Time Tuple, instaed the applied Rate Correction is adapted such that the existing offset is steadily reduced to zero within a configured time span. Offset Correction By Rate Adaption can only be applied if Rate Correction is enabled, of course.
+
+[SWS_StbM_00359]
+The StbM shall calculate the Global Time offset (i.e., difference) between the Received Time and the Synclocal Time upon each, except the very first, valid invocation of StbM_BusSetGlobalTime(). The elements of the Time Tuples used for calculating the Global Time offset have the following denotation:
+* TLSync = Global Time part of the Synclocal Time Tuple
+* TGRx = Global Time part of the Received Time Tuple
+(RS_TS_00018)
+
+[SWS_StbM_00355]
+The StbM shall calculate the current value of a Time Base based on the Main Tuple and the current rate correction term according to:
+TL = TGSync + (TV - TVSync) * r
+With:
+* TL = Current value of the Time Base
+* TV = Current value of the Virtual Local Time
+* TVSync = Virtual Local Time part of the Main Time Tuple
+* TGSync = Global Time part of the Main Time Tuple
+* r = Current rate for correcting the local instance of the Time Base
+(RS_TS_00018)
+
+[SWS_StbM_00440]
+For Synchronized Time Bases and if rate correction is enabled (see [SWS_StbM_00377]) and if the absolute value of the time offset between the Received Time and the Synclocal Time (abs(TGRx - TLSync)) is equal or greater than StbMOffsetCorrectionJumThreshold (ECUC_StbM_00056:), the StbM shall use the factor rrc for the rate correction term r:
+r = rrc
+Otherwise r shall be set to 1, unless r shall be set according to [SWS_StbM_00356] or [SWS_StbM_00353].
+(RS_TS_00018)
+
+[SWS_StbM_00441]
+For Offset Time Bases and if rate correction is enabled (see [SWS_StbM_00377]) and if the absolute value of the time offset between the Received Time and the Synclocal Time (abs(TGRx - TLSync)) is equal or greater than StbMOffsetCorrectionJumpThreshold (ECUC_StbM_00056:), the StbM shall use the factor rorc for the rate correction term r:
+r = rorc - 1
+Otherwise r shall be set to 0, unless r shall be set accordingly to [SWS_StbM_00356] or [SWS_StbM_00355]).
+(RS_TS_00018)
+
+[SWS_StbM_00356]
+If rate correction is enabled (see [SWS_StbM_00377]) and if the absolute value of the time offset between the Received Time and the Synclocal Time (abs(TGRx - TLSync)) is smaller than StbMOffsetCorrectionJumpThreshold (ECUC_StbM_00056:), the StbM shall correct the time offset by temporarily applying an additional rate (roc) to r:
+r = rrc + roc (for Synchronized Time Bases)
+r = (rorc - 1) + roc (for Offset Time Bases)
+This rate correction term shall be applied for the duration defined by parameter StbMOffsetCorrectionAdaptionInterval (ECUC_StbM_00057:), starting when obtaining the Received Time Tuple (i.e., it shall be applied as long as (TV - TVSync) (see [SWS_StbM_00355] is smaller than StbMOffsetCorrectionAdaptionInterval).
+
+roc shall be calculated as shown:
+roc = (TGRx - TLSync) / (TCorrInt)
+With:
+* TCorrInt = StbMOffsetCorrectionAdaptionInterval 
+* TLSync = Global Time part of the Synclocal Time Tuple
+* TGRx = Global Time part of the Received Time Tuple
+(RS_TS_00018, RS_TS_00019)
+
+[SWS_StbM_00353]
+If an additional rate has been applied (Offset Correction By Rate Adaption according to [SWS_StbM_00356]), the StbM shall after the period of StbMOffsetCorrectionAdpationInterval (i.e., (TV - TVSync) (see [SWS_StbM_00355]) is larger or equal than StbMOffsetCorrectionAdaptionInterval) insert the following two steps if it needs to calculate the current value of a Time Base as defined by [SWS_StbM_00355]:
+1. It shall first calculate a temporary Time Tuple [TLTemp; TVTemp] using the formula in [SWS_StbM_00355] with 
+TV = TVTemp = TVSync + StbMOffsetCorrectionAdaptionInterval
+r = rrc + roc (for Synchronized Time Bases)
+r = (rorc - 1) + roc (for Offset Time Bases)
+TLTemp shall be set to the resulting value TL
+2. Afterwards the Main Time Tuple [TGSync; TVSync] shall be set by an atomic operation to the values of the temporary Time Tuple [TVTemp; TVTemp].
+Then the calculation in [SWS_StbM_00355] shall be done by using the updated Main Time Tuple, the current value of the Virtual Local Time and r = rrc respective r = (rorc - 1).
+(RS_TS_00018)
+
+Note:
+It is possible for the StM to perform the first two steps (i.e., to update the Main Time Tuple) in its Main Function after expiration of StbMOffsetCorrectionAdaptionInterval without being requested to calculate the current time. However, since a request to calculate the current time might occur after expiration of StbMOffsetCOrrectionAdaptionInterval but before the next Main Function invocation, it is not possible to always decouple the first two from the last one.
+
+[SWS_StbM_00400]
+If StbMOffsetCorrectionJumpThreshold (ECUC_StbM_00056:) is set to 0, Offset Correction shall be perfomed by Jump Correction only.
+(RS_TS_00018)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

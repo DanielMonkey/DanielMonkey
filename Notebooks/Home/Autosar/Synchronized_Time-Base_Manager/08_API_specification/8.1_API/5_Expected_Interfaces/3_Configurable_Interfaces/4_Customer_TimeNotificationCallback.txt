@@ -1,0 +1,34 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2019-05-23T16:12:42+08:00
+
+====== 4 Customer TimeNotificationCallback ======
+Created Thursday 23 May 2019
+
+[SWS_StbM_00273]
+{{./pasted_image.png}}
+(RS_TS_00017, SRS_BSW_00457, SRS_BSW_00360, SRS_BSW_00333)
+
+[SWS_StbM_00274]
+The event notification callback function shall be set by the parameter StbMTimeNotificationCallback (ECUC_StbM_00064:)
+(RS_TS_00017)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

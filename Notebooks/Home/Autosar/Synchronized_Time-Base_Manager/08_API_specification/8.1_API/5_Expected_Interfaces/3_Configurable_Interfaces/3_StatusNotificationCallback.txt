@@ -1,0 +1,45 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2019-05-23T16:08:34+08:00
+
+====== 3 StatusNotificationCallback ======
+Created Thursday 23 May 2019
+
+[SWS_StbM_00285]
+{{./pasted_image.png}}
+(RS_TS_20001, RS_TS_00016, SRS_BSW_00457, SRS_BSW_00360, SRS_BSW_00333)
+
+[SWS_StbM_00299]
+The status notification callback function shall be set by the parameter StbMStatusNotificationCallback (ECUC_StbM_00046:)
+(RS_TS_00016)
+
+Note:
+The event notification callback might be called in interrupt context only, if there is no callback configured in StbM which belongs to a SW-C.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
