@@ -1,0 +1,10 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2019-06-03T17:48:47+08:00
+
+====== 03 ======
+Created Monday 03 June 2019
+
+The functions lt and rt make 90-degree turns by default, but you can provide a second argument that specifies the number of degrees. For example, lt(bob, 45) turns bob 45 degrees to the left.
+Make a copy of squre and change the name to polygon. Add another parameter named n and modify the body so it draws an n-sided regular polygon.
+Hint: The exterior angles of an n-sided regular polygon are 360/n degress.

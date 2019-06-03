@@ -1,0 +1,19 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2019-05-28T17:27:34+08:00
+
+====== 04 StbMNotificationInterface ======
+Created Tuesday 28 May 2019
+
+SWS Item				ECUC_StbM_00068:
+Name					StbMNotificationInterface
+Parent				StbMSynchronizedTimeBase
+Description			This parameter defines what type of interface shall be used to notify a customer of a status event.
+Type					EcucEnumerationParamDef
+Range					CALLBACK
+					   CALLBACK_AND_SR_INTERFACE
+					   NO_NOTIFICATION
+					   SR_INTERFACE
+scope:local
+
+

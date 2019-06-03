@@ -1,0 +1,17 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2019-05-28T17:42:38+08:00
+
+====== 01 TurtleWorld ======
+Created Tuesday 28 May 2019
+
+A package is a collection of modules; 
+
+If you downloaded the Swampy modules but did not install them as a package, you can either work in the directory that contains the Swampy files, or add that directory to Python's search path. Then you can import TurtleWorld like this:
+from TurtleWorld import *
+
+This means that bob refers to an instance of a Turtle as defined in module TurtleWorld. In this context, "instance" means a member of a set; this Turtle is one of the set of possible Turtles.
+
+TurtleWorld provides several turtle-steering functions: fd and bk for forward and backward, and lt and rt for left and right turns. Also, each Turtle is holding a pen, which is either down or up; if the pen is down, the Turtle leaves a trail when it moves. The functions pu and pd stand for "pen up" and "pen down".
+
+

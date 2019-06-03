@@ -1,0 +1,9 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2019-06-03T17:26:42+08:00
+
+====== 01 ======
+Created Monday 03 June 2019
+
+Write a function called square that takes a parameter named t, which is a turtle. It should be use the turtle to draw a square.
+Write a function call that passes bob as an argument to square, and then run the program again.

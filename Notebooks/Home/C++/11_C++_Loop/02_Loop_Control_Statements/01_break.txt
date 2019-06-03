@@ -2,7 +2,7 @@ Content-Type: text/x-zim-wiki
 Wiki-Format: zim 0.4
 Creation-Date: 2019-04-28T18:16:01+08:00
 
-====== 05 break ======
+====== 01 break ======
 Created Sunday 28 April 2019
 
 break语句		终止loop或switch语句，程序流将继续执行紧接着loop或switch的下一条语句。
@@ -18,4 +18,12 @@ break;
 
 流程图：
 {{./pasted_image.png}}
+
+
+
+
+
+
+
+
 

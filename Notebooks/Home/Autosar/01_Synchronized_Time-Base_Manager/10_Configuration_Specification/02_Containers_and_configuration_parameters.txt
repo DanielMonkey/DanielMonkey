@@ -1,0 +1,11 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2019-05-28T15:33:28+08:00
+
+====== 02 Containers and configuration parameters ======
+Created Tuesday 28 May 2019
+
+The module supports different post-build variants (previously known as post-build selectable configuration sets), but not post-build loadable configuration.
+
+The configuration tool must check the consistency of the configuration at configuration time.
+

@@ -1,0 +1,16 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2019-05-28T16:39:11+08:00
+
+====== 07 StbMGptTimerRef ======
+Created Tuesday 28 May 2019
+
+SWS Item			ECUC_StbM_00039:
+Name				StbMGptTimerRef
+Parent			StbMGeneral
+Description		This represents an optional sub-container in case any Time Notification Customer is configured.
+				The designated GPT timer has to be configured to have a tick duration of one micro second.
+Type				Symbolic name reference to [GptChannelConfiguration]
+scope:local
+
+

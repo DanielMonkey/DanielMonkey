@@ -1,0 +1,23 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2019-05-29T18:27:06+08:00
+
+====== 03 Nest if statement ======
+Created Wednesday 29 May 2019
+
+嵌套if语句			你可以在一个if或else if语句内使用另一个if或else if语句。
+
+在C++中，嵌套if-else语句是合法的，这意味着你可以在一个if或else if语句内使用另一个if或else if语句。
+
+语法
+C++中嵌套if语句的语法：
+if(boolean_expression 1)
+{
+	//当布尔表达式1为真时执行
+	if(boolean_expression 2)
+	{
+		//当布尔表达式2为真时执行
+	}
+}
+
+你可以嵌套else if ... else，方式与嵌套if语句类似。

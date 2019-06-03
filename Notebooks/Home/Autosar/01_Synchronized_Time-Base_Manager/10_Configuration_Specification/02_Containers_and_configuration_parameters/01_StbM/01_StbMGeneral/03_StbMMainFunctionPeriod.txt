@@ -1,0 +1,13 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2019-05-28T16:13:27+08:00
+
+====== 03 StbMMainFunctionPeriod ======
+Created Tuesday 28 May 2019
+
+SWS Item			ECUC_StbM_00027:
+Name				StbMMainFunctionPeriod
+Parent			StbMGeneral
+Description		Schedule period of the main function StbM_MainFunction. Unit: [s]
+Type				EcucFloatParamDef
+scope:local

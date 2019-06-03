@@ -1,0 +1,36 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2019-05-28T18:20:59+08:00
+
+====== 12 C++ Conditions ======
+Created Tuesday 28 May 2019
+
+判断结构要求程序员指定一个或多个要评估或测试的条件，以及条件为真时要执行的语句（必需的）和条件为假时要执行的语句（可选的）。
+
+下面是大多数编程语言中典型的判断结构的一般形式：
+{{./pasted_image.png}}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

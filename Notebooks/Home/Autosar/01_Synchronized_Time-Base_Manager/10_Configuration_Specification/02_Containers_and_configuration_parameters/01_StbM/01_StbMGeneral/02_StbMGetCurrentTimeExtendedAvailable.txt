@@ -1,0 +1,13 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2019-05-28T15:55:47+08:00
+
+====== 02 StbMGetCurrentTimeExtendedAvailable ======
+Created Tuesday 28 May 2019
+
+SWS Item			ECUC_StbM_00032:
+Name				StbMGetCurrentTimeExtendedAvailable
+Parent			StbMGeneral
+Description		This allows to define whether an additional variant of the the API GetCurrentTime with a 64 bit argument is provided.
+Type				EcucBooleanParamDef
+scope:local

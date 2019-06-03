@@ -1,0 +1,18 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2019-05-28T16:36:16+08:00
+
+====== 06 StbMVersionInfoApi ======
+Created Tuesday 28 May 2019
+
+SWS Item				ECUC_StbM_00013:
+Name					StbMVersionInfoApi
+Parent				StbMGeneral
+Description			Activate/Deactivate the version information API (StbM_GetVersionInfo).
+					* Ture:	version information API activated
+					* False: version information API deactivated
+Type					EcucBooleanParamDef
+scope:local
+
+
+

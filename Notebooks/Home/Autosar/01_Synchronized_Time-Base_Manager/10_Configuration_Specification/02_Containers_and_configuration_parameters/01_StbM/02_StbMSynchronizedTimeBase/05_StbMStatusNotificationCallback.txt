@@ -1,0 +1,14 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2019-05-28T17:31:23+08:00
+
+====== 05 StbMStatusNotificationCallback ======
+Created Tuesday 28 May 2019
+
+SWS Item				ECUC_StbM_00046:
+Name					StbMStatusNotificationCallback
+Parent				StbMSynchronizedTimeBase
+Description			Name of the customer specific status notification callback function, which shall be called, if a non-masked status event occurs.
+Type					EcucFunctionNameDef
+scope:local			dependency: StbMStatusNotificationCallback shall be available, if and only if StbMNotificationInterface is set to either CALLBACK or CALLBACK_AND_SR_INTERFACE.
+

@@ -1,0 +1,56 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2019-05-27T18:26:50+08:00
+
+====== 03 goto statements ======
+Created Monday 27 May 2019
+
+goto语句			将控制转移到被标记的语句。但是不建议在程序中使用goto语句。
+
+goto语句允许把控制无条件转移到同一函数内的被标记的语句。
+注意：
+在任何编程语言中，都不建议使用goto语句。因为它使得程序的控制流难以跟踪，使程序难以理解和难以修改。任何使用goto语句的程序都可以改写成不需要使用goto语句的写法。
+
+语法
+C++中goto语句的语法：
+goto label;
+...
+.
+label: statement;
+在这里，label是识别被标记语句的标识符，可以是任何除C++关键字以外的纯文本。标记语句可以是任何语句，放置在标识符和冒号(:)后边。
+
+流程图
+{{./pasted_image.png}}
+
+
+goto语句一个很好的作用是退出深嵌套例程。例如，请看下面的代码片段：
+for( ... ) {
+	for(...){
+		while(...){
+			if(...)	goto stop;
+			.
+			.
+			.
+		}
+	}
+}
+stop:
+cout << "Error in program.\n";
+
+消除goto会导致一些额外的测试被执行。一个简单的break语句在这里不会起到作用，因为它只会使程序退出最内层循环。
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -5,3 +5,4 @@ Creation-Date: 2019-05-24T17:44:27+08:00
 ====== 09 Sequence Diagrams ======
 Created Friday 24 May 2019
 
+The sequence diagrams show the basic operations of the Synchronized Time-Base Manager.

@@ -1,0 +1,10 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2019-05-28T17:03:57+08:00
+
+====== 02 StbMSynchronizedTimeBase ======
+Created Tuesday 28 May 2019
+
+SWS Item				ECUC_StbM_00003:
+Container Name		StbMSynchronizedTimeBase
+Description			Synchronized time.base collects the information about a specific time-base provider within the system.

@@ -1,0 +1,21 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2019-05-28T15:45:33+08:00
+
+====== 01 StbM ======
+Created Tuesday 28 May 2019
+
+SWS Item					ECUC_StbM_00065:
+Module Name			StbM
+Module Description		Configuration of the Synchronized Time-Base Manager (StbM) module.
+						VARIANT-PRE_COMPILE
+
+
+Container Name
+StbMGeneral							This container holds the general parameters of the Synchronized Time-base Manager
+StbMSynchronizedTimeBase		Synchronized time.base collects the information about specific time-base provider within the system.
+StbMTriggeredCustomer			The triggered customer is directly triggered by the Synchronized Time-base Manager by getting synchronized with the current (global) definition of time and 
+								passage of time.
+
+{{./pasted_image.png}}
+

@@ -1,0 +1,17 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2019-05-28T17:05:39+08:00
+
+====== 01 StbMAllowSystemWideGlobalTimeMaster ======
+Created Tuesday 28 May 2019
+
+SWS Item				ECUC_StbM_00066:
+Name					StbMAllowSystemWideGlobalTimeMaster
+Parent				StbMSynchronizedTimeBase
+Description			For postbuild variant of the StbM this parameter has to be set to true for a Global Time Master that may act as a system-wide source of time.
+					   Otherwise no corresponding service ports/interfaces is provided.
+					  The Global Time Master functionality behind the service ports/interfaces has to be enabled/disabled sparately via parameter StbMIsSystemWideGlobalTimeMaster.
+Type					EcucBooleanParamDef
+scope:local
+
+

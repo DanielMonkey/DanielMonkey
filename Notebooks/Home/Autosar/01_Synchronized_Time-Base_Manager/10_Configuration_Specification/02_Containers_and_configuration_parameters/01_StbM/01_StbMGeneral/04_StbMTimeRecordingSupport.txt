@@ -1,0 +1,13 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2019-05-28T16:17:35+08:00
+
+====== 04 StbMTimeRecordingSupport ======
+Created Tuesday 28 May 2019
+
+SWS Item			ECUC_StbM_00038:
+Name				StbMTimeRecordingSupport
+Parent			StbMGeneral
+Description		Enables/Disables the usage of the recording functionality for Synchronized and Offset timebases for Global Time precision measurement purpose.
+Type				EcucBooleanParamDef
+scope:local

@@ -1,0 +1,39 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2019-05-28T18:24:29+08:00
+
+====== 01 If Statement ======
+Created Tuesday 28 May 2019
+
+if语句				一个if语句由一个布尔表达式后跟一个或多个语句组成。
+
+语法
+C++中if语句的语法：
+if(boolean_expression)
+{
+	//如果布尔表达式为真将执行的语句
+}
+
+如果布尔表达式为true，则if语句内的代码块将被执行。
+如果布尔表达式为false，则if语句结束后的第一组代码（闭括号后）将被执行。
+C++语言把任何非零和非空的值假定为true，把零或null假定为false.
+
+流程图
+{{./pasted_image.png}}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

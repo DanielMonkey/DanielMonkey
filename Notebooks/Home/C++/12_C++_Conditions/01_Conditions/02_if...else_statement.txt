@@ -1,0 +1,116 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2019-05-28T18:33:28+08:00
+
+====== 02 if...else statement ======
+Created Tuesday 28 May 2019
+
+if ... else语句				一个if语句后可跟一个可选的else语句，else语句在布尔表达式为假时执行。
+
+语法
+C++中if ... else语句的语法：
+if(boolean_expression)
+{
+	//如果布尔表达式为真将执行的语句
+}
+else
+{
+	//如果布尔表达式为假将执行的语句
+}
+
+如果布尔表达式为true，则执行if块内的代码。
+如果不而表达式为false，则执行else块内的代码。
+
+流程图
+{{./pasted_image.png}}
+
+if ... else if ... else语句
+一个if语句后可跟一个可选的else if ... else语句，这可用于测试多种条件。
+当使用if .. else if ... else语句时，以下几点需要注意：
+* 一个if后可跟零个或一个else，else必须在所有的else if之后。
+* 一个if后可跟零个或多个else if，else if必须在else之前。
+* 一旦某个else if匹配成功，其他的else if或else将不会被测试。
+
+语法
+C++中的if ... else if ... else语句的语法：
+if(boolean_expression 1)
+{
+	//当布尔表达式1为真时执行
+}
+else if(boolean_expression 2)
+{
+	//当布尔表达式2为真时执行
+}
+else if(boolean_expression 3)
+{
+	//当布尔表达式3为真时执行
+}
+else
+{
+	//当上面条件都不为真时执行
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

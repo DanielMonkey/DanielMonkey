@@ -20,5 +20,5 @@ Or you can use the star operator to import everything from the module:
 The advantage of importing everything from the math module is that your code can be more concise.
 The disadvantage is that there might be conflicts between names defined in different modules, or between a name from a module and one of your variables.
 
-Make sure that the code you are looking at is the code you are running.
+
 

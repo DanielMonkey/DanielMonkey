@@ -1,0 +1,32 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2019-05-27T18:07:55+08:00
+
+====== 02 continue statement ======
+Created Monday 27 May 2019
+
+continue语句		引起循环跳过主体的剩余部分，立即重新开始测试条件。
+
+C++中的continue语句有点像break语句。但它不是强迫终止，continue会跳过当前循环中的代码，强迫开始下一次循环。
+对于for循环，continue语句会导致执行条件测试和循环增量部分。
+对于while和do ... while循环，continue语句会导致程序控制回到条件测试上。
+
+语法
+C++中continue语句的语法：
+continue;
+
+流程图
+{{./pasted_image.png}}
+
+
+
+
+
+
+
+
+
+
+
+
+

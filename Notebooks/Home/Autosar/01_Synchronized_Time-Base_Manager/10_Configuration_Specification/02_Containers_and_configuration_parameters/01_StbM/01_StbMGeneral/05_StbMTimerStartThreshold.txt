@@ -1,0 +1,14 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2019-05-28T16:20:41+08:00
+
+====== 05 StbMTimerStartThreshold ======
+Created Tuesday 28 May 2019
+
+SWS Item				ECUC_StbM_00063:
+Name					StbMTimerStartThreshold
+Parent				StbMGeneral
+Description			This interval defines, when a GPT Timer shall be started for Time Notification Customers for which the corresponding Customer Timer is running [uint: seconds]
+Type					EcucFloatParamDef
+scope:local
+

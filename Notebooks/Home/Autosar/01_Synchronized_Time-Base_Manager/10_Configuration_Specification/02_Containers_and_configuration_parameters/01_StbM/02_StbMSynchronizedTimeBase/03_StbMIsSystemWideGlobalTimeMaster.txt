@@ -1,0 +1,16 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2019-05-28T17:22:22+08:00
+
+====== 03 StbMIsSystemWideGlobalTimeMaster ======
+Created Tuesday 28 May 2019
+
+SWS Item				ECUC_StbM_00036:
+Name					StbMIsSystemWideGlobalTimeMaster
+Parent				StbMSynchronizedTimeBase
+Description			This parameter shall be set to ture for a Global Time Master that acts as a system-wide source of time information with respect to Global Time.
+					It is possible that several Global Time Masters exist that have set this parameter set to true because the Global Time Masters exist once per Global Time Domain and one ECU may own several Global Time Domains on different buses it is connected to.
+Type					EcucBooleanParamDef
+scope:local
+
+

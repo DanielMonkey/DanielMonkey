@@ -1,0 +1,17 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2019-05-28T17:17:47+08:00
+
+====== 02 StbMClearTimeleapCount ======
+Created Tuesday 28 May 2019
+
+SWS Item				ECUC_StbM_00037:
+Name					StbMClearTimeleapCount
+Parent				StbMSynchronizedTimeBase
+Description			This attribute describes the required number of updates to the Time Base where the time difference to the previous value has to remain below 
+					StbMTimeLeapPastThreshold/StbMTimeLeapFutureThreshold until the TIMELEAP_PAST/TIMELEAP_FUTURE bit within timeBaseStatus of the 
+					Time Base is cleared.
+Type					EcucIntegerParamDef
+scope:local
+
+
