@@ -1,0 +1,12 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2019-06-04T17:58:43+08:00
+
+====== 06 Interface design ======
+Created Tuesday 04 June 2019
+
+By convention, import statements are usually at the beginning of the script.
+
+The interface of a function is a summary of how it is used: what are the parameters? What does the function do? And what is the return value? 
+An interface is "clean" if it is "as simple as possible, but not simpler. (Einstein)"
+

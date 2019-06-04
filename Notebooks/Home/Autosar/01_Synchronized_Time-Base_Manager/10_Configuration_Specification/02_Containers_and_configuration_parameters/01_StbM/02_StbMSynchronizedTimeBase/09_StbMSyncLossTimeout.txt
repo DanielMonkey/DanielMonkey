@@ -1,0 +1,13 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2019-06-04T16:15:26+08:00
+
+====== 09 StbMSyncLossTimeout ======
+Created Tuesday 04 June 2019
+
+SWS Item					ECUC_StbM_00028:
+Name						StbMSyncLossTimeout
+Parent					StbMSynchronizedTimeBase
+Description				This attribute describes the timeout for the situation that the time synchronization gets lost in the scope of the time domain. Units: seconds
+Type						EcucFloatParamDef
+scope:local

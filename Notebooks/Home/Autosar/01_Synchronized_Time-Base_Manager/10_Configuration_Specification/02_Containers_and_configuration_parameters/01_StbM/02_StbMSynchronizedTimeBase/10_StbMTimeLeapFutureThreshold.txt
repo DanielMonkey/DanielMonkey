@@ -1,0 +1,13 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2019-06-04T16:38:18+08:00
+
+====== 10 StbMTimeLeapFutureThreshold ======
+Created Tuesday 04 June 2019
+
+SWS Item					ECUC_StbM_00041:
+Name						StbMTimeLeapFutureThreshold
+Parent					StbMSynchronizedTimeBase
+Description				This represents the maximum allowed positive difference between a newly received Global Time Base value and the current Local Time Base value [unit: seconds].
+Type						EcucFloatParamDef
+scope:local

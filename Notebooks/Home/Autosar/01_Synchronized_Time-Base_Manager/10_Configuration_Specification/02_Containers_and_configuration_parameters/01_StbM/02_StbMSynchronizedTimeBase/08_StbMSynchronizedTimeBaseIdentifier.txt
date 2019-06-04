@@ -1,0 +1,21 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2019-06-04T16:11:41+08:00
+
+====== 08 StbMSynchronizedTimeBaseIdentifier ======
+Created Tuesday 04 June 2019
+
+SWS Item					ECUC_StbM_00021:
+Name						StbMSynchronizedTimeBaseIdentifier
+Parent					StbMSynchronizedTimeBase
+Description				Identification of a Synchronized TimeBase via a unique identifier.
+						 Range:
+					* 0 ... 15: Synchronized Time Bases
+					* 16 ... 31: Offset Time Bases
+					* 32 ... 127: Pure Local Time Bases
+					* 128 ... 65535: Reserved
+Type						EcucIntegerParamDef (Symbolic Name generated for this parameter)
+scope:local
+
+     
+

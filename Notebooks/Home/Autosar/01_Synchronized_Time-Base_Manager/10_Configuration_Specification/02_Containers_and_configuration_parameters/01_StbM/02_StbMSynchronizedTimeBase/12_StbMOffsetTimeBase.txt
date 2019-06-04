@@ -1,0 +1,14 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2019-06-04T16:43:36+08:00
+
+====== 12 StbMOffsetTimeBase ======
+Created Tuesday 04 June 2019
+
+SWS Item					ECUC_StbM_00030:
+Name						StbMOffsetTimeBase
+Parent					StbMSynchronizedTimeBase
+Description				This is the reference to the Synchronized Time-Base this Offset Time-Base is based on. This referenece makes the containing StbMSynchronizatedTimeBase an Offset Time-Base.
+Type						Reference to [StbMSynchronizedTimeBase]
+scope:local
+

@@ -6,3 +6,9 @@ Creation-Date: 2019-05-28T17:35:40+08:00
 Created Tuesday 28 May 2019
 
 SWS Item				ECUC_StbM_00045:
+Name					StbMStatusNotificationMask
+Parent				StbMSynchronizedTimeBase
+Description			The parameter defines the initial value for NotificationMask mask, which defines the events for which the event notification callback function shall be called.
+Type					EcucIntegerParamDef
+scope:local
+

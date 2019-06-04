@@ -1,0 +1,13 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2019-06-04T17:18:05+08:00
+
+====== 04 ======
+Created Tuesday 04 June 2019
+
+Write a function called circle that takes a turtle, t, and radius, r, as parameters and that draws an approximate circle by invoking polygon with an appropriate length and number of sides. Test your function with a range of values of r.
+
+Hint: figure out the circumference of the circle and make sure that length * n = circumference.
+
+Another hint: if bob is too slow for you, you can speed him up by changing bob.delay, which is the time between moves, in seconds. bob.delay = 0.01 ought to get him moving.
+

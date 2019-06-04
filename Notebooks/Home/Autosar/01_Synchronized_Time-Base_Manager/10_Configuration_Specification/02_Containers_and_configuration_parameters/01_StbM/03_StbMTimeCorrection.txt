@@ -1,0 +1,10 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2019-06-04T17:11:58+08:00
+
+====== 03 StbMTimeCorrection ======
+Created Tuesday 04 June 2019
+
+SWS Item					ECUC_StbM_00048:
+Container Name			StbMTimeCorrection
+Description				Collects the information relevant for the rate- and offset correction of a Time Base.

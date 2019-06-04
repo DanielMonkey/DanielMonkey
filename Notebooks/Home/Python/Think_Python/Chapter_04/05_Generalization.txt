@@ -1,0 +1,14 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2019-06-04T17:53:52+08:00
+
+====== 05 Generalization ======
+Created Tuesday 04 June 2019
+
+Adding a parameter to a function is called generalization because it makes the function more general.
+
+If you have more than a few numeric arguments, it is easy to forget what they are, or what order they should be in. 
+It is legal, and sometimes helpful, to include the names of the parameters in the argument list.
+These are called keyword arguments because they include the parameter names as "key-words" (not to be confused with Python keywords like while and def).
+
+This syntax makes the program more readable. It is also a reminder about how arguments and parameters work: when you call a function, the arguments are assigned to the parameters.

@@ -1,0 +1,13 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2019-06-04T16:40:59+08:00
+
+====== 11 StbMTimeLeapPastThreshold ======
+Created Tuesday 04 June 2019
+
+SWS Item					ECUC_StbM_00042:
+Name						StbMTimeLeapPastThreshold
+Parent					StbMSynchronizedTimeBase
+Description				This represents the maximum allowed negative difference between the current Local Time Base value and a newly received Global Time Base value [unit: seconds].
+Type						EcucFloatParamDef
+scope:local

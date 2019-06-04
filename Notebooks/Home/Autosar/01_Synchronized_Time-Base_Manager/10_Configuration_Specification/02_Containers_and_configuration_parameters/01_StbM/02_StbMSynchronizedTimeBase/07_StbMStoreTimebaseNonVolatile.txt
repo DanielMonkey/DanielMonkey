@@ -1,0 +1,17 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2019-06-04T16:08:22+08:00
+
+====== 07 StbMStoreTimebaseNonVolatile ======
+Created Tuesday 04 June 2019
+
+SWS Item					ECUC_StbM_00031:
+Name						StbMStoreTimebaseNonVolatile
+Parent					StbMSynchronizedTimeBase
+Description				This allows for specifying that the Time Base shall be stored in the NvRam.
+Type						EcucEnumerationParamDef
+Range						NO_STORAGE
+						 STORAGE_AT_SHUTDOWN
+scope:local
+
+

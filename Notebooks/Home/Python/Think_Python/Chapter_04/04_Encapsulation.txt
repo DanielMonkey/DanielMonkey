@@ -1,0 +1,10 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2019-06-04T17:49:04+08:00
+
+====== 04 Encapsulation ======
+Created Tuesday 04 June 2019
+
+Wrapping a piece of code up in a function is called encapsulation. 
+One of the benefits of encapsulation is that it attaches a name to the code, which serves as a kind of documentation. 
+Another advantage is that if you re-use the code, it is more concise to call a function twice than to copy and paste the body!

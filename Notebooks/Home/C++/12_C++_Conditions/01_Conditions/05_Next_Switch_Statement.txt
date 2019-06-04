@@ -1,0 +1,27 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2019-06-03T18:37:37+08:00
+
+====== 05 Next Switch Statement ======
+Created Monday 03 June 2019
+
+嵌套switch语句			你可以在一个switch语句内使用另一个switch语句
+
+即可以在一个switch语句内使用另一个switch语句。即使内部和外部switch的case常量包含共同的值，也没有矛盾。
+C++中的switch语句允许最多256个嵌套层次。
+
+语法
+C++中嵌套switch语句的语法：
+switch(ch1){
+	case 'A':
+		cout << “这个A是外部switch的一部分” <<endl;
+		switch(ch2){
+			case 'A':
+				cout <<"这个A是内部switch的一部分" <<endl;
+				break;
+			case 'B':	//内部B case代码
+		}
+		break;
+	case 'B':	//外部B case代码
+}
+
