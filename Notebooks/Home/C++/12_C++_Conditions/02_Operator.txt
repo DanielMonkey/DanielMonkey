@@ -1,0 +1,13 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2019-06-04T18:18:44+08:00
+
+====== 02 Operator ======
+Created Tuesday 04 June 2019
+
+? : 运算符
+条件运算符? :，可以用来替代if ... else语句。它的一般形式如下：
+Exp1 ? Exp2 : Exp3;
+其中，Exp1、Exp2和Exp3是表达式。请注意，冒号的使用和位置。
+?表达式的值是由Exp1决定的。如果Exp1为真，则计算Exp2的值，结果即为整个? : 表达式的值。
+如果Exp1为假，则计算Exp3的值，结果即为整个? : 表达式的值。

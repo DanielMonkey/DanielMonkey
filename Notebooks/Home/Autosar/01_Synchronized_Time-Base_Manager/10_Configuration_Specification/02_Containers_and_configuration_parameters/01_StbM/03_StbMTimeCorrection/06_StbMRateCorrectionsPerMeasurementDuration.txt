@@ -1,0 +1,13 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2019-06-05T15:42:41+08:00
+
+====== 06 StbMRateCorrectionsPerMeasurementDuration ======
+Created Wednesday 05 June 2019
+
+SWS Item					ECUC_StbM_00055:
+Name						StbMRateCorrectionsPerMeasurementDuration
+Parent					StbMTimeCorrection
+Description				Number of simultaneous rate measurements to determine the current rate deviation.
+Type						EcucIntegerParamDef
+scope:local

@@ -1,0 +1,10 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2019-06-05T15:47:04+08:00
+
+====== 04 StbMLocalTimeClock ======
+Created Wednesday 05 June 2019
+
+SWS Item					ECUC_StbM_00047:
+Container Name			StbMLocalTimeClock
+Description				References the hardware reference clock of this Synchronized Time Base.

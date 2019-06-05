@@ -1,0 +1,11 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2019-06-05T16:51:34+08:00
+
+====== 07 Refactoring ======
+Created Wednesday 05 June 2019
+
+This process - rearranging a program to improve function interfaces and facilitate code reuse - is called refactoring.
+
+If we had planned ahead, we might have written polyline first and avoided refactoring, but often you don'e konw enough at the beginning of a project to design all the interfaces.
+Once you start coding, you understand the problem better. Sometimes refactoring is a sign that you have learned something.

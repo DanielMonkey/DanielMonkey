@@ -1,0 +1,10 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2019-06-05T16:20:55+08:00
+
+====== 06 StbMNotificationCustomer ======
+Created Wednesday 05 June 2019
+
+SWS Item					ECUC_StbM_00050:
+Container Name			StbMNotificationCustomer
+Description				This container holds the configuration of a notification customer, which is notified is informed about the occurance of a Time-base related event.

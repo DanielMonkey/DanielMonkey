@@ -1,0 +1,17 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2019-06-05T17:22:06+08:00
+
+====== 09 docstring ======
+Created Wednesday 05 June 2019
+
+A docstring is a string at the beginning of a function that explains the interface ("doc" is short for "documentation").
+
+This docstring is a triple-quoted string, also known as multiline string because the triple quotes allow the string to span more then one line.
+It is terse, but it contains the essential information someone would need to use this function. 
+It explains concisely what the function does (without getting into the details of how it does it).
+It explains what effect each parameter has on the behavior of the function and what type each parameter should be (if it is not obvious).
+
+Writing this kind of documentation is an important part of interface dsign.
+A well-designed interface should be simple to explain; if you are having a hard time explaining one of your functions, that might be a sign that the interface could be improved.
+

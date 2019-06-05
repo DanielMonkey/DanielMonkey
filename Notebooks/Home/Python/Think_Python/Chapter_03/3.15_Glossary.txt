@@ -5,3 +5,7 @@ Creation-Date: 2019-05-28T17:41:21+08:00
 ====== 3.15 Glossary ======
 Created Tuesday 28 May 2019
 
+function: A named sequence of statements that performs some useful operation. Functions may or may not take arguments and may or may not produce a result.
+
+function definition: A statement that creates a new function, specifying its name, parameters, and the statements it executes.
+

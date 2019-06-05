@@ -1,0 +1,13 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2019-06-05T16:13:09+08:00
+
+====== 02 StbMOffsetTimeRecordTableBlockCount ======
+Created Wednesday 05 June 2019
+
+SWS Item					ECUC_StbM_00059:
+Name						StbMOffsetTimeRecordTableBlockCount
+Parent					StbMTimeRecording
+Description				Represents the number of Blocks used for queing time measurement events for the Offset Time Base Record Table.
+Type						EcucIntegerParamDef
+scope:local

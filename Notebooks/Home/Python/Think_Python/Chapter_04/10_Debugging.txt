@@ -1,0 +1,16 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2019-06-05T17:34:56+08:00
+
+====== 10 Debugging ======
+Created Wednesday 05 June 2019
+
+An interface is like a contract between a function and a caller.
+The caller agrees to provide certain parameters and the function agrees to do certain work.
+
+These requirements are called preconditions because they are supposed to be true before the function starts executing. 
+Conversely, conditions at the end of the function are postconditions. 
+Postconditions include the intended effect of the function (like drawing line segments) and any side effects (like moving the Turtle or making other changes in the World).
+
+Preconditions are the responsibility of the caller.
+If the caller violates a (properly documented!) precondition and the function does't work correctly, the bug is in the caller, not the function.

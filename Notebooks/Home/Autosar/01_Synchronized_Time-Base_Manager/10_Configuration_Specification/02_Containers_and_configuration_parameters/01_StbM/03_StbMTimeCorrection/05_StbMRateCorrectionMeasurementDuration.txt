@@ -1,0 +1,13 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2019-06-05T15:38:36+08:00
+
+====== 05 StbMRateCorrectionMeasurementDuration ======
+Created Wednesday 05 June 2019
+
+SWS Item					ECUC_StbM_00054:
+Name						StbMRateCorrectionMeasurementDuration
+Parent					StbMTimeCorrection
+Description				Definition of the time span[s] which is used to calculate the rate deviation.
+Type						EcucFloatParamDef
+scope:local

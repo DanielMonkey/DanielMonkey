@@ -1,0 +1,7 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2019-06-05T17:40:20+08:00
+
+====== 12 Exercies ======
+Created Wednesday 05 June 2019
+

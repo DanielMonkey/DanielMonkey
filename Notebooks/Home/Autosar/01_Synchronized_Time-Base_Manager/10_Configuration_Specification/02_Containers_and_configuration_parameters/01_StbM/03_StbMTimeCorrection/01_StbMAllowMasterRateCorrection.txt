@@ -1,0 +1,19 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2019-06-05T15:24:36+08:00
+
+====== 01 StbMAllowMasterRateCorrection ======
+Created Wednesday 05 June 2019
+
+SWS Item					ECUC_StbM_00043:
+Name						StbMAllowMasterRateCorrection
+Parent					StbMTimeCorrection
+Description				This attribute describes whether the rate correction value of a Time Base can be set by StbM_SetRateCorrection:
+					* false: the rate correction value can not be set by StbM_SetRateCorrection()
+					* true: the rate correction value can be set by StbM_SetRateCorrection()
+Type						EcucBooleanParamDef
+scope:local
+
+
+
+

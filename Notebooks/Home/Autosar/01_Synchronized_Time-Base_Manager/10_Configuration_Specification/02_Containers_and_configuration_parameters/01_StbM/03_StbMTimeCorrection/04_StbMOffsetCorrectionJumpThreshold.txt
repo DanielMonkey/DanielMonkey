@@ -1,0 +1,13 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2019-06-05T15:35:08+08:00
+
+====== 04 StbMOffsetCorrectionJumpThreshold ======
+Created Wednesday 05 June 2019
+
+SWS Item					ECUC_StbM_00056:
+Name						StbMOffsetCorrectionJumpThreshold
+Parent					StbMTimeCorrection
+Description				Threshold for the correction method. Deviations below this value will be corrected by a linear reduction over a defined timespan. Values equal- and greater than this value will be corrected by immediately setting the correct time- and rate in form of a jump [unit: seconds].
+Type						EcucFloatParamDef
+scope:local

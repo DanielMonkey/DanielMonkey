@@ -1,0 +1,13 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2019-06-05T16:15:51+08:00
+
+====== 03 StbMSyncTimeRecordBlockCallback ======
+Created Wednesday 05 June 2019
+
+SWS Item					ECUC_StbM_00060:
+Name						StbMSyncTimeRecordBlockCallback
+Parent					StbMTimeRecording
+Description				Name of the customer specific callback function, which shall be called, if a measurement data for a Synchronized Time Base are available.
+Type						EcucFunctionNameDef
+scope:local

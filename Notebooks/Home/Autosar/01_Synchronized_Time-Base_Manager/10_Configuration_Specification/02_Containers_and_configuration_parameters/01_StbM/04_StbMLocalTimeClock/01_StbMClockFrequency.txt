@@ -1,0 +1,13 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2019-06-05T15:48:31+08:00
+
+====== 01 StbMClockFrequency ======
+Created Wednesday 05 June 2019
+
+SWS Item					ECUC_StbM_00051:
+Name						StbMClockFrequency
+Parent					StbMLocalTimeClock
+Description				Represents the frequency [Hz] of the HW reference clock used by the StbM.
+Type						EcucIntegerParamDef
+scope:local

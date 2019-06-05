@@ -1,0 +1,8 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2019-06-05T17:39:26+08:00
+
+====== 11 Glossary ======
+Created Wednesday 05 June 2019
+
+instance:	A member of a set. The TurtleWorld in this chapter is a member of the set of TurtleWorlds.

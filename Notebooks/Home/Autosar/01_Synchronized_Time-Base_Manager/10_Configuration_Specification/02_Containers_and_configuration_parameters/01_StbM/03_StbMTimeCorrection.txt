@@ -8,3 +8,5 @@ Created Tuesday 04 June 2019
 SWS Item					ECUC_StbM_00048:
 Container Name			StbMTimeCorrection
 Description				Collects the information relevant for the rate- and offset correction of a Time Base.
+Type						EcucFloatParamDef
+scope:local

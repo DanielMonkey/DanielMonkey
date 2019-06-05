@@ -1,0 +1,13 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2019-06-05T16:03:04+08:00
+
+====== 02 StbMClockPrescaler ======
+Created Wednesday 05 June 2019
+
+SWS Item					ECUC_StbM_00052:
+Name						StbMClockPrescaler
+Parent					StbMLocalTimeClock
+Description				Represents the prescaler to calculate the resulting frequency of the HW reference clock used by the StbM.
+Type						EcucIntegerParamDef
+scope:local

@@ -1,0 +1,13 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2019-06-05T16:05:22+08:00
+
+====== 03 StbMLocalTimeHardware ======
+Created Wednesday 05 June 2019
+
+SWS Item					ECUC_StbM_00053:
+Name						StbMLocalTimeHardware
+Parent					StbMLocalTimeClock
+Description				Reference to the local time hardware
+Type						Choice reference to [EthTSynGlobalTimeDomain, GptChannelConfiguration, OsCounter]
+scope:local
