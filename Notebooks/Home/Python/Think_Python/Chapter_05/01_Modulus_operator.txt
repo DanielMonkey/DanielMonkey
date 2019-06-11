@@ -1,0 +1,10 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2019-06-10T16:55:30+08:00
+
+====== 01 Modulus operator ======
+Created Monday 10 June 2019
+
+The modulus operator works on integers and yields the remainder when the first operand is divided by the second. 
+In Python, the modulus operator is a percent sign (%).
+

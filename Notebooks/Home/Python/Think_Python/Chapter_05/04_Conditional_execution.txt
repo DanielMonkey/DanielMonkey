@@ -1,0 +1,23 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2019-06-10T17:43:18+08:00
+
+====== 04 Conditional execution ======
+Created Monday 10 June 2019
+
+In order to write useful programs, we almost always need the ability to check conditions and change the behavior of the program accordingly.
+Conditional satements give us this ability.
+The simplest form is the if statement.
+
+The boolean expresion after if is called condition. If it is true, then the indented statement gets executed. If not, nothing happens.
+
+if statements have the same structure as function definitions: a header followed by an indented body. Statements like this are called compound statements.
+
+There is no limit on the number of statements that can appear in the body, but there has to be at least one.
+Occasionally, it is useful to have a body with no statements (usually as a place keeper for code you haven't written yet). In that case, you can use the pass statement, which does nothing.
+
+if x < 0:
+	pass			# need to handle negative values!
+
+
+

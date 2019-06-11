@@ -1,0 +1,16 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2019-06-06T09:44:35+08:00
+
+====== NVCAN ======
+Created Thursday 06 June 2019
+
+cat Testlog_T2.txt | grep "CAN ID" | awk '{print $6":"$8}' | sort | uniq -c
+
+./nvcan_gen -d can1 -f 0 -id 500 -data DEADBEEFDEADBEEF -n 64 -tint 20 -total 640000
+
+./nvcan_dump -d can0 -v -f Testlog_T1.txt -t 600000
+
+
+1min = 60s = 60000
+5 * 60000 = 300000

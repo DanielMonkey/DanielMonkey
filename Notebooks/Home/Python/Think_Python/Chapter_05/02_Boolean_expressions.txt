@@ -1,0 +1,25 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2019-06-10T17:24:57+08:00
+
+====== 02 Boolean expressions ======
+Created Monday 10 June 2019
+
+A boolean expression is an expression that is either true or false. 
+
+True and False are special values that belong to the type bool; they are not strings.
+
+The == operator is one of the relational operators; the others are:
+	x != y		# x is not equal to y
+	x > y		# x is greater than y
+	x < y		# x is less than y
+	x >= y		# x is greater or equal to y
+	x <= y		# x is less than or equal to y
+
+Although these operations are probably familiar to you, the Python symbols are different from the mathematical symbols.
+A common error is to use a single equal sign (=) instead of a double euqal sign (==).
+Remember that = is an assignment operator and == is a relational operator.
+There is no such thing as =< or =>.
+
+
+

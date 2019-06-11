@@ -1,0 +1,12 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2019-06-10T17:48:45+08:00
+
+====== 05 Alternative execution ======
+Created Monday 10 June 2019
+
+A second form of the if statement is alternative execution, in which there are two possibilities and the condition determines which one gets executed.
+
+Since the condition must be true or false, exactly one of the alternatives will be executed.
+The alternatives are called branches, because they are branches in the flow of execution.
+
