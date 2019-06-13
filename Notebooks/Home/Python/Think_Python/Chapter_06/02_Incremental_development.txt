@@ -1,0 +1,12 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2019-06-12T17:46:52+08:00
+
+====== 02 Incremental development ======
+Created Wednesday 12 June 2019
+
+As you write larger functions, you might find yourself spending more time debugging.
+
+To deal with increasingly complex programs, you might want to try a process called incremental development. 
+The goal of incremental development is to avoid long debugging sessions by adding and testing only a small amount of code at a time.
+

@@ -1,0 +1,12 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2019-06-11T17:20:12+08:00
+
+====== 09 Stack diagrams for recursive functions ======
+Created Tuesday 11 June 2019
+
+Every time a function gets called, Python creates a new function frame, which contains the function's local variables and parameters.
+For a recursive function, there might be more than one frame on the stack at the same time.
+
+The bottom of the stack is called the base case. It does not make a recursive call, so there is no more frames.
+

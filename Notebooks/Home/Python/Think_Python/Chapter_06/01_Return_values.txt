@@ -1,0 +1,27 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2019-06-12T17:32:54+08:00
+
+====== 01 Return values ======
+Created Wednesday 12 June 2019
+
+Some of the built-in functions we have used, such as the math functions, produce results. 
+Calling the function generates a value, which we usually assing to a variable or use as part of an expression.
+
+We have seen the return statement before, but in a fruitful function the return statement includes an expression.
+This statement means:"Return immediately from this function and use the following expression as a return value."
+The expression can be arbitrarily complicated.
+
+On the other hand, temporary variables like temp often make debugging easier.
+
+Sometimes it is useful to have multiple return statements, one in each branch of a conditional.
+
+Since these return statements are in an alternative conditional, only one will be executed.
+
+As soon as a return statement executes, the function terminates without executing any subsequent statements.
+Code that appears after a return statement, or any other place the flow of execution can never reach, is called dead code.
+
+In a fruitful function, it is a good idea to ensure that every possible path through the program hits a return statement.
+
+If a flow of execution gets to the end of a function, the return value is None, which is not the absolute value of 0.
+

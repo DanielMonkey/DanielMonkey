@@ -1,0 +1,45 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2019-06-12T18:27:07+08:00
+
+====== 06 Lambda function and expression ======
+Created Wednesday 12 June 2019
+
+C++11提供了对匿名函数的支持，称为Lambda函数（也叫Lambda表达式）。
+Lambda表达式把函数看作对象。Lambda表达式可以像对象一样使用，比如可以将它们赋给变量和作为参数传递，还可以像函数一样对其求值。
+Lambda表达式本质上与函数声明非常类似。
+
+Lambda表达式具体形式如下：
+[capture](parameters)->return-type{body}
+
+如果没有返回值可以表示为：
+[capture](parameters){body}
+
+如果Lambda函数没有传回值（例如void），其返回类型可被完全忽略。
+在Lambda表达式内可以访问当前作用域的变量，这是Lambda表达式的闭包（Closure）行为。
+与JavaScript闭包不同，C++变量传递有传值和传引用的区别。可以通过前面的[]来指定：
+[ ] //没有定义任何变量。使用未定义变量会引发错误。
+[x, &y]			//x以传值方式传入（默认），y以引用方式传入
+[&]				//任何被使用到的外部变量都隐式地以引用方式加以引用。
+[=]				//任何被使用到的外部变量都隐式地以传值方式加以引用。
+[&, x]			//x显式地以传值方式加以引用。其余变量以引用方式加以引用。
+[=, &z]			//z显式地以引用方式加以引用。其余变量以传值方式加以引用。
+
+另外有一点需要注意。对于[=]或[&]的形式，Lambda表达式可以直接使用this指针。
+如果要使用this指针，必须显式传入：
+[this](){this->someFunc();}();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,22 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2019-06-11T17:54:46+08:00
+
+====== 12 Debugging ======
+Created Tuesday 11 June 2019
+
+The traceback Python displays when an error occurs contains a lot of information, but it can be overwhelming, especially when there are many frames on the stack.
+The most useful parts are usually:
+* What kind of error it was, and
+* Where it occurred
+
+Syntax errors are usually easy to find, but there are a few gotches. 
+Whitespace errors can be trickly because spaces and tabs are invisible and we are used to ignoring them.
+
+In general, error messages indicate where the problem was discovered, but the actual error might be earlier in the code, sometimes on a previous line.
+
+The same is true of runtime errors.
+
+In general, error messages tell you where the problem was discovered, but that is often not where it was caused.
+
+

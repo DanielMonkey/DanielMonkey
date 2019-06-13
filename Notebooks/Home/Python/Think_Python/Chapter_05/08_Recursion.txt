@@ -1,0 +1,12 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2019-06-11T17:15:59+08:00
+
+====== 08 Recursion ======
+Created Tuesday 11 June 2019
+
+It is legal for one function to call another; it also legal for a function to call itself.
+It may not be obvious why that is a good thing, but it turns out to be one of the most magical things a program can do.
+
+A function that calls itself is recursive; the process is called recursion.
+

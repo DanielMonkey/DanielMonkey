@@ -1,0 +1,14 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2019-06-11T17:10:54+08:00
+
+====== 07 Nested conditionals ======
+Created Tuesday 11 June 2019
+
+One conditional can also be nested within another.
+
+Although the indentation of the statements makes the structure apparent, nested conditionals become difficult to read very quickly.
+In general, it is a good idea to avoid them when you can.
+
+Logical operators often provide a way to simplify nested conditional statements.
+

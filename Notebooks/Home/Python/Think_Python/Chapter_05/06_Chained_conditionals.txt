@@ -5,3 +5,14 @@ Creation-Date: 2019-06-10T17:56:41+08:00
 ====== 06 Chained conditionals ======
 Created Monday 10 June 2019
 
+Sometimes there are more than two possibilities and we need more than two branches. 
+One way to express a computation like that is a chained conditional.
+
+elif is an abbreviation of "else if".
+There is no limit on the number of elif statements.
+If there is an else clause, it has to be at the end, but there doesn't have to be one.
+
+Each condition is checked in order. If the first is false, the next is checked, and so on.
+If one of them is true, the corresponding branch executes, and the statement ends. 
+Even if more than one condition is true, only the first true branch executes.
+

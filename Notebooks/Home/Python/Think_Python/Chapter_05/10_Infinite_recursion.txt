@@ -1,0 +1,14 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2019-06-11T17:23:18+08:00
+
+====== 10 Infinite recursion ======
+Created Tuesday 11 June 2019
+
+If a recursion never reaches a base case, it goes on making recursive calls forever, and the program never terminates.
+This is known as infinite recursion, and it is generally not a good idea.
+
+In most programming environments, a program with infinite recursion does not really run forever. 
+Python reports an error message when the maximum recursion depth is reached.
+When the error occurs, there are 1000 recurse frames on the stack!
+
