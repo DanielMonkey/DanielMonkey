@@ -1,0 +1,11 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2019-06-18T17:56:00+08:00
+
+====== 06 Leap of faith ======
+Created Tuesday 18 June 2019
+
+Following the flow of execution is one way to read programs, but it can quickly become labyrinthine.
+An alternative is what I call the "leap of faith". 
+When you come to a function call, instead of following the flow of execution, you assume that the function works correctly and return the right result.
+

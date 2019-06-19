@@ -1,0 +1,13 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2019-06-18T17:43:30+08:00
+
+====== 04 Boolean functions ======
+Created Tuesday 18 June 2019
+
+Functions can return booleans, which is often convenient for hiding complicated tests inside functions.
+
+It is common to give boolean functions names that sound like yes/no questions.
+
+Boolean functions are often used in conditional statements.
+

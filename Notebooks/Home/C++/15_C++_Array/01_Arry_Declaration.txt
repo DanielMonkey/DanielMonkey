@@ -1,0 +1,11 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2019-06-18T18:13:36+08:00
+
+====== 01 Arry Declaration ======
+Created Tuesday 18 June 2019
+
+在C++中要声明一个数组，需要指定元素的类型和元素的数量。
+type arrayName[arraySize];
+这叫做一维数组。arraySize必须是一个大于零的整数常量，type可以是任意有效的C++数据类型。
+

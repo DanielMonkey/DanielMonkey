@@ -1,0 +1,9 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2019-06-17T17:41:38+08:00
+
+====== 03 Composition ======
+Created Monday 17 June 2019
+
+As you should expect by now, you can call one function from within another. This ability is called composition.
+

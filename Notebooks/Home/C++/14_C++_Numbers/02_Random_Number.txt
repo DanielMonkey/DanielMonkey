@@ -1,0 +1,10 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2019-06-17T18:42:12+08:00
+
+====== 02 Random Number ======
+Created Monday 17 June 2019
+
+在许多情况下，需要生成随机数。关于随机数生成器，有两个相关的函数。
+一个是rand()，该函数只返回一个伪随机数。生成随机数之前必须先调用srand()函数。
+

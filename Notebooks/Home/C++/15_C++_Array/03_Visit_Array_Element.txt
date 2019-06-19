@@ -1,0 +1,8 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2019-06-18T18:19:34+08:00
+
+====== 03 Visit Array Element ======
+Created Tuesday 18 June 2019
+
+数组元素可以通过数组名称加索引进行访问。元素的索引是放在方括号内，跟在数组名称的后边。

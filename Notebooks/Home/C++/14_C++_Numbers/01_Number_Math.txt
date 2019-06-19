@@ -1,0 +1,26 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2019-06-17T18:24:20+08:00
+
+====== 01 Number Math ======
+Created Monday 17 June 2019
+
+在C++中，除了可以创建各种函数，还包含了各种有用的函数供您使用。
+这些函数写在标准C和C++库中，叫做内置函数。
+你可以在程序中引用这些函数。
+C++内置了丰富的数字函数，可对各种数字进行运算。下表列出了C++中一些有用的内置的数字函数。
+为了利用这些函数，你需要引用数字头文件<cmath>。
+
+double cos(double);			该函数返回弧度角(double型)的余弦。
+double sin(double);			该函数返回弧度角(double型)的正弦。
+double tan(double);			该函数返回弧度角(double型)的正切。
+double log(double);			该函数返回参数的自然对数。
+double pow(double, double);		假设第一个参数为x，第二个参数为y，则该函数返回x的y次方。
+double hypot(double, double);		该函数返回两个参数的平方总和的平方根，也就是说，参数为一个直角三角形的两个直角边，函数会返回斜边的长度。
+double sqrt(double);					该函数返回参数的平方根。
+int abs(int);							该函数返回整数的绝对值。
+double fabs(double);				该函数返回任意一个浮点数的绝对值。
+double floor(double);				该函数返回一个小于或者等于传入参数的最大整数。
+
+
+

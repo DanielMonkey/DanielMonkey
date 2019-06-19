@@ -10,3 +10,15 @@ As you write larger functions, you might find yourself spending more time debugg
 To deal with increasingly complex programs, you might want to try a process called incremental development. 
 The goal of incremental development is to avoid long debugging sessions by adding and testing only a small amount of code at a time.
 
+The print statements we wrote are useful for debugging, but once you get the function working, you should remove them.
+Code like that is called scaffolding because it is helpful for building the program but is not part of the final product.
+
+When you start out, you should add only a line or two of code at at time. As you gain more experience, you might find yourself writing and debugging bigger chunks.
+Either way, incremental development can save you a lot of debugging time.
+
+The key aspects of the process are:
+1. Start with a working program and make small incremental changes. At any point, if there is an error, you should have a good idea where it is.
+2. Use temporary variables to hold intermediate values so you can display and check them.
+3. Once the program is working, you might want to remove some of the scaffolding or consolidate multiple statements into compound expressions, but only if it does not make the program difficult to read.
+
+
