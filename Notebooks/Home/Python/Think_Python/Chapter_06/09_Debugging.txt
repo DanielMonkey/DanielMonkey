@@ -1,0 +1,27 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2019-06-19T17:22:14+08:00
+
+====== 09 Debugging ======
+Created Wednesday 19 June 2019
+
+Breaking a large program into smaller functions creates natural checkpoints for debugging.
+
+If a function is not working, there are three possibilities to consider:
+* There is something wrong with the arguments the function is getting; a precondition is violated
+* There is something wrong with the function; a postcondition is violated
+* There is something wrong with the return value or the way it is being used.
+
+The rule out of the first possibility, you can add a print statement at the beginning of the function and display the values of the parameters (and maybe their types).
+Or you can write code that checks the preconditions explicity.
+
+If the parameters look good, add print statement before each return statement that displays the return value. If possible, check the result by hand. 
+Consider calling the function with values that make it easy to check the result.
+
+If the function seems to be working, look at the function call to make sure the return value is being used correctly (or used at all!).
+
+Adding print statements at the beginning and end of a function can help make the flow of execution more visible.
+
+It takes some time to develop effective scaffolding, but a little bit of scaffolding can save a lot of debugging.
+
+

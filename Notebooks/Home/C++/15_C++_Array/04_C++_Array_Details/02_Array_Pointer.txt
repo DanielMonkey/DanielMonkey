@@ -1,0 +1,10 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2019-06-19T18:31:20+08:00
+
+====== 02 Array Pointer ======
+Created Wednesday 19 June 2019
+
+数组名是一个指向数组中第一个元素的常量指针。
+
+使用数组名作为常量指针是合法的，反之亦然。

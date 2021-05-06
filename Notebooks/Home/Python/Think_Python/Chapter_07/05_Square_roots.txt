@@ -1,0 +1,11 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2019-06-25T18:00:35+08:00
+
+====== 05 Square roots ======
+Created Tuesday 25 June 2019
+
+Loops are often used in programs that compute numerical results by starting with an approximate answer and iteratively improving it.
+
+In general we don't know ahead of time how many steps it takes to get the right answer, but we know when we get there because the estimate stops changing.
+

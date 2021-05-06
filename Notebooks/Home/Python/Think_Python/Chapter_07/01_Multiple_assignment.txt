@@ -1,0 +1,21 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2019-06-25T17:31:13+08:00
+
+====== 01 Multiple assignment ======
+Created Tuesday 25 June 2019
+
+As you may have discovered, it is legal to make more than one assignment to the same variable.
+A new assignment makes an existing variable refer to a new value (and stop referring to the old value).
+
+The comma at then end of the first print statement suppresses the newline, which is why both outputs appear on the same line.
+
+With multiple assignment it is especially important to distinguish between an assignment operation and a statement of equality.
+Because Python uses the equal sign (=) for assignement, it is tempting to interpret a statement like a = b as a statement of equality. It is not!
+
+Firt, equality is a symmetric relation and assignment is not.
+Furthermore, in mathematics, a statement of equality is either true or false, for all time. In Python, an assignment statement can make two variables equal, but they don't have to stay that way.
+
+Although multiple assignment is frequently helpful, you should use it with caution.
+If the values of variables change frequently, it can make the code difficult to read and debug.
+

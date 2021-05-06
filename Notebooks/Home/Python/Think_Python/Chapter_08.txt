@@ -1,0 +1,8 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2019-07-09T17:46:52+08:00
+
+====== Chapter 08 ======
+Created Tuesday 09 July 2019
+
+Strings

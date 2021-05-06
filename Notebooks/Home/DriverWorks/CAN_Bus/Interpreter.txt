@@ -42,15 +42,60 @@ The standard CAN ID works well.
 # ./sample_canbus_interpreter --dbc=/samples/data/samples/sensors/can/nl-5-modify_T1.dbc --driver=can.aurix --params=ip=10.42.0.146,bus=a,aport=50000,bport=60395
 
 
+./sample_canbus_interpreter --dbc=.././data/samples/sensors/can/DataspeedByWire.dbc --driver=can.socket --params=device=can0 > .././data/samples/sensors/can/can_log.txt
+
+
+./sample_canbus_interpreter --dbc=.././data/samples/sensors/can/AutonomousVehicleCANSignals.dbc  --params=file=.././data/samples/sensors/can/can.bin
+
+
+./sample_canbus_interpreter --params=file=.././data/samples/sensors/radar/conti/radar_0.bin
+
+AutonomousVehicleCANSignals
+
+can_log.txt
 
 
 
 
+# ./sample_record --help
+One or more of the following output file options is required:
+	 --write-file-gps=/path/to/file.gps 	: file to record GPS data to
+	 --write-file-can=/path/to/canbusfile 	: file to record CAN data to
+	 --write-file-lidar=/path/to/lidarfile 	: file to record Lidar data to
+	 --write-file-radar=/path/to/radarfile 	: file to record Radar data to
+Additional options are:
+	 --can-driver=can.socket 		: CAN driver to open (default=can.socket)
+	 --can-params=device=can0,bus=d 	: parameters passed to CAN sensor
+	 --gps-driver=gps.uart 			: GPS sensor driver (default=gps.uart)
+	 --gps-params=device=/dev/ttyACM0 	: parameters passed to GPS sensor
+	 --lidar-driver=lidar.socket 			: Lidar sensor driver (default=lidar.socket)
+	 --lidar-params=device=QUAN_M18A,file=filename	: parameters passed to LIDAR sensor
+	 --radar-driver=radar.socket 			: Radar sensor driver (default=radar.socket)
+	 --radar-params=file=filename	: parameters passed to RADAR sensor
+
+--can-driver: default=can.socket
+--can-params: default=
+--gps-driver: default=gps.uart
+--gps-params: default=
+--lidar-driver: default=lidar.socket
+--lidar-params: default=
+--offscreen: default=0
+	Used for running windowed apps in headless mode. 0 = show window, 1 = offscreen window
+--profiling: default=1
+	Enables/disables sample profiling
+--radar-driver: default=radar.socket
+--radar-params: default=
+--write-file-can: default=
+--write-file-gps: default=
+--write-file-lidar: default=
+--write-file-radar: default=
 
 
 
+/samples/data/samples/sensors/can/can_log_T2.txt
 
 
+./sample_record --write-file-can=/samples/data/samples/sensors/can/can_log_Test.bin --can-driver=can.socket --can-params=device=can0
 
 
 

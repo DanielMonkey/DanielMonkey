@@ -1,0 +1,227 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2020-03-11T15:12:19+08:00
+
+====== VMON ======
+Created Wednesday 11 March 2020
+
+Case 1:
+Shell>setport 11 15 0
+Shell>showport 11 15
+P11.15: Direction = OUT; Push Pull; General-purpose output; State = LOW 
+Shell>setport 33 10 0
+Shell>showport 33 10
+P33.10: Direction = OUT; Push Pull; General-purpose output; State = LOW 
+Shell>showport 33 2
+P33.2: Direction = OUT; Push Pull; General-purpose output; State = HIGH 
+Shell>setport 33 2 0
+Shell>VMON XA interrupt falling detected !! 
+Please run command "vmonstatus handle_interrupt"
+Note: Aurix will not monitor VMON interrupt until this command is executed
+And this command will power off the Tegra!!
+
+
+Case 2:
+Shell>showport 11 15
+P11.15: Direction = OUT; Push Pull; General-purpose output; State = HIGH 
+Shell>showport 33 10
+P33.10: Direction = OUT; Push Pull; General-purpose output; State = HIGH 
+Shell>showportexp 2 1 0
+EXP 2.1.0: Direction = OUT; State = HIGH 
+Shell>setport 11 15 0
+Shell>setport 33 10 0
+Shell>setportexp 2 1 0 0
+Shell>showport 33 2
+P33.2: Direction = OUT; Push Pull; General-purpose output; State = HIGH 
+Shell>setport 33 2 0
+Shell>VMON XA interrupt falling detected !! 
+Please run command "vmonstatus handle_interrupt"
+Note: Aurix will not monitor VMON interrupt until this command is executed
+And this command will power off the Tegra!! 
+
+
+Case3:
+Shell>showportexp 2 1 0
+EXP 2.1.0: Direction = OUT; State = HIGH 
+Shell>setportexp 2 1 0 0
+Shell>showport 2 1 0 
+P02.1: Direction = IN; State = LOW 
+Shell>showport 33 2
+P33.2: Direction = OUT; Push Pull; General-purpose output; State = HIGH 
+Shell>setport 33 2 0
+Shell>VMON XA interrupt falling detected !! 
+Please run command "vmonstatus handle_interrupt"
+Note: Aurix will not monitor VMON interrupt until this command is executed
+And this command will power off the Tegra!!
+
+case4:
+Shell>showport 11 15
+P11.15: Direction = OUT; Push Pull; General-purpose output; State = HIGH 
+Shell>showport 33 2
+P33.2: Direction = OUT; Push Pull; General-purpose output; State = HIGH 
+Shell>showport 33 10
+P33.10: Direction = OUT; Push Pull; General-purpose output; State = HIGH 
+Shell>setport 11 15 0
+Shell>setport 33 10 0
+Shell>showport 33 2
+P33.2: Direction = OUT; Push Pull; General-purpose output; State = HIGH 
+Shell>setport 33 2 0
+Shell>VMON XA interrupt falling detected !! 
+Please run command "vmonstatus handle_interrupt"
+Note: Aurix will not monitor VMON interrupt until this command is executed
+And this command will power off the Tegra!! 
+
+case5:
+Shell>showport 11 15
+P11.15: Direction = OUT; Push Pull; General-purpose output; State = HIGH 
+Shell>showport 33 10
+P33.10: Direction = OUT; Push Pull; General-purpose output; State = HIGH 
+Shell>showportexp 2 1 0
+EXP 2.1.0: Direction = OUT; State = HIGH 
+Shell>setportexp 2 1 0 0
+Shell>setport 33 10 0
+Shell>setport 11 15 0
+Shell>showport 33 2
+P33.2: Direction = OUT; Push Pull; General-purpose output; State = HIGH 
+Shell>setport 33 2 0
+Shell>VMON XA interrupt falling detected !! 
+Please run command "vmonstatus handle_interrupt"
+Note: Aurix will not monitor VMON interrupt until this command is executed
+And this command will power off the Tegra!!
+
+
+case6:
+Shell>vmonstatus handle_interrupt
+Aurix does not has XA VMON access
+Shell>showport 11 15
+P11.15: Direction = OUT; Push Pull; General-purpose output; State = HIGH 
+Shell>showport 33 10
+P33.10: Direction = OUT; Push Pull; General-purpose output; State = HIGH 
+Shell>showportexp 2 1 0
+EXP 2.1.0: Direction = OUT; State = HIGH 
+Shell>showportexp 3 1 5
+EXP 3.1.5: Direction = OUT; State = LOW 
+Shell>showport 33 11
+P33.11: Direction = OUT; Push Pull; General-purpose output; State = LOW 
+Shell>showport 33 13
+P33.13: Direction = OUT; Push Pull; General-purpose output; State = LOW 
+Shell>showport 33 14
+P33.14: Direction = OUT; Push Pull; General-purpose output; State = LOW 
+Shell>showport 33 15
+P33.15: Direction = OUT; Push Pull; General-purpose output; State = LOW 
+Shell>showportexp 3 0 0
+EXP 3.0.0: Direction = OUT; State = LOW 
+Shell>showportexp 3 1 4
+EXP 3.1.4: Direction = OUT; State = LOW 
+Shell>showportexp 3 1 6
+EXP 3.1.6: Direction = OUT; State = HIGH 
+Shell>showportexp 3 1 7
+EXP 3.1.7: Direction = OUT; State = LOW 
+Shell>showport 2 1 1
+P02.1: Direction = IN; State = LOW 
+Shell>showportexp 3 1 3
+EXP 3.1.3: Direction = OUT; State = LOW 
+Shell>showportexp 2 1 1 
+EXP 2.1.1: Direction = OUT; State = LOW 
+Shell>showportexp 2 1 5
+EXP 2.1.5: Direction = OUT; State = LOW 
+Shell>showport 13 0
+P13.0: Direction = OUT; Push Pull; General-purpose output; State = HIGH 
+Shell>showport 33 2
+P33.2: Direction = OUT; Push Pull; General-purpose output; State = HIGH 
+Shell>setport 11 15 0
+Shell>setport 33 10 0
+Shell>setportexp 2 1 0 0
+Shell>setportexp 3 1 6 0
+Shell>setport 13 0 0
+Shell>showport 11 15
+P11.15: Direction = OUT; Push Pull; General-purpose output; State = LOW 
+Shell>showport 33 10
+P33.10: Direction = OUT; Push Pull; General-purpose output; State = LOW 
+Shell>showportexp 2 1 0
+EXP 2.1.0: Direction = OUT; State = LOW 
+Shell>showportexp 3 1 6
+EXP 3.1.6: Direction = OUT; State = LOW 
+Shell>shwoport 13 0
+
+Unknown command: shwoport 13 0
+Shell>showport 13 0
+P13.0: Direction = OUT; Push Pull; General-purpose output; State = LOW 
+Shell>setport 33 2 0
+Shell>VMON XA interrupt falling detected !! 
+Please run command "vmonstatus handle_interrupt"
+Note: Aurix will not monitor VMON interrupt until this command is executed
+And this command will power off the Tegra!! 
+
+case7:
+Shell>vmonstatus handle_interrupt
+Aurix does not has XA VMON access
+Shell>ping: recv
+
+Shell>
+Shell>showport 11 15
+P11.15: Direction = OUT; Push Pull; General-purpose output; State = HIGH 
+Shell>showport 33 10
+P33.10: Direction = OUT; Push Pull; General-purpose output; State = HIGH 
+Shell>showportexp 2 1 0
+EXP 2.1.0: Direction = OUT; State = HIGH 
+Shell>showportexp 3 1 6 0
+EXP 3.1.6: Direction = OUT; State = HIGH 
+Shell>setport 11 15 0
+Shell>setport 33 10 0
+Shell>setportexp 2 1 0 0
+Shell>setportexp 3 1 6 0
+Shell>setport 33 2 0
+
+
+Shell>poweroff
+Verifying Xavier A power down sequence
+Error: VMON 0x48 power down time stamp data is not valid!!
+Error: VMON 0x58 power down time stamp data is not valid!!
+Error: VMON 0x2b power down time stamp data is not valid!!
+Error: fail to write value 0x0 into VMON slave 0x48, offset 0x17 with crc 0xc3
+read back 0xa6 is not expected
+Error: fail to write value 0x0 into VMON slave 0x58, offset 0x17 with crc 0x4e
+read back 0xa6 is not expected
+Error: fail to write value 0x0 into VMON slave 0x2b, offset 0x17 with crc 0xed
+read back 0xa6 is not expected
+Power down sequence is NOT correct!!
+Mark "!!" at the rails in violation
+VDD_1V8_AO     , group 4, power down TS 0.00 ms 
+VDD_1V8_HS     , group 4, power down TS 0.00 ms 
+VDD_1V8_LS     , group 4, power down TS 0.00 ms !!
+GND            , group 0, power down TS 0.00 ms 
+VDDIO_AO_3V3   , group 1, power down TS 0.00 ms 
+VDD_SOC        , group 7, power down TS 0.00 ms !!
+VDD_CPU        , group 0, power down TS 0.00 ms 
+VDDIO_AO_3V3   , group 1, power down TS 0.00 ms 
+VDD_3V3        , group 1, power down TS 0.00 ms 
+VDD_USB_3V3    , group 1, power down TS 0.00 ms 
+VDD_EMMC_3V3   , group 1, power down TS 0.00 ms 
+VDDIO_AO_3V3   , group 1, power down TS 0.00 ms !!
+VDD_GPU        , group 0, power down TS 0.00 ms 
+VDD_CV         , group 0, power down TS 0.00 ms 
+VDD_RTC        , group 5, power down TS 0.00 ms !!
+VDD_1V0        , group 2, power down TS 0.00 ms 
+VDD_DDR_1V1    , group 3, power down TS 0.00 ms !!
+VDD_1V2        , group 2, power down TS 0.00 ms !!
+VDDIO_AO_3V3   , group 1, power down TS 0.00 ms 
+VDD_DDR2       , group 5, power down TS 0.00 ms !!
+VDD_DDRQ       , group 4, power down TS 0.00 ms 
+Power off the system
+
+
+
+
+Shell>vmonstatus handle_interrupt
+Aurix does not has XA VMON access
+Shell>
+Shell>poweroff
+Power off the system
+Command Executed
+Shell>VMON XA interrupt falling detected !! 
+Please run command "vmonstatus handle_interrupt"
+Note: Aurix will not monitor VMON interrupt until this command is executed
+And this command will power off the Tegra!!
+
+

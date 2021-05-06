@@ -20,3 +20,14 @@ cat Testlog_T2.txt | grep "CAN ID" | awk '{print $6":"$8}' | sort | uniq -c
 ./nvcan_gen -d can1 -f 0 -id 500 -data DEADBEEFDEADBEEF -n 96 -tint 20 -total 960000
 
 ./nvcan_dump -d can0 -v -f Testlog_T12.txt -n 30 -t 900000
+
+./nvcan_send -d can0 -f 0 -id 200 -data 1122334455667788&./nvcan_send -d can0 -f 0 -id 201 -data 1122334455667788&./nvcan_send -d can0 -f 0 -id 202 -data 1122334455667788&./nvcan_send -d can0 -f 0 -id 204 -data 1122334455667788&./nvcan_send -d can0 -f 0 -id 205 -data 1122334455667788&./nvcan_send -d can0 -f 0 -id 206 -data 1122334455667788&./nvcan_send -d can0 -f 0 -id 207 -data 1122334455667788&./nvcan_send -d can0 -f 0 -id 208 -data 1122334455667788&./nvcan_send -d can0 -f 0 -id 209 -data 1122334455667788&./nvcan_send -d can0 -f 0 -id 20A -data 1122334455667788&./nvcan_send -d can0 -f 0 -id 20B -data 1122334455667788&./nvcan_send -d can0 -f 0 -id 20C -data 1122334455667788&./nvcan_send -d can0 -f 0 -id 20D -data 1122334455667788&./nvcan_send -d can0 -f 0 -id 20E -data 1122334455667788&./nvcan_send -d can0 -f 0 -id 20F -data 1122334455667788&./nvcan_send -d can0 -f 0 -id 210 -data 1122334455667788
+
+./nvcan_send -d can0 -f 0 -id 200 -data 1122334455667788 -f 0 -id 201 -data 1122334455667788
+
+
+
+[[/home/daniyang/nvidia/src/git/5.1.12.0/qnx/qnx/src/resmgrs/nvcan]]
+[[/home/daniyang/nvidia/src/git/5.1.12.0/qnx/qnx/src/tests/can]]
+[[/home/daniyang/nvidia/src/git/5.1.12.0/linux/kernel/nvidia/drivers/net/can]]
+

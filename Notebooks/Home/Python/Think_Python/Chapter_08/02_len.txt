@@ -1,0 +1,10 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2019-07-09T17:51:06+08:00
+
+====== 02 len ======
+Created Tuesday 09 July 2019
+
+len is a built-in function that returns the number of characters in a string.
+
+Alternatively, you can use negative indices, which count backward from the end of the string. The expression fruit [-1] yields the last letter, fruit[-2] yields the second to last, and so on.

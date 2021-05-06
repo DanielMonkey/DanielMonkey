@@ -5,13 +5,15 @@ Creation-Date: 2019-04-26T13:03:14+08:00
 ====== CAN ======
 Created Friday 26 April 2019
 
-./nvcan_send -d can0 -f 2 -id 123 -b -data FFEEDDCCBBAA99887766554433221100FEEFDCCDBAAB98897667544532231001FFEEDDCCBBAA99887766554433221100FEEFCDDCBAAB98897667544532231001 -v
+./nvcan_send -d can0 -f 2 -id 244 -b -data FFEEDDCCBBAA99887766554433221100FEEFDCCDBAAB98897667544532231001FFEEDDCCBBAA99887766554433221100FEEFCDDCBAAB98897667544532231001 -v
 
-./nvcan_send -d can0 -f 2 -id 244 -b -data FFEEDDCCBBAA99887766554433221100 -v
+./nvcan_send -d can1 -f 2 -id 7F0 -b -data FFEEDDCCBBAA99887766554433221100 -v
 
 ./nvcan_send -d can0 -f 0 -id 233  -data 0011AABBCCDDEEFF -v
 
 ./nvcan_dump -d can0 -n 1 -t 20000 -f /tmp/PythonScrp/nvcan_dump_T20.txt -v
+
+./nvcan_dump -d can0 -n 1 -t 10000 -v
 
 devc-nvcan -q 40 -gfc 0 -d can0 -baddr 0x0c310000 &
 

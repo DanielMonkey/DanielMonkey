@@ -1,0 +1,13 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2019-06-19T17:16:29+08:00
+
+====== 07 One more example ======
+Created Wednesday 19 June 2019
+
+fibonacci
+
+fibonacci(0) = 0
+fibonacci(1) = 1
+fibonacci(n) = fibonacci(n - 1) + fibonacci(n - 2)
+

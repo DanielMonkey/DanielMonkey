@@ -36,6 +36,40 @@ export LD_LIBRARY_PATH=/usr/local/lib/:${LD_LIBRARY_PATH}
 6. Mirror Tasking Compiler and EB Tresos Studio license
 ssh -L 9090:hqlicense01.nvidia.com:9090 -L 56654:hqlicense01.nvidia.com:56654 o-xterm -N -v -g
 
+ssh -L 9090:rnnvlicense05.nvidia.com:9090 -L 56654:hqlicense01.nvidia.com:56654 sc-xterm-01 -N -v -g
+
+ssh -L 56654:hqlicense01.nvidia.com:56654 sc-xterm-01 -N -v -g
+
+http://127.0.0.1:9090/stats
+
 sudo dhclient eth0
 
+openssl aes-256-cbc -md md5 -a -in ../internal-mb1.tar.gz.aes -k do-not-release -d | tar xvzf -
 
+./generate_IFS_image.sh nvidia-t186.build_vm ifs-nvidia-t18x-vcm31t186-guest_vm.bin
+
+cd ${QNX_TOP}
+[[./qnx_create_targetfs.sh]]
+
+# make clean -f Makefile.bind BOARD=e3550b03-t194a PCT=qnx
+# make -f Makefile.bind BOARD=e3550b03-t194a PCT=qnx
+
+make clean -f Makefile.bind BOARD=p3479a04-t194 PCT=qnx
+make -f Makefile.bind BOARD=p3479a04-t194 PCT=qnx
+./bootburn.sh -b p3479a04-t194 -B qspi --clean
+
+make -f Makefile.bind PCT=linux BOARD=e3550b03-t194a
+
+# ./bootburn.sh -b e3550b03-t194a -B qspi --clean
+
+./create_bsp_images.sh -B qspi -b p3479a04-t194 -r 02 -g images  -z "--skunum 699-63479-0001-500 --setskuversion AB --setboardserial 01234567890123456789 --setprodinfo 699-63479-0001-500 AB --setmacid mac0 0x000ba4eba5"
+
+./flash_bsp_images.sh -P images/699-63479-0001-500_AB -b p3479a04-t194 -z "--skunum 699-63479-0001-500 --setskuversion AB --setboardserial 01234 --setprodinfo 699-63479-0001-500 AB --setmacid mac0 0x000ba4eba5"
+
+./flash_bsp_images.sh -P images/699-63550-0001-300_GD -b p3479a04-t194 --clean
+
+./create_bsp_images.sh -g images -b p3479a04-t194 -r 02
+
+699-63550-0001-300_GD
+
+https://confluence.nvidia.com/display/AutomotivePlatform/Vector+Aurix+Repo+and+Build+Instructions#VectorAurixRepoandBuildInstructions-EBClientLicenseAdministrationV1.2.4

@@ -6,3 +6,8 @@ Creation-Date: 2019-03-26T18:03:47+08:00
 Created Tuesday 26 March 2019
 
 ./nvmipp_raw -cf ddpx-a.conf -d 0 -c SF3325-CSI-A   --aggregate 1
+
+screen -c /tmp/graphics.conf 
+cd [[/samples/nvmedia/]]
+./nvmipp_raw -cf ddpx-b.conf --aggregate 1 -c SF3325-CSI-A
+

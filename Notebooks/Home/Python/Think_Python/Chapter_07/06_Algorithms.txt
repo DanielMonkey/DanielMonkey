@@ -1,0 +1,26 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2019-07-09T17:30:02+08:00
+
+====== 06 Algorithms ======
+Created Tuesday 09 July 2019
+
+It is not easy to define an algoritm. It might help to start with something that is not an algorithm.
+
+Similary, the techniques you learned for addition with carrying, subtraction with borrowing, and long division are all algorithms. 
+One of the characteristics of algorithms is that they do not require any intelligence to carry out. 
+They are mechanical processes in which each step follows from the last according to a simple set of rules.
+
+In my opinion, it is embarrassing that humans spend so much time in school learning to execute algorithms that, quite literally, require no intelligence.
+
+On the other hand, the process of designing algorithms is interesting, intellectually challenging, and a central part of what we call programming.
+
+Some of the things that people do naturally, without difficulty or conscious thought, are the hardest to express algorithmically. Understanding natural language is a good example. 
+We all do it, but so far no one has been able to explain how we do it, at least not in the form of an algorithm.
+
+
+
+
+
+
+

@@ -1,0 +1,16 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2019-07-09T17:39:46+08:00
+
+====== 07 Debugging ======
+Created Tuesday 09 July 2019
+
+As you start writing bigger programs, you might find yourself spending more time debugging. More code means more chances to make an error and more palce for debugs to hide.
+
+One way to cut your debugging time is "debugging by bisection".
+
+If the mid-point check is incorrect, there must be a problem in the first half of the program. If it is correct, the problem is in the second half.
+
+In practice it is not always clear what the "middle of the program" is and not always posible to check it. It doesn't make sense to count lines and find the exact midpoint.
+Instead, think about places in the program where there might be errors and places where it is easy to put a check. Then choose a spot where you think the chances are about the same that the bug is before or after the check.
+

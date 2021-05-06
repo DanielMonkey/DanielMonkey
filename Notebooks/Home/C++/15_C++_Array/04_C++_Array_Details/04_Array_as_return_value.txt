@@ -1,0 +1,16 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2019-06-25T18:24:54+08:00
+
+====== 04 Array as return value ======
+Created Tuesday 25 June 2019
+
+C++不允许返回一个完整的数组作为函数的参数。但是，你可以通过指定不带索引的数组名来返回一个指向数组的指针。
+如果你想要从函数返回一个一维数组，你必须声明一个返回指针的函数，如下：
+
+int * myFunction()
+{
+	...
+}
+
+另外，C++不支持在函数外返回局部变量的地址，除非定义局部变量为static变量。

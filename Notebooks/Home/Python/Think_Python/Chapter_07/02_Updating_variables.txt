@@ -1,0 +1,14 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2019-06-25T17:40:13+08:00
+
+====== 02 Updating variables ======
+Created Tuesday 25 June 2019
+
+One of the most common forms of multiple assignment is an update, where the new value of the variable depends on the old.
+
+If you try to update a variable that doesn't exist, you get an error, because Python evaluates the right side before it assigns a value to x:
+
+Before you can update a variable, you have to initialize it, usually with a simple assignment.
+
+Updating a variable by adding 1 is called an increment; substracting 1 is called a decrement.

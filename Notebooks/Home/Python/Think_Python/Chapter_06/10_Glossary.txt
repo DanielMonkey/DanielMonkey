@@ -1,0 +1,10 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2019-06-19T17:47:48+08:00
+
+====== 10 Glossary ======
+Created Wednesday 19 June 2019
+
+temporary variable:
+A variable used to store an intermediate value in a complex calculation.
+

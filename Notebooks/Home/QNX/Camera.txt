@@ -1,0 +1,102 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2019-06-26T16:15:30+08:00
+
+====== Camera ======
+Created Wednesday 26 June 2019
+
+# ./nvsipl_camera -h
+Usage:
+-h or --help                    :Prints this help
+-c or --platform-config 'name'  :Platform configuration. Supported values
+	MAX96712_RAW12_TPG_DPHY_x2         :MAX96712 RAW12 TPG in 2 lane DPHY mode
+	MAX96712_RGB_TPG_CPHY_x2           :MAX96712 RGB TPG in 2 lane CPHY mode
+	AR0144P_DPHY_x2                    :AR0144P module in 2 lane DPHY mode
+	AR0144P_DPHY_x2_TPG                :AR0144P module in 2 lane DPHY, TPG mode
+	CONSTELLATION_2MP_DPHY_x2          :Constellation 1920x1208 capture in 2 lane DPHY mode
+	CONSTELLATION_8MP_DPHY_x4          :Constellation 3848x2168 capture in 4 lane DPHY mode
+	CONSTELLATION_2MP_TPG_DPHY_x2      :Constellation 1920x1208 tpg capture with in 2 lane DPHY mode
+	SF3325_DPHY_x2                     :SF3325 module in 2 lane DPHY mode
+	SF3325_DPHY_x2_TPG                 :SF3325 module in 2 lane DPHY, TPG mode
+	SF3325_CPHY_x2                     :SF3325 module in 2 lane CPHY mode
+	SF3325_CPHY_x2_TPG                 :SF3325 module in 2 lane CPHY, TPG mode
+	SF3324_DPHY_x2                     :SF3324 module in 2 lane DPHY mode
+	SF3324_DPHY_x2_TPG                 :SF3324 module in 2 lane DPHY, TPG mode
+	SF3324_CPHY_x2                     :SF3324 module in 2 lane CPHY mode
+	SF3324_CPHY_x2_TPG                 :SF3324 module in 2 lane CPHY, TPG mode
+--link-enable-masks 'masks'     :Enable masks for links on each deserializer connected to CSI
+								:masks is a list of masks for each deserializer.
+								:Eg: '0x0000 0x1101 0x0000 0x0000' disables all but links 0, 2 and 3 on CSI-CD intrface
+-d or --disp-id <ID>            :Display ID.
+								Number of available displays: 1
+								Display ID: 0
+									Width: 1920
+									Height: 1080
+									Refresh rate: 60
+-w or --disp-win-id <ID>        :Display window ID. Supported values 0 to 2
+-z or --disp-win-depth <val>    :Display window depth. Supported values 0 to 255
+-p or --disp-win-pos 'rect'     :Display position, where rect is x0, y0, width, height
+-f or --filedump-prefix 'str'   :Dump RAW file with filename prefix 'str'  when RAW output is enabled.
+-r or --runfor <seconds>        :Exit application after n seconds
+-v or --verbosity <level>       :Set verbosity. Supported values (default: 1) 
+								: 0 (None)
+								: 1 (Errors)
+								: 2 (Warnings and above)
+								: 3 (Infos and above)
+								: 4 (Debug and above)
+-t or --test-config-file <file> :Set custom platform config json file
+-l or --list-configs            :List configs from file specified via -t or --test-config-file
+-i or --input-raw-file <file>   :Set input RAW file for simulator mode testing
+--enableRawOutput               :Enable the Raw output
+--disableISP0Output             :Disable the ISP0 output
+--disableISP1Output             :Disable the ISP1 output
+--enableSlave                   :Enable slave mode
+--showfps                       :Show FPS (frames per second) every 2 seconds
+--showmetadata                  :Show Metadata when RAW output is enabled
+
+
+./nvsipl_camera -c "SF3325_DPHY_x2" -m "1 0 0 0" --showfps
+
+
+./nvmipp_raw -cf ddpx-a.conf -c SF3325-CSI-A
+
+./nvmipp_raw -cf ddpx-a.conf -d 0 -c SF3325-CSI-A --aggregate 1
+
+./nvsipl_camera -c "SF3324_DPHY_x2" --link-enable-masks "0x0001 0x0000 0x0000 0x0000" -d 0 -w 1
+
+./nvsipl_camera --platform-config "SF3324_DPHY_x4" --link-enable-masks "0x0001 0x0000 0x0000 0x0000" --showfps -d 0 -w 1
+
+
+cimcampower a0 off
+
+cimcampower a0 on
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,13 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2019-06-25T18:35:14+08:00
+
+====== 16 String ======
+Created Tuesday 25 June 2019
+
+C++提供了以下两种类型的字符串表示形式：
+* C风格字符串
+* C++引入的string类类型
+
+
+

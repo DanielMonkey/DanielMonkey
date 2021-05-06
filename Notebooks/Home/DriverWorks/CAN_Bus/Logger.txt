@@ -23,10 +23,32 @@ Usage: ./sample_canbus_logger
 												: A filter can be specified by adding comma separated id:mask values to the --filter= argument.
 												: A message is considered passing if <received_can_id> & mask == id & mask
 
-# ./sample_canbus_logger --driver=can.socket --params=device=can0 --send_i_understand_implications=1000 --send_id=323 --hwtime=1
-# ./sample_canbus_logger --driver=can.aurix --params=ip=10.42.0.146,bus=a,aport=50000,bport=60395 --send_i_understand_implications=1000 --send_id=123 --hwtime=1
 
-# ./sample_canbus_logger --driver=can.aurix --params=ip=10.42.0.28,bus=a,aport=50000,bport=60395
+# ./sample_canbus_logger --help
+--driver: default=can.virtual
+--filter: default=000:000
+--offscreen: default=0
+	Used for running windowed apps in headless mode. 0 = show window, 1 = offscreen window
+--params: default=file=.././data/samples/sfm/triangulation/canbus.can
+--profiling: default=1
+	Enables/disables sample profiling
+--send_i_understand_implications: default=0
+--send_id: default=6FF
+Usage: ./sample_canbus_logger
+	--driver=can.virtual 			: one of the available CAN drivers (see sample_sensors_info)
+	--params=file=canbus.can,arg2=value	: comma separated key=value parameters for the sensor (see sample_sensor_info for a set of supported parameters)
+	--send_i_understand_implications=10	: If > 0 random CAN messages with given delay in msec will be sent
+				 				: WARNING - do not use this functionality in a production environment, sending routines should be used to test the connectivity in a separated environment only! 
+	--send_id=6FF 				: CAN message ID when sending messages (see send_i_understand_implications)
+	--filter=1A2:FFF,100:300,3A:0F,... 	: Pass any number of CAN ids and masks to add a filter.
+				 				: A filter can be specified by adding comma separated id:mask values to the --filter= argument.
+				 				: A message is considered passing if <received_can_id> & mask == id & mask
+
+
+# ./sample_canbus_logger --driver=can.socket --params=device=can0 --send_i_understand_implications=1000 --send_id=323 --hwtime=1
+# ./sample_canbus_logger --driver=can.aurix --params=ip=10.42.0.146,bus=f,aport=50000,bport=60395 --send_i_understand_implications=1000 --send_id=123 --hwtime=1
+
+# ./sample_canbus_logger --driver=can.aurix --params=ip=10.42.0.28,bus=a,aport=50000,bport=60395 --send_i_understand_implications=1000 --send_id=4BB
 
 # ./sample_canbus_logger --driver=can.aurix --params=ip=10.42.0.28,bus=a,aport=54545,bport=60350 --send_i_understand_implications=1000 --send_id=4BB --hwtime=1
 
@@ -43,6 +65,9 @@ Usage: ./sample_canbus_logger
 [01-01-1970 00:52:07] CAN messages [2720] for 0 at 4026536468026536
 [01-01-1970 00:52:07] Parsed 1 CAN messages, found 1 messages on selected EasyCAN bus.
 4026536468026536 -> AA0  [8] 00 00 00 00 00 00 00 00 
+
+AsPduId is 0x0, AsPduLen is 0x26.
+Dst is 0x1, Src is 0x4, Len is 0x26, Timestamp is 0x9c39c, AppSelector is 0xca, MsgId is 0x103
 
 
 

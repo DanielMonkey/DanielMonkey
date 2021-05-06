@@ -17,3 +17,75 @@ QNX OTA
 /bin/ksh /proc/boot/nv_aurix_check_fw.sh
 Force update
 /bin/ksh /proc/boot/nv_aurix_check_fw.sh -force_update <firmware file name>
+
+
+
+scp Network_Test_TB.sh daniyang@10.19.225.183:/ho[[me/daniyang/Documents/]]
+
+
+sudo ifconfig can0 down
+
+
+sudo mount -t cifs -o username=daniyang //10.23.151.226/Users/daniyang/00_Work_Data/11_Win_Shared [[/home/daniyang/Documents/21_win_share]]
+
+export FOUND_DIR=~/netapp39/daily/Embedded/BuildBrain/Foundation/t186ref/stage-main/2358
+export FOUND_DIR=~/netapp39/daily/Embedded/BuildBrain/Foundation/t186ref/cust-desay-5.1.12.4/2358
+export FOUND_DIR=~/netapp39/release/Embedded/BuildBrain/Foundation/t186ref/embedded-5.1.12.4/0006
+export QNX_DIR=~/netapp39/daily/Embedded/BuildBrain/SDK/t186ref-qnx/stage-main/2267
+export QNX_DIR=~/netapp39/daily/Embedded/BuildBrain/SDK/t186ref-qnx/stage-main/2267
+export QNX_DIR=~/netapp39/release/Embedded/BuildBrain/SDK/t186ref-qnx/cust-desay-5.1.12.4/0007
+
+tegrarecovery x1 on
+tegrarecovery x1 off
+tegrareset x1
+
+setistconfig 1
+
+getistinfo
+
+enableSafetyLogs
+
+l3_getsafetystatus
+
+repo init -u ssh://git-master:12001/tegra/manifest.git -b cust/desay/5.1.12.4 -m automotive.xml -g auto-foundation,auto-linux,auto-qnx
+
+repo sync -j4  -c --no-tags -d -f
+
+
+remotes/origin/cust/desay/5.1.12.4
+
+
+make -f Makefile.bind BOARD=p3479a04-t194ad125 PCT=qnx
+
+./bootburn.sh -b p3479a04-t194ad125 -B qspi
+
+cd drive-t186ref-foundation/tools/host/flashtools/bootburn_t19x/
+./bootburn.sh -b p3479a04-t194ad125 -B qspi ${BOOTBURN_ARGS}
+
+./shutdown.sh -x /dev/ttyUSB3 -r5000
+./shutdown.sh -x /dev/ttyUSB3 -s /dev/ttyUSB2 -r5000
+
+sudo ./tcu_muxer -d /dev/ttyUSB2  -g 16 -b 15 -i -s path_to save_log
+
+sudo gpasswd --add ${USER} dialout
+
+Aurix_SafeShutdwn_T1.txt
+
+remotes/origin/cust/desay/5.1.12.4
+
+ota disable
+
+
+# Important:- Steps to follow when adding a NEW option:-
+# a. Add the option to the list of "GenericOptions" variable
+# b. In the dictionary "AvailableOptionsSet" present in file
+# bootburn_lib.sh add the option as key and its expected no.
+# of arguments as value.
+# c. If its a special option add it to the list of checks in
+# function IsSpecialOption() to be by passed.
+
+python bootburn.py -b p3479a04-t194 -B qspi --clean --encryption_key aes-128bit.key -p 3072_rsa_priv.pem -D
+
+i2cr 0x48 0xE
+
+ptpd-avb -gCKLb eq0

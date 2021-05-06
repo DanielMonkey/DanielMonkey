@@ -1,0 +1,13 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2019-07-09T17:47:16+08:00
+
+====== 01 A string is a sequence ======
+Created Tuesday 09 July 2019
+
+A string is a sequence of characters. You can access the characters one at a time with the bracket operator.
+
+The expression in brackets is called an index. The index indicates which characeter in the sequence you want (hence the name).
+
+You can use any expression, incuding variables and operators, as an index, but the value of the index has to be an integer.
+

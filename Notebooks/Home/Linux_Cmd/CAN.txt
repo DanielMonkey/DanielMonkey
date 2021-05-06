@@ -1,0 +1,49 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2019-09-27T17:25:16+08:00
+
+====== CAN ======
+Created Friday 27 September 2019
+
+ip -details -statistics link show can0
+
+
+nvidia@tegra-ubuntu:~$ ip -details -statistics link show can1
+12: can1: <NOARP,UP,LOWER_UP,ECHO> mtu 16 qdisc pfifo_fast state UP mode DEFAULT group default qlen 10
+	link/can  promiscuity 0 
+	can state ERROR-ACTIVE (berr-counter tx 0 rx 0) restart-ms 100 
+		  bitrate 500000 sample-point 0.870 
+		  tq 20 prop-seg 43 phase-seg1 43 phase-seg2 13 sjw 1
+		  mttcan: tseg1 2..255 tseg2 0..127 sjw 1..127 brp 1..511 brp-inc 1
+		  mttcan: dtseg1 1..31 dtseg2 0..15 dsjw 1..15 dbrp 1..15 dbrp-inc 1
+		  clock 50000000
+		  re-started bus-errors arbit-lost error-warn error-pass bus-off
+		  1043       0          0          1043       1043       1043      numtxqueues 1 numrxqueues 1 gso_max_size 65536 gso_max_segs 65535 
+	RX: bytes  packets  errors  dropped overrun mcast   
+	33376      4172     0       0       0       0       
+	TX: bytes  packets  errors  dropped carrier collsns 
+	47976      5997     0       0       0       0       
+nvidia@tegra-ubuntu:~$ sduo ip link set can1 type can restart-ms 10                                                                          
+-bash: sduo: command not found
+nvidia@tegra-ubuntu:~$ sudo ip link set can1 type can restart-ms 10                                                                          
+[sudo] password for nvidia: 
+RTNETLINK answers: Device or resource busy
+nvidia@tegra-ubuntu:~$ sudo ip link set can1 down
+nvidia@tegra-ubuntu:~$ sudo ip link set can1 type can restart-ms 10
+nvidia@tegra-ubuntu:~$ sudo ip link set can1 up
+nvidia@tegra-ubuntu:~$ ip -details -statistics link show can1
+12: can1: <NOARP,UP,LOWER_UP,ECHO> mtu 16 qdisc pfifo_fast state UP mode DEFAULT group default qlen 10
+	link/can  promiscuity 0 
+	can state ERROR-ACTIVE (berr-counter tx 0 rx 0) restart-ms 10 
+		  bitrate 500000 sample-point 0.870 
+		  tq 20 prop-seg 43 phase-seg1 43 phase-seg2 13 sjw 1
+		  mttcan: tseg1 2..255 tseg2 0..127 sjw 1..127 brp 1..511 brp-inc 1
+		  mttcan: dtseg1 1..31 dtseg2 0..15 dsjw 1..15 dbrp 1..15 dbrp-inc 1
+		  clock 50000000
+		  re-started bus-errors arbit-lost error-warn error-pass bus-off
+		  1043       0          0          1043       1043       1043      numtxqueues 1 numrxqueues 1 gso_max_size 65536 gso_max_segs 65535 
+	RX: bytes  packets  errors  dropped overrun mcast   
+	33376      4172     0       0       0       0       
+	TX: bytes  packets  errors  dropped carrier collsns 
+	47976      5997     0       0       0       0       
+nvidia@tegra-ubuntu:~$ ./cangen can1 -g 200 -I 233 -L 8 -D DEADBEEFDEADBEEF
