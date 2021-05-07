@@ -5,3 +5,5 @@ def find(word, start, letter):
             return index
         index = index + 1
     return -1
+
+print find('banaba', 2, 'a')
