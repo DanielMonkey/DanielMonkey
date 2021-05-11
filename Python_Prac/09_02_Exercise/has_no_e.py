@@ -1,7 +1,7 @@
 def has_no_e(word):
     for letter in word:
         if letter == 'e':
-            return
+            return False
     return True
 
 cnt_wd = 0
