@@ -42,6 +42,11 @@ class Time:
     def is_after(self, other):
         return self.time_to_int() > other.time_to_int()
 
+    def __lt__(self, other):
+        t1 = self.hour, self.minute, self.second
+        t2 = other.hour, other.minute, other.second
+        return t1 < t2
+
 def int_to_time(seconds):
     time = Time()
     minutes, time.second = divmod(seconds, 60)
@@ -78,5 +83,8 @@ print(start + duration)
 print(start + 1337)
 print(1337 + start)
 
+t1 = Time(9, 45, 35)
+t2 = Time(8, 35, 45)
+print(t2 < t1)
 
 

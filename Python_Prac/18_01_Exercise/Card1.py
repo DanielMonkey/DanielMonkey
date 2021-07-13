@@ -11,12 +11,26 @@ class Card:
     def __str__(self):
         return '%s of %s' % (Card.rank_names[self.rank], Card.suit_names[self.suit])
 
+    def __lt__(self, other):
+        #check the suits
+        #if self.suit < other.suit:
+            #return True
+        #if self.suit > other.suit:
+            #return False
+
+        #suits are the same ... check ranks
+        #return self.rank < other.rank
+        t1 = self.suit, self.rank
+        t2 = other.suit, other.rank
+        return t1 < t2
+
 
 
 queen_of_diamonds = Card(1, 12)
 print(queen_of_diamonds)
 card1 = Card(2, 11)
 print(card1)
-
+card2 = Card(1, 4)
+print(card2 < card1)
 
 
